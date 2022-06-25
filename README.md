@@ -9,6 +9,7 @@ Integrantes:
 * Juan Maneffa:
 * Francisco Peretto:
 * Ezequiel Raimondo:
+* Juan Romano
 
 Webs que sirven de referencia para este market place:
 * :
