@@ -8,7 +8,7 @@ Integrantes:
 * Ivan Caceres: 24 años, siempre me gustaron las computadoras y los lenguajes. Hablo ingles, frances, portugues y logicamente español. 
 * Juan Maneffa: 34 años, empleado en la Armada Argentina, siempre me gusto la programacion y me entusiama poder desarrollar aplicaciones que lleguen a muchas personas.
 * Francisco Peretto: 32 años, maestro de primaria, queriendo insertarme al mercado de la programación.
-* Ezequiel Raimondo:
+* Ezequiel Raimondo: 38 años, maestro de enseñanza práctica, buscando agregar nuevos conocimientos y cambiar/diversificar mi ámbito de trabajo.
 * Juan Romano:
 
 Webs que sirven de referencia para este market place:
