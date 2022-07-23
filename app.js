@@ -3,9 +3,11 @@ const path = require('path')
 
 const app = express();
 
-const publicPath = path.resolve(__dirname,'./public')
+const publicPath = path.resolve(__dirname,'./public');
 
-app.listen(3030, () => console.log("Servidor en linea"))
+const port = 3030;
+
+app.listen(port, () => console.log("Servidor en linea"))
 
 app.get('/', (req , res) => res.sendFile(path.resolve(__dirname,'./views/index.html')))
 
