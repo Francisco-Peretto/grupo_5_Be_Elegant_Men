@@ -104,13 +104,9 @@ header section {
     width: 100%;
 }
 
-.div-imagen {
-    width: 50%;
-}
-
 header img {
-    width: 20%;
-    height: 20%;
+    width: 45%;
+    height: 45%;
 }
 
 .navbar-usuario {
@@ -120,6 +116,10 @@ header img {
     justify-content: space-around;
     align-items: center;
     width: 35%;
+}
+
+.navbar-usuario i {
+    size: 100%;
 }
 
 .navbar-categorias {

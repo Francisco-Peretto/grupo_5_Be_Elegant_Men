@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+
+<html>
+    <head lang="en">
+        <meta charset="UTF-8">
+        <meta name=”viewport” content=”with-device.wid th, initial-scale= 1”>
+
+        <!-- fuente playfair -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+
+        <!-- link a font awesome -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet">
+   
+        <!-- link a hoja de estilos -->
+        <link href="/css/styles.css" rel="stylesheet">
+    </head>
+    <body>
+        <main class="cuerpo-register">
+            <h2>Crea tu cuenta</h2>
+            <form class="formulario-register" action="" method="post">
+
+                <fieldset class="fieldset-register">
+                    <legend>Datos Personales</legend>
+                    <input type="text" id="nombre" placeholder="Nombre/s" name="nombre_usuario">
+                    <input type="text" id="apellido" placeholder="Apellido" name="apellido_usuario">
+                    <input type="number" id="dni" placeholder="DNI" name="dni_usuario">
+                </fieldset>
+
+                <fieldset class="fieldset-register">
+                    <legend>Fecha de Nacimiento</legend>
+                        <input type="date" id="fecha-nac" name="fecha-nac_usuario">
+                </fieldset>
+
+                <fieldset class="fieldset-register">
+                    <legend>Genero</legend>
+                        <div>
+                            <input type="radio" id="masculino" name="genero_usuario" value="masculimo" checked>
+                            <label for="masculimo">Masculino</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="femenino" name="genero_usuario" value="femenino">
+                            <label for="femenino">Femenino</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="otro" name="genero_usuario" value="otro">
+                            <label for="otro">Otro</label>
+                        </div>
+                </fieldset>
+                
+                <fieldset class="fieldset-register">
+                    <legend>Domicilio</legend>
+                    <input type="text" id="calle" placeholder="Calle" name="calle_domicilio_usuario">
+                    <input type="text" id="numero" placeholder="Numero" name="numero_domicilio_usuario">
+                    <input type="text" id="provincia" placeholder="Provincia" name="provincia_domicilio_usuario">
+                    <input type="text" id="localidad" placeholder="Localidad" name="localidad_domicilio_usuario">
+                    <input type="text" id="cp" placeholder="Codigo Postal" name="cp_domicilio_usuario">
+                </fieldset>
+
+                <fieldset class="fieldset-register">
+                    <legend>Usuario</legend>
+                    <input type="email" id="email" placeholder="Correo Electronico" name="email_usuario">
+                    <input type="email" id="repeat-email" placeholder="Repetir Correo Electronico"name="repetiremail_usuario">
+                    <input type="password" id="pass" placeholder="Contraseña"name="contraseña_usuario">
+                    <input type="password" id="repeat-pass" placeholder="Repetir Contraseña"name="repetircontraseña_usuario">
+                </fieldset>
+                
+                <fieldset class="fieldset-register">
+                    <legend>Deseas recibir nuestro newsletter?</legend>
+                        <div>
+                            <input type="checkbox" id="si" name="newsletter_usuario" value="si">
+                            <label for="si">Si</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="no" name="newsletter_usuario" value="no">
+                            <label for="no">No</label>
+                        </div>
+                </fieldset>
+
+                <button type="submit">Enviar</button>
+                <button type="reset">Borrar Datos</button>
+            </form>
+        </main>
+    </body>
+</html>
