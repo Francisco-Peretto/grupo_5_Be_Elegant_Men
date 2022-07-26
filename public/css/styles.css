@@ -1,9 +1,19 @@
+
+/*  estilos generales */
+
 *{
 
     list-style-type: none;
     text-decoration: none;    
+    box-sizing: border-box;
 }
 
+body {
+    font-family: 'Playfair Display', serif;
+}
+
+
+/*  estilos footer */
 
 .footer{
     display: flex;
@@ -72,6 +82,58 @@
     width: 100%;
     justify-content: center;
 }
+
+
+/*  estilos header */
+
+header {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid lightgray;
+}
+
+header section {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.div-imagen {
+    width: 50%;
+}
+
+header img {
+    width: 20%;
+    height: 20%;
+}
+
+.navbar-usuario {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 35%;
+}
+
+.navbar-categorias {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 2%;
+}
+
+
+
 
 
 
