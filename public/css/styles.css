@@ -1,0 +1,77 @@
+*{
+
+    list-style-type: none;
+    text-decoration: none;    
+}
+
+
+.footer{
+    display: flex;
+    background-color: #0e141a;
+    text-align: center; 
+    justify-content: center;
+    flex-direction: column;
+    color: #ffffff;
+}
+.lista{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 10px;
+    margin-right: 20px;
+    color: #ffffff;
+
+}
+
+.link{
+    color: #ffffff;
+
+}
+.titulo{
+    text-align: center;
+    padding-left: 20px;
+    font-size: 50px;
+}
+
+.social{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+}
+
+.icon-list{
+    display: flex;
+    padding: 5px;
+    text-decoration: none;  
+   
+}
+
+.fa-pinterest{
+    color: #ffffff;
+    padding: 10px;
+}
+.fa-facebook{
+    color: #ffffff;
+    padding: 10px;
+}
+.fa-instagram{
+    color: #ffffff;
+    padding: 10px;
+}
+.fa-twitter{
+    color: #ffffff;
+    padding: 10px;
+}
+
+.derechos{
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    border: 1px solid  #131d27;
+    width: 100%;
+    justify-content: center;
+}
+
+
+
