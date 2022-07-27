@@ -18,68 +18,70 @@
     </head>
     <body>
         <main class="cuerpo-register">
-            <h2>Crea tu cuenta</h2>
+            <div class="cabecera-register">
+                <a href="/"><img src="\img\logo08.jpeg" alt="logo"></a>
+                <h2>Crea tu cuenta</h2>
+            </div>
             <form class="formulario-register" action="" method="post">
-
-                <fieldset class="fieldset-register">
-                    <legend>Datos Personales</legend>
-                    <input type="text" id="nombre" placeholder="Nombre/s" name="nombre_usuario">
-                    <input type="text" id="apellido" placeholder="Apellido" name="apellido_usuario">
-                    <input type="number" id="dni" placeholder="DNI" name="dni_usuario">
-                </fieldset>
-
-                <fieldset class="fieldset-register">
-                    <legend>Fecha de Nacimiento</legend>
-                        <input type="date" id="fecha-nac" name="fecha-nac_usuario">
-                </fieldset>
-
-                <fieldset class="fieldset-register">
-                    <legend>Genero</legend>
-                        <div>
-                            <input type="radio" id="masculino" name="genero_usuario" value="masculimo" checked>
-                            <label for="masculimo">Masculino</label>
-                        </div>
-                        <div>
-                            <input type="radio" id="femenino" name="genero_usuario" value="femenino">
-                            <label for="femenino">Femenino</label>
-                        </div>
-                        <div>
-                            <input type="radio" id="otro" name="genero_usuario" value="otro">
-                            <label for="otro">Otro</label>
-                        </div>
-                </fieldset>
                 
-                <fieldset class="fieldset-register">
-                    <legend>Domicilio</legend>
-                    <input type="text" id="calle" placeholder="Calle" name="calle_domicilio_usuario">
-                    <input type="text" id="numero" placeholder="Numero" name="numero_domicilio_usuario">
-                    <input type="text" id="provincia" placeholder="Provincia" name="provincia_domicilio_usuario">
-                    <input type="text" id="localidad" placeholder="Localidad" name="localidad_domicilio_usuario">
-                    <input type="text" id="cp" placeholder="Codigo Postal" name="cp_domicilio_usuario">
-                </fieldset>
+                <label for="nombre">Nombre/s</label>
+                <input type="text" id="nombre" name="nombre_usuario">
 
-                <fieldset class="fieldset-register">
-                    <legend>Usuario</legend>
-                    <input type="email" id="email" placeholder="Correo Electronico" name="email_usuario">
-                    <input type="email" id="repeat-email" placeholder="Repetir Correo Electronico"name="repetiremail_usuario">
-                    <input type="password" id="pass" placeholder="Contraseña"name="contraseña_usuario">
-                    <input type="password" id="repeat-pass" placeholder="Repetir Contraseña"name="repetircontraseña_usuario">
-                </fieldset>
+                <label for="apellido">Apellido</label>
+                <input type="text" id="apellido" name="apellido_usuario">
+
+                <label for="dni">DNI</label>
+                <input type="text" id="dni" name="dni_usuario">
+
+                <label for="fecha-nac">Fecha de Nacimiento</label>
+                <input type="date" id="fecha-nac" name="fecha-nac_usuario">
+
+                <label for="masculimo">Masculino</label>
+                <input type="radio" id="masculino" name="genero_usuario" value="masculimo" checked>
+         
+                <label for="femenino">Femenino</label>
+                <input type="radio" id="femenino" name="genero_usuario" value="femenino">
                 
-                <fieldset class="fieldset-register">
-                    <legend>Deseas recibir nuestro newsletter?</legend>
-                        <div>
-                            <input type="checkbox" id="si" name="newsletter_usuario" value="si">
-                            <label for="si">Si</label>
-                        </div>
-                        <div>
-                            <input type="checkbox" id="no" name="newsletter_usuario" value="no">
-                            <label for="no">No</label>
-                        </div>
-                </fieldset>
+                <label for="otro">Otro</label>
+                <input type="radio" id="otro" name="genero_usuario" value="otro">
+                
+                <label for="provincia">Provincia</label>
+                <input type="text" id="provincia" name="provincia_domicilio_usuario">
+                
+                <label for="localidad">Localidad</label>
+                <input type="text" id="localidad" name="localidad_domicilio_usuario">
+                
+                <label for="cp">Codigo Postal</label>
+                <input type="text" id="cp" name="cp_domicilio_usuario">
+
+                <label for="calle">Calle</label> 
+                <input type="text" id="calle" name="calle_domicilio_usuario">
+                
+                <label for="numero_calle">Nro.</label>
+                <input type="text" id="numero_calle" name="numero_domicilio_usuario">
+
+                <label for="piso">Piso</label> 
+                <input type="text" id="piso" name="piso_domicilio_usuario">
+                
+                <label for="depto">Depto.</label>
+                <input type="text" id="depto" name="depto_domicilio_usuario">
+
+                <label for="telefono">Telefono</label>
+                <input type="tel" id="telefono" name="telefono_domicilio_usuario">
+
+                <label for="email">Correo Electronico</label>
+                <input type="email" id="email" name="email_usuario">
+                
+                <label for="repeat-email">Repetir Correo Electronico</label>
+                <input type="email" id="repeat-email" name="repetiremail_usuario">
+                
+                <label for="pass">Contraseña</label>
+                <input type="password" id="pass" name="contraseña_usuario">
+                
+                <label for="repeat-pass">Repetir Contraseña</label>
+                <input type="password" id="repeat-pass" name="repetircontraseña_usuario">
 
                 <button type="submit">Enviar</button>
-                <button type="reset">Borrar Datos</button>
             </form>
         </main>
     </body>

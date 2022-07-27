@@ -1,0 +1,56 @@
+.cuerpo-register {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 45%;
+    border: 1px solid lightgray;
+    margin: auto;
+    margin-top: 5%;
+}
+
+.cabecera-register {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 3%;
+}
+
+.cabecera-register img {
+    width: 100%;
+    align-self: center;
+}
+
+.cabecera-register a {
+    width:25%;
+}
+
+.formulario-register {
+    width: 95%;
+    margin: auto;
+    padding-left: 10%;
+}
+
+.formulario-register label {
+    display: inline-block;
+    width: 40%;
+    margin-top: 3%;
+}
+
+.formulario-register input {
+    display: inline-block;
+    width: 40%;
+    margin-top: 3%;
+}
+
+.formulario-register button {
+    display: inline-block;
+    width: 20%;
+    margin: 5% 0;
+    border-radius: 5px;
+}
+
+
