@@ -18,18 +18,20 @@
     </head>
     <body>
         <main class="cuerpo-login">
-            <h2>Ingresa a tu cuenta</h2>
-            <form class="formulario-login"action="" method="post">
-                <input type="text" id="email" placeholder="Correo Electronico" name="email_usuario">
-                <input type="password" id="contraseña" placeholder="Contraseña"name="contraseña_usuario">
-                <button type="submit">Enviar</button>
-            </form>
-            <div class="div-recupero-contraseña">
-                <h4><a href="">Olvidaste tu contraseña?</a></h4>
+            <div class="cabecera-login">
+                <a class="img-logo-login" href="/"><img src="\img\logo08.jpeg" alt="logo"></a>
+                <h2>Ingresa a tu cuenta</h2>
             </div>
-            <div class="div-crear-usuario">
-                <h4>Aun no tenes tu cuenta?</h4> 
-                <h4><a href="/register">Creala ahora</a></h4>
+            <form class="formulario-login"action="" method="post">
+                <label for="email">Correo Electronico</label>
+                <input type="text" id="email" placeholder="Correo Electronico" name="email_usuario">
+                <label for="contraseña">Contraseña</label>
+                <input type="password" id="contraseña" placeholder="Contraseña"name="contraseña_usuario">
+                <button type="submit">Ingresar</button>
+            </form>
+            <div class="pie-login">
+                <a href="">Olvidaste tu contraseña?</a>
+                <a href="/register">Aun no tenes tu cuenta? Creala ahora</a>
             </div>
         </main>
     </body>
