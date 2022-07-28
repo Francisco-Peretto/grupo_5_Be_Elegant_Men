@@ -23,65 +23,98 @@
                 <h2>Crea tu cuenta</h2>
             </div>
             <form class="formulario-register" action="" method="post">
-                
-                <label for="nombre">Nombre/s</label>
-                <input type="text" id="nombre" name="nombre_usuario">
+                <div>
+                    <label for="nombre">Nombre/s</label>
+                    <input type="text" id="nombre" name="nombre_usuario">
+                </div>
 
+                <div>
                 <label for="apellido">Apellido</label>
                 <input type="text" id="apellido" name="apellido_usuario">
+                </div>
 
+                <div>
                 <label for="dni">DNI</label>
                 <input type="text" id="dni" name="dni_usuario">
-
+                </div>
+                
+                <div>
                 <label for="fecha-nac">Fecha de Nacimiento</label>
                 <input type="date" id="fecha-nac" name="fecha-nac_usuario">
+                </div>
 
-                <label for="masculimo">Masculino</label>
-                <input type="radio" id="masculino" name="genero_usuario" value="masculimo" checked>
-         
-                <label for="femenino">Femenino</label>
-                <input type="radio" id="femenino" name="genero_usuario" value="femenino">
-                
-                <label for="otro">Otro</label>
-                <input type="radio" id="otro" name="genero_usuario" value="otro">
-                
+                <div>
+                <label for="genero">Genero</label>
+                <select id="genero" name="genero_usuario">
+                    <option value="masculino">Masculino</option>
+                    <option value="femenino">Femenino</option>
+                    <option value="otro">Otro</option>
+                </select>
+                </div>
+
+                <div>
                 <label for="provincia">Provincia</label>
                 <input type="text" id="provincia" name="provincia_domicilio_usuario">
-                
+                </div>
+
+                <div>
                 <label for="localidad">Localidad</label>
                 <input type="text" id="localidad" name="localidad_domicilio_usuario">
-                
+                </div>
+
+                <div>
                 <label for="cp">Codigo Postal</label>
                 <input type="text" id="cp" name="cp_domicilio_usuario">
+                </div>
 
+                <div>
                 <label for="calle">Calle</label> 
                 <input type="text" id="calle" name="calle_domicilio_usuario">
-                
+                </div>
+
+                <div>
                 <label for="numero_calle">Nro.</label>
                 <input type="text" id="numero_calle" name="numero_domicilio_usuario">
+                </div>
 
+                <div>
                 <label for="piso">Piso</label> 
                 <input type="text" id="piso" name="piso_domicilio_usuario">
-                
+                </div>
+
+                <div>
                 <label for="depto">Depto.</label>
                 <input type="text" id="depto" name="depto_domicilio_usuario">
+                </div>
 
+                <div>
                 <label for="telefono">Telefono</label>
                 <input type="tel" id="telefono" name="telefono_domicilio_usuario">
+                </div>
 
+                <div>
                 <label for="email">Correo Electronico</label>
                 <input type="email" id="email" name="email_usuario">
-                
+                </div>
+
+                <div>
                 <label for="repeat-email">Repetir Correo Electronico</label>
                 <input type="email" id="repeat-email" name="repetiremail_usuario">
-                
+                </div>
+
+                <div>
                 <label for="pass">Contraseña</label>
                 <input type="password" id="pass" name="contraseña_usuario">
-                
+                </div>
+
+                <div>
                 <label for="repeat-pass">Repetir Contraseña</label>
                 <input type="password" id="repeat-pass" name="repetircontraseña_usuario">
-
+                </div>
+                
+                <div>
                 <button type="submit">Enviar</button>
+                </div>
             </form>
         </main>
     </body>
