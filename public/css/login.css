@@ -6,6 +6,7 @@
     align-items: center;
     width: 45%;
     border: 1px solid lightgray;
+    border-radius: 15px;
     margin: auto;
     margin-top: 5%;
 }
@@ -25,6 +26,7 @@
 }
 
 .cabecera-login a {
+    margin-top: 5%;
     width:25%;
 }
 
@@ -52,7 +54,9 @@
 
 .formulario-login button {
     width: 30%;
-    margin: 5% 0;
+    margin: 7% 0;
+    padding: 1%;
+    text-align: center;
     border-radius: 5px;
 }
 

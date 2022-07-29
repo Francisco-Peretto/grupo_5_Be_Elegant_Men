@@ -6,6 +6,7 @@
     align-items: center;
     width: 45%;
     border: 1px solid lightgray;
+    border-radius: 15px;
     margin: auto;
     margin-top: 5%;
 }
@@ -20,6 +21,7 @@
 }
 
 .cabecera-register img {
+    margin-top: 5%;
     width: 100%;
     align-self: center;
 }
@@ -39,7 +41,7 @@
 }
 
 .formulario-register label {
-    width: 80%;
+    width: 100%;
     margin-top: 3%;
     margin-right: 3%;
 }
@@ -50,9 +52,29 @@
 }
 
 .formulario-register button {
-    width: 50%;
+    width: 20%;
+    padding: 1%;
     margin: 5% 0;
     border-radius: 5px;
+}
+
+.formulario-register section {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    width: 100%;
+    margin-bottom: 3%;
+}
+
+.formulario-register article {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    width: 45%;
 }
 
 .formulario-register div {
@@ -61,10 +83,11 @@
     flex-direction: column;
     justify-content: space-around;
     align-items: flex-start;
-    width: 80%;
+    width: 100%;
 }
 
-
-
-
-
+.div-boton {
+    position: relative;
+    top: -15px;
+    left: 78%;
+}

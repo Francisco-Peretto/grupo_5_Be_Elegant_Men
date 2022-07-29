@@ -23,97 +23,115 @@
                 <h2>Crea tu cuenta</h2>
             </div>
             <form class="formulario-register" action="" method="post">
-                <div>
-                    <label for="nombre">Nombre/s</label>
-                    <input type="text" id="nombre" name="nombre_usuario">
-                </div>
+                <section class="sec-datos-personales">
+                    <article class="col-derecha">
+                        <div>
+                            <label for="nombre">Nombre/s</label>
+                            <input type="text" id="nombre" name="nombre_usuario" tabindex="1">
+                        </div>
+                        <div>
+                            <label for="dni">DNI</label>
+                            <input type="text" id="dni" name="dni_usuario" tabindex="3">
+                        </div>
+                        <div>
+                            <label for="genero">Genero</label>
+                            <select id="genero" name="genero_usuario" tabindex="5">
+                                <option value="masculino">Masculino</option>
+                                <option value="femenino">Femenino</option>
+                                <option value="otro">Otro</option>
+                            </select>
+                        </div>
+                    </article> 
+                    <article class="col-izquierda">
+                        <div>
+                            <label for="apellido">Apellido</label>
+                            <input type="text" id="apellido" name="apellido_usuario" tabindex="2">
+                        </div>
+                        <div>
+                            <label for="fecha-nac">Fecha de Nacimiento</label>
+                            <input type="date" id="fecha-nac" name="fecha-nac_usuario" tabindex="4">
+                        </div>
+                    </article>
+                </section>
 
-                <div>
-                <label for="apellido">Apellido</label>
-                <input type="text" id="apellido" name="apellido_usuario">
-                </div>
+                <section class="sec-datos-localidad">
+                    <article class="col-derecha">
+                        <div>
+                            <label for="provincia">Provincia</label>
+                            <input type="text" id="provincia" name="provincia_domicilio_usuario" tabindex="6">
+                        </div>
+                        <div>
+                            <label for="cp">Codigo Postal</label>
+                            <input type="text" id="cp" name="cp_domicilio_usuario" tabindex="8">
+                        </div>
+                    </article>
+                    <article class="col-izquierda">
+                        <div>
+                            <label for="localidad">Localidad</label>
+                            <input type="text" id="localidad" name="localidad_domicilio_usuario" tabindex="7">
+                        </div>
+                    </article>
+                </section>
 
-                <div>
-                <label for="dni">DNI</label>
-                <input type="text" id="dni" name="dni_usuario">
-                </div>
-                
-                <div>
-                <label for="fecha-nac">Fecha de Nacimiento</label>
-                <input type="date" id="fecha-nac" name="fecha-nac_usuario">
-                </div>
+                <section class="sec-datos-direccion">
+                    <article class="col-derecha">
+                        <div>
+                            <label for="calle">Calle</label> 
+                            <input type="text" id="calle" name="calle_domicilio_usuario" tabindex="9">
+                        </div>
+                        <div>
+                            <label for="piso">Piso</label> 
+                            <input type="text" id="piso" name="piso_domicilio_usuario" tabindex="11">
+                        </div>
+                    </article>
+                    <article class="col-izquierda">
+                        <div>
+                            <label for="numero_calle">Nro.</label>
+                            <input type="text" id="numero_calle" name="numero_domicilio_usuario" tabindex="10">
+                        </div>
+                        <div>
+                            <label for="depto">Depto.</label>
+                            <input type="text" id="depto" name="depto_domicilio_usuario" tabindex="12">
+                        </div>
+                    </article>
+                </section>
 
-                <div>
-                <label for="genero">Genero</label>
-                <select id="genero" name="genero_usuario">
-                    <option value="masculino">Masculino</option>
-                    <option value="femenino">Femenino</option>
-                    <option value="otro">Otro</option>
-                </select>
-                </div>
+                <section class="sec-telefono">
+                    <article class="col-derecha">
+                        <div>
+                            <label for="telefono">Telefono</label>
+                            <input type="tel" id="telefono" name="telefono_domicilio_usuario" tabindex="13">
+                        </div>
+                    </article>
+                    <article class="col-izquierda"></article>
+                </section>
 
-                <div>
-                <label for="provincia">Provincia</label>
-                <input type="text" id="provincia" name="provincia_domicilio_usuario">
-                </div>
+                <section class="sec-datos-usuario">
+                    <article class="col-derecha">
+                        <div>
+                            <label for="email">Correo Electronico</label>
+                            <input type="email" id="email" name="email_usuario" tabindex="14">
+                        </div>
+                        <div>
+                            <label for="pass">Contraseña</label>
+                            <input type="password" id="pass" name="contraseña_usuario" tabindex="16">
+                        </div>
+                    </article>
+                    
+                    <article class="col-izquierda">
+                        <div>
+                            <label for="repeat-email">Repetir Correo Electronico</label>
+                            <input type="email" id="repeat-email" name="repetiremail_usuario" tabindex="15">
+                        </div>
+                        <div>
+                            <label for="repeat-pass">Repetir Contraseña</label>
+                            <input type="password" id="repeat-pass" name="repetircontraseña_usuario" tabindex="17">
+                        </div>
+                    </article>
+                </section>
 
-                <div>
-                <label for="localidad">Localidad</label>
-                <input type="text" id="localidad" name="localidad_domicilio_usuario">
-                </div>
-
-                <div>
-                <label for="cp">Codigo Postal</label>
-                <input type="text" id="cp" name="cp_domicilio_usuario">
-                </div>
-
-                <div>
-                <label for="calle">Calle</label> 
-                <input type="text" id="calle" name="calle_domicilio_usuario">
-                </div>
-
-                <div>
-                <label for="numero_calle">Nro.</label>
-                <input type="text" id="numero_calle" name="numero_domicilio_usuario">
-                </div>
-
-                <div>
-                <label for="piso">Piso</label> 
-                <input type="text" id="piso" name="piso_domicilio_usuario">
-                </div>
-
-                <div>
-                <label for="depto">Depto.</label>
-                <input type="text" id="depto" name="depto_domicilio_usuario">
-                </div>
-
-                <div>
-                <label for="telefono">Telefono</label>
-                <input type="tel" id="telefono" name="telefono_domicilio_usuario">
-                </div>
-
-                <div>
-                <label for="email">Correo Electronico</label>
-                <input type="email" id="email" name="email_usuario">
-                </div>
-
-                <div>
-                <label for="repeat-email">Repetir Correo Electronico</label>
-                <input type="email" id="repeat-email" name="repetiremail_usuario">
-                </div>
-
-                <div>
-                <label for="pass">Contraseña</label>
-                <input type="password" id="pass" name="contraseña_usuario">
-                </div>
-
-                <div>
-                <label for="repeat-pass">Repetir Contraseña</label>
-                <input type="password" id="repeat-pass" name="repetircontraseña_usuario">
-                </div>
-                
-                <div>
-                <button type="submit">Enviar</button>
+                <div class="div-boton">
+                    <button type="submit" tabindex="18">Enviar</button>
                 </div>
             </form>
         </main>
