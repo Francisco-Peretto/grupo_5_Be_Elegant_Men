@@ -17,3 +17,6 @@ Webs que sirven de referencia para este market place:
 * : https://www.dafiti.com.ar : web de referencia para el home
 * : https://www.mercadolibre.com.ar : web utilizada por ser referente en el rubro de tiendas online
 * : https://www.ae.com/intl/es/cart : web utilizada para el carrito de compras
+
+Web de tablero de trabajo:
+* : https://trello.com/b/xcOe6A5e/proyecto-dh
