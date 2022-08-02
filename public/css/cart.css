@@ -1,27 +1,6 @@
-@import url('header.css');
-@import url('login.css');
-@import url('register.css');
-@import url('footer.css');
-@import url('productDetail.css');
-
-
-*{
-
-    list-style-type: none;
-    text-decoration: none;    
-    box-sizing: border-box;
-}
-
-
-
-body {
-    font-family: 'Playfair Display', serif;
-}
-
 .image-box{
 	box-shadow: #0e141a;
 	border: #0e141a;
-	
 }
 
 .Header{
