@@ -11,10 +11,10 @@ const port = process.env.PORT || 3030;
 
 app.listen(port, () => console.log("Servidor en linea"))
 
-app.get('/', (req , res) => res.sendFile(path.resolve(__dirname,'./views/index.ejs')))
-app.get('/login', (req , res) => res.sendFile(path.resolve(__dirname,'./views/login.ejs')))
-app.get('/register', (req , res) => res.sendFile(path.resolve(__dirname,'./views/register.ejs')))
-app.get('/productDetail', (req , res) => res.sendFile(path.resolve(__dirname,'./views/productDetail.ejs')))
-app.get('/cart', (req , res) => res.sendFile(path.resolve(__dirname,'./views/cart.ejs')))
+app.get('/', (req , res) => res.render(path.resolve(__dirname,'./views/index.ejs')))
+app.get('/login', (req , res) => res.render(path.resolve(__dirname,'./views/login.ejs')))
+app.get('/register', (req , res) => res.render(path.resolve(__dirname,'./views/register.ejs')))
+app.get('/productDetail', (req , res) => res.render(path.resolve(__dirname,'./views/productDetail.ejs')))
+app.get('/cart', (req , res) => res.render(path.resolve(__dirname,'./views/cart.ejs')))
 
 app.use(express.static(publicPath));
