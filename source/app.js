@@ -1,17 +1,16 @@
 const express = require('express');
+const app = express();
+const config = require('./modules/server');
+const {join} = require('path');
+
 const routesProducts = require('./routes/products');
 const routesUsers = require('./routes/users');
-const app = express();
-const path = require('path')
+const statics = require('./modules/static');
 
-const publicPath = path.resolve(__dirname,'../public');
+app.listen(config.port,config.start());
 
-const port = process.env.PORT || 3030;
-app.set ("view engine", "ejs")          ////// setup de EJS
-app.listen(port, () => console.log("Servidor en linea"))
+app.set ("view engine", "ejs")
 
+app.use(statics(join(__dirname,"../public")));
 app.use('/', routesProducts);
-
 app.use('/users/', routesUsers);
-
-app.use(express.static(publicPath));
