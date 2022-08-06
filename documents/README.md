@@ -28,7 +28,7 @@ Wireframes:
 Web de tablero de trabajo:
 * : https://trello.com/b/xcOe6A5e/proyecto-dh
 
-Paleta de colores
-#0b335b
-#dae0ed
-#035c5c
+Paleta de colores:
+* : #0b335b
+* : #dae0ed
+* : #035c5c
