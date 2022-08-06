@@ -16,7 +16,14 @@ Webs que sirven de referencia para este market place:
 * : https://www.diselo.com.ar : esta pagina sirve de referencia para el Formulario de login y registro.
 * : https://www.dafiti.com.ar : web de referencia para el home
 * : https://www.mercadolibre.com.ar : web utilizada por ser referente en el rubro de tiendas online
-* : https://www.ae.com/intl/es/cart : web utilizada para el carrito de compras
+* : https://www.ae.com/intl/es/cart : web utilizada para el carrito de compras7
+
+Wirefrmas:
+* : Home - https://wireframe.cc/jP8dsw
+* : Detalle de Producto - https://wireframe.cc/Q6abWW
+* : Carrito de Compras - https://wireframe.cc/pro/pp/f25b5e63d561890 
+* : Formulario de Registro - https://wireframe.cc/26u2Sy
+* : Formulario de Login - https://wireframe.cc/khVH86
 
 Web de tablero de trabajo:
 * : https://trello.com/b/xcOe6A5e/proyecto-dh
