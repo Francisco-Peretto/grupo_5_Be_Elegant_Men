@@ -18,7 +18,7 @@ Webs que sirven de referencia para este market place:
 * : https://www.mercadolibre.com.ar : web utilizada por ser referente en el rubro de tiendas online
 * : https://www.ae.com/intl/es/cart : web utilizada para el carrito de compras7
 
-Wirefrmas:
+Wireframes:
 * : Home - https://wireframe.cc/jP8dsw
 * : Detalle de Producto - https://wireframe.cc/Q6abWW
 * : Carrito de Compras - https://wireframe.cc/pro/pp/f25b5e63d561890 
