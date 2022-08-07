@@ -5,14 +5,36 @@
         <%- include('../partials/header.ejs') %>
         
         <main class="cuerpo-login">
-            <h2>Ingresa a tu cuenta</h2>
+            <h1>Ingresa a tu cuenta</h1>
             <form class="formulario-login"action="" method="post">
                 <input type="text" id="email" name="email_usuario" placeholder="Correo Electronico">
                 <input type="password" id="contraseña" name="contraseña_usuario" placeholder="Contraseña">
                 <button type="submit">Ingresar</button>
             </form>
             <a href="#">Olvidaste tu contraseña?</a>
-            <a href="\register.ejs">Aun no tenes tu cuenta? Creala ahora</a>
+            <a href="../users/register">Aun no tenes tu cuenta? Creala ahora</a>
         </main>
+        <footer class= "footer"> 
+            <H1 class="titulo">BE ELEGANT MEN</H1>
+            <li class="lista">
+                <ul><a class="link" href="#">Tienda</ul></a>
+                <ul><a class="link" href="#">Historia</ul></a>
+                <ul><a class="link" href="#">Contacto</ul></a>
+                <ul><a class="link" href="#">Ayuda</ul></a>
+            </li>
+            <div class="social">
+                <ul class="icon-list">
+                    <li><a href="#"></li><i class="fab fa-instagram"></i></a>
+                    <li><a href="#"></li><i class="fab fa-facebook"></i></a>
+                    <li><a href="#"></li><i class="fab fa-pinterest"></i></a>
+                    <li><a href="#"></li><i class="fab fa-twitter"></i></a>
+                </ul>
+            </div>
+            <div class="derechos">
+                <ul>© 2022 Be Elegant Men</ul>
+                <ul>Terminos de servicio</ul>
+                <ul>Politica de privacidad</ul>
+            </div>
+        </footer>
     </body>
 </html>

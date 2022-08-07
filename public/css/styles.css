@@ -6,16 +6,22 @@
 @import url('homeBody.css');
 @import url('cart.css');
 
-/*  estilos generales */
+/*  
+Paleta de colores
 
-*{
+: #0b335b
+: #dae0ed
+: #035c5c 
+*/
 
+* {
     list-style-type: none;
     text-decoration: none;    
     box-sizing: border-box;
 }
 
 body {
+    margin: 0%;
     font-family: 'Playfair Display', serif;
 }
 

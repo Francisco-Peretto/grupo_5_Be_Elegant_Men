@@ -5,7 +5,7 @@
     justify-content: space-around;
     align-items: center;
     width: 40%;
-    border: 1px solid #dae0ed;
+    border: 1px solid #035c5c ;
     border-radius: 15px;
     margin: auto;
     margin-top: 5%;
@@ -46,4 +46,5 @@
     padding: 1%;
     text-align: center;
     border-radius: 5px;
+    background-color: #dae0ed ;
 }
