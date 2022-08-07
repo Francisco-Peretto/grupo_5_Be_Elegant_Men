@@ -1,38 +1,18 @@
-<!DOCTYPE html>
-
-<html>
-    <head lang="en">
-        <meta charset="UTF-8">
-        <meta name=”viewport” content=”with-device.wid th, initial-scale= 1”>
-
-        <!-- fuente playfair -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
-
-        <!-- link a font awesome -->
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet">
-   
-        <!-- link a hoja de estilos -->
-        <link href="/css/styles.css" rel="stylesheet">
-    </head>
+<%- include('../partials/head.ejs') %>
+  
     <body>
+
+        <%- include('../partials/header.ejs') %>
+        
         <main class="cuerpo-login">
-            <div class="cabecera-login">
-                <a href="/"><img src="\img\logo09.jpg" alt="logo"></a>
-                <h2>Ingresa a tu cuenta</h2>
-            </div>
+            <h2>Ingresa a tu cuenta</h2>
             <form class="formulario-login"action="" method="post">
-                <label for="email">Correo Electronico</label>
-                <input type="text" id="email" name="email_usuario">
-                <label for="contraseña">Contraseña</label>
-                <input type="password" id="contraseña" name="contraseña_usuario">
+                <input type="text" id="email" name="email_usuario" placeholder="Correo Electronico">
+                <input type="password" id="contraseña" name="contraseña_usuario" placeholder="Contraseña">
                 <button type="submit">Ingresar</button>
             </form>
-            <div class="pie-login">
-                <a href="">Olvidaste tu contraseña?</a>
-                <a href="/register">Aun no tenes tu cuenta? Creala ahora</a>
-            </div>
+            <a href="#">Olvidaste tu contraseña?</a>
+            <a href="\register.ejs">Aun no tenes tu cuenta? Creala ahora</a>
         </main>
     </body>
 </html>

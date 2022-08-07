@@ -1,29 +1,8 @@
 <%- include('../partials/head.ejs') %>
 
     <body>
-        <header>
-            <section class="sec-header-superior">
-                <a class="img-logo" href="/"><img src="\img\logo09.jpg" alt="logo"></a>
-                <nav class="navbar-usuario">
-                    <form class="form-busqeda" action="" method="">
-                        <input type="search">
-                        <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
-                    </form>
-                    <abbr title="Tus Articulos"><a class="link-compras" href="/cart"><i class="fa-solid fa-cart-shopping"></i></a></abbr>
-                    <abbr title="Ingresa a tu Cuenta"><a class="link-login" href="/login"><i class="fa-solid fa-user"></i></a></abbr>
-                </nav>
-            </section>
-            <section class="sec-header-inferior">
-                <nav class="navbar-categorias">
-                    <a href="">Ambos</a>
-                    <a href="">Pantalones de Vestir</a>
-                    <a href="">Camisas</a>
-                    <a href="">Sacos Informales</a>
-                    <a href="">Zapatos</a>
-                    <a href="">Corbatas</a>
-                </nav>
-            </section>
-        </header>
+
+        <%- include('../partials/header.ejs') %>
 
         <main class="cuerpo-productDetail">
             <section class="section-productDetail">
@@ -140,6 +119,6 @@
                 <ul>Terminos de servicio</ul>
                 <ul>Politica de privacidad</ul>
             </div>
-          </footer>
+        </footer>
     </body>
 </html>

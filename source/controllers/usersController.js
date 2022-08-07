@@ -10,8 +10,8 @@ const usersController = {
     },
 
     register: (req , res) => {
-        res.render(path.resolve(__dirname,'.../views/users/productDetail.ejs'));
-    }
+        res.render(path.resolve(__dirname,'../views/users/register.ejs'));
+    },
 }
 
 module.exports = usersController;

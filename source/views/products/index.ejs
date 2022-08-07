@@ -1,53 +1,8 @@
-<!DOCTYPE html>
-
-<html>
-  <head lang="en">
-    <meta charset="UTF-8" />
-    <meta name="”viewport”" content="”with-device.wid" th, initial-scale="1”" />
-
-    <!-- fuente playfair -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap"
-      rel="stylesheet"
-    />
-
-    <!-- link a font awesome -->
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-      rel="stylesheet"
-    />
-
-    <!-- link a hoja de estilos -->
-    <link href="/css/styles.css" rel="stylesheet"/>
-  </head>
-  <title>Be Elegant Men</title>
+<%- include('../partials/head.ejs') %>
+  
   <body>
 
-    <header>
-      <section class="sec-header-superior">
-          <a class="img-logo" href="/"><img src="\img\logo09.jpg" alt="logo"></a>
-          <nav class="navbar-usuario">
-              <form class="form-busqeda" action="" method="">
-                  <input type="search">
-                  <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
-              </form>
-              <abbr title="Tus Articulos"><a class="link-compras" href="/cart"><i class="fa-solid fa-cart-shopping"></i></a></abbr>
-              <abbr title="Ingresa a tu Cuenta"><a class="link-login" href="/login"><i class="fa-solid fa-user"></i></a></abbr>
-          </nav>
-      </section>
-      <section class="sec-header-inferior">
-          <nav class="navbar-categorias">
-              <a href="">Ambos</a>
-              <a href="">Pantalones de Vestir</a>
-              <a href="">Camisas</a>
-              <a href="">Sacos Informales</a>
-              <a href="">Zapatos</a>
-              <a href="">Corbatas</a>
-          </nav>
-      </section>
-    </header>
+    <%- include('../partials/header.ejs') %>
 
     <main>
       <h2>Nuestros Productos</h2>
@@ -113,6 +68,5 @@
           <ul>Politica de privacidad</ul>
       </div>
     </footer>
-    
   </body>
 </html>

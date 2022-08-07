@@ -1,93 +1,49 @@
 .cuerpo-register {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    width: 45%;
-    border: 1px solid lightgray;
+    width: 40%;
+    border: 1px solid #dae0ed;
     border-radius: 15px;
     margin: auto;
     margin-top: 5%;
-}
-
-.cabecera-register {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-    margin-bottom: 3%;
-}
-
-.cabecera-register img {
-    margin-top: 5%;
-    width: 100%;
-    align-self: center;
-}
-
-.cabecera-register a {
-    width:25%;
+    margin-bottom: 5%;
 }
 
 .formulario-register {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    width: 95%;
-    padding:  0 5%;
-}
-
-.formulario-register label {
-    width: 100%;
-    margin-top: 3%;
-    margin-right: 3%;
-}
-
-.formulario-register input,select {
-    width: 100%;
-    margin-top: 3%;
-}
-
-.formulario-register button {
-    width: 20%;
-    padding: 1%;
-    margin: 5% 0;
-    border-radius: 5px;
+    width: 90%;
+    padding: 2%;
 }
 
 .formulario-register section {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     flex-direction: row;
-    justify-content: space-around;
-    align-items: flex-start;
+    justify-content: space-between;
+    align-items: center;
     width: 100%;
     margin-bottom: 3%;
 }
 
-.formulario-register article {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: flex-start;
-    width: 45%;
+.formulario-register section input {
+    width: 48%;
+    height: 30px;
 }
 
-.formulario-register div {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: flex-start;
+.formulario-register section .input-email {
     width: 100%;
 }
 
-.div-boton {
-    position: relative;
-    top: -15px;
-    left: 78%;
+.formulario-register section button {
+    width: 30%;
+    padding: 1%;
+    text-align: center;
+    border-radius: 5px;
 }

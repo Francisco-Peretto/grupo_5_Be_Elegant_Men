@@ -6,6 +6,6 @@ router.get('/cart', usersController.cart);
 
 router.get('/login', usersController.login);
 
-router.get('/productDetail', usersController.register)
+router.get('/register', usersController.register)
 
 module.exports = router;
