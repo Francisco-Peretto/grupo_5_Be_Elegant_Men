@@ -7,6 +7,7 @@
     align-items: center;
     margin-top: 2%;
     margin-bottom: 2%;
+    
 }
 
 .producto a {
@@ -16,15 +17,32 @@
     justify-content: space-around;
     align-items: center;
     width: 100%;
+    box-shadow: 0px 0px 10px rgb(100 100 100);
+    
 }
 
 .producto img {
-    width: 350px;
+    width: 400px;
     height: 500px;
+    margin: 5px;
 }
 
 main h2 {
     text-align: center;
+}
+
+.producto{
+
+    margin: 2% 2%;
+
+}
+
+.producto p {
+
+    font-size: 18px;
+
+
+
 }
     
 
