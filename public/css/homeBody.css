@@ -7,7 +7,7 @@
     align-items: center;
     margin-top: 2%;
     margin-bottom: 2%;
-    
+    background-color: black;
 }
 
 .producto a {
@@ -17,7 +17,7 @@
     justify-content: space-around;
     align-items: center;
     width: 100%;
-    box-shadow: 0px 0px 10px rgb(100 100 100);
+    box-shadow: 0px 0px 10px rgb(224 197 51 / 73%);
     
 }
 
@@ -41,7 +41,7 @@ main h2 {
 
     font-size: 18px;
     font-weight: bold;
-    color:#0b335b
+    color:#adb1b5
  }
     
 
