@@ -17,14 +17,24 @@ header {
     width: 100%;
 }
 
+.sec-header-superior h2 {
+    color: #dae0ed;
+}
+
 .contenedor-img {
-    width: 10%;
+    width: 12%;
 }
 
 .img-logo {
     width: 100%;
     margin: auto;
     display: block;
+}
+
+.img-logo:hover {
+    transform: rotateX(360deg);
+    transition-property: transform;
+    transition-duration: 5s;
 }
 
 .form-busqueda {
@@ -53,6 +63,21 @@ header {
 .navbar-usuario i {
     color: #dae0ed;
     font-size: 22px;
+
+    display:block!important;
+    -webkit-transition:-webkit-transform 0.5s ease-out;
+    -moz-transition:-moz-transform 0.5s ease-out;
+    -o-transition:-o-transform 0.5s ease-out;
+    -ms-transition:-ms-transform 0.5s ease-out;
+    transition:transform 0.5s ease-out;
+}
+
+.navbar-usuario i:hover {
+    -moz-transform: scale(1.5);
+    -webkit-transform: scale(1.5);
+    -o-transform: scale(1.5);
+    -ms-transform: scale(1.5);
+    transform: scale(1.5)
 }
 
 .navbar-categorias {
@@ -68,4 +93,19 @@ header {
 .navbar-categorias a {
     color: #dae0ed;
     font-size: 20px;
+
+    display:block!important;
+    -webkit-transition:-webkit-transform 0.5s ease-out;
+    -moz-transition:-moz-transform 0.5s ease-out;
+    -o-transition:-o-transform 0.5s ease-out;
+    -ms-transition:-ms-transform 0.5s ease-out;
+    transition:transform 0.5s ease-out;
+}
+
+.navbar-categorias a:hover {
+    -moz-transform: scale(1.5);
+    -webkit-transform: scale(1.5);
+    -o-transform: scale(1.5);
+    -ms-transform: scale(1.5);
+    transform: scale(1.5)
 }

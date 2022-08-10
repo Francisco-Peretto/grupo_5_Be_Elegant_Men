@@ -5,7 +5,7 @@
     justify-content: space-around;
     align-items: center;
     width: 40%;
-    border: 1px solid #035c5c ;
+    border: 1px solid #0b335b ;
     border-radius: 15px;
     margin: auto;
     margin-top: 5%;
@@ -41,10 +41,30 @@
     width: 100%;
 }
 
-.formulario-register section button {
+
+
+.formulario-register button {
     width: 30%;
-    padding: 1%;
     text-align: center;
-    border-radius: 5px;
-    background-color: #dae0ed ;
+    background-color: #0b335b;
+    color: #fff;
+    font-size: 1rem;
+    padding: 1%;
+    border: 2px solid;
+    border-radius: .5rem;
+    cursor: pointer;
+    transition: all 1s ease;
+    box-shadow: .5rem .5rem 1rem #ccc, 
+        -.5rem -.5rem 1rem #fff;
+}
+
+.formulario-register button:hover {
+    box-shadow: .5rem .5rem 1rem #fff, 
+    -.5rem -.5rem 1rem #ccc;
+    
+}
+
+.formulario-register button:active {
+    box-shadow: inset .2rem .2rem 1rem #fff, 
+    inset -.2rem -.2rem 1rem #ccc;
 }
