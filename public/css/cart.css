@@ -161,19 +161,33 @@
 	color: #202020;
 	justify-content: center;
 }
-.button{
-	margin-top: 10px;
-	margin-left: 25%;
-	width: 50%;
-	height: 40px;
-	border: none;
-	background-color: #0e4581;
-	
-	cursor: pointer;
-	font-size: 16px;
-	align-items: center;
-	font-weight: 600;
-	color: white
+.button {
+	display: block;
+	margin: auto;
+	margin-top: 1%;
+    width: 12%;
+    text-align: center;
+    background-color: #0e141a;
+    color: #fff;
+    font-size: 1rem;
+	padding: 6px;
+
+    border: 2px solid;
+    border-radius: .5rem;
+    cursor: pointer;
+    transition: all 1s ease;
+    box-shadow: .5rem .5rem 1rem #ccc, 
+        -.5rem -.5rem 1rem #fff;
+}
+
+.button:hover {
+    box-shadow: .5rem .5rem 1rem #fff, 
+    -.5rem -.5rem 1rem #ccc;
+}
+
+.button:active {
+    box-shadow: inset .2rem .2rem 1rem #fff, 
+    inset -.2rem -.2rem 1rem #ccc;
 }
 
 .checkout{

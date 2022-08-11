@@ -17,9 +17,21 @@
                     <input type="password" id="pass" name="contraseña_usuario" placeholder="Contraseña">
                     <input type="password" id="repeat-pass" name="repetircontraseña_usuario" placeholder="Confirmar Contraseña">
                 </section>
+                <div>
+                    <label>Tipo Usuario</label>
+                    <input type="radio" id="comprador" name="tipo_usuario" value="Comprador" checked>
+                    <label for="comprador">Comprador</label>
+                    <input type="radio" id="vendedor" name="tipo_usuario" value="Vendedor">
+                    <label for="vendedor">Vendedor</label>
+                </div>
+                <div>
+                    <label>Foto de Perfil</label>
+                    <input type="file" id="foto" name="foto_usuario">
+                </div>
                 <section>
                     <button type="submit">Crear</button>
                 </section>
+
             </form>
         </main>
         

@@ -34,7 +34,19 @@ header {
 .img-logo:hover {
     transform: rotateX(360deg);
     transition-property: transform;
-    transition-duration: 5s;
+    transition-duration: 2s;
+}
+
+@keyframes logo-header {
+    0% { transform: rotateX(0deg);}
+    25% { transform: rotateX(90deg);}
+    50% { transform: rotateX(180deg);}
+    75% { transform: rotateX(270deg);}
+    100% { transform: rotateX(360deg);}
+}
+
+.img-logo {
+    animation: logo-header 2s 1;
 }
 
 .form-busqueda {

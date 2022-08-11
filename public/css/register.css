@@ -12,6 +12,10 @@
     margin-bottom: 5%;
 }
 
+.cuerpo-register:hover {
+    border: 3px solid #0b335b ;
+}
+
 .formulario-register {
     display: flex;
     flex-wrap: nowrap;
@@ -22,6 +26,16 @@
     padding: 2%;
 }
 
+.formulario-register div {
+    width: 100%;
+    margin-top: 0%;
+    margin-bottom: 3%;
+}
+
+.formulario-register label {
+    margin-right: 2%;
+}
+
 .formulario-register section {
     display: flex;
     flex-wrap: nowrap;
@@ -29,7 +43,7 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    margin-bottom: 3%;
+    margin-bottom: 2%;
 }
 
 .formulario-register section input {
@@ -41,12 +55,10 @@
     width: 100%;
 }
 
-
-
 .formulario-register button {
     width: 30%;
     text-align: center;
-    background-color: #0b335b;
+    background-color: #0e141a;
     color: #fff;
     font-size: 1rem;
     padding: 1%;

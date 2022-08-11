@@ -13,6 +13,10 @@
     padding-bottom: 2%;
 }
 
+.cuerpo-login:hover {
+    border: 3px solid #0b335b ;
+}
+
 .formulario-login {
     display: flex;
     flex-wrap: nowrap;
@@ -32,7 +36,7 @@
 .formulario-login button {
     width: 30%;
     text-align: center;
-    background-color: #0b335b;
+    background-color: #0e141a;
     color: #fff;
     font-size: 1rem;
     padding: 1%;
@@ -47,8 +51,7 @@
 
 .formulario-login button:hover {
     box-shadow: .5rem .5rem 1rem #fff, 
-    -.5rem -.5rem 1rem #ccc;
-    
+    -.5rem -.5rem 1rem #ccc; 
 }
 
 .formulario-login button:active {
