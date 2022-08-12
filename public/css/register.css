@@ -28,7 +28,7 @@
 
 .formulario-register div {
     width: 100%;
-    margin-top: 0%;
+    margin-top: 2%;
     margin-bottom: 3%;
 }
 
@@ -57,6 +57,8 @@
 
 .formulario-register button {
     width: 30%;
+    margin-left: 35%;
+    margin-top: 2%;
     text-align: center;
     background-color: #0e141a;
     color: #fff;
@@ -80,3 +82,37 @@
     box-shadow: inset .2rem .2rem 1rem #fff, 
     inset -.2rem -.2rem 1rem #ccc;
 }
+
+/*estilo para el input file*/
+
+.file-select {
+    position: relative;
+    display: inline-block;
+  }
+  
+.file-select::before {
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    width: 40%;
+    content: 'Seleccionar';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+  }
+  
+  .file-select input[type="file"] {
+    opacity: 0;
+    width: 200px;
+    height: 32px;
+    display: inline-block;
+  }
+  
+  #foto_usuario::before {
+    content: 'Foto de Perfil';
+  }

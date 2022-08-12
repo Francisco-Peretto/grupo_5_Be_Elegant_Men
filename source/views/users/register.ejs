@@ -1,21 +1,19 @@
 <%- include('../partials/head.ejs') %>
-  
     <body>
-
         <%- include('../partials/header.ejs') %>
         <main class="cuerpo-register">
             <h1>Crea tu cuenta</h1>
             <form class="formulario-register" action="" method="post">
                 <section>
-                    <input type="text" id="nombre" name="nombre_usuario" placeholder="Nombre/s">
-                    <input type="text" id="apellido" name="apellido_usuario" placeholder="Apellido">
+                    <input type="text" id="nombre" name="nombre_usuario" placeholder="Nombre/s" required>
+                    <input type="text" id="apellido" name="apellido_usuario" placeholder="Apellido/s" required>
                 </section>
                 <section>
-                    <input class="input-email" type="email" id="email" name="email_usuario" placeholder="Correo Electrónico">
+                    <input class="input-email" type="email" id="email" name="email_usuario" placeholder="Correo Electrónico" required>
                 </section>
                 <section>
-                    <input type="password" id="pass" name="contraseña_usuario" placeholder="Contraseña">
-                    <input type="password" id="repeat-pass" name="repetircontraseña_usuario" placeholder="Confirmar Contraseña">
+                    <input type="password" id="pass" name="contraseña_usuario" placeholder="Contraseña" required>
+                    <input type="password" id="repeat-pass" name="repetircontraseña_usuario" placeholder="Confirmar Contraseña" required>
                 </section>
                 <div>
                     <label>Tipo Usuario</label>
@@ -24,20 +22,15 @@
                     <input type="radio" id="vendedor" name="tipo_usuario" value="Vendedor">
                     <label for="vendedor">Vendedor</label>
                 </div>
-                <div>
-                    <label>Foto de Perfil</label>
-                    <input type="file" id="foto" name="foto_usuario">
-                </div>
+                <div class="file-select" id="foto_usuario" >
+                    <input type="file" name="foto_usuario" aria-label="Archivo" required>
+                  </div>
                 <section>
                     <button type="submit">Crear</button>
                 </section>
 
             </form>
         </main>
-        
-        
         <%- include('../partials/footer.ejs') %>
-    
-    
     </body>
 </html>
