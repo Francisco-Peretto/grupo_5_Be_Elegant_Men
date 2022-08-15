@@ -6,6 +6,7 @@
     align-items: center;
     margin: 0%;
     background-color: black;
+    margin-bottom: 2%;
 }
 
 .producto a {
@@ -27,6 +28,23 @@
 main h2 {
     text-align: center;
 }
+
+.seccion-marcas {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 0.5%;
+    margin-top: 0.5%;
+}
+
+.seccion-marcas img {
+    width: 8%;
+}
+
+
 
 .producto{
     margin: 2% 2%;

@@ -91,7 +91,7 @@
   }
   
 .file-select::before {
-    background-color: black;
+    background-color: #0e141a;
     color: white;
     display: flex;
     justify-content: center;
