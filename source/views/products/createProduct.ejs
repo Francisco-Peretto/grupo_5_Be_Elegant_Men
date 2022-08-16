@@ -8,42 +8,57 @@
                     <input type="text" id="name" name="name" placeholder="Nombre del producto" required>
                     <input type="number" id="price" name="price" placeholder="Precio del producto" required>
                 </section>
+
                 <section>
-                    <textarea id="description" name="description" placeholder="Descripción del producto" required></textarea>
+                    <textarea name="description" id="description" placeholder="Descripción del producto" required></textarea>
                 </section>
+<!--
                 <div>
-                    <label for="size">Selecciona el talle</label>
-                    <select class="dropdown-createProduct" name="size">
-                        <option id="size" name="size" value="s">S</option>
-                        <option id="size" name="size" value="m">M</option>
-                        <option id="size" name="size" value="l">L</option>
-                        <option id="size" name="size" value="xl">XL</option>
+                    <h3>Selecciona el talle</h3>
+                    <select class="dropdown-createProduct" name="size" required>
+                        <option value="s">S</option>
+                        <option value="m">M</option>
+                        <option value="l">L</option>
+                        <option value="xl">XL</option>
                     </select>
                 </div>
+
                 <div>
-                    <label for="color">Selecciona el color</label>
-                    <select class="dropdown-createProduct" name="color">
-                        <option id="color" name="color" value="negro">Negro</option>
-                        <option id="color" name="color" value="gris">Gris</option>
-                        <option id="color" name="color" value="azul">Azul</option>
-                        <option id="color" name="color" value="blanco">Blanco</option>
+                    <h3>Selecciona el color</h3>
+                    <select class="dropdown-createProduct" name="color" required>
+                        <option value="negro">Negro</option>
+                        <option value="gris">Gris</option>
+                        <option value="azul">Azul</option>
+                        <option value="blanco">Blanco</option>
                     </select>
                 </div>
-                <div>
-                    <label for="color">Selecciona la categoría</label>
-                    <select class="dropdown-createProduct" name="category">
-                        <option id="ambos" name="ambos" value="ambos">Ambos</option>
-                        <option id="pantalones" name="pantalones" value="pantalones">Pantalones</option>
-                        <option id="camisas" name="camisas" value="camisas">Camisas</option>
-                        <option id="sacos-informales" name="sacos-informales" value="sacos-informales">Sacos informales</option>
-                        <option id="zapatos" name="zapatos" value="zapatos">Zapatos</option>
-                        <option id="corbatas" name="corbatas" value="corbatas">Corbatas</option>
+-->
+                <section>
+                    <h3>Selecciona la marca</h3>
+                    <select class="dropdown-createProduct" name="marca" required> <!-- este name es lo que pasa al back-->
+                        <option value="Brooks Brothers">Brooks Brothers</option>
+                        <option value="Colantuono">Colantuono</option>
+                        <option value="Devré">Devré</option>
+                        <option value="Ermenegildo Zegna">Ermenegildo Zegna</option>
+                        <option value="Hermes">Hermes</option>
+                        <option value="Luigi de Carlo">Luigi de Carlo</option>
                     </select>
-                </div>
-            </div>
+
+                    <h3>Selecciona la categoría</h3>
+                    <select class="dropdown-createProduct" name="categoría" required> <!-- este name es lo que pasa al back-->
+                        <option value="ambo">Ambo</option>
+                        <option value="pantalones">Pantalones</option>
+                        <option value="camisas">Camisas</option>
+                        <option value="saco de vestir">Saco de vestir</option>
+                        <option value="zapato">Zapatos</option>
+                        <option value="corbata">Corbatas</option>
+                    </select>
+                </section>
+
                 <div class="file-select-createProduct" id="picture" >
                     <input type="file" name="picture" aria-label="Fotos del producto" required>
                 </div>
+
                 <section>
                     <button type="submit">Crear producto</button>
                     <button type="reset">Reiniciar formulario</button>
