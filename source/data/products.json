@@ -1,0 +1,44 @@
+[
+    {
+        "nombre": "Ambo",
+        "categoría": "Ambo",
+        "marca": "Luigi de Carlo",
+        "precio": "1000",
+        "sku": "0"
+    },
+    {
+        "nombre": "Pantalón de vestir",
+        "categoría": "Pantalón de vestir",
+        "marca": "Hermes",
+        "precio": "1000",
+        "sku": "1"
+    },
+    {
+        "nombre": "Camisa",
+        "categoría": "Camisa",
+        "marca": "Devré",
+        "precio": "1000",
+        "sku": "2"
+    },
+    {
+        "nombre": "Saco de vestir",
+        "categoría": "Saco de vestir",
+        "marca": "Ermenegildo Zegna",
+        "precio": "1000",
+        "sku": "3"
+    },
+    {
+        "nombre": "Zapatos",
+        "categoría": "Zapatos",
+        "marca": "Colantuono",
+        "precio": "1000",
+        "sku": "4"
+    },
+    {
+        "nombre": "Corbata",
+        "categoría": "Corbata",
+        "marca": "Brooks Brothers",
+        "precio": "1000",
+        "sku": "5"
+    }
+]

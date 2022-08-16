@@ -1,0 +1,10 @@
+[
+    {
+        "id": "01",
+        "nombre": "Mateo",
+        "apellido": "González",
+        "teléfono": "1158956874",
+        "dirección":"Calle Falsa 123",
+        "correo":"correo_fantasma@gmail.com"
+    }
+]
