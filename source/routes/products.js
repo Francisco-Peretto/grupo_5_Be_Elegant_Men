@@ -14,11 +14,11 @@ router.get('/products/create', productsController.createProductGet); // 2. GET p
 
 router.get('/products/:id', productsController.idProduct); // 3. GET products/:id
 
-router.get('/products', productsController.createProductPost); // 4. POST products
+router.post('/products', productsController.createProductPost); // 4. POST products
 
 router.get('/products/:id/edit', productsController.editProductGet); // 5. GET products/:id/edit
 
-router.get('/products/:id', productsController.editProductPost); // 6. PUT products/id
+router.get('/products/:id', productsController.editProductPost); // 6. PUT products/id ARREGLAR ESTE !
 
 router.get('/products/:id', productsController.createProductPost); // 7. DELETE products/:id
 

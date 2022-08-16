@@ -1,0 +1,56 @@
+<%- include('../partials/head.ejs') %>
+    <body>
+        <%- include('../partials/header.ejs') %>
+        <main class="cuerpo-register-createProduct">
+            <h1>Registro de producto</h1>
+            <form class="formulario-register-createProduct" action="/products" method="post">
+                <section>
+                    <input type="text" id="name" name="name" placeholder="Nombre del producto" required>
+                    <input type="number" id="price" name="price" placeholder="Precio del producto" required>
+                </section>
+                <section>
+                    <textarea id="description" name="description" placeholder="Descripción del producto" required></textarea>
+                </section>
+                <div>
+                    <label for="size">Selecciona el talle</label>
+                    <select class="dropdown-createProduct" name="size">
+                        <option id="size" name="size" value="s">S</option>
+                        <option id="size" name="size" value="m">M</option>
+                        <option id="size" name="size" value="l">L</option>
+                        <option id="size" name="size" value="xl">XL</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="color">Selecciona el color</label>
+                    <select class="dropdown-createProduct" name="color">
+                        <option id="color" name="color" value="negro">Negro</option>
+                        <option id="color" name="color" value="gris">Gris</option>
+                        <option id="color" name="color" value="azul">Azul</option>
+                        <option id="color" name="color" value="blanco">Blanco</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="color">Selecciona la categoría</label>
+                    <select class="dropdown-createProduct" name="category">
+                        <option id="ambos" name="ambos" value="ambos">Ambos</option>
+                        <option id="pantalones" name="pantalones" value="pantalones">Pantalones</option>
+                        <option id="camisas" name="camisas" value="camisas">Camisas</option>
+                        <option id="sacos-informales" name="sacos-informales" value="sacos-informales">Sacos informales</option>
+                        <option id="zapatos" name="zapatos" value="zapatos">Zapatos</option>
+                        <option id="corbatas" name="corbatas" value="corbatas">Corbatas</option>
+                    </select>
+                </div>
+            </div>
+                <div class="file-select-createProduct" id="picture" >
+                    <input type="file" name="picture" aria-label="Fotos del producto" required>
+                </div>
+                <section>
+                    <button type="submit">Crear producto</button>
+                    <button type="reset">Reiniciar formulario</button>
+                </section>
+
+            </form>
+        </main>
+        <%- include('../partials/footer.ejs') %>
+    </body>
+</html>

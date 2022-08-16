@@ -5,6 +5,7 @@
 @import url('productDetail.css');
 @import url('homeBody.css');
 @import url('cart.css');
+@import url('createProduct.css');
 
 * {
     list-style-type: none;

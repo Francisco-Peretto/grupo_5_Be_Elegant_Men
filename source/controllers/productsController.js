@@ -10,7 +10,7 @@ const productsController = {
     },
 
     createProductGet: (req, res) => {  // 2. GET products/create. Formulario de creación de productos aún sin hacer
-
+        res.render(path.resolve(__dirname,'../views/products/createProduct.ejs'));
     },
 
     idProduct: (req , res) => { // 3. GET products/:id. Pasará a renderizar el producto con el ID seleccionado cuando se implemente EJS en la hoja productDetail

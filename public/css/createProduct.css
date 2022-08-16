@@ -1,0 +1,116 @@
+.cuerpo-register-createProduct {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 40%;
+    border: 1px solid #0b335b ;
+    border-radius: 15px;
+    margin: auto;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.cuerpo-register-createProduct:hover {
+    border: 3px solid #0b335b ;
+}
+
+.formulario-register-createProduct {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 90%;
+    padding: 2%;
+}
+
+.formulario-register-createProduct div {
+    width: 100%;
+    margin-top: 2%;
+    margin-bottom: 3%;
+}
+
+.formulario-register-createProduct label {
+    margin-right: 2%;
+}
+
+.formulario-register-createProduct section {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 2%;
+}
+
+.formulario-register-createProduct section input {
+    width: 48%;
+    height: 30px;
+}
+
+.formulario-register-createProduct section textarea {
+    width: 100%;
+    height: 50px;
+}
+
+
+.formulario-register-createProduct button {
+    width: 30%;
+    text-align: center;
+    background-color: #0e141a;
+    color: #fff;
+    font-size: 1rem;
+    padding: 1%;
+    margin-top: 1em;
+    border: 2px solid;
+    border-radius: .5rem;
+    cursor: pointer;
+    box-shadow: .5rem .5rem 1rem #ccc, 
+        -.5rem -.5rem 1rem #fff;
+    white-space: nowrap;
+}
+
+.formulario-register-createProduct button:hover {
+    box-shadow: .5rem .5rem 1rem #fff, 
+    -.5rem -.5rem 1rem #ccc;
+    
+}
+
+.formulario-register-createProduct button:active {
+    box-shadow: inset .2rem .2rem 1rem #fff, 
+    inset -.2rem -.2rem 1rem #ccc;
+}
+
+/*estilo para el input file*/
+
+.file-select-createProduct {
+    position: relative;
+    display: inline-block;
+  }
+  
+.file-select-createProduct::before {
+    background-color: #0e141a;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    width: 40%;
+    content: 'Fotos del producto';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+  }
+  
+  .file-select-createProduct input[type="file"] {
+    opacity: 0;
+    width: 200px;
+    height: 32px;
+    display: inline-block;
+  }
+
