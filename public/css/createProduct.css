@@ -12,10 +12,6 @@
     margin-bottom: 5%;
 }
 
-.cuerpo-register-createProduct:hover {
-    border: 3px solid #0b335b ;
-}
-
 .formulario-register-createProduct {
     display: flex;
     flex-wrap: nowrap;
