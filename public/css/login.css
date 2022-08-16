@@ -13,10 +13,6 @@
     padding-bottom: 2%;
 }
 
-.cuerpo-login:hover {
-    border: 3px solid #0b335b ;
-}
-
 .formulario-login {
     display: flex;
     flex-wrap: nowrap;

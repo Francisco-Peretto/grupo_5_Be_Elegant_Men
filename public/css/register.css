@@ -12,10 +12,6 @@
     margin-bottom: 5%;
 }
 
-.cuerpo-register:hover {
-    border: 3px solid #0b335b ;
-}
-
 .formulario-register {
     display: flex;
     flex-wrap: nowrap;
