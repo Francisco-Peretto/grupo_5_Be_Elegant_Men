@@ -1,45 +1,45 @@
 [
     {
         "producto": "ambo",
-        "color": "negro",
         "talle": "M",
         "marca": "Luigi_de_Carlo",
+        "precio": "1000",
         "sku": "100"
 
     },
     {
         "producto": "pantalón_vestir",
-        "color": "azul",
         "talle": "L",
         "marca": "Hermes",
+        "precio": "1000",
         "sku": "200"
     },
     {
         "producto": "camisa",
-        "color": "blanco",
         "talle": "S",
         "marca": "Devré",
+        "precio": "1000",
         "sku": "300"
     },
     {
         "producto": "saco_de_vestir",
-        "color": "gris_oscuro",
         "talle": "M",
         "marca": "Ermenegildo_Zegna",
+        "precio": "1000",
         "sku": "400"
     },
     {
         "producto": "zapatos",
-        "color": "marrón",
         "talle": "42",
         "marca": "Colantuono",
+        "precio": "1000",
         "sku": "500"
     },
     {
         "producto": "corbata",
-        "color": "liso",
         "talle": "M",
         "marca": "Brooks_Brothers",
+        "precio": "1000",
         "sku": "600"
     }
 ]
