@@ -8,7 +8,7 @@
     },
     {
         "nombre": "Pantalón de vestir",
-        "categoría": "Pantalón de vestir",
+        "categoría": "Pantalones",
         "marca": "Hermes",
         "precio": "1000",
         "sku": "1"
@@ -22,7 +22,7 @@
     },
     {
         "nombre": "Saco de vestir",
-        "categoría": "Saco de vestir",
+        "categoría": "Sacos de vestir",
         "marca": "Ermenegildo Zegna",
         "precio": "1000",
         "sku": "3"
