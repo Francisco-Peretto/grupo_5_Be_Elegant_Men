@@ -1,45 +1,44 @@
 [
     {
-        "producto": "ambo",
-        "talle": "M",
-        "marca": "Luigi_de_Carlo",
+        "nombre": "Ambo",
+        "categoría": "Ambo",
+        "marca": "Luigi de Carlo",
         "precio": "1000",
-        "sku": "100"
-
+        "sku": "0"
     },
     {
-        "producto": "pantalón_vestir",
-        "talle": "L",
+        "nombre": "Pantalón de vestir",
+        "categoría": "Pantalón de vestir",
         "marca": "Hermes",
         "precio": "1000",
-        "sku": "200"
+        "sku": "1"
     },
     {
-        "producto": "camisa",
-        "talle": "S",
+        "nombre": "Camisa",
+        "categoría": "Camisa",
         "marca": "Devré",
         "precio": "1000",
-        "sku": "300"
+        "sku": "2"
     },
     {
-        "producto": "saco_de_vestir",
-        "talle": "M",
-        "marca": "Ermenegildo_Zegna",
+        "nombre": "Saco de vestir",
+        "categoría": "Saco de vestir",
+        "marca": "Ermenegildo Zegna",
         "precio": "1000",
-        "sku": "400"
+        "sku": "3"
     },
     {
-        "producto": "zapatos",
-        "talle": "42",
+        "nombre": "Zapatos",
+        "categoría": "Zapatos",
         "marca": "Colantuono",
         "precio": "1000",
-        "sku": "500"
+        "sku": "4"
     },
     {
-        "producto": "corbata",
-        "talle": "M",
-        "marca": "Brooks_Brothers",
+        "nombre": "Corbata",
+        "categoría": "Corbata",
+        "marca": "Brooks Brothers",
         "precio": "1000",
-        "sku": "600"
+        "sku": "5"
     }
 ]
