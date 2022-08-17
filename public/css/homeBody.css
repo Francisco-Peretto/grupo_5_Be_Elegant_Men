@@ -24,10 +24,6 @@
     margin: 5px;
 }
 
-main h2 {
-    text-align: center;
-}
-
 .seccion-marcas {
     display: flex;
     flex-wrap: wrap;
