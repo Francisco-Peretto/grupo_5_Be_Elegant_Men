@@ -13,6 +13,10 @@
     padding-bottom: 2%;
 }
 
+.cuerpo-login h1 {
+    font-size: 2rem;
+}
+
 .formulario-login {
     display: flex;
     flex-wrap: nowrap;
@@ -58,7 +62,7 @@
 
 .cuerpo-login a {
     margin-top: 2%;
-    font-size: 18px;
+    font-size: 1rem;
     color: #444;
     font-weight: bold;
 }
@@ -67,3 +71,33 @@
     text-decoration: underline;
   }
 
+   /* mediasquerys */
+
+@media (max-width: 480px) {
+    .cuerpo-login h1 {
+        font-size: 1.5rem;
+    }
+    .cuerpo-login {
+        width: 90%;
+    }
+    .cuerpo-login a {
+        font-size: 0.75rem;
+    }
+  }
+  
+  @media (min-width: 481px) and (max-width: 768px) {
+    .cuerpo-login h1 {
+        font-size: 1.5rem;
+    }
+    .cuerpo-login {
+        width: 60%;
+    }
+  }
+  
+  @media (min-width: 769px) and (max-width: 1024px) {
+
+  }
+  
+  @media (min-width: 1025px) {
+
+  }

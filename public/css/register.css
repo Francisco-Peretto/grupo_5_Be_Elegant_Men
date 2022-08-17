@@ -12,6 +12,10 @@
     margin-bottom: 5%;
 }
 
+.cuerpo-register h1 {
+    font-size: 2rem;
+}
+
 .formulario-register {
     display: flex;
     flex-wrap: nowrap;
@@ -110,5 +114,30 @@
   }
   
   #foto_usuario::before {
-    content: 'Foto de Perfil';
+    content: 'Foto';
+  }
+
+
+  /* mediasquerys */
+
+@media (max-width: 480px) {
+
+    .cuerpo-register {
+        width: 90%;
+    }
+  }
+  
+  @media (min-width: 481px) and (max-width: 768px) {
+
+    .cuerpo-register {
+        width: 60%;
+    }
+  }
+  
+  @media (min-width: 769px) and (max-width: 1024px) {
+
+  }
+  
+  @media (min-width: 1025px) {
+
   }

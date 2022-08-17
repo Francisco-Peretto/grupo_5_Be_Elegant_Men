@@ -7,68 +7,40 @@
     color: #ffffff;
     width: 100%;
 }
-.lista{
+
+.titulo{
+    text-align: center;
+    font-size:  3rem;
+}
+
+.lista , .derechos , .icon-list {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    padding: 10px;
-    margin-right: 20px;
     color: #ffffff;
+    margin-bottom: 2%;
+}
 
+.iconos{
+    color: inherit;
+    margin: 0 1%;
 }
 
 .texto{
-
     color: inherit;
+    margin: 0 0.25%;
 }
 
-
-.link{
+.fa-pinterest , .fa-facebook , .fa-instagram , .fa-twitter {
     color: #ffffff;
-
-}
-.titulo{
-    text-align: center;
-    padding-left: 20px;
-    font-size: 50px;
 }
 
-.social{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    
-}
 
-.icon-list{
-    display: flex;
-    padding: 5px;
-    text-decoration: none;  
-   
-}
-
-.fa-pinterest{
-    color: #ffffff;
-    padding: 10px;
-}
-.fa-facebook{
-    color: #ffffff;
-    padding: 10px;
-}
-.fa-instagram{
-    color: #ffffff;
-    padding: 10px;
-}
-.fa-twitter{
-    color: #ffffff;
-    padding: 10px;
-}
-
-.derechos{
-    display: flex;
-    flex-direction: row;
-    align-self: center;
-    border: 1px solid  #131d27;
-    width: 100%;
-    justify-content: center;
+@media  (max-width: 480px) {
+    .lista , .derechos , .icon-list {
+        display: block;
+    }
+    .titulo{
+        font-size:  2rem;
+    }
 }

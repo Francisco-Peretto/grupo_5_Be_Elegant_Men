@@ -8,37 +8,6 @@
     background-color: black;
 }
 
-.producto a {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    width: 100%;
-    box-shadow: 0px 0px 10px rgb(224 197 51 / 73%);
-}
-
-.producto img {
-    width: 400px;
-    height: 500px;
-    margin: 5px;
-}
-
-.seccion-marcas {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    width: 100%;
-    margin-bottom: 0.5%;
-    margin-top: 0.5%;
-}
-
-.seccion-marcas img {
-    width: 8%;
-}
-
 .producto{
     margin: 2% 2%;
     display:block!important;
@@ -57,9 +26,66 @@
     transform: scale(1.05)
 }
 
+.producto img {
+    width: 300px;
+    height: 400px;
+    margin: 5px;
+}
+
+.producto a {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    box-shadow: 0px 0px 10px rgb(224 197 51 / 73%);
+}
+
 .producto p {
     font-size: 18px;
     font-weight: bold;
     color:#adb1b5
- }
-    
+}
+
+.seccion-marcas {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 0.5%;
+    margin-top: 0.5%;
+}
+
+.seccion-marcas img {
+    width: 8%;
+}
+
+ 
+/* mediasquerys */
+
+@media (max-width: 480px) {
+    .producto img {
+        width: 150px;
+        height: 200px;
+        margin: 2.5px;
+    }
+}
+  
+@media (min-width: 481px) and (max-width: 768px) {
+    .producto img {
+        width: 150px;
+        height: 200px;
+        margin: 2.5px;
+    }
+}
+  
+@media (min-width: 769px) and (max-width: 1024px) {
+
+}
+  
+@media (min-width: 1025px) {
+
+}
