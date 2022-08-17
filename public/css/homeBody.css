@@ -68,16 +68,16 @@
 
 @media (max-width: 480px) {
     .producto img {
-        width: 150px;
-        height: 200px;
+        width: 175px;
+        height: 220px;
         margin: 2.5px;
     }
 }
   
 @media (min-width: 481px) and (max-width: 768px) {
     .producto img {
-        width: 150px;
-        height: 200px;
+        width: 175px;
+        height: 220px;
         margin: 2.5px;
     }
 }

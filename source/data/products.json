@@ -1,7 +1,7 @@
 [
     {
         "nombre": "Ambo",
-        "categoría": "Ambo",
+        "categoría": "Ambos",
         "marca": "Luigi de Carlo",
         "precio": "1000",
         "sku": "0"
@@ -15,14 +15,14 @@
     },
     {
         "nombre": "Camisa",
-        "categoría": "Camisa",
+        "categoría": "Camisas",
         "marca": "Devré",
         "precio": "1000",
         "sku": "2"
     },
     {
-        "nombre": "Saco de vestir",
-        "categoría": "Sacos de vestir",
+        "nombre": "Saco",
+        "categoría": "Sacos",
         "marca": "Ermenegildo Zegna",
         "precio": "1000",
         "sku": "3"
@@ -36,7 +36,7 @@
     },
     {
         "nombre": "Corbata",
-        "categoría": "Corbata",
+        "categoría": "Corbatas",
         "marca": "Brooks Brothers",
         "precio": "1000",
         "sku": "5"
