@@ -5,6 +5,7 @@
         "apellido": "González",
         "teléfono": "1158956874",
         "dirección":"Calle Falsa 123",
-        "correo":"correo_fantasma@gmail.com"
+        "correo":"correo_fantasma@gmail.com",
+        "contraseña":"123456"
     }
 ]
