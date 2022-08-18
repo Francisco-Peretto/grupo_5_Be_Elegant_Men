@@ -1,44 +1,352 @@
 [
     {
-        "nombre": "Ambo",
-        "categoría": "Ambos",
-        "marca": "Luigi de Carlo",
-        "precio": "1000",
-        "sku": "0"
+        "sku":1,
+        "nombre":"producto1",
+        "categoria":"sacos",
+        "marca":"devre",
+        "precio":"$4616.31"
     },
     {
-        "nombre": "Pantalón de vestir",
-        "categoría": "Pantalones",
-        "marca": "Hermes",
-        "precio": "1000",
-        "sku": "1"
+        "sku":2,
+        "nombre":"producto2",
+        "categoria":"camisas",
+        "marca":"hermes",
+        "precio":"$8522.91"
     },
     {
-        "nombre": "Camisa",
-        "categoría": "Camisas",
-        "marca": "Devré",
-        "precio": "1000",
-        "sku": "2"
+        "sku":3,
+        "nombre":"producto3",
+        "categoria":"zapatos",
+        "marca":"brooks-brothers",
+        "precio":"$8649.80"
     },
     {
-        "nombre": "Saco",
-        "categoría": "Sacos",
-        "marca": "Ermenegildo Zegna",
-        "precio": "1000",
-        "sku": "3"
+        "sku":4,
+        "nombre":"producto4",
+        "categoria":"ambos",
+        "marca":"ermenegildo-zegna",
+        "precio":"$7845.10"
     },
     {
-        "nombre": "Zapatos",
-        "categoría": "Zapatos",
-        "marca": "Colantuono",
-        "precio": "1000",
-        "sku": "4"
+        "sku":5,
+        "nombre":"producto5",
+        "categoria":"pantalones",
+        "marca":"luigi-di-carlo",
+        "precio":"$6353.33"
     },
     {
-        "nombre": "Corbata",
-        "categoría": "Corbatas",
-        "marca": "Brooks Brothers",
-        "precio": "1000",
-        "sku": "5"
+        "sku":6,
+        "nombre":"producto6",
+        "categoria":"zapatos",
+        "marca":"devre",
+        "precio":"$7549.41"
+    },
+    {
+        "sku":7,
+        "nombre":"producto7",
+        "categoria":"sacos",
+        "marca":"luigi-di-carlo",
+        "precio":"$9672.25"
+    },
+    {
+        "sku":8,
+        "nombre":"producto8",
+        "categoria":"ambos",
+        "marca":"ermenegildo-zegna",
+        "precio":"$6693.85"
+    },
+    {
+        "sku":9,
+        "nombre":"producto9",
+        "categoria":"pantalones",
+        "marca":"luigi-di-carlo",
+        "precio":"$7944.77"
+    },
+    {
+        "sku":10,
+        "nombre":"producto10",
+        "categoria":"corbatas",
+        "marca":"brooks-brothers",
+        "precio":"$3147.14"
+    },
+    {
+        "sku":11,
+        "nombre":"producto11",
+        "categoria":"zapatos",
+        "marca":"hermes",
+        "precio":"$7152.06"
+    },
+    {
+        "sku":12,
+        "nombre":"producto12",
+        "categoria":"corbatas",
+        "marca":"luigi-di-carlo",
+        "precio":"$9097.96"
+    },
+    {
+        "sku":13,
+        "nombre":"producto13",
+        "categoria":"ambos",
+        "marca":"luigi-di-carlo",
+        "precio":"$7463.11"
+    },
+    {
+        "sku":14,
+        "nombre":"producto14",
+        "categoria":"ambos",
+        "marca":"luigi-di-carlo",
+        "precio":"$4693.70"
+    },
+    {
+        "sku":15,
+        "nombre":"producto15",
+        "categoria":"pantalones",
+        "marca":"brooks-brothers",
+        "precio":"$4081.03"
+    },
+    {
+        "sku":16,
+        "nombre":"producto16",
+        "categoria":"camisas",
+        "marca":"hermes",
+        "precio":"$9491.18"
+    },
+    {
+        "sku":17,
+        "nombre":"producto17",
+        "categoria":"sacos",
+        "marca":"luigi-di-carlo",
+        "precio":"$9203.74"
+    },
+    {
+        "sku":18,
+        "nombre":"producto18",
+        "categoria":"sacos",
+        "marca":"devre",
+        "precio":"$3619.21"
+    },
+    {
+        "sku":19,
+        "nombre":"producto19",
+        "categoria":"zapatos",
+        "marca":"devre",
+        "precio":"$8665.05"
+    },
+    {
+        "sku":20,
+        "nombre":"producto20",
+        "categoria":"pantalones",
+        "marca":"brooks-brothers",
+        "precio":"$5450.56"
+    },
+    {
+        "sku":21,
+        "nombre":"producto21",
+        "categoria":"sacos",
+        "marca":"luigi-di-carlo",
+        "precio":"$2985.21"
+    },
+    {
+        "sku":22,
+        "nombre":"producto22",
+        "categoria":"zapatos",
+        "marca":"colantuono",
+        "precio":"$7915.07"
+    },
+    {
+        "sku":23,
+        "nombre":"producto23",
+        "categoria":"ambos",
+        "marca":"hermes",
+        "precio":"$3943.27"
+    },
+    {
+        "sku":24,
+        "nombre":"producto24",
+        "categoria":"pantalones",
+        "marca":"colantuono",
+        "precio":"$6070.74"
+    },
+    {
+        "sku":25,
+        "nombre":"producto25",
+        "categoria":"zapatos",
+        "marca":"devre",
+        "precio":"$6704.16"
+    },
+    {
+        "sku":26,
+        "nombre":"producto26",
+        "categoria":"sacos",
+        "marca":"devre",
+        "precio":"$6046.13"
+    },
+    {
+        "sku":27,
+        "nombre":"producto27",
+        "categoria":"zapatos",
+        "marca":"luigi-di-carlo",
+        "precio":"$3271.11"
+    },
+    {
+        "sku":28,
+        "nombre":"producto28",
+        "categoria":"camisas",
+        "marca":"colantuono",
+        "precio":"$9214.61"
+    },
+    {
+        "sku":29,
+        "nombre":"producto29",
+        "categoria":"sacos",
+        "marca":"luigi-di-carlo",
+        "precio":"$4565.11"
+    },
+    {
+        "sku":30,
+        "nombre":"producto30",
+        "categoria":"corbatas",
+        "marca":"hermes",
+        "precio":"$5786.24"
+    },
+    {
+        "sku":31,
+        "nombre":"producto31",
+        "categoria":"ambos",
+        "marca":"brooks-brothers",
+        "precio":"$4219.30"
+    },
+    {
+        "sku":32,
+        "nombre":"producto32",
+        "categoria":"corbatas",
+        "marca":"colantuono",
+        "precio":"$6625.76"
+    },
+    {
+        "sku":33,
+        "nombre":"producto33",
+        "categoria":"pantalones",
+        "marca":"ermenegildo-zegna",
+        "precio":"$7232.60"
+    },
+    {
+        "sku":34,
+        "nombre":"producto34",
+        "categoria":"sacos",
+        "marca":"hermes",
+        "precio":"$7328.96"
+    },
+    {
+        "sku":35,
+        "nombre":"producto35",
+        "categoria":"zapatos",
+        "marca":"devre",
+        "precio":"$8720.29"
+    },
+    {
+        "sku":36,
+        "nombre":"producto36",
+        "categoria":"ambos",
+        "marca":"colantuono",
+        "precio":"$6735.46"
+    },
+    {
+        "sku":37,
+        "nombre":"producto37",
+        "categoria":"pantalones",
+        "marca":"luigi-di-carlo",
+        "precio":"$7250.45"
+    },
+    {
+        "sku":38,
+        "nombre":"producto38",
+        "categoria":"sacos",
+        "marca":"devre",
+        "precio":"$5298.17"
+    },
+    {
+        "sku":39,
+        "nombre":"producto39",
+        "categoria":"corbatas",
+        "marca":"colantuono",
+        "precio":"$5573.38"
+    },
+    {
+        "sku":40,
+        "nombre":"producto40",
+        "categoria":"ambos",
+        "marca":"luigi-di-carlo",
+        "precio":"$7062.56"
+    },
+    {
+        "sku":41,
+        "nombre":"producto41",
+        "categoria":"sacos",
+        "marca":"brooks-brothers",
+        "precio":"$7733.90"
+    },
+    {
+        "sku":42,
+        "nombre":"producto42",
+        "categoria":"corbatas",
+        "marca":"hermes",
+        "precio":"$9135.52"
+    },
+    {
+        "sku":43,
+        "nombre":"producto43",
+        "categoria":"ambos",
+        "marca":"brooks-brothers",
+        "precio":"$2176.03"
+    },
+    {
+        "sku":44,
+        "nombre":"producto44",
+        "categoria":"corbatas",
+        "marca":"luigi-di-carlo",
+        "precio":"$6922.27"
+    },
+    {
+        "sku":45,
+        "nombre":"producto45",
+        "categoria":"zapatos",
+        "marca":"ermenegildo-zegna",
+        "precio":"$9445.79"
+    },
+    {
+        "sku":46,
+        "nombre":"producto46",
+        "categoria":"zapatos",
+        "marca":"brooks-brothers",
+        "precio":"$2269.90"
+    },
+    {
+        "sku":47,
+        "nombre":"producto47",
+        "categoria":"zapatos",
+        "marca":"ermenegildo-zegna",
+        "precio":"$4945.56"
+    },
+    {
+        "sku":48,
+        "nombre":"producto48",
+        "categoria":"pantalones",
+        "marca":"hermes",
+        "precio":"$5476.98"
+    },
+    {
+        "sku":49,
+        "nombre":"producto49",
+        "categoria":"sacos",
+        "marca":"devre",
+        "precio":"$3550.68"
+    },
+    {
+        "sku":50,
+        "nombre":"producto50",
+        "categoria":"ambos",
+        "marca":"hermes",
+        "precio":"$7739.29"
     }
 ]

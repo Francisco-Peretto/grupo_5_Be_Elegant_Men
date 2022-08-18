@@ -1,5 +1,7 @@
 const path = require('path')
 
+const {all,one,generate, write} = require('../models/productsModel')
+
 const productsController = {
     index: (req , res) => { // GET index
         res.render(path.resolve(__dirname,'../views/products/index.ejs'))
