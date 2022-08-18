@@ -62,11 +62,10 @@
 .seccion-marcas img {
     width: 8%;
 }
-
- 
+  
 /* mediasquerys */
 
-@media (max-width: 480px) {
+@media (max-width: 479px) {
     .producto img {
         width: 175px;
         height: 220px;
@@ -74,7 +73,7 @@
     }
 }
   
-@media (min-width: 481px) and (max-width: 768px) {
+@media (min-width: 480px) and (max-width: 799px) {
     .producto img {
         width: 175px;
         height: 220px;
@@ -82,10 +81,10 @@
     }
 }
   
-@media (min-width: 769px) and (max-width: 1024px) {
+@media (min-width: 800px) and (max-width: 1023px) {
 
 }
   
-@media (min-width: 1025px) {
+@media (min-width: 1024px) {
 
 }

@@ -36,11 +36,12 @@
 }
 
 
-@media  (max-width: 480px) {
+@media (max-width: 479px) {
     .lista , .derechos , .icon-list {
         display: block;
     }
     .titulo{
-        font-size:  2rem;
+        font-size: 2rem;
     }
 }
+

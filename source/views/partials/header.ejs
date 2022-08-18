@@ -6,12 +6,20 @@
             <input type="search" placeholder="Encontrá lo que estas buscando...">
             <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
         </form>
-        <nav class="navbar-usuario">
-            <a class="link-login" href="../users/login"><i class="fa-solid fa-user"></i></a>
-            <a class="link-compras" href="../users/cart"><i class="fa-solid fa-cart-shopping"></i></a>
-            <a class="link-favoritos" href="../users/login"><i class="fa-solid fa-heart"></i></i></a>
+        <nav class="menu-hamburguesa">
+            <input type="checkbox" id="menu">
+            <label for="menu"><i class="fa-solid fa-bars"></i></label>
+            <ul>
+              <li><a href="../users/login"><i class="fa-solid fa-user"></i></a></li>
+              <li><a href="../users/cart"><i class="fa-solid fa-cart-shopping"></i></a></li>
+              <li><a href="../products/create"><i class="fa-solid fa-circle-plus"></i></i></a></li>
+            </ul>
         </nav>
-        <a class="icono-menu" href=""><i class="fa-solid fa-bars"></i></a>  
+        <nav class="navbar-usuario">
+            <a href="../users/login"><i class="fa-solid fa-user"></i></a>
+            <a href="../users/cart"><i class="fa-solid fa-cart-shopping"></i></a>
+            <a href="../products/create"><i class="fa-solid fa-circle-plus"></i></i></a>
+        </nav>
     </section>
     <nav class="navbar-categorias">
         <a href="">Ambos</a>
