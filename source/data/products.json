@@ -5,7 +5,7 @@
       "detalle": "Ut ultrices vel augue vestibulum et ultrices posuere cubilia curae.",
       "categoria": "Ambos",
       "marca": "Brooks Brothers",
-      "precio": "4154.19",
+      "precio": 4154,
       "imagen": "default.png"
     }, 
     {
@@ -14,7 +14,7 @@
       "detalle": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin risus. Praesent lectus.",
       "categoria": "Pantalones",
       "marca": "Luigi Di Carlo",
-      "precio": "8134.18",
+      "precio": 8134,
       "imagen": "default.png"
     }, 
     {
@@ -23,7 +23,7 @@
       "detalle": "Quisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla. Nunc purus.",
       "categoria": "Ambos",
       "marca": "Brooks Brothers",
-      "precio": "9928.89",
+      "precio": 9928,
       "imagen": "default.png"
     }, 
     {
@@ -32,7 +32,7 @@
       "detalle": "Maecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat.",
       "categoria": "Corbatas",
       "marca": "Luigi Di Carlo",
-      "precio": "3074.01",
+      "precio": 3074,
       "imagen": "default.png"
     }, 
     {
@@ -41,7 +41,7 @@
       "detalle": "In hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.",
       "categoria": "Camisas",
       "marca": "Brooks Brothers",
-      "precio": "5018.73",
+      "precio": 5018,
       "imagen": "default.png"
     }, 
     {
@@ -50,7 +50,7 @@
       "detalle": "Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
       "categoria": "Ambos",
       "marca": "Brooks Brothers",
-      "precio": "5351.78",
+      "precio": 5351,
       "imagen": "default.png"
     }, 
     {
@@ -59,7 +59,7 @@
       "detalle": "Aenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum.",
       "categoria": "Sacos",
       "marca": "Luigi Di Carlo",
-      "precio": "4157.52",
+      "precio": 4157,
       "imagen": "default.png"
     }, 
     {
@@ -68,7 +68,7 @@
       "detalle": "Maecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat.",
       "categoria": "Corbatas",
       "marca": "Colantuono",
-      "precio": "7291.64",
+      "precio": 7291,
       "imagen": "default.png"
     }, 
     {
@@ -77,7 +77,7 @@
       "detalle": "Aenean fermentum. Donec ut mauris eget massa tempor convallis. Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh.",
       "categoria": "Camisas",
       "marca": "Colantuono",
-      "precio": "6462.19",
+      "precio": 6462,
       "imagen": "default.png"
     }, 
     {
@@ -86,7 +86,7 @@
       "detalle": "Cras mi pede, malesuada in, imperdiet et, commodo vulputate, justo. In blandit ultrices enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
       "categoria": "Corbatas",
       "marca": "Luigi Di Carlo",
-      "precio": "6011.37",
+      "precio": 6011,
       "imagen": "default.png"
     }, 
     {
@@ -95,7 +95,7 @@
       "detalle": "In quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet.",
       "categoria": "Ambos",
       "marca": "Brooks Brothers",
-      "precio": "4377.67",
+      "precio": 4377,
       "imagen": "default.png"
     }, 
     {
@@ -104,7 +104,7 @@
       "detalle": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin risus. Praesent lectus.",
       "categoria": "Sacos",
       "marca": "Brooks Brothers",
-      "precio": "5970.85",
+      "precio": 5970,
       "imagen": "default.png"
     }, 
     {
@@ -113,7 +113,7 @@
       "detalle": "Nulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi.",
       "categoria": "Corbatas",
       "marca": "Luigi Di Carlo",
-      "precio": "9082.07",
+      "precio": 9082,
       "imagen": "default.png"
     }, 
     {
@@ -122,7 +122,7 @@
       "detalle": "Aliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis.",
       "categoria": "Pantalones",
       "marca": "Ermenegildo Zegna",
-      "precio": "8673.27",
+      "precio": 8673,
       "imagen": "default.png"
     }, 
     {
@@ -131,7 +131,7 @@
       "detalle": "Aliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis.",
       "categoria": "Ambos",
       "marca": "Devre",
-      "precio": "7955.39",
+      "precio": 7955,
       "imagen": "default.png"
     }, 
     {
@@ -140,7 +140,7 @@
       "detalle": "Phasellus in felis. Donec semper sapien a libero. Nam dui.",
       "categoria": "Corbatas",
       "marca": "Colantuono",
-      "precio": "5700.41",
+      "precio": 5700,
       "imagen": "default.png"
     }, 
     {
@@ -149,7 +149,7 @@
       "detalle": "Vestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis.",
       "categoria": "Pantalones",
       "marca": "Hermes",
-      "precio": "3925.15",
+      "precio": 3925,
       "imagen": "default.png"
     }, 
     {
@@ -158,7 +158,7 @@
       "detalle": "Integer ac leo. Pellentesque ultrices mattis odio. Donec vitae nisi.",
       "categoria": "Sacos",
       "marca": "Luigi Di Carlo",
-      "precio": "7931.13",
+      "precio": 7931,
       "imagen": "default.png"
     }, 
     {
@@ -167,7 +167,7 @@
       "detalle": "Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.",
       "categoria": "Ambos",
       "marca": "Luigi Di Carlo",
-      "precio": "9290.37",
+      "precio": 9290,
       "imagen": "default.png"
     }, 
     {
@@ -176,7 +176,7 @@
       "detalle": "Cras mi pede, malesuada in, imperdiet et, commodo vulputate, justo. In blandit ultrices enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
       "categoria": "Sacos",
       "marca": "Colantuono",
-      "precio": "6659.64",
+      "precio": 6659,
       "imagen": "default.png"
     }, 
     {
@@ -185,7 +185,7 @@
       "detalle": "Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti.",
       "categoria": "Camisas",
       "marca": "Colantuono",
-      "precio": "8411.69",
+      "precio": 8411,
       "imagen": "default.png"
     }, 
     {
@@ -194,7 +194,7 @@
       "detalle": "Etiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem.",
       "categoria": "Pantalones",
       "marca": "Luigi Di Carlo",
-      "precio": "7108.62",
+      "precio": 7108,
       "imagen": "default.png"
     }, 
     {
@@ -203,7 +203,7 @@
       "detalle": "Duis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum.",
       "categoria": "Zapatos",
       "marca": "Brooks Brothers",
-      "precio": "3351.47",
+      "precio": 3351,
       "imagen": "default.png"
     }, 
     {
@@ -212,7 +212,7 @@
       "detalle": "Aliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis.",
       "categoria": "Sacos",
       "marca": "Devre",
-      "precio": "2210.89",
+      "precio": 2210,
       "imagen": "default.png"
     }, 
     {
@@ -221,7 +221,7 @@
       "detalle": "Curabitur at ipsum ac tellus semper interdum. Mauris ullamcorper purus sit amet nulla. Quisque arcu libero, rutrum ac, lobortis vel, dapibus at, diam.",
       "categoria": "Sacos",
       "marca": "Luigi Di Carlo",
-      "precio": "5876.39",
+      "precio": 5876,
       "imagen": "default.png"
     }, 
     {
@@ -230,7 +230,7 @@
       "detalle": "Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti.",
       "categoria": "Zapatos",
       "marca": "Ermenegildo Zegna",
-      "precio": "8954.74",
+      "precio": 8954,
       "imagen": "default.png"
     }, 
     {
@@ -239,7 +239,7 @@
       "detalle": "Suspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst.",
       "categoria": "Ambos",
       "marca": "Ermenegildo Zegna",
-      "precio": "7445.83",
+      "precio": 7445,
       "imagen": "default.png"
     }, 
     {
@@ -248,7 +248,7 @@
       "detalle": "In hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.",
       "categoria": "Pantalones",
       "marca": "Colantuono",
-      "precio": "5623.91",
+      "precio": 5623,
       "imagen": "default.png"
     }, 
     {
@@ -257,7 +257,7 @@
       "detalle": "Aenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum.",
       "categoria": "Corbatas",
       "marca": "Colantuono",
-      "precio": "5155.89",
+      "precio": 5155,
       "imagen": "default.png"
     }, 
     {
@@ -266,7 +266,7 @@
       "detalle": "Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero.",
       "categoria": "Corbatas",
       "marca": "Colantuono",
-      "precio": "2131.99",
+      "precio": 2131,
       "imagen": "default.png"
     }, 
     {
@@ -275,7 +275,7 @@
       "detalle": "Maecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat.",
       "categoria": "Sacos",
       "marca": "Hermes",
-      "precio": "2378.54",
+      "precio": 2378,
       "imagen": "default.png"
     }, 
     {
@@ -284,7 +284,7 @@
       "detalle": "Quisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla. Nunc purus.",
       "categoria": "Sacos",
       "marca": "Devre",
-      "precio": "2578.23",
+      "precio": 2578,
       "imagen": "default.png"
     }, 
     {
@@ -293,7 +293,7 @@
       "detalle": "Fusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem.",
       "categoria": "Camisas",
       "marca": "Hermes",
-      "precio": "5969.93",
+      "precio": 5969,
       "imagen": "default.png"
     }, 
     {
@@ -302,7 +302,7 @@
       "detalle": "Maecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat.",
       "categoria": "Pantalones",
       "marca": "Devre",
-      "precio": "8923.74",
+      "precio": 8923,
       "imagen": "default.png"
     }, 
     {
@@ -311,7 +311,7 @@
       "detalle": "Cras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque.",
       "categoria": "Zapatos",
       "marca": "Colantuono",
-      "precio": "9681.03",
+      "precio": 9681,
       "imagen": "default.png"
     }, 
     {
@@ -320,7 +320,7 @@
       "detalle": "Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.",
       "categoria": "Sacos",
       "marca": "Hermes",
-      "precio": "9075.97",
+      "precio": 9075,
       "imagen": "default.png"
     }, 
     {
@@ -329,7 +329,7 @@
       "detalle": "Aenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum.",
       "categoria": "Corbatas",
       "marca": "Luigi Di Carlo",
-      "precio": "8868.30",
+      "precio": 8868,
       "imagen": "default.png"
     }, 
     {
@@ -338,7 +338,7 @@
       "detalle": "Praesent id massa id nisl venenatis lacinia. Aenean sit amet justo. Morbi ut odio.",
       "categoria": "Corbatas",
       "marca": "Colantuono",
-      "precio": "7364.35",
+      "precio": 7364,
       "imagen": "default.png"
     }, 
     {
@@ -347,7 +347,7 @@
       "detalle": "Praesent id massa id nisl venenatis lacinia. Aenean sit amet justo. Morbi ut odio.",
       "categoria": "Pantalones",
       "marca": "Luigi Di Carlo",
-      "precio": "3902.95",
+      "precio": 3902,
       "imagen": "default.png"
     }, 
     {
@@ -356,7 +356,7 @@
       "detalle": "Proin interdum mauris non ligula pellentesque ultrices. Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl.",
       "categoria": "Corbatas",
       "marca": "Colantuono",
-      "precio": "3049.50",
+      "precio": 3049,
       "imagen": "default.png"
     }, 
     {
@@ -365,7 +365,7 @@
       "detalle": "Aenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum.",
       "categoria": "Camisas",
       "marca": "Devre",
-      "precio": "3791.03",
+      "precio": 3791,
       "imagen": "default.png"
     }, 
     {
@@ -374,7 +374,7 @@
       "detalle": "Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla. Sed vel enim sit amet nunc viverra dapibus. Nulla suscipit ligula in lacus.",
       "categoria": "Pantalones",
       "marca": "Devre",
-      "precio": "2505.56",
+      "precio": 2505,
       "imagen": "default.png"
     }, 
     {
@@ -383,7 +383,7 @@
       "detalle": "Etiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem.",
       "categoria": "Sacos",
       "marca": "Devre",
-      "precio": "8530.10",
+      "precio": 8530,
       "imagen": "default.png"
     }, 
     {
@@ -392,7 +392,7 @@
       "detalle": "Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero.",
       "categoria": "Pantalones",
       "marca": "Hermes",
-      "precio": "4812.19",
+      "precio": 4812,
       "imagen": "default.png"
     }, 
     {
@@ -401,7 +401,7 @@
       "detalle": "Duis aliquam convallis nunc. Proin at turpis a pede posuere nonummy. Integer non velit.",
       "categoria": "Corbatas",
       "marca": "Ermenegildo Zegna",
-      "precio": "7866.12",
+      "precio": 7866,
       "imagen": "default.png"
     }, 
     {
@@ -410,7 +410,7 @@
       "detalle": "Sed ante. Vivamus tortor. Duis mattis egestas metus.",
       "categoria": "Camisas",
       "marca": "Hermes",
-      "precio": "3850.19",
+      "precio": 3850,
       "imagen": "default.png"
     }, 
     {
@@ -419,7 +419,7 @@
       "detalle": "Fusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem.",
       "categoria": "Sacos",
       "marca": "Devre",
-      "precio": "7884.03",
+      "precio": 7884,
       "imagen": "default.png"
     }, 
     {
@@ -428,7 +428,7 @@
       "detalle": "Etiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem.",
       "categoria": "Pantalones",
       "marca": "Colantuono",
-      "precio": "9071.10",
+      "precio": 9071,
       "imagen": "default.png"
     }, 
     {
@@ -437,7 +437,7 @@
       "detalle": "Maecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui.",
       "categoria": "Zapatos",
       "marca": "Colantuono",
-      "precio": "9388.79",
+      "precio": 9388,
       "imagen": "default.png"
     }, 
     {
@@ -446,7 +446,7 @@
       "detalle": "In sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus.",
       "categoria": "Ambos",
       "marca": "Devre",
-      "precio": "4576.73",
+      "precio": 4576,
       "imagen": "default.png"
     }, 
     {
@@ -455,7 +455,7 @@
       "detalle": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin risus. Praesent lectus.",
       "categoria": "Zapatos",
       "marca": "Ermenegildo Zegna",
-      "precio": "6556.31",
+      "precio": 6556,
       "imagen": "default.png"
     }
 ]    
