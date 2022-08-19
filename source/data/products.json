@@ -1,461 +1,461 @@
 [
     {
       "sku": 0,
-      "nombre": "Producto 0",
-      "detalle": "Ut ultrices vel augue vestibulum et ultrices posuere cubilia curae.",
-      "categoria": "Ambos",
-      "marca": "Brooks Brothers",
-      "precio": 4154,
-      "imagen": "/img/product_detail/camisa_7.png"
+      "name": "Producto 0",
+      "detail": "Ut ultrices vel augue vestibulum et ultrices posuere cubilia curae.",
+      "category": "Ambos",
+      "brand": "Brooks Brothers",
+      "price": 4154,
+      "image": "/img/product_detail/camisa_7.png"
     }, 
     {
       "sku": 1,
-      "nombre": "Producto 1",
-      "detalle": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin risus. Praesent lectus.",
-      "categoria": "Pantalones",
-      "marca": "Luigi Di Carlo",
-      "precio": 8134,
-      "imagen": "default.png"
+      "name": "Producto 1",
+      "detail": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin risus. Praesent lectus.",
+      "category": "Pantalones",
+      "brand": "Luigi Di Carlo",
+      "price": 8134,
+      "image": "default.png"
     }, 
     {
       "sku": 2,
-      "nombre": "Producto 2",
-      "detalle": "Quisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla. Nunc purus.",
-      "categoria": "Ambos",
-      "marca": "Brooks Brothers",
-      "precio": 9928,
-      "imagen": "default.png"
+      "name": "Producto 2",
+      "detail": "Quisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla. Nunc purus.",
+      "category": "Ambos",
+      "brand": "Brooks Brothers",
+      "price": 9928,
+      "image": "default.png"
     }, 
     {
       "sku": 3,
-      "nombre": "Producto 3",
-      "detalle": "Maecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat.",
-      "categoria": "Corbatas",
-      "marca": "Luigi Di Carlo",
-      "precio": 3074,
-      "imagen": "default.png"
+      "name": "Producto 3",
+      "detail": "Maecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat.",
+      "category": "Corbatas",
+      "brand": "Luigi Di Carlo",
+      "price": 3074,
+      "image": "default.png"
     }, 
     {
       "sku": 4,
-      "nombre": "Producto 4",
-      "detalle": "In hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.",
-      "categoria": "Camisas",
-      "marca": "Brooks Brothers",
-      "precio": 5018,
-      "imagen": "default.png"
+      "name": "Producto 4",
+      "detail": "In hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.",
+      "category": "Camisas",
+      "brand": "Brooks Brothers",
+      "price": 5018,
+      "image": "default.png"
     }, 
     {
       "sku": 5,
-      "nombre": "Producto 5",
-      "detalle": "Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
-      "categoria": "Ambos",
-      "marca": "Brooks Brothers",
-      "precio": 5351,
-      "imagen": "default.png"
+      "name": "Producto 5",
+      "detail": "Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+      "category": "Ambos",
+      "brand": "Brooks Brothers",
+      "price": 5351,
+      "image": "default.png"
     }, 
     {
       "sku": 6,
-      "nombre": "Producto 6",
-      "detalle": "Aenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum.",
-      "categoria": "Sacos",
-      "marca": "Luigi Di Carlo",
-      "precio": 4157,
-      "imagen": "default.png"
+      "name": "Producto 6",
+      "detail": "Aenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum.",
+      "category": "Sacos",
+      "brand": "Luigi Di Carlo",
+      "price": 4157,
+      "image": "default.png"
     }, 
     {
       "sku": 7,
-      "nombre": "Producto 7",
-      "detalle": "Maecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat.",
-      "categoria": "Corbatas",
-      "marca": "Colantuono",
-      "precio": 7291,
-      "imagen": "default.png"
+      "name": "Producto 7",
+      "detail": "Maecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat.",
+      "category": "Corbatas",
+      "brand": "Colantuono",
+      "price": 7291,
+      "image": "default.png"
     }, 
     {
       "sku": 8,
-      "nombre": "Producto 8",
-      "detalle": "Aenean fermentum. Donec ut mauris eget massa tempor convallis. Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh.",
-      "categoria": "Camisas",
-      "marca": "Colantuono",
-      "precio": 6462,
-      "imagen": "default.png"
+      "name": "Producto 8",
+      "detail": "Aenean fermentum. Donec ut mauris eget massa tempor convallis. Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh.",
+      "category": "Camisas",
+      "brand": "Colantuono",
+      "price": 6462,
+      "image": "default.png"
     }, 
     {
       "sku": 9,
-      "nombre": "Producto 9",
-      "detalle": "Cras mi pede, malesuada in, imperdiet et, commodo vulputate, justo. In blandit ultrices enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
-      "categoria": "Corbatas",
-      "marca": "Luigi Di Carlo",
-      "precio": 6011,
-      "imagen": "default.png"
+      "name": "Producto 9",
+      "detail": "Cras mi pede, malesuada in, imperdiet et, commodo vulputate, justo. In blandit ultrices enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
+      "category": "Corbatas",
+      "brand": "Luigi Di Carlo",
+      "price": 6011,
+      "image": "default.png"
     }, 
     {
       "sku": 10,
-      "nombre": "Producto 10",
-      "detalle": "In quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet.",
-      "categoria": "Ambos",
-      "marca": "Brooks Brothers",
-      "precio": 4377,
-      "imagen": "default.png"
+      "name": "Producto 10",
+      "detail": "In quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet.",
+      "category": "Ambos",
+      "brand": "Brooks Brothers",
+      "price": 4377,
+      "image": "default.png"
     }, 
     {
       "sku": 11,
-      "nombre": "Producto 11",
-      "detalle": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin risus. Praesent lectus.",
-      "categoria": "Sacos",
-      "marca": "Brooks Brothers",
-      "precio": 5970,
-      "imagen": "default.png"
+      "name": "Producto 11",
+      "detail": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin risus. Praesent lectus.",
+      "category": "Sacos",
+      "brand": "Brooks Brothers",
+      "price": 5970,
+      "image": "default.png"
     }, 
     {
       "sku": 12,
-      "nombre": "Producto 12",
-      "detalle": "Nulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi.",
-      "categoria": "Corbatas",
-      "marca": "Luigi Di Carlo",
-      "precio": 9082,
-      "imagen": "default.png"
+      "name": "Producto 12",
+      "detail": "Nulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi.",
+      "category": "Corbatas",
+      "brand": "Luigi Di Carlo",
+      "price": 9082,
+      "image": "default.png"
     }, 
     {
       "sku": 13,
-      "nombre": "Producto 13",
-      "detalle": "Aliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis.",
-      "categoria": "Pantalones",
-      "marca": "Ermenegildo Zegna",
-      "precio": 8673,
-      "imagen": "default.png"
+      "name": "Producto 13",
+      "detail": "Aliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis.",
+      "category": "Pantalones",
+      "brand": "Ermenegildo Zegna",
+      "price": 8673,
+      "image": "default.png"
     }, 
     {
       "sku": 14,
-      "nombre": "Producto 14",
-      "detalle": "Aliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis.",
-      "categoria": "Ambos",
-      "marca": "Devre",
-      "precio": 7955,
-      "imagen": "default.png"
+      "name": "Producto 14",
+      "detail": "Aliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis.",
+      "category": "Ambos",
+      "brand": "Devre",
+      "price": 7955,
+      "image": "default.png"
     }, 
     {
       "sku": 15,
-      "nombre": "Producto 15",
-      "detalle": "Phasellus in felis. Donec semper sapien a libero. Nam dui.",
-      "categoria": "Corbatas",
-      "marca": "Colantuono",
-      "precio": 5700,
-      "imagen": "default.png"
+      "name": "Producto 15",
+      "detail": "Phasellus in felis. Donec semper sapien a libero. Nam dui.",
+      "category": "Corbatas",
+      "brand": "Colantuono",
+      "price": 5700,
+      "image": "default.png"
     }, 
     {
       "sku": 16,
-      "nombre": "Producto 16",
-      "detalle": "Vestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis.",
-      "categoria": "Pantalones",
-      "marca": "Hermes",
-      "precio": 3925,
-      "imagen": "default.png"
+      "name": "Producto 16",
+      "detail": "Vestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis.",
+      "category": "Pantalones",
+      "brand": "Hermes",
+      "price": 3925,
+      "image": "default.png"
     }, 
     {
       "sku": 17,
-      "nombre": "Producto 17",
-      "detalle": "Integer ac leo. Pellentesque ultrices mattis odio. Donec vitae nisi.",
-      "categoria": "Sacos",
-      "marca": "Luigi Di Carlo",
-      "precio": 7931,
-      "imagen": "default.png"
+      "name": "Producto 17",
+      "detail": "Integer ac leo. Pellentesque ultrices mattis odio. Donec vitae nisi.",
+      "category": "Sacos",
+      "brand": "Luigi Di Carlo",
+      "price": 7931,
+      "image": "default.png"
     }, 
     {
       "sku": 18,
-      "nombre": "Producto 18",
-      "detalle": "Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.",
-      "categoria": "Ambos",
-      "marca": "Luigi Di Carlo",
-      "precio": 9290,
-      "imagen": "default.png"
+      "name": "Producto 18",
+      "detail": "Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.",
+      "category": "Ambos",
+      "brand": "Luigi Di Carlo",
+      "price": 9290,
+      "image": "default.png"
     }, 
     {
       "sku": 19,
-      "nombre": "Producto 19",
-      "detalle": "Cras mi pede, malesuada in, imperdiet et, commodo vulputate, justo. In blandit ultrices enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
-      "categoria": "Sacos",
-      "marca": "Colantuono",
-      "precio": 6659,
-      "imagen": "default.png"
+      "name": "Producto 19",
+      "detail": "Cras mi pede, malesuada in, imperdiet et, commodo vulputate, justo. In blandit ultrices enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
+      "category": "Sacos",
+      "brand": "Colantuono",
+      "price": 6659,
+      "image": "default.png"
     }, 
     {
       "sku": 20,
-      "nombre": "Producto 20",
-      "detalle": "Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti.",
-      "categoria": "Camisas",
-      "marca": "Colantuono",
-      "precio": 8411,
-      "imagen": "default.png"
+      "name": "Producto 20",
+      "detail": "Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti.",
+      "category": "Camisas",
+      "brand": "Colantuono",
+      "price": 8411,
+      "image": "default.png"
     }, 
     {
       "sku": 21,
-      "nombre": "Producto 21",
-      "detalle": "Etiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem.",
-      "categoria": "Pantalones",
-      "marca": "Luigi Di Carlo",
-      "precio": 7108,
-      "imagen": "default.png"
+      "name": "Producto 21",
+      "detail": "Etiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem.",
+      "category": "Pantalones",
+      "brand": "Luigi Di Carlo",
+      "price": 7108,
+      "image": "default.png"
     }, 
     {
       "sku": 22,
-      "nombre": "Producto 22",
-      "detalle": "Duis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum.",
-      "categoria": "Zapatos",
-      "marca": "Brooks Brothers",
-      "precio": 3351,
-      "imagen": "default.png"
+      "name": "Producto 22",
+      "detail": "Duis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum.",
+      "category": "Zapatos",
+      "brand": "Brooks Brothers",
+      "price": 3351,
+      "image": "default.png"
     }, 
     {
       "sku": 23,
-      "nombre": "Producto 23",
-      "detalle": "Aliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis.",
-      "categoria": "Sacos",
-      "marca": "Devre",
-      "precio": 2210,
-      "imagen": "default.png"
+      "name": "Producto 23",
+      "detail": "Aliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis.",
+      "category": "Sacos",
+      "brand": "Devre",
+      "price": 2210,
+      "image": "default.png"
     }, 
     {
       "sku": 24,
-      "nombre": "Producto 24",
-      "detalle": "Curabitur at ipsum ac tellus semper interdum. Mauris ullamcorper purus sit amet nulla. Quisque arcu libero, rutrum ac, lobortis vel, dapibus at, diam.",
-      "categoria": "Sacos",
-      "marca": "Luigi Di Carlo",
-      "precio": 5876,
-      "imagen": "default.png"
+      "name": "Producto 24",
+      "detail": "Curabitur at ipsum ac tellus semper interdum. Mauris ullamcorper purus sit amet nulla. Quisque arcu libero, rutrum ac, lobortis vel, dapibus at, diam.",
+      "category": "Sacos",
+      "brand": "Luigi Di Carlo",
+      "price": 5876,
+      "image": "default.png"
     }, 
     {
       "sku": 25,
-      "nombre": "Producto 25",
-      "detalle": "Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti.",
-      "categoria": "Zapatos",
-      "marca": "Ermenegildo Zegna",
-      "precio": 8954,
-      "imagen": "default.png"
+      "name": "Producto 25",
+      "detail": "Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti.",
+      "category": "Zapatos",
+      "brand": "Ermenegildo Zegna",
+      "price": 8954,
+      "image": "default.png"
     }, 
     {
       "sku": 26,
-      "nombre": "Producto 26",
-      "detalle": "Suspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst.",
-      "categoria": "Ambos",
-      "marca": "Ermenegildo Zegna",
-      "precio": 7445,
-      "imagen": "default.png"
+      "name": "Producto 26",
+      "detail": "Suspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst.",
+      "category": "Ambos",
+      "brand": "Ermenegildo Zegna",
+      "price": 7445,
+      "image": "default.png"
     }, 
     {
       "sku": 27,
-      "nombre": "Producto 27",
-      "detalle": "In hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.",
-      "categoria": "Pantalones",
-      "marca": "Colantuono",
-      "precio": 5623,
-      "imagen": "default.png"
+      "name": "Producto 27",
+      "detail": "In hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.",
+      "category": "Pantalones",
+      "brand": "Colantuono",
+      "price": 5623,
+      "image": "default.png"
     }, 
     {
       "sku": 28,
-      "nombre": "Producto 28",
-      "detalle": "Aenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum.",
-      "categoria": "Corbatas",
-      "marca": "Colantuono",
-      "precio": 5155,
-      "imagen": "default.png"
+      "name": "Producto 28",
+      "detail": "Aenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum.",
+      "category": "Corbatas",
+      "brand": "Colantuono",
+      "price": 5155,
+      "image": "default.png"
     }, 
     {
       "sku": 29,
-      "nombre": "Producto 29",
-      "detalle": "Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero.",
-      "categoria": "Corbatas",
-      "marca": "Colantuono",
-      "precio": 2131,
-      "imagen": "default.png"
+      "name": "Producto 29",
+      "detail": "Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero.",
+      "category": "Corbatas",
+      "brand": "Colantuono",
+      "price": 2131,
+      "image": "default.png"
     }, 
     {
       "sku": 30,
-      "nombre": "Producto 30",
-      "detalle": "Maecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat.",
-      "categoria": "Sacos",
-      "marca": "Hermes",
-      "precio": 2378,
-      "imagen": "default.png"
+      "name": "Producto 30",
+      "detail": "Maecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat.",
+      "category": "Sacos",
+      "brand": "Hermes",
+      "price": 2378,
+      "image": "default.png"
     }, 
     {
       "sku": 31,
-      "nombre": "Producto 31",
-      "detalle": "Quisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla. Nunc purus.",
-      "categoria": "Sacos",
-      "marca": "Devre",
-      "precio": 2578,
-      "imagen": "default.png"
+      "name": "Producto 31",
+      "detail": "Quisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla. Nunc purus.",
+      "category": "Sacos",
+      "brand": "Devre",
+      "price": 2578,
+      "image": "default.png"
     }, 
     {
       "sku": 32,
-      "nombre": "Producto 32",
-      "detalle": "Fusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem.",
-      "categoria": "Camisas",
-      "marca": "Hermes",
-      "precio": 5969,
-      "imagen": "default.png"
+      "name": "Producto 32",
+      "detail": "Fusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem.",
+      "category": "Camisas",
+      "brand": "Hermes",
+      "price": 5969,
+      "image": "default.png"
     }, 
     {
       "sku": 33,
-      "nombre": "Producto 33",
-      "detalle": "Maecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat.",
-      "categoria": "Pantalones",
-      "marca": "Devre",
-      "precio": 8923,
-      "imagen": "default.png"
+      "name": "Producto 33",
+      "detail": "Maecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat.",
+      "category": "Pantalones",
+      "brand": "Devre",
+      "price": 8923,
+      "image": "default.png"
     }, 
     {
       "sku": 34,
-      "nombre": "Producto 34",
-      "detalle": "Cras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque.",
-      "categoria": "Zapatos",
-      "marca": "Colantuono",
-      "precio": 9681,
-      "imagen": "default.png"
+      "name": "Producto 34",
+      "detail": "Cras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque.",
+      "category": "Zapatos",
+      "brand": "Colantuono",
+      "price": 9681,
+      "image": "default.png"
     }, 
     {
       "sku": 35,
-      "nombre": "Producto 35",
-      "detalle": "Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.",
-      "categoria": "Sacos",
-      "marca": "Hermes",
-      "precio": 9075,
-      "imagen": "default.png"
+      "name": "Producto 35",
+      "detail": "Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.",
+      "category": "Sacos",
+      "brand": "Hermes",
+      "price": 9075,
+      "image": "default.png"
     }, 
     {
       "sku": 36,
-      "nombre": "Producto 36",
-      "detalle": "Aenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum.",
-      "categoria": "Corbatas",
-      "marca": "Luigi Di Carlo",
-      "precio": 8868,
-      "imagen": "default.png"
+      "name": "Producto 36",
+      "detail": "Aenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum.",
+      "category": "Corbatas",
+      "brand": "Luigi Di Carlo",
+      "price": 8868,
+      "image": "default.png"
     }, 
     {
       "sku": 37,
-      "nombre": "Producto 37",
-      "detalle": "Praesent id massa id nisl venenatis lacinia. Aenean sit amet justo. Morbi ut odio.",
-      "categoria": "Corbatas",
-      "marca": "Colantuono",
-      "precio": 7364,
-      "imagen": "default.png"
+      "name": "Producto 37",
+      "detail": "Praesent id massa id nisl venenatis lacinia. Aenean sit amet justo. Morbi ut odio.",
+      "category": "Corbatas",
+      "brand": "Colantuono",
+      "price": 7364,
+      "image": "default.png"
     }, 
     {
       "sku": 38,
-      "nombre": "Producto 38",
-      "detalle": "Praesent id massa id nisl venenatis lacinia. Aenean sit amet justo. Morbi ut odio.",
-      "categoria": "Pantalones",
-      "marca": "Luigi Di Carlo",
-      "precio": 3902,
-      "imagen": "default.png"
+      "name": "Producto 38",
+      "detail": "Praesent id massa id nisl venenatis lacinia. Aenean sit amet justo. Morbi ut odio.",
+      "category": "Pantalones",
+      "brand": "Luigi Di Carlo",
+      "price": 3902,
+      "image": "default.png"
     }, 
     {
       "sku": 39,
-      "nombre": "Producto 39",
-      "detalle": "Proin interdum mauris non ligula pellentesque ultrices. Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl.",
-      "categoria": "Corbatas",
-      "marca": "Colantuono",
-      "precio": 3049,
-      "imagen": "default.png"
+      "name": "Producto 39",
+      "detail": "Proin interdum mauris non ligula pellentesque ultrices. Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl.",
+      "category": "Corbatas",
+      "brand": "Colantuono",
+      "price": 3049,
+      "image": "default.png"
     }, 
     {
       "sku": 40,
-      "nombre": "Producto 40",
-      "detalle": "Aenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum.",
-      "categoria": "Camisas",
-      "marca": "Devre",
-      "precio": 3791,
-      "imagen": "default.png"
+      "name": "Producto 40",
+      "detail": "Aenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum.",
+      "category": "Camisas",
+      "brand": "Devre",
+      "price": 3791,
+      "image": "default.png"
     }, 
     {
       "sku": 41,
-      "nombre": "Producto 41",
-      "detalle": "Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla. Sed vel enim sit amet nunc viverra dapibus. Nulla suscipit ligula in lacus.",
-      "categoria": "Pantalones",
-      "marca": "Devre",
-      "precio": 2505,
-      "imagen": "default.png"
+      "name": "Producto 41",
+      "detail": "Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla. Sed vel enim sit amet nunc viverra dapibus. Nulla suscipit ligula in lacus.",
+      "category": "Pantalones",
+      "brand": "Devre",
+      "price": 2505,
+      "image": "default.png"
     }, 
     {
       "sku": 42,
-      "nombre": "Producto 42",
-      "detalle": "Etiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem.",
-      "categoria": "Sacos",
-      "marca": "Devre",
-      "precio": 8530,
-      "imagen": "default.png"
+      "name": "Producto 42",
+      "detail": "Etiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem.",
+      "category": "Sacos",
+      "brand": "Devre",
+      "price": 8530,
+      "image": "default.png"
     }, 
     {
       "sku": 43,
-      "nombre": "Producto 43",
-      "detalle": "Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero.",
-      "categoria": "Pantalones",
-      "marca": "Hermes",
-      "precio": 4812,
-      "imagen": "default.png"
+      "name": "Producto 43",
+      "detail": "Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero.",
+      "category": "Pantalones",
+      "brand": "Hermes",
+      "price": 4812,
+      "image": "default.png"
     }, 
     {
       "sku": 44,
-      "nombre": "Producto 44",
-      "detalle": "Duis aliquam convallis nunc. Proin at turpis a pede posuere nonummy. Integer non velit.",
-      "categoria": "Corbatas",
-      "marca": "Ermenegildo Zegna",
-      "precio": 7866,
-      "imagen": "default.png"
+      "name": "Producto 44",
+      "detail": "Duis aliquam convallis nunc. Proin at turpis a pede posuere nonummy. Integer non velit.",
+      "category": "Corbatas",
+      "brand": "Ermenegildo Zegna",
+      "price": 7866,
+      "image": "default.png"
     }, 
     {
       "sku": 45,
-      "nombre": "Producto 45",
-      "detalle": "Sed ante. Vivamus tortor. Duis mattis egestas metus.",
-      "categoria": "Camisas",
-      "marca": "Hermes",
-      "precio": 3850,
-      "imagen": "default.png"
+      "name": "Producto 45",
+      "detail": "Sed ante. Vivamus tortor. Duis mattis egestas metus.",
+      "category": "Camisas",
+      "brand": "Hermes",
+      "price": 3850,
+      "image": "default.png"
     }, 
     {
       "sku": 46,
-      "nombre": "Producto 46",
-      "detalle": "Fusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem.",
-      "categoria": "Sacos",
-      "marca": "Devre",
-      "precio": 7884,
-      "imagen": "default.png"
+      "name": "Producto 46",
+      "detail": "Fusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem.",
+      "category": "Sacos",
+      "brand": "Devre",
+      "price": 7884,
+      "image": "default.png"
     }, 
     {
       "sku": 47,
-      "nombre": "Producto 47",
-      "detalle": "Etiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem.",
-      "categoria": "Pantalones",
-      "marca": "Colantuono",
-      "precio": 9071,
-      "imagen": "default.png"
+      "name": "Producto 47",
+      "detail": "Etiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem.",
+      "category": "Pantalones",
+      "brand": "Colantuono",
+      "price": 9071,
+      "image": "default.png"
     }, 
     {
       "sku": 48,
-      "nombre": "Producto 48",
-      "detalle": "Maecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui.",
-      "categoria": "Zapatos",
-      "marca": "Colantuono",
-      "precio": 9388,
-      "imagen": "default.png"
+      "name": "Producto 48",
+      "detail": "Maecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui.",
+      "category": "Zapatos",
+      "brand": "Colantuono",
+      "price": 9388,
+      "image": "default.png"
     }, 
     {
       "sku": 49,
-      "nombre": "Producto 49",
-      "detalle": "In sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus.",
-      "categoria": "Ambos",
-      "marca": "Devre",
-      "precio": 4576,
-      "imagen": "default.png"
+      "name": "Producto 49",
+      "detail": "In sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus.",
+      "category": "Ambos",
+      "brand": "Devre",
+      "price": 4576,
+      "image": "default.png"
     }, 
     {
       "sku": 50,
-      "nombre": "Producto 50",
-      "detalle": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin risus. Praesent lectus.",
-      "categoria": "Zapatos",
-      "marca": "Ermenegildo Zegna",
-      "precio": 6556,
-      "imagen": "default.png"
+      "name": "Producto 50",
+      "detail": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin risus. Praesent lectus.",
+      "category": "Zapatos",
+      "brand": "Ermenegildo Zegna",
+      "price": 6556,
+      "image": "default.png"
     }
 ]    
