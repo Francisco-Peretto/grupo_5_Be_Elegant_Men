@@ -2,7 +2,6 @@ const express = require ('express');
 const productsController = require ('../controllers/productsController');
 const router = express.Router();
 
-
 router.get('/', productsController.index); // Index
 
 // GET productDetail que quedará en desuso cuando se introduzca ejs a productDetail y se direccione por id
@@ -14,12 +13,12 @@ router.get('/products/create', productsController.createProductGet); // 2. GET p
 
 router.get('/products/:id', productsController.idProduct); // 3. GET products/:id
 
-router.post('/products', productsController.createProductPost); // 4. POST products
+router.post('/products', productsController.createProductPost); // 4. POST products falta pasar Multer
 
 router.get('/products/:id/edit', productsController.editProductGet); // 5. GET products/:id/edit
 
-router.get('/products/:id', productsController.editProductPost); // 6. PUT products/id ARREGLAR ESTE !
+router.put('/products/:id', productsController.editProductPost); // 6. PUT products/id falta pasar Multer
 
-router.get('/products/:id', productsController.createProductPost); // 7. DELETE products/:id
+router.delete('/products/:id', productsController.createProductPost); // 7. DELETE products/:id
 
 module.exports = router;

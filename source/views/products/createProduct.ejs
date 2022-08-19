@@ -3,7 +3,7 @@
         <%- include('../partials/header.ejs') %>
         <main class="cuerpo-register-createProduct">
             <h1>Registro de producto</h1>
-            <form class="formulario-register-createProduct" action="/products" method="post">
+            <form class="formulario-register-createProduct" action="/products" method="post" enctype="multipart/form-data">
                 <section>
                     <input type="text" id="name" name="name" placeholder="Nombre del producto" required>
                     <input type="number" id="price" name="price" placeholder="Precio del producto" required>
@@ -36,22 +36,18 @@
                 <section>
                     <h3>Selecciona la marca</h3>
                     <select class="dropdown-createProduct" name="marca" required> <!-- este name es lo que pasa al back-->
-                        <option value="Brooks Brothers">Brooks Brothers</option>
-                        <option value="Colantuono">Colantuono</option>
-                        <option value="Devré">Devré</option>
-                        <option value="Ermenegildo Zegna">Ermenegildo Zegna</option>
-                        <option value="Hermes">Hermes</option>
-                        <option value="Luigi de Carlo">Luigi de Carlo</option>
+                        <% let marcas = ['Brooks Brothers', 'Colantuono', 'Devré', 'Ermenegildo Zegna', 'Hermes', 'Luigi de Carlo']; %> 
+                        <% for( const marca of marcas) { %>
+                            <option value="<%= marca %>"> <%= marca %> </option>                        
+                        <% } %>
                     </select>
 
                     <h3>Selecciona la categoría</h3>
                     <select class="dropdown-createProduct" name="categoría" required> <!-- este name es lo que pasa al back-->
-                        <option value="ambo">Ambos</option>
-                        <option value="pantalones">Pantalones</option>
-                        <option value="camisas">Camisas</option>
-                        <option value="saco de vestir">Sacos</option>
-                        <option value="zapato">Zapatos</option>
-                        <option value="corbata">Corbatas</option>
+                        <% let categorias = ['Ambos', 'Pantalones', 'Camisas', 'Sacos', 'Zapatos', 'Corbatas']; %> 
+                        <% for( const categoria of categorias) { %>
+                            <option value="<%= categoria %>"> <%= categoria %> </option>                        
+                        <% } %>
                     </select>
                 </section>
 

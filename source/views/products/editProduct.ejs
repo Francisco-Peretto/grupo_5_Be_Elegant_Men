@@ -1,0 +1,50 @@
+<%- include('../partials/head.ejs') %>
+    <body>
+        <%- include('../partials/header.ejs') %>
+        <main class="cuerpo-register-createProduct">
+            <h1>Edición de producto</h1>
+            <!-- Revisar el action -->
+            <form class="formulario-register-createProduct" action="/products/:id?_method=PUT" method="POST" enctype="multipart/form-data"> 
+                <section>
+                    <input type="text" id="nombre" name="nombre" placeholder="Nombre del producto" value="<%- skuToEdit.nombre %> " required>
+                    <input type="number" id="precio" name="precio" placeholder="Precio del producto" value="<%- skuToEdit.precio %>" required>
+                </section>
+                <!-- Obtener descripción a través de EJS -->
+                <section> 
+                    <textarea name="detalle" id="detalle" placeholder="Descripción del producto" value="<%- skuToEdit.detalle %>" required></textarea>
+                </section>
+
+                <section> 
+                    <h3>Selecciona la marca</h3> <!-- Cuando recupere la marca le agregará el selected -->
+                    <select class="dropdown-createProduct" name="marca" required>
+                        <% let marcas = ['Brooks Brothers', 'Colantuono', 'Devré', 'Ermenegildo Zegna', 'Hermes', 'Luigi de Carlo']; %> 
+                        <% for( const marca of marcas) { %>
+                            <option value="<%= marca %>"> <%= marca %> </option>                        
+                        <% } %>
+                    </select>
+
+                    <h3>Selecciona la categoría</h3> <!-- Cuando recupere la categoría le agregará el selected -->
+                    <select class="dropdown-createProduct" name="categoria" required>
+                        <% let categorias = ['Ambos', 'Pantalones', 'Camisas', 'Sacos', 'Zapatos', 'Corbatas']; %> 
+                        <% for( const categoria of categorias) { %>
+                            <option value="<%= categoria %>"> <%= categoria %> </option>                        
+                        <% } %>
+                    </select>
+                </section>
+
+                <div class="file-select-createProduct" id="picture" > <!-- Cuando recupere la marca le agregará las imágenes -->
+                    <input type="file" name="picture" aria-label="Fotos del producto" required>
+                </div>
+
+                <section>
+                    <form action="products/<%= skuToEdit.sku %>/edit?_method=PUT" method="post">
+                        <button type="submit" value="editar">Editar producto</button>
+                    </form>
+                    <button type="reset">Reiniciar formulario</button>
+                </section>
+
+            </form>
+        </main>
+        <%- include('../partials/footer.ejs') %>
+    </body>
+</html>

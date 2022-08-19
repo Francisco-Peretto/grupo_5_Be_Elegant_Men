@@ -6,30 +6,60 @@
 
         <main class="cuerpo-productDetail">
             <section class="section-productDetail">
-                <li class="galeriaProducto-productDetail"> <!--  Galería vertical-->
-                    <img class="slideGaleria-productDetail" src="\img\product_detail\camisa_blanca1.jpg" alt="Imagen del producto 1">
-                    <img class="slideGaleria-productDetail" src="\img\product_detail\camisa_blanca2.jpg" alt="Imagen del producto 2">
-                    <img class="slideGaleria-productDetail" src="\img\product_detail\camisa_blanca3.jpg" alt="Imagen del producto 3">
-                    <img class="slideGaleria-productDetail" src="\img\product_detail\camisa_blanca4.jpg" alt="Imagen del producto 4">
+                <li class="galeriaProducto-productDetail"> <!--  Hacer con ejs tantas imágenes como hayan además de la primera-->
+                    <img class="slideGaleria-productDetail" src="<%= id.imagen %>" alt="Imagen del producto 1">
+                    <img class="slideGaleria-productDetail" src="<%= id.imagen %>" alt="Imagen del producto 2">
+                    <img class="slideGaleria-productDetail" src="<%= id.imagen %>" alt="Imagen del producto 3">
+                    <img class="slideGaleria-productDetail" src="<%= id.imagen %>" alt="Imagen del producto 4">
                 </li>
 
-                <picture class="imagenPrincipal-productDetail">
-                    <source srcset="\img\product_detail\camisa_blanca1.jpg">
-                    <img class="imagenProducto-productDetail" src="\img\product_detail\camisa_blanca1.jpg" alt="Imagen principal del producto">
+                <picture class="imagenPrincipal-productDetail"> <!-- Obtener primer imagen del json -->
+                    <source srcset="<%= id.imagen %>">
+                    <img class="imagenProducto-productDetail" src="<%= id.imagen %>" alt="Imagen principal del producto">
                 </picture>
                 
                 <article class="opcionesProducto-productDetail"> <!-- Sector derecho del producto, opciones de la compra -->
-                    <h3 class="rutaProducto-productDetail"> Camisas > Camisa formal de algodón </h3> <!-- Será reemplazado por un listado horizontal con links -->                                                
+                    <h3 class="rutaProducto-productDetail.ejs"><%= id.categoria %> / <%= id.nombre %> </h3>
 
-                    <h2 class="nombreProducto-productDetail">Camisa formal de algodón</h2>
+                    <h2 class="nombreProducto-productDetail"><%= id.nombre %> </h2>
 
                     <div class="precioYFavoritos-productDetail"> <!-- Caja de precio y favoritos -->
-                        <h2 class="precioProducto-productDetail">$1234.56</h3>
+                        <h2 class="precioProducto-productDetail"><%= id.precio %></h3>
                         <i class="fa-solid fa-heart favoritos-productDetail"></i>
                     </div>
                     
                     <form action="/" method="post" class="formulario-productDetail">
-<!--                        <div class="boxFormulario-productDetail">
+                        <div class="boxFormulario-productDetail cantidadYCarrito-productDetail"> <!-- Caja de cantidad y carrito -->
+                            <select name="cantidad" class="dropdown-productDetail dropdownCantidad-productDetail">
+                                <option value="">Elegí una cantidad</option>
+                                <% let valores = ['1','2','3','4','5']; %> 
+                                <% for( let i of valores ) { %>
+                                    <option value="<%= i %>"> <%= i %> </option>
+                                    <% } %>
+                            </select>
+                        </div>
+                        <div class="boxFormulario-productDetail">
+                            <form action="products/<%= id.sku %>/edit" method="get">
+                                <button type="submit" value="edit" class="carritoProducto-productDetail boton-productDetail" >  
+                                    <h3 class="textoCarrito-productDetail">Editar</h3>   
+                                </button>
+                            </form>
+
+                            <form action="products/<%= id.sku %>/?_method=DELETE" method="post">
+                                <button type="submit" value="delete" class="carritoProducto-productDetail boton-productDetail" >  
+                                    <h3 class="textoCarrito-productDetail">Borrar</h3>   
+                                </button>
+                            </form>
+
+                            <form action="../users/cart" method="get"> <!--Es un GET que lleva al cart porque no se ha implementado agregar un objeto al cart-->
+                            <button type="submit" value="submit" class="carritoProducto-productDetail boton-productDetail"> 
+                                <h3 class="textoCarrito-productDetail">Agregar al carrito</h3>
+                                <i class="fa-solid fa-cart-shopping carrito-productoDetail"></i>
+                            </button>
+                            </form>
+                        </div>
+                    </form>
+<!--                        
                             <label for="size">Elegí el talle</label>
                             <select class="dropdown-productDetail" name="size">
                                 <option value="s">S</option>
@@ -49,34 +79,12 @@
                             </select>
                         </div>
                     -->
-                        <div class="boxFormulario-productDetail cantidadYCarrito-productDetail"> <!-- Caja de cantidad y carrito -->
-                            <select class="dropdown-productDetail dropdownCantidad-productDetail" name="cantidad">
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5</option>
-                                <option value="6">6</option>
-                                <option value="7">7</option>
-                                <option value="8">8</option>
-                                <option value="9">9</option>
-                                <option value="10">10</option>
-                            </select>
-                                
-                            <button value="submit" class="carritoProducto-productDetail boton-productDetail"> 
-                                <h3 class="textoCarrito-productDetail">Agregar al carrito</h3>
-                                <i class="fa-solid fa-cart-shopping carrito-productoDetail"></i>
-                            </button>
-                        </div>
-                    </form>
                 </article>
             </section>
             <section class="sectionDetallesProducto-productDetail">
                 <article class="detallesProducto-productDetail">
                 <h2 class="tituloDetalleProducto-productDetail">Detalles del producto</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat alias voluptatum nihil excepturi. Incidunt ullam magni minima, fugit facere necessitatibus commodi. Magni quod repudiandae, praesentium illum suscipit optio quia omnis?</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat alias voluptatum nihil excepturi. Incidunt ullam magni minima, fugit facere necessitatibus commodi. Magni quod repudiandae, praesentium illum suscipit optio quia omnis?</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat alias voluptatum nihil excepturi. Incidunt ullam magni minima, fugit facere necessitatibus commodi. Magni quod repudiandae, praesentium illum suscipit optio quia omnis?</p>
+                <p><%= id.detalle %> </p>
                 </article>
             </section>
 

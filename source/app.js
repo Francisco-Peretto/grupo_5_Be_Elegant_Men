@@ -1,16 +1,19 @@
 const express = require('express');
 const app = express();
 const config = require('./modules/server');
-const {join} = require('path');
+const {resolve} = require('path');
+const methodOverride = require('method-override');
 
 const routesProducts = require('./routes/products');
 const routesUsers = require('./routes/users');
-const statics = require('./modules/static');
 
 app.listen(config.port,config.start());
 
-app.set ("view engine", "ejs")
+app.set('views', resolve(__dirname, 'views'));
+app.set("view engine", "ejs")
+app.use(express.static(resolve(__dirname,'..','public')))
+app.use(express.urlencoded({extended: true})) // capturar datos de formulario post
 
-app.use(statics(join(__dirname,"../public")));
 app.use('/', routesProducts);
 app.use('/users/', routesUsers);
+app.use (methodOverride('_method'));
