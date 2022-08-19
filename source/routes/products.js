@@ -7,7 +7,7 @@ router.get('/', productsController.index); // Index
 // GET productDetail que quedará en desuso cuando se introduzca ejs a productDetail y se direccione por id
 router.get('/productDetail', productsController.productDetail);
 
-router.get('/products', productsController.listProduct); // 1. GET products.
+router.get('/products/list/:category?', productsController.listProduct); // 1. GET products.
 
 router.get('/products/create', productsController.createProductGet); // 2. GET products/create.
 

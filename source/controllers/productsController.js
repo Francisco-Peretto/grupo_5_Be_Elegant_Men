@@ -7,7 +7,16 @@ const productsController = {
     },
     
     listProduct: (req, res) => { // 1. GET products. Listado de productos
+        
+        let products = all();                               
 
+        if (req.params.category) {                         
+            products = products.filter(e => 
+                e.category == req.params.category)         
+            return res.render('products/categoriesList',{products})            
+        }
+        
+        return res.render('products/categoriesList',{products})  
     },
 
     createProductGet: (req, res) => {  // 2. GET products/create. Formulario de creación de productos aún sin hacer

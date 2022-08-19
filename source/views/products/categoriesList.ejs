@@ -2,7 +2,7 @@
     <body>
         <%- include('../partials/header.ejs') %>
 
-        <h2>Estos son nuestros <%= product.category  %> </h2>
+        <h2>Estos son nuestros <%= products.category  %> </h2>
 
         <% if (products.length > 0) { %>
             <section>
@@ -21,7 +21,7 @@
                 <% }) %> 
             </section>
         <% } else { %>
-             <h2>No tenemos  <%= product.category %></h2>         
+             <h2>No tenemos  <%= products.category %></h2>         
         <% } %>
 
         <a href="/">Volver</a>
