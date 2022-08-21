@@ -6,7 +6,7 @@
     "category": "Ambos",
     "brand": "Brooks Brothers",
     "price": 4154,
-    "image": "default.png"
+    "image": "ambo_2.jpg"
   },
   {
     "sku": 1,
@@ -15,7 +15,7 @@
     "category": "Pantalones",
     "brand": "Luigi Di Carlo",
     "price": 8134,
-    "image": "default.png"
+    "image": "pantalon_vestir_1.png"
   },
   {
     "sku": 2,
@@ -24,7 +24,7 @@
     "category": "Ambos",
     "brand": "Brooks Brothers",
     "price": 9928,
-    "image": "default.png"
+    "image": "ambo_3.png"
   },
   {
     "sku": 3,
@@ -33,7 +33,7 @@
     "category": "Corbatas",
     "brand": "Luigi Di Carlo",
     "price": 3074,
-    "image": "default.png"
+    "image": "corbata_1.png"
   },
   {
     "sku": 4,
@@ -42,7 +42,7 @@
     "category": "Camisas",
     "brand": "Brooks Brothers",
     "price": 5018,
-    "image": "default.png"
+    "image": "camisa_5.png"
   },
   {
     "sku": 5,
@@ -51,7 +51,7 @@
     "category": "Ambos",
     "brand": "Brooks Brothers",
     "price": 5351,
-    "image": "default.png"
+    "image": "ambo_2.jpg"
   },
   {
     "sku": 6,
@@ -60,7 +60,7 @@
     "category": "Sacos",
     "brand": "Luigi Di Carlo",
     "price": 4157,
-    "image": "default.png"
+    "image": "saco_2.jpg"
   },
   {
     "sku": 7,
@@ -69,7 +69,7 @@
     "category": "Corbatas",
     "brand": "Colantuono",
     "price": 7291,
-    "image": "default.png"
+    "image": "corbata_2.png"
   },
   {
     "sku": 8,
@@ -78,7 +78,7 @@
     "category": "Camisas",
     "brand": "Colantuono",
     "price": 6462,
-    "image": "default.png"
+    "image": "camisa_6.png"
   },
   {
     "sku": 9,
@@ -87,7 +87,7 @@
     "category": "Corbatas",
     "brand": "Luigi Di Carlo",
     "price": 6011,
-    "image": "default.png"
+    "image": "corbata_3.png"
   },
   {
     "sku": 10,
@@ -96,7 +96,7 @@
     "category": "Ambos",
     "brand": "Brooks Brothers",
     "price": 4377,
-    "image": "default.png"
+    "image": "ambo_2.jpg"
   },
   {
     "sku": 11,
@@ -105,7 +105,7 @@
     "category": "Sacos",
     "brand": "Brooks Brothers",
     "price": 5970,
-    "image": "default.png"
+    "image": "saco_3.jpg"
   },
   {
     "sku": 12,
@@ -114,7 +114,7 @@
     "category": "Corbatas",
     "brand": "Luigi Di Carlo",
     "price": 9082,
-    "image": "default.png"
+    "image": "corbata_4.jpg"
   },
   {
     "sku": 13,
@@ -123,7 +123,7 @@
     "category": "Pantalones",
     "brand": "Ermenegildo Zegna",
     "price": 8673,
-    "image": "default.png"
+    "image": "pantalon_vestir_2.png"
   },
   {
     "sku": 14,
@@ -132,7 +132,7 @@
     "category": "Ambos",
     "brand": "Devre",
     "price": 7955,
-    "image": "default.png"
+    "image": "ambo_3.png"
   },
   {
     "sku": 15,
@@ -141,7 +141,7 @@
     "category": "Corbatas",
     "brand": "Colantuono",
     "price": 5700,
-    "image": "default.png"
+    "image": "corbata_5.jpg"
   },
   {
     "sku": 16,
@@ -150,7 +150,7 @@
     "category": "Pantalones",
     "brand": "Hermes",
     "price": 3925,
-    "image": "default.png"
+    "image": "pantalon_vestir_3.png"
   },
   {
     "sku": 17,
@@ -159,7 +159,7 @@
     "category": "Sacos",
     "brand": "Luigi Di Carlo",
     "price": 7931,
-    "image": "default.png"
+    "image": "saco_4.png"
   },
   {
     "sku": 18,
@@ -168,7 +168,7 @@
     "category": "Ambos",
     "brand": "Luigi Di Carlo",
     "price": 9290,
-    "image": "default.png"
+    "image": "ambo_2.jpg"
   },
   {
     "sku": 19,
@@ -177,7 +177,7 @@
     "category": "Sacos",
     "brand": "Colantuono",
     "price": 6659,
-    "image": "default.png"
+    "image": "saco_5.png"
   },
   {
     "sku": 20,
@@ -186,7 +186,7 @@
     "category": "Camisas",
     "brand": "Colantuono",
     "price": 8411,
-    "image": "default.png"
+    "image": "camisa_7.png"
   },
   {
     "sku": 21,
@@ -195,16 +195,16 @@
     "category": "Pantalones",
     "brand": "Luigi Di Carlo",
     "price": 7108,
-    "image": "default.png"
+    "image": "pantalon_vestir_1.png"
   },
   {
     "sku": 22,
-    "name": "Producto 22",
+    "name": "Producto 22 ",
     "detail": "Duis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum.",
     "category": "Zapatos",
     "brand": "Brooks Brothers",
-    "price": 3351,
-    "image": "default.png"
+    "price": 3350,
+    "image": "zapatos_2.PNG"
   },
   {
     "sku": 23,
@@ -213,7 +213,7 @@
     "category": "Sacos",
     "brand": "Devre",
     "price": 2210,
-    "image": "default.png"
+    "image": "saco_2.jpg"
   },
   {
     "sku": 24,
@@ -222,7 +222,7 @@
     "category": "Sacos",
     "brand": "Luigi Di Carlo",
     "price": 5876,
-    "image": "default.png"
+    "image": "saco_3.jpg"
   },
   {
     "sku": 25,
@@ -231,7 +231,7 @@
     "category": "Zapatos",
     "brand": "Ermenegildo Zegna",
     "price": 8954,
-    "image": "default.png"
+    "image": "zapatos_3.png"
   },
   {
     "sku": 26,
@@ -240,7 +240,7 @@
     "category": "Ambos",
     "brand": "Ermenegildo Zegna",
     "price": 7445,
-    "image": "default.png"
+    "image": "ambo_3.png"
   },
   {
     "sku": 27,
@@ -249,7 +249,7 @@
     "category": "Pantalones",
     "brand": "Colantuono",
     "price": 5623,
-    "image": "default.png"
+    "image": "pantalon_vestir_2.png"
   },
   {
     "sku": 28,
@@ -258,7 +258,7 @@
     "category": "Corbatas",
     "brand": "Colantuono",
     "price": 5155,
-    "image": "default.png"
+    "image": "corbata_6.png"
   },
   {
     "sku": 29,
@@ -267,7 +267,7 @@
     "category": "Corbatas",
     "brand": "Colantuono",
     "price": 2131,
-    "image": "default.png"
+    "image": "corbata_7.png"
   },
   {
     "sku": 30,
@@ -276,7 +276,7 @@
     "category": "Sacos",
     "brand": "Hermes",
     "price": 2378,
-    "image": "default.png"
+    "image": "saco_4.png"
   },
   {
     "sku": 31,
@@ -285,7 +285,7 @@
     "category": "Sacos",
     "brand": "Devre",
     "price": 2578,
-    "image": "default.png"
+    "image": "saco_5.png"
   },
   {
     "sku": 32,
@@ -294,7 +294,7 @@
     "category": "Camisas",
     "brand": "Hermes",
     "price": 5969,
-    "image": "default.png"
+    "image": "camisa_5.png"
   },
   {
     "sku": 33,
@@ -303,7 +303,7 @@
     "category": "Pantalones",
     "brand": "Devre",
     "price": 8923,
-    "image": "default.png"
+    "image": "pantalon_vestir_3.png"
   },
   {
     "sku": 34,
@@ -312,7 +312,7 @@
     "category": "Zapatos",
     "brand": "Colantuono",
     "price": 9681,
-    "image": "default.png"
+    "image": "zapatos_2.PNG"
   },
   {
     "sku": 35,
@@ -321,7 +321,7 @@
     "category": "Sacos",
     "brand": "Hermes",
     "price": 9075,
-    "image": "default.png"
+    "image": "saco_2.jpg"
   },
   {
     "sku": 36,
@@ -330,7 +330,7 @@
     "category": "Corbatas",
     "brand": "Luigi Di Carlo",
     "price": 8868,
-    "image": "default.png"
+    "image": "corbata_8.png"
   },
   {
     "sku": 37,
@@ -339,7 +339,7 @@
     "category": "Corbatas",
     "brand": "Colantuono",
     "price": 7364,
-    "image": "default.png"
+    "image": "corbata_1.png"
   },
   {
     "sku": 38,
@@ -348,7 +348,7 @@
     "category": "Pantalones",
     "brand": "Luigi Di Carlo",
     "price": 3902,
-    "image": "default.png"
+    "image": "pantalon_vestir_1.png"
   },
   {
     "sku": 39,
@@ -357,7 +357,7 @@
     "category": "Corbatas",
     "brand": "Colantuono",
     "price": 3049,
-    "image": "default.png"
+    "image": "corbata_2.png"
   },
   {
     "sku": 40,
@@ -366,7 +366,7 @@
     "category": "Camisas",
     "brand": "Devre",
     "price": 3791,
-    "image": "default.png"
+    "image": "camisa_6.png"
   },
   {
     "sku": 41,
@@ -375,7 +375,7 @@
     "category": "Pantalones",
     "brand": "Devre",
     "price": 2505,
-    "image": "default.png"
+    "image": "pantalon_vestir_2.png"
   },
   {
     "sku": 42,
@@ -384,7 +384,7 @@
     "category": "Sacos",
     "brand": "Devre",
     "price": 8530,
-    "image": "default.png"
+    "image": "saco_3.jpg"
   },
   {
     "sku": 43,
@@ -393,7 +393,7 @@
     "category": "Pantalones",
     "brand": "Hermes",
     "price": 4812,
-    "image": "default.png"
+    "image": "pantalon_vestir_3.png"
   },
   {
     "sku": 44,
@@ -402,7 +402,7 @@
     "category": "Corbatas",
     "brand": "Ermenegildo Zegna",
     "price": 7866,
-    "image": "default.png"
+    "image": "corbata_3.png"
   },
   {
     "sku": 45,
@@ -411,7 +411,7 @@
     "category": "Camisas",
     "brand": "Hermes",
     "price": 3850,
-    "image": "default.png"
+    "image": "camisa_7.png"
   },
   {
     "sku": 46,
@@ -420,7 +420,7 @@
     "category": "Sacos",
     "brand": "Devre",
     "price": 7884,
-    "image": "default.png"
+    "image": "saco_4.png"
   },
   {
     "sku": 47,
@@ -429,7 +429,7 @@
     "category": "Pantalones",
     "brand": "Colantuono",
     "price": 9071,
-    "image": "default.png"
+    "image": "pantalon_vestir_1.png"
   },
   {
     "sku": 48,
@@ -438,7 +438,7 @@
     "category": "Zapatos",
     "brand": "Colantuono",
     "price": 9388,
-    "image": "default.png"
+    "image": "zapatos_3.png"
   },
   {
     "sku": 49,
@@ -447,15 +447,15 @@
     "category": "Ambos",
     "brand": "Devre",
     "price": 4576,
-    "image": "default.png"
+    "image": "ambo_2.jpg"
   },
   {
     "sku": 50,
-    "name": "Producto 50 -3",
+    "name": "Producto 50",
     "detail": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin risus. Praesent lectus.",
     "category": "Zapatos",
     "brand": "Ermenegildo Zegna",
     "price": 6556,
-    "image": "default.png"
+    "image": "zapatos_2.PNG"
   }
 ]

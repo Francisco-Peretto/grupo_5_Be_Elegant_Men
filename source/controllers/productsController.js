@@ -14,10 +14,10 @@ const productsController = {
         if (req.params.category) {                         
             products = products.filter(e => 
                 e.category == req.params.category)         
-            return res.render('./products/categoriesList',{products})            
+            return res.render('./products/listProducts',{products})            
         }
         
-        return res.render('./products/categoriesList',{products})  
+        return res.render('./products/listProducts',{products})  
     },
 
     createProductGet: (req, res) => {  // 2. GET products/create. Formulario de creación de productos aún sin hacer
@@ -64,7 +64,7 @@ const productsController = {
     deleteProduct: (req, res) => { // 7. DELETE products/:id. Botón de borrado de producto
         let product = one(req.body.sku)
         if (product.image != 'default.png'){
-            let file = path.resolve(__dirname,'..','..','public','img',product.image)
+            let file = path.resolve(__dirname,'..','..','public','img','products',product.image)
             unlinkSync(file)
         }
         let allProducts = all();

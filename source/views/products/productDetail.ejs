@@ -7,14 +7,14 @@
         <main class="cuerpo-productDetail">
             <section class="section-productDetail">
                 <li class="galeriaProducto-productDetail"> <!--  Hacer con ejs tantas imágenes como hayan además de la primera-->
-                    <img class="slideGaleria-productDetail" src="/img/<%= id.image %>" alt="Imagen del producto 1">
-                    <img class="slideGaleria-productDetail" src="/img/<%= id.image %>" alt="Imagen del producto 2">
-                    <img class="slideGaleria-productDetail" src="/img/<%= id.image %>" alt="Imagen del producto 3">
-                    <img class="slideGaleria-productDetail" src="/img/<%= id.image %>" alt="Imagen del producto 4">
+                    <img class="slideGaleria-productDetail" src="/img/products/<%= id.image %>" alt="Imagen del producto 1">
+                    <img class="slideGaleria-productDetail" src="/img/products/<%= id.image %>" alt="Imagen del producto 2">
+                    <img class="slideGaleria-productDetail" src="/img/products/<%= id.image %>" alt="Imagen del producto 3">
+                    <img class="slideGaleria-productDetail" src="/img/products/<%= id.image %>" alt="Imagen del producto 4">
                 </li>
 
                 <picture class="imagenPrincipal-productDetail"> <!-- Obtener primer imagen del json -->
-                    <source srcset="/img/<%= id.image %>">
+                    <source srcset="/img/products/<%= id.image %>">
                     <img class="imagenProducto-productDetail" src="/img/<%= id.image %>" alt="Imagen principal del producto">
                 </picture>
                 
@@ -85,26 +85,25 @@
             </section>
             <section class="sectionDetallesProducto-productDetail">
                 <article class="detallesProducto-productDetail">
-                <h2 class="tituloDetalleProducto-productDetail">Detalles del producto</h2>
-                <p><%= id.detail %> </p>
+                    <h2 class="tituloDetalleProducto-productDetail">Detalles del producto</h2>
+                    <p><%= id.detail %> </p>
                 </article>
             </section>
 
             <section class="sectionDetallesProducto-productDetail">
                 <article class="detallesProducto-productDetail">
-                <h2 class="tituloDetalleProducto-productDetail">Productos relacionados</h2>
-                <li class="galeriaProductosRelacionados-productDetail">
-                    <img class="imagenRelacionados-productDetail" src="\img\product_detail\camisa_blanca1.jpg" alt="Imagen del producto 1">
-                    <img class="imagenRelacionados-productDetail" src="\img\product_detail\camisa_blanca2.jpg" alt="Imagen del producto 2">
-                    <img class="imagenRelacionados-productDetail" src="\img\product_detail\camisa_blanca3.jpg" alt="Imagen del producto 3">
-                    <img class="imagenRelacionados-productDetail" src="\img\product_detail\camisa_blanca4.jpg" alt="Imagen del producto 4">
-                </li>
+                    <h2 class="tituloDetalleProducto-productDetail">Productos relacionados</h2>
+                    <li class="galeriaProductosRelacionados-productDetail">
+                        <img class="imagenRelacionados-productDetail" src="\img\products\camisa_blanca1.jpg" alt="Imagen del producto 1">
+                        <img class="imagenRelacionados-productDetail" src="\img\products\camisa_blanca2.jpg" alt="Imagen del producto 2">
+                        <img class="imagenRelacionados-productDetail" src="\img\products\camisa_blanca3.jpg" alt="Imagen del producto 3">
+                        <img class="imagenRelacionados-productDetail" src="\img\products\camisa_blanca4.jpg" alt="Imagen del producto 4">
+                    </li>
                 </article>
             </section>
             
         </main>
         
         <%- include('../partials/footer.ejs') %>
-    
     </body>
 </html>

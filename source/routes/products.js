@@ -1,6 +1,9 @@
 const express = require ('express');
+
 const productsController = require ('../controllers/productsController');
+
 const router = express.Router();
+
 const multer = require('multer');
 const storage = require('../modules/storage');
 const upload = multer({storage:storage('../../uploads/users')});
