@@ -47,7 +47,7 @@
     height: 30px;
 }
 
-.formulario-register-createProduct section textarea {
+#detail {
     width: 100%;
     height: 50px;
 }

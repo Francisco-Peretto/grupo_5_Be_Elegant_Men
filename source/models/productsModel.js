@@ -21,12 +21,12 @@ let model = {
         let last = all.pop()                    
         product.sku = last.sku + 1             
 
-        product.nombre = data.nombre  
-        product.detalle = data.detalle            
-        product.categoria = data.categoria      
-        product.marca = data.marca              
-        product.precio = parseInt(data.precio)    
-        product.imagen = data.imagen              
+        product.name = data.name  
+        product.detail = data.detail            
+        product.category = data.category      
+        product.brand = data.brand              
+        product.price = parseInt(data.price)    
+        product.image = data.image              
         return product                          
     },
     write : function (data) {            // funcion que nos permite escribir el archivo json
