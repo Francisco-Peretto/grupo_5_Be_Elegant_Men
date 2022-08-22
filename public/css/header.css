@@ -19,6 +19,7 @@ header {
 h2 a {
   color: #fff;
   text-decoration: none;
+  margin-left: -15%;
 }
 
 .contenedor-img {
@@ -272,6 +273,10 @@ h2 a {
 
 .form-busqueda button {
   width: 10%;
+}
+
+h2 a {
+  margin-left: -10%;
 }
 
 }
