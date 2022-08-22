@@ -1,24 +1,64 @@
 <%- include('../partials/head.ejs') %>
     <body>
         <%- include('../partials/header.ejs') %>
-
-        <% if (products.length > 0) { %>
-        <section>
-            <% products.forEach(element => { %> 
-            <article>
-                <a href="/products/<%= element.sku %>">
-                    <picture>
-                        <img src="/img/products/<%= element.image %>" alt="<%= element.image %>">
-                    </picture>
+        <main class="main-listProducts">
+            <section class="sec-filtros">
+                <h2>Filtros</h2>
+                <article class="filtro-categoria">
+                    <form>
+                        <fieldset>
+                            <legend>Filtrar por Marca</legend>
+                                <div>
+                                    <label>Filtro 1</label>
+                                    <input type="checkbox" name="" id="">
+                                </div>
+                                <div>
+                                    <label>Filtro 2</label>
+                                    <input type="checkbox" name="" id="">
+                                </div>
+                                <div>
+                                    <label>Filtro 3</label>
+                                    <input type="checkbox" name="" id="">
+                                </div>        
+                        </fieldset>
+                        <fieldset>
+                            <legend>Filtrar por Precio</legend>
+                                <input type="range" name="" id="">
+                        </fieldset>
+                        <fieldset>
+                            <legend>Filtrar por Color</legend>
+                                <div>
+                                    <label>Filtro 1</label>
+                                    <input type="checkbox" name="" id="">
+                                </div>
+                                <div>
+                                    <label>Filtro 2</label>
+                                    <input type="checkbox" name="" id="">
+                                </div>
+                                <div>
+                                    <label>Filtro 3</label>
+                                    <input type="checkbox" name="" id="">
+                                </div>        
+                        </fieldset>
+                        <button type="submit">Aplicar</button>
+                        <button type="reset">Quitar</button>
+                    </form>
+                </article>
+            </section>
+            <% if (products.length > 0) { %>
+            <section class="sec-productos">
+                <% products.forEach(element => { %> 
+                <a class="link-producto" href="/products/<%= element.sku %>">
+                    <img src="/img/products/<%= element.image %>" alt="<%= element.image %>">
                     <div>
-                        <h3><%= element.name %></h3>
-                        <h3>$ <%= element.price %></h3>
+                        <p><%= element.name %></p>
+                        <p>$ <%= element.price %></p>
                     </div>
                 </a>
-            </article>
-            <% }) %> 
-        </section>
+                <% }) %> 
+            </section>
         <% } %>
+        </main>
         <%- include('../partials/footer.ejs') %>
     </body>
 </html>
