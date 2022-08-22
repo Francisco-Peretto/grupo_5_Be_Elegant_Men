@@ -33,16 +33,17 @@
                     </select>
                 </div>
 -->
-                <section>
-                    <h3>Selecciona la marca</h3>
+                <section class="input-select">
+                    <label>Selecciona la marca:</label>
                     <select class="dropdown-createProduct" name="brand" required> <!-- este name es lo que pasa al back-->
                         <% let marcas = ['Brooks Brothers', 'Colantuono', 'Devré', 'Ermenegildo Zegna', 'Hermes', 'Luigi de Carlo']; %> 
                         <% for( const marca of marcas) { %>
                             <option value="<%= marca %>"> <%= marca %> </option>                        
                         <% } %>
                     </select>
-
-                    <h3>Selecciona la categoría</h3>
+                </section>
+                <section class="input-select">
+                    <label>Selecciona la categoría:</label>
                     <select class="dropdown-createProduct" name="category" required> <!-- este name es lo que pasa al back-->
                         <% let categorias = ['Ambos', 'Pantalones', 'Camisas', 'Sacos', 'Zapatos', 'Corbatas']; %> 
                         <% for( const categoria of categorias) { %>
@@ -56,8 +57,8 @@
                 </div>
 
                 <section>
-                    <button type="submit">Crear producto</button>
-                    <button type="reset">Reiniciar formulario</button>
+                    <button type="submit">Crear</button>
+                    <button type="reset">Borrar datos</button>
                 </section>
             </form>
         </main>

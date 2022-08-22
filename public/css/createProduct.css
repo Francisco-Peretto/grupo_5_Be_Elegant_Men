@@ -30,6 +30,7 @@
 
 .formulario-register-createProduct label {
     margin-right: 2%;
+    color: black;
 }
 
 .formulario-register-createProduct section {
@@ -54,7 +55,7 @@
 
 
 .formulario-register-createProduct button {
-    width: 30%;
+    width: 45%;
     text-align: center;
     background-color: #0e141a;
     color: #fff;
@@ -95,7 +96,7 @@
     align-items: center;
     border-radius: 15px;
     width: 40%;
-    content: 'Fotos del producto';
+    content: 'Fotos';
     position: absolute;
     left: 0;
     right: 0;
@@ -110,3 +111,24 @@
     display: inline-block;
   }
 
+  /* mediasquerys */
+
+@media (max-width: 479px) {
+    .cuerpo-register-createProduct {
+        width: 90%;
+    }
+}
+  
+@media (min-width: 480px) and (max-width: 799px) {
+    .cuerpo-register-createProduct {
+        width: 75%;
+    }
+}
+  
+@media (min-width: 800px) and (max-width: 1023px) {
+
+}
+  
+@media (min-width: 1024px) {
+
+}

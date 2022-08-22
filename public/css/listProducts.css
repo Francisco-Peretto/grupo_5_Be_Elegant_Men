@@ -85,7 +85,7 @@
     width: 25%;
     height: 350px;
     margin: 2%;
-    color: #fff;
+    color: #adb1b5;
     text-decoration: none;
 
     display:block!important;
@@ -112,6 +112,7 @@
 .link-producto div {
     width:100%;
     height: 30%;
+    margin-top: 10%;
     align-self: flex-start;
 }
 

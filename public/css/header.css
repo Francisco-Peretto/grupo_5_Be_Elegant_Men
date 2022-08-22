@@ -215,7 +215,7 @@ h2 a {
 @media (max-width: 479px) {
 
   .navbar-categorias a {
-    font-size: 0.75em;
+    font-size: 0.5em;
   }
   .navbar-usuario  {
     display: none;
@@ -242,7 +242,7 @@ h2 a {
 @media (min-width: 480px) and (max-width: 799px) {
 
   .navbar-categorias a {
-    font-size: 1em;
+    font-size: 0.85em;
   }
   .navbar-usuario  {
     display: none;
