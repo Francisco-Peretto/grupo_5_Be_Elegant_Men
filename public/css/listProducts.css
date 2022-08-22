@@ -105,8 +105,11 @@
 }
 
 .link-producto img {
-    width:100%;
+    width:80%;
     height: 70%;
+    align-content: space-between;
+    margin-left: 4vh;
+    margin-top: 2vh;
 }
 
 .link-producto div {
@@ -119,6 +122,9 @@
 .link-producto div p {
     margin: 3%;
     font-size: 18px;
+    margin-left: 4vh;
+    margin-bottom: 1.5vh;
+    margin-top: -2vh;
 }
 
 /* mediasquerys */
