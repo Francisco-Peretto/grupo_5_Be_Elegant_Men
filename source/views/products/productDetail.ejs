@@ -5,62 +5,53 @@
         <%- include('../partials/header.ejs') %>
 
         <main class="cuerpo-productDetail">
-            <section class="section-productDetail">
-                <li class="galeriaProducto-productDetail"> <!--  Hacer con ejs tantas imágenes como hayan además de la primera-->
-                    <img class="slideGaleria-productDetail" src="/img/products/<%= id.image %>" alt="Imagen del producto 1">
-                    <img class="slideGaleria-productDetail" src="/img/products/<%= id.image %>" alt="Imagen del producto 2">
-                    <img class="slideGaleria-productDetail" src="/img/products/<%= id.image %>" alt="Imagen del producto 3">
-                    <img class="slideGaleria-productDetail" src="/img/products/<%= id.image %>" alt="Imagen del producto 4">
-                </li>
 
-                <picture class="imagenPrincipal-productDetail"> <!-- Obtener primer imagen del json -->
-                    <source srcset="/img/products/<%= id.image %>">
-                    <img class="imagenProducto-productDetail" src="/img/<%= id.image %>" alt="Imagen principal del producto">
+            <section class="sec-principal">
+                <picture class="galeriaProducto"> <!--  Hacer con ejs tantas imágenes como hayan además de la primera-->
+                    <img src="/img/products/<%= id.image %>" alt="Imagen del producto 1">
+                    <img src="/img/products/<%= id.image %>" alt="Imagen del producto 2">
+                    <img src="/img/products/<%= id.image %>" alt="Imagen del producto 3">
+                    <img src="/img/products/<%= id.image %>" alt="Imagen del producto 4">
                 </picture>
-                
-                <article class="opcionesProducto-productDetail"> <!-- Sector derecho del producto, opciones de la compra -->
-                    <h3 class="rutaProducto-productDetail.ejs"><a href="list/<%= id.category %>"><%= id.category %></a>  / <a href="<%= id.sku %>"><%= id.name %></a> </h3>
 
-                    <h2 class="nombreProducto-productDetail"><%= id.name %> </h2>
+                <img class="imagenPrincipal" src="/img/products/<%= id.image %>" alt="Imagen principal del producto">
 
-                    <div class="precioYFavoritos-productDetail"> <!-- Caja de precio y favoritos -->
-                        <h2 class="precioProducto-productDetail"><%= id.price %></h3>
-                        <i class="fa-solid fa-heart favoritos-productDetail"></i>
+                <article class="opcionesProducto"> <!-- Sector derecho del producto, opciones de la compra -->
+                    <div class="div-categoria-favoritos">
+                        <a href="list/<%= id.category %>"><%= id.category %></a>
+                        <a href=""><i class="fa-solid fa-heart"></i></a>
+                    </div>
+                    <div class="div-puntuacion">
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>                        
+                    </div>
+
+                    <h2 class="nombreProducto"><%= id.name %> </h2>    
+
+                    <div class="div-precio-descuento">
+                        <h2>$ <%= id.price %></h2>
+                        <p>43% OFF</p>
                     </div>
                     
-                    <form action="/" method="post" class="formulario-productDetail">
-                        <div class="boxFormulario-productDetail cantidadYCarrito-productDetail"> <!-- Caja de cantidad y carrito -->
-                            <select name="cantidad" class="dropdown-productDetail dropdownCantidad-productDetail">
-                                <option value="">Elegí una cantidad</option>
+                    <form class="form-carrito" action="../users/cart" method="post">
+                        <div> 
+                            <label for="cantidad">Cantidad</label>
+                            <select name="cantidad" id="cantidad">
                                 <% let valores = ['1','2','3','4','5']; %> 
                                 <% for( let i of valores ) { %>
                                     <option value="<%= i %>"> <%= i %> </option>
                                     <% } %>
                             </select>
                         </div>
-                        <div class="boxFormulario-productDetail">
-                            <form action="../users/cart" method="get"> <!--Es un GET que lleva al cart porque no se ha implementado agregar un objeto al cart a través de POST-->
-                            <button type="submit" value="submit" class="carritoProducto-productDetail boton-productDetail"> 
-                                <h3 class="textoCarrito-productDetail">Agregar al carrito</h3>
-                                <i class="fa-solid fa-cart-shopping carrito-productoDetail"></i>
+                            <button type="submit">
+                                Agregar al carrito<i class="fa-solid fa-cart-shopping"></i>
                             </button>
-                            </form>
-                        </div>                        
+                        </form>
                     </form>
-                    <div class="precioYFavoritos-productDetail"></div>
-                        <form action="<%= id.sku %>/edit" method="get">
-                            <button type="submit" class="carritoProducto-productDetail boton-productDetail" >  
-                                <h3 class="textoCarrito-productDetail">Editar</h3>   
-                            </button>
-                        </form>
-
-                        <form action="<%= id.sku %>?_method=DELETE" method="post"> <!-- hacer confirmación -->
-                            <input type="hidden" name="sku" value="<%= id.sku %>">
-                            <button type="submit" class="carritoProducto-productDetail boton-productDetail" >  
-                                <h3 class="textoCarrito-productDetail">Borrar</h3>   
-                            </button>
-                        </form>
-                    </div>
+  
 <!--                        
                             <label for="size">Elegí el talle</label>
                             <select class="dropdown-productDetail" name="size">
@@ -81,25 +72,33 @@
                             </select>
                         </div>
                     -->
-                </article>
-            </section>
-            <section class="sectionDetallesProducto-productDetail">
-                <article class="detallesProducto-productDetail">
-                    <h2 class="tituloDetalleProducto-productDetail">Detalles del producto</h2>
-                    <p><%= id.detail %> </p>
+
+                    <div class="botonera">
+                        <form action="<%= id.sku %>/edit" method="get">
+                            <button type="submit">Editar</button>
+                        </form>
+
+                        <form action="<%= id.sku %>?_method=DELETE" method="post"> <!-- hacer confirmación -->
+                            <input type="hidden" name="sku" value="<%= id.sku %>">
+                            <button type="submit">Borrar</button>
+                        </form>
+                    </div>
                 </article>
             </section>
 
-            <section class="sectionDetallesProducto-productDetail">
-                <article class="detallesProducto-productDetail">
-                    <h2 class="tituloDetalleProducto-productDetail">Productos relacionados</h2>
-                    <li class="galeriaProductosRelacionados-productDetail">
-                        <img class="imagenRelacionados-productDetail" src="\img\products\camisa_blanca1.jpg" alt="Imagen del producto 1">
-                        <img class="imagenRelacionados-productDetail" src="\img\products\camisa_blanca2.jpg" alt="Imagen del producto 2">
-                        <img class="imagenRelacionados-productDetail" src="\img\products\camisa_blanca3.jpg" alt="Imagen del producto 3">
-                        <img class="imagenRelacionados-productDetail" src="\img\products\camisa_blanca4.jpg" alt="Imagen del producto 4">
-                    </li>
-                </article>
+            <section class="sec-detallesProducto">
+                <h2>Detalles del producto</h2>
+                <p><%= id.detail %> </p>
+            </section>
+
+            <section class="sec-productosRelacionados">
+                <h2>Productos relacionados</h2>
+                <picture>
+                    <img src="\img\products\camisa_blanca1.jpg" alt="Imagen del producto 1">
+                    <img src="\img\products\camisa_blanca2.jpg" alt="Imagen del producto 2">
+                    <img src="\img\products\camisa_blanca3.jpg" alt="Imagen del producto 3">
+                    <img src="\img\products\camisa_blanca4.jpg" alt="Imagen del producto 4">
+                </picture>
             </section>
             
         </main>
