@@ -88,7 +88,7 @@
     color: #adb1b5;
     text-decoration: none;
 
-    display:block!important;
+    display:block;
     -webkit-transition:-webkit-transform 0.5s ease-out;
     -moz-transition:-moz-transform 0.5s ease-out;
     -o-transition:-o-transform 0.5s ease-out;

@@ -50,25 +50,34 @@ h2 a {
     animation: logo-header 2s 1;
 }
 
-.form-busqueda {
-  display: flex;
-  flex-wrap: nowrap;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-  width: 40%;
+.div-busqueda {
+  float:right;
+  margin:7px;
+  margin-top: 15px;
+  margin-left: 15px;
 }
 
-.form-busqueda input {
-    width: 85%;
-    margin-left: 7%;
-    height: 30px;
+.div-busqueda input {
+  width:375px;
+  height:25px;
+  border-radius:25px;
+  border: none;
 }
 
-.form-busqueda button {
-    width: 8%;
-    height: 30px;
-    margin-left: 5px;
+.div-busqueda button {
+  background-color: #0e141a;
+  color: #f2f2f2;
+  float: right;
+  padding: 5px 10px;
+  margin-top: 0px;
+  margin-right: 18px;
+  border: none;
+  cursor: pointer;
+} 
+
+.div-busqueda i {
+  margin-top: -3px;
+  font-size: 22px;
 }
 
 .navbar-usuario {
@@ -84,7 +93,7 @@ h2 a {
     color: #fff;
     font-size: 22px;
 
-    display:block!important;
+    display:block;
     -webkit-transition:-webkit-transform 0.2s ease-out;
     -moz-transition:-moz-transform 0.2s ease-out;
     -o-transition:-o-transform 0.2s ease-out;
@@ -114,7 +123,7 @@ h2 a {
   color: #dae0ed;
   font-size: 1.2em;
 
-  display:block!important;
+  display:block;
   -webkit-transition:-webkit-transform 0.2s ease-out;
   -moz-transition:-moz-transform 0.2s ease-out;
   -o-transition:-o-transform 0.2s ease-out;
@@ -130,7 +139,7 @@ h2 a {
   transform: scale(1.2)
 }
 
-/* menu hamburguesa nuevo */
+/* menu hamburguesa  */
 
 .menu-hamburguesa ul{
   display: none;
@@ -159,7 +168,7 @@ h2 a {
   font-size: 25px;
   text-align: center;
 
-  display:block!important;
+  display:block;
   -webkit-transition:-webkit-transform 0.2s ease-out;
   -moz-transition:-moz-transform 0.2s ease-out;
   -o-transition:-o-transform 0.2s ease-out;
@@ -194,7 +203,7 @@ h2 a {
   font-size: 15px;
   text-align: center;
 
-  display:block!important;
+  display:block;
   -webkit-transition:-webkit-transform 0.2s ease-out;
   -moz-transition:-moz-transform 0.2s ease-out;
   -o-transition:-o-transform 0.2s ease-out;
@@ -216,53 +225,57 @@ h2 a {
 @media (max-width: 479px) {
 
   .navbar-categorias a {
-    font-size: 0.5em;
+    font-size: 0.7em;
   }
   .navbar-usuario  {
     display: none;
   }
-  .form-busqueda input {
-    height: 25px;
-    margin-left: -45px;
-  }
-
-  .form-busqueda button {
-    width: 20%;
-    height: 25px;
-    margin-left: -25px;
-  }
-
   .sec-header-superior h2 {
     display: none;
   }
   .contenedor-img {
     width: 25%;
-}
+  }
+  .div-busqueda {
+    margin-left: 0px;
+  }
+  .div-busqueda input {
+    width:130px;
+  }
+  .div-busqueda input {
+    height:20px;
+  }
+  .div-busqueda button {
+    margin: auto;
+    height:15px;
+  }
 }
 
 @media (min-width: 480px) and (max-width: 799px) {
 
   .navbar-categorias a {
-    font-size: 0.85em;
+    font-size: 1em;
   }
   .navbar-usuario  {
     display: none;
-  }
-  .form-busqueda input {
-    height: 25px;
-    margin-left: -45px;
-  }
-
-  .form-busqueda button {
-    width: 14%;
-    height: 25px;
-    margin-left: -45px;
   }
   .sec-header-superior h2 {
     display: none;
   }
   .contenedor-img {
     width: 20%;
+  }
+  .div-busqueda {
+    margin-left: -35px;
+  }
+  .div-busqueda input {
+    width:240px;
+  }
+  .div-busqueda input {
+    height:20px;
+  }
+  .div-busqueda button {
+    height:15px;
   }
 }
 
@@ -271,18 +284,17 @@ h2 a {
     display: none;
 }
 
-.form-busqueda button {
-  width: 10%;
-}
-
 h2 a {
   margin-left: -10%;
 }
 
+.div-busqueda input {
+  width:275px;
+}
 }
 
 @media (min-width: 1024px) {
   .menu-hamburguesa {
     display: none;
-}
+  }
 }

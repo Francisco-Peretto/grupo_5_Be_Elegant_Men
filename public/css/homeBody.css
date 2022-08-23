@@ -9,8 +9,8 @@
 }
 
 .producto{
-    margin: 2% 2%;
-    display:block!important;
+    margin: 3% 2%;
+    display:block;
     -webkit-transition:-webkit-transform 0.5s ease-out;
     -moz-transition:-moz-transform 0.5s ease-out;
     -o-transition:-o-transform 0.5s ease-out;
