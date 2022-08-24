@@ -19,13 +19,13 @@
                 <article class="opcionesProducto"> <!-- Sector derecho del producto, opciones de la compra -->
                     <div class="div-categoria-favoritos">
                         <a href="list/<%= id.category %>"><%= id.category %></a>
-                        <a href=""><i class="fa-solid fa-heart"></i></a>
+                        <a href=""><i class="fa-regular fa-heart"></i></a>
                     </div>
                     <div class="div-puntuacion">
-                        <i class="fa-regular fa-star"></i>
-                        <i class="fa-regular fa-star"></i>
-                        <i class="fa-regular fa-star"></i>
-                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
                         <i class="fa-regular fa-star"></i>                        
                     </div>
 
@@ -35,6 +35,13 @@
                         <h2>$ <%= id.price %></h2>
                         <p>43% OFF</p>
                     </div>
+
+                    <div class="div-envio">
+                        <p><i class="fa-solid fa-truck-fast"></i> Envios a todo el pais</p>
+                        <a href="#"><i class="fa-solid fa-location-pin"></i> Calcula el costo</a>
+                    </div>
+                    
+                    <p>Stock disponible</p>
                     
                     <form class="form-carrito" action="../users/cart" method="post">
                         <div> 
@@ -46,15 +53,10 @@
                                     <% } %>
                             </select>
                         </div>
-                            <button type="submit">
-                                Agregar al carrito<i class="fa-solid fa-cart-shopping"></i>
-                            </button>
-                        </form>
-                    </form>
-  
-<!--                        
+                    <!--                      
+                        <div>  
                             <label for="size">Elegí el talle</label>
-                            <select class="dropdown-productDetail" name="size">
+                            <select name="size">
                                 <option value="s">S</option>
                                 <option value="m">M</option>
                                 <option value="l">L</option>
@@ -62,9 +64,9 @@
                             </select>
                         </div>
 
-                        <div class="boxFormulario-productDetail">
+                        <div>
                             <label for="color">Elegí el color</label>
-                            <select class="dropdown-productDetail" name="color">
+                            <select name="color">
                                 <option value="negro">Negro</option>
                                 <option value="gris">Gris</option>
                                 <option value="azul">Azul</option>
@@ -72,6 +74,10 @@
                             </select>
                         </div>
                     -->
+                        <button type="submit">
+                            Agregar al carrito<i class="fa-solid fa-cart-shopping"></i>
+                        </button>
+                    </form>
 
                     <div class="botonera">
                         <form action="<%= id.sku %>/edit" method="get">

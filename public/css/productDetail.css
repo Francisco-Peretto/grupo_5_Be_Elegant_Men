@@ -26,22 +26,24 @@
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: flex-start;
     align-items: center;  
     width: 10%;
+    height: 40rem;
 }
 
 .galeriaProducto img {
     margin: 5% 0;
-    width: 50%;
+    width: 4rem;
+    height: 4rem;
     padding: 2%;
     border: 1px solid black;
-    border-radius: 15px;
+    border-radius: 10px;
 }
 
 .imagenPrincipal {
-    width: 40%;
-    height: 700px;
+    width: 30rem;
+    height: 40rem;
     border-radius: 15px;
 }
 
@@ -49,8 +51,8 @@
     width: 35%;
     border: 1px solid black;
     border-radius: 15px;
-    padding: 3%;
-    height: 700px;
+    padding: 2rem;
+    height: 40rem;
 }
 
 .div-categoria-favoritos {
@@ -59,11 +61,11 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
-    margin-bottom: 5%;
+    margin-bottom: 1rem;
 }
 
 .div-puntuacion {
-    margin: 5% 0;
+    margin: 1rem 0;
 }
 
 .nombreProducto {
@@ -82,17 +84,77 @@
     margin-left: 4%;
 }
 
-.sec-principal label {
+.div-envio {
+    margin-bottom: 1rem;
+}
+
+.div-envio p {
+    width: 100%;
+}
+
+.form-carrito label {
     color: black;
+}
+
+.form-carrito button {
+    width: 15rem;
+    margin-top: 1rem;
+    padding: .5rem;
+    text-align: center;
+    background-color: #0e141a;
+    color: #fff;
+    font-size: 1rem;
+    border: 2px solid;
+    border-radius: .5rem;
+    cursor: pointer;
+    transition: all 1s ease;
+    box-shadow: .5rem .5rem 1rem #ccc, 
+        -.5rem -.5rem 1rem #fff;
+}
+
+.form-carrito button:hover {
+    box-shadow: .5rem .5rem 1rem #fff, 
+    -.5rem -.5rem 1rem #ccc;
+}
+
+.form-carrito button:active {
+    box-shadow: inset .2rem .2rem 1rem #fff, 
+    inset -.2rem -.2rem 1rem #ccc;
 }
 
 .botonera {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: space-around;
     align-items: center;
-    margin-top: 5%;
+    margin-top: 5rem;
+}
+
+.botonera button {
+    width: 10rem;
+    margin-top: 1rem;
+    text-align: center;
+    background-color: #0e141a;
+    color: #fff;
+    font-size: 1rem;
+    padding: .5rem;
+    border: 2px solid;
+    border-radius: .5rem;
+    cursor: pointer;
+    transition: all 1s ease;
+    box-shadow: .5rem .5rem 1rem #ccc, 
+        -.5rem -.5rem 1rem #fff;
+}
+
+.botonera button:hover {
+    box-shadow: .5rem .5rem 1rem #fff, 
+    -.5rem -.5rem 1rem #ccc;
+}
+
+.botonera button:active {
+    box-shadow: inset .2rem .2rem 1rem #fff, 
+    inset -.2rem -.2rem 1rem #ccc;
 }
 
 .sec-detallesProducto {
@@ -102,7 +164,7 @@
     justify-content: center;
     align-items: flex-start;
     width: 90vw;
-    padding: 2%;
+    padding: 1.5rem;
 }
 
 .sec-detallesProducto h2,p {
