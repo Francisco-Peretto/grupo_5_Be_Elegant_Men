@@ -10,18 +10,18 @@ const upload = multer({storage:storage('../../uploads/users')});
 
 router.get('/', productsController.index); // Index
 
-router.get('/products/list/:category?', productsController.listProduct); // 1. GET products.
+router.get('/products/list/:category?', productsController.list); // 1. GET products.
 
-router.get('/products/create', productsController.createProductGet); // 2. GET products/create.
+router.get('/products/create', productsController.create); // 2. GET products/create.
 
-router.get('/products/:id', productsController.idProduct); // 3. GET products/:id
+router.get('/products/:id', productsController.detail); // 3. GET products/:id
 
-router.post('/products/save', upload.any(), productsController.createProductPost); // 4. POST products
+router.post('/products/save', upload.any(), productsController.save); // 4. POST products
 
-router.get('/products/:id/edit', productsController.editProductGet); // 5. GET products/:id/edit
+router.get('/products/:id/edit', productsController.edit); // 5. GET products/:id/edit
 
-router.put('/products/:id', upload.any(), productsController.editProductPost); // 6. PUT products/id
+router.put('/products/:id', upload.any(), productsController.update); // 6. PUT products/id
 
-router.delete('/products/:id', productsController.deleteProduct); // 7. DELETE products/:id
+router.delete('/products/:id', productsController.erase); // 7. DELETE products/:id
 
 module.exports = router;
