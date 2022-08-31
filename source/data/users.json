@@ -1,11 +1,26 @@
 [
     {
         "id": "01",
-        "nombre": "Mateo",
-        "apellido": "González",
-        "teléfono": "1158956874",
-        "dirección":"Calle Falsa 123",
-        "correo":"correo_fantasma@gmail.com",
-        "contraseña":"123456"
+        "firstName": "Mateo",
+        "lastName": "González",
+        "email":"correo_fantasma@gmail.com",
+        "password":"123456",
+        "avatar": "img.jpg"
+    },
+    {
+        "id": "02",
+        "firstName": "Carlos",
+        "lastName": "Sanchez",
+        "email":"CS02@gmail.com",
+        "password":"12345678",
+        "avatar": "img.jpg"
+    },
+    {
+        "id": "03",
+        "firstName": "Humberto",
+        "lastName": "Velez",
+        "email":"vengaelmensaje@gmail.com",
+        "password":"123456789",
+        "avatar": "img.jpg"
     }
 ]
