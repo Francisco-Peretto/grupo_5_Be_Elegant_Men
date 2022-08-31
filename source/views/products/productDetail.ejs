@@ -8,13 +8,13 @@
 
             <section class="sec-principal">
                 <picture class="galeriaProducto"> <!--  Hacer con ejs tantas imágenes como hayan además de la primera-->
-                    <img src="/img/products/<%= id.image %>" alt="Imagen del producto 1">
-                    <img src="/img/products/<%= id.image %>" alt="Imagen del producto 2">
-                    <img src="/img/products/<%= id.image %>" alt="Imagen del producto 3">
-                    <img src="/img/products/<%= id.image %>" alt="Imagen del producto 4">
+                    <img src="/img/products/<%= id.category %>/<%= id.image %>" alt="Imagen del producto 1">
+                    <img src="/img/products/<%= id.category %>/<%= id.image %>" alt="Imagen del producto 2">
+                    <img src="/img/products/<%= id.category %>/<%= id.image %>" alt="Imagen del producto 3">
+                    <img src="/img/products/<%= id.category %>/<%= id.image %>" alt="Imagen del producto 4">
                 </picture>
 
-                <img class="imagenPrincipal" src="/img/products/<%= id.image %>" alt="Imagen principal del producto">
+                <img class="imagenPrincipal" src="/img/products/<%= id.category %>/<%= id.image %>" alt="Imagen principal del producto">
 
                 <article class="opcionesProducto"> <!-- Sector derecho del producto, opciones de la compra -->
                     <div class="div-categoria-favoritos">

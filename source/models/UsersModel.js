@@ -21,8 +21,6 @@ let model = {
         let all = model.all()                   
         let last = all.pop()                    
         user.id = last.id + 1             
-
-        user.name = data.name  
         user.firstName = data.firstName            
         user.lastName = data.lastName      
         user.email = data.email              
