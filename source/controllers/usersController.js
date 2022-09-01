@@ -19,12 +19,12 @@ const usersController = {
         return res.render(__dirname,'../views/users/profile.ejs');
     },
 
-    access: (req , res) => { // POST login  ESTO NO ESTÁ TESTEADO
-        let userToLogin = one('email', req.body.email); // Capturar email del formulario de login y buscar usuario con método. Se le puede cambiar el nombre
+    access: (req , res) => { // POST login Esto no está testeado porque hay que crear contraseña encriptada al crear al usuario
+        let userToLogin = all().find(e => e.email == req.body.email);
         if (userToLogin) {
-            let correctPassword = bcryptjs.CompareSync(req.body.password, userToLogin.password);
+            let correctPassword = bcryptjs.compareSync(req.body.password, userToLogin.password);
             if (correctPassword) {
-                return res.redirect('/'); // Se podría crear una ventana de confirmación o reenviar al perfil
+                return res.redirect('/');
              }
              return res.render('../views/users/login.ejs'); // HACER PARA DEVOLVER ERRORES          
         }
