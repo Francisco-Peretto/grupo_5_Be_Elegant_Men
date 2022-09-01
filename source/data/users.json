@@ -1,26 +1,20 @@
 [
-    {
-        "id": "01",
-        "firstName": "Mateo",
-        "lastName": "González",
-        "email":"correo_fantasma@gmail.com",
-        "password":"123456",
-        "avatar": "img.jpg"
-    },
-    {
-        "id": "02",
-        "firstName": "Carlos",
-        "lastName": "Sanchez",
-        "email":"CS02@gmail.com",
-        "password":"12345678",
-        "avatar": "img.jpg"
-    },
-    {
-        "id": "03",
-        "firstName": "Humberto",
-        "lastName": "Velez",
-        "email":"vengaelmensaje@gmail.com",
-        "password":"123456789",
-        "avatar": "img.jpg"
-    }
+  {
+    "id": 1,
+    "firstName": "Mateo",
+    "lastName": "González",
+    "email": "correo_fantasma@gmail.com",
+    "password": "$2a$10$FQag5sflLp/Zz6kWvCvNC.J61MvPDjvX2pKhgJUPrCN7JQiiQlmku",
+    "tipoUsuario": "Comprador",
+    "image": "default.png"
+  },
+  {
+    "id": 2,
+    "firstName": "Karlos",
+    "lastName": "Market",
+    "email": "km@gmail.com",
+    "password": "$2a$10$drdmHWZDmTpsjEst2BhcMOnxX/qoZdA1k0e6qAWiFPURYaljChngO",
+    "tipoUsuario": "Vendedor",
+    "image": "image-1662048555871.jpg"
+  }
 ]

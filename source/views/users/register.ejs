@@ -3,34 +3,33 @@
         <%- include('../partials/header.ejs') %>
         <main class="cuerpo-register">
             <h1>Crea tu cuenta</h1>
-            <form class="formulario-register" action="" method="post">
+            <form class="formulario-register" action="/users/register" method="post" enctype="multipart/form-data">
                 <section>
-                    <input type="text" id="nombre" name="nombre_usuario" placeholder="Nombre/s" required>
-                    <input type="text" id="apellido" name="apellido_usuario" placeholder="Apellido/s" required>
+                    <input type="text" id="firstName" name="firstName" placeholder="Nombre/s" required>
+                    <input type="text" id="lastName" name="lastName" placeholder="Apellido/s" required>
                 </section>
                 <section>
-                    <input class="input-email" type="email" id="email" name="email_usuario" placeholder="Correo Electrónico" required>
+                    <input class="input-email" type="email" id="email" name="email" placeholder="Correo Electrónico" required>
                 </section>
                 <section>
-                    <input type="password" id="pass" name="contraseña_usuario" placeholder="Contraseña" required>
-                    <input type="password" id="repeat-pass" name="repetircontraseña_usuario" placeholder="Confirmar Contraseña" required>
+                    <input type="password" id="password" name="password" placeholder="Contraseña" required>
+                    <input type="password" id="repeat-pass" name="repetirPassword" placeholder="Confirmar Contraseña" required>
                 </section>
                 <div>
                     <label>Tipo de Usuario:</label>
                     <div>
-                    <input type="radio" id="comprador" name="tipo_usuario" value="Comprador" checked>
+                    <input type="radio" id="comprador" name="tipoUsuario" value="Comprador" checked>
                     <label for="comprador">Comprador</label>
-                    <input type="radio" id="vendedor" name="tipo_usuario" value="Vendedor">
+                    <input type="radio" id="vendedor" name="tipoUsuario" value="Vendedor">
                     <label for="vendedor">Vendedor</label>
                     </div>
                 </div>
-                <div class="file-select" id="foto_usuario" >
-                    <input type="file" name="foto_usuario" aria-label="Archivo" required>
+                <div class="file-select" id="image" >
+                    <input type="file" name="image" aria-label="Archivo">
                   </div>
                 <section>
-                    <button type="submit">Crear</button>
+                    <button type="submit">Crear usuario</button>
                 </section>
-
             </form>
         </main>
         <%- include('../partials/footer.ejs') %>

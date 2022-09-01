@@ -18,6 +18,6 @@ router.get('/profile', usersController.profile);
 
 router.post('/login', usersController.access);
 
-router.post('/register', usersController.record)
+router.post('/register', upload.any(), usersController.record)
 
 module.exports = router;
