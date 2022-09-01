@@ -3,9 +3,9 @@
         <%- include('../partials/header.ejs') %>
         <main class="cuerpo-login">
             <h1>Ingresa a tu cuenta</h1>
-            <form class="formulario-login"action="" method="post">
-                <input type="text" id="email" name="email_usuario" placeholder="Correo Electronico">
-                <input type="password" id="contraseña" name="contraseña_usuario" placeholder="Contraseña">
+            <form class="formulario-login"action="/users/login" method="post">
+                <input type="text" id="email" name="email" placeholder="Correo Electrónico">
+                <input type="password" id="password" name="password" placeholder="Contraseña">
                 <button type="submit">Ingresar</button>
             </form>
             <a href="#">Olvidaste tu contraseña?</a>
