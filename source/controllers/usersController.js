@@ -16,7 +16,7 @@ const usersController = {
     },
 
     profile: (req , res) => { // GET profile
-        return res.render(__dirname,'../views/users/profile.ejs');
+        return res.render('../views/users/profile.ejs');
     },
 
     access: (req , res) => { // POST login

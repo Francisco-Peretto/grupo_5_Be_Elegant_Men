@@ -1,0 +1,30 @@
+.cuerpo-profile {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 5%;
+}
+
+.contenedor-avatar {
+    width: 15%;
+}
+
+.avatar {
+    width: 100%;
+    border-radius: 50%;
+}
+
+.sec-profile {
+    width: 50%;
+    margin-left: 5%;
+}
+
+.sec-profile label {
+    color: black;
+}
+
+.sec-profile button {
+    margin-top: 2%;
+}
