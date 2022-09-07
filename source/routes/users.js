@@ -8,6 +8,8 @@ const multer = require('multer');
 const storage = require('../modules/storage');
 const upload = multer({storage:storage('../../uploads/users')});
 
+const isLogged = require('../middlewares/isLogged')
+
 router.get('/cart', usersController.cart);
 
 router.get('/login', usersController.login);
