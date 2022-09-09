@@ -47,6 +47,10 @@
     margin-bottom: 2%;
 }
 
+.div-error {
+    color: red;
+}
+
 .formulario-register section input {
     width: 48%;
     height: 30px;

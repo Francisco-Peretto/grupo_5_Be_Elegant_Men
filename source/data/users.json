@@ -5,7 +5,6 @@
     "lastName": "González",
     "email": "correo_fantasma@gmail.com",
     "password": "$2a$10$FQag5sflLp/Zz6kWvCvNC.J61MvPDjvX2pKhgJUPrCN7JQiiQlmku",
-    "tipoUsuario": "Comprador",
     "image": "default.png"
   },
   {
@@ -14,7 +13,6 @@
     "lastName": "Market",
     "email": "km@gmail.com",
     "password": "$2a$10$drdmHWZDmTpsjEst2BhcMOnxX/qoZdA1k0e6qAWiFPURYaljChngO",
-    "tipoUsuario": "Vendedor",
     "image": "image-1662048555871.jpg"
   }
 ]

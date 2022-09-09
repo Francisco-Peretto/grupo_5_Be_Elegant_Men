@@ -1,6 +1,7 @@
 const path = require('path');
 const {all,one,generate, write} = require('../models/usersModel');
 const bcryptjs = require('bcryptjs');
+const {validationResult} = require('express-validator')
 
 const usersController = {
     cart: (req , res) => {  // GET cart
@@ -15,8 +16,19 @@ const usersController = {
         return res.render('../views/users/register.ejs');
     },
 
-    profile: (req , res) => { // GET profile
-        return res.render('../views/users/profile.ejs');
+    processValidationsRegister : (req,res) => {
+        const resultValidation = validationResult(req)
+
+        if (resultValidation.errors.length > 0) {
+            return res.render('../views/users/register.ejs' , {errors: resultValidation.mapped() , old : req.body})
+        } else {
+            let user = generate(req.body);
+            let allUsers = all();
+            allUsers.push(user);
+            write(allUsers);
+
+            return res.redirect('/');  // Cuando sea creado profile puede redirigir a esa vista
+        }
     },
 
     access: (req , res) => { // POST login

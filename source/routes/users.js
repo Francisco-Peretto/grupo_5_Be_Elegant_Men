@@ -8,18 +8,21 @@ const multer = require('multer');
 const storage = require('../modules/storage');
 const upload = multer({storage:storage('../../uploads/users')});
 
-const isLogged = require('../middlewares/isLogged')
+const registerValidations = require('../validations/users/registerValidations')
 
+//ruta para mostar el carrito
 router.get('/cart', usersController.cart);
 
-router.get('/login', usersController.login);
+//rutas de registro
+router.get('/register', usersController.register)   //muestra la vista del forulario de registro
+router.post('/register', upload.any(), usersController.record)  // registra un usuario
 
-router.get('/register', usersController.register)
+//ruta de loguin
+router.get('/login', usersController.login);    //muestra la vista del formulario de registro
 
-router.get('/profile', usersController.profile);
+// rutas de perfil
+//router.get('/profile/:userId', usersController.profile);
 
 router.post('/login', usersController.access);
-
-router.post('/register', upload.any(), usersController.record)
 
 module.exports = router;
