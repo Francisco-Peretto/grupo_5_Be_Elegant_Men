@@ -6,42 +6,44 @@
             <form class="formulario-register" action="/users/register" method="post" enctype="multipart/form-data">
                 <section>
                     <input type="text" id="firstName" name="firstName" placeholder="Nombre/s" value="<%= locals.old ? old.firstName : '' %>">
-                    <% if (locals.errors && errors.firstName) { %>
-                        <div class="div-error">
-                            <%= errors.firstName.msg %>
-                        </div>
-                    <% } %>
-                    <input type="text" id="lastName" name="lastName" placeholder="Apellido/s" value="<%= locals.old ? old.lastName : '' %>">
-                    <% if (locals.errors && errors.lastName) { %>
-                        <div class="div-error">
-                            <%= errors.lastName.msg %>
-                        </div>
-                    <% } %>
                 </section>
+                <% if (locals.errors && errors.firstName) { %>
+                    <div class="div-error">
+                        <%= errors.firstName.msg %>
+                    </div>
+                <% } %>
                 <section>
-                    <input class="input-email" type="email" id="email" name="email" placeholder="Correo Electrónico" value="<%= locals.old ? old.email : '' %>">
-                    <% if (locals.errors && errors.email) { %>
-                        <div class="div-error">
-                            <%= errors.email.msg %>
-                        </div>
-                    <% } %>
+                    <input type="text" id="lastName" name="lastName" placeholder="Apellido/s" value="<%= locals.old ? old.lastName : '' %>">
                 </section>
+                <% if (locals.errors && errors.lastName) { %>
+                    <div class="div-error">
+                        <%= errors.lastName.msg %>
+                    </div>
+                <% } %>
+                <section>
+                    <input type="email" id="email" name="email" placeholder="Correo Electrónico" value="<%= locals.old ? old.email : '' %>">
+                </section>
+                <% if (locals.errors && errors.email) { %>
+                    <div class="div-error">
+                        <%= errors.email.msg %>
+                    </div>
+                <% } %>
                 <section>
                     <input type="password" id="password" name="password" placeholder="Contraseña">
-                    <% if (locals.errors && errors.password) { %>
-                        <div class="div-error">
-                            <%= errors.password.msg %>
-                        </div>
-                    <% } %>
                 </section>
+                <% if (locals.errors && errors.password) { %>
+                    <div class="div-error">
+                        <%= errors.password.msg %>
+                    </div>
+                <% } %>
                 <div class="file-select" id="image" >
-                    <input type="file" name="image" aria-label="Archivo">
-                    <% if (locals.errors && errors.image) { %>
-                        <div class="div-error">
-                            <%= errors.image.msg %>
-                        </div>
-                    <% } %>  
+                    <input type="file" name="image" id="image">
                 </div>
+                <% if (locals.errors && errors.image) { %>
+                    <div class="div-error">
+                        <%= errors.image.msg %>
+                    </div>
+                <% } %>  
                 <section>
                     <button type="submit">Crear usuario</button>
                 </section>

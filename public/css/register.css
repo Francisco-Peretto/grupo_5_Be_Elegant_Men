@@ -28,13 +28,7 @@
 
 .formulario-register div {
     width: 100%;
-    margin-top: 2%;
     margin-bottom: 3%;
-}
-
-.formulario-register label {
-    margin-right: 2%;
-    color: black;
 }
 
 .formulario-register section {
@@ -48,16 +42,13 @@
 }
 
 .div-error {
+    font-size: 15px;
     color: red;
 }
 
 .formulario-register section input {
-    width: 48%;
-    height: 30px;
-}
-
-.formulario-register section .input-email {
     width: 100%;
+    height: 30px;
 }
 
 .formulario-register button {

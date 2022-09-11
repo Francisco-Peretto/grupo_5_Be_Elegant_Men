@@ -26,7 +26,6 @@ let model = {
         user.lastName = data.lastName
         user.email = data.email
         user.password = bcryptjs.hashSync(data.password, 10)
-        user.tipoUsuario = data.tipoUsuario
         user.image = data.image
         return user
     },
