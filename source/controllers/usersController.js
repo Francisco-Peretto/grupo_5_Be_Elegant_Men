@@ -42,11 +42,17 @@ const usersController = {
     },
     access: (req , res) => { // POST login
         let userToLogin = findByField('email', req.body.email)
+
         if (userToLogin) {
             let correctPassword = bcryptjs.compareSync(req.body.password, userToLogin.password);
             if (correctPassword) {
                 delete userToLogin.password
                 req.session.userLogged = userToLogin
+
+                if (req.body.remember) {
+                    res.cookie('userEmail' , req.body.email, {maxAge : (((1000 * 60) * 60)*24)}) // cookie de 24 hs
+                }
+
                 return res.redirect('profile');
              } else {
                 return res.render('users/login' , {
@@ -54,7 +60,9 @@ const usersController = {
                         password: {
                             msg: 'Contraseña incorrecta'
                         }
-                    }})
+                    },
+                    old : req.body
+                })
              }
         } else {
             return res.render('users/login' , {
@@ -70,7 +78,8 @@ const usersController = {
             user: req.session.userLogged
         })
     },
-    logout: (req, res) => {
+    logout: (req, res) => { // GET logout
+        res.clearCookie('userEmail')
         req.session.destroy()
         return res.redirect('/')
     }

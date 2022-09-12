@@ -6,31 +6,28 @@
                 <img class="avatar" src="/img/users/<%= user.image %> " alt="Imagen de Usuario">
             </picture>
             <section class="sec-profile">
-                <form action="" method="">
+                <form>
                     <fieldset>
                         <legend>Informacion Personal</legend>
                         <div>
                             <label for="firstName">Nombre</label>
-                            <input type="text" value="<%= user.firstName %>">
+                            <input type="text" value="<%= user.firstName %>" readonly>
                         </div>
                         <div>
                             <label for="lastName">Apellido</label>
-                            <input type="text" value="<%= user.lastName %>">
-                        </div>
-                        <div>
-                            <button type="submit">Editar</button>
+                            <input type="text" value="<%= user.lastName %>" readonly>
                         </div>
                     </fieldset>
                 </form>
-                <form action="" method="">
+                <form>
                     <fieldset>
                         <legend>Informacion de Usuario</legend>
                         <label for="email">Correo Electronico</label>
-                        <input type="email" value="<%= user.email %>">
-                        <div>
-                            <button type="submit">Editar</button>
-                        </div>
+                        <input type="email" value="<%= user.email %>" readonly>
                     </fieldset>
+                </form>
+                <form action="/users/logout" method="get">
+                    <button type="submit">Cerrrar sesion</button>
                 </form>
             </section>
         </main>

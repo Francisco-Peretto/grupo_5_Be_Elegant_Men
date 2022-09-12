@@ -139,6 +139,26 @@ h2 a {
   transform: scale(1.2)
 }
 
+.navbar-usuario a {
+  color: #dae0ed;
+  font-size: 1.2em;
+
+  display:block;
+  -webkit-transition:-webkit-transform 0.2s ease-out;
+  -moz-transition:-moz-transform 0.2s ease-out;
+  -o-transition:-o-transform 0.2s ease-out;
+  -ms-transition:-ms-transform 0.2s ease-out;
+  transition:transform 0.2s ease-out;
+}
+
+.navbar-usuario a:hover {
+  -moz-transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  -o-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2)
+}
+
 /* menu hamburguesa  */
 
 .menu-hamburguesa ul{
@@ -187,7 +207,7 @@ h2 a {
 .menu-hamburguesa ul{
   margin-top:0;
   padding: 0;
-  width: 40px;
+  width: 50px;
   position: absolute;
 }
 
@@ -199,7 +219,11 @@ h2 a {
   list-style: none;
 }
 
-.menu-hamburguesa li a i{
+.menu-hamburguesa li a{
+  color: #fff;
+}
+
+.menu-hamburguesa li i{
   font-size: 15px;
   text-align: center;
 

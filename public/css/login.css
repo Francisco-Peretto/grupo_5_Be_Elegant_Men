@@ -33,6 +33,12 @@
     margin-bottom: 3%;
 }
 
+.formulario-login .div-error {
+    font-size: 15px;
+    color: red;
+    margin-bottom: 3%;
+}
+
 .formulario-login button {
     width: 30%;
     margin-top: 2%;
@@ -70,6 +76,18 @@
 .cuerpo-login a:hover {
     text-decoration: underline;
   }
+
+.div-remember {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.div-remember label {
+    color: #0e141a;
+}
 
 /* mediasquerys */
 

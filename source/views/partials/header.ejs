@@ -16,13 +16,27 @@
                 <i class="fa-solid fa-bars"></i>
             </label>
             <ul>
-              <li><a href="../users/login"><i class="fa-solid fa-user"></i></a></li>
-              <li><a href="../users/cart"><i class="fa-solid fa-cart-shopping"></i></a></li>
-              <li><a href="../products/create"><i class="fa-solid fa-circle-plus"></i></i></a></li>
+              <li>
+                <a href="/users/login">
+                    <% if (locals.isLogged) { %>
+                        Hola <%= locals.userLogged.firstName %>
+                    <% } else {%>
+                        <i class="fa-solid fa-user"></i>
+                    <% } %>
+                </a>
+              </li>
+              <li><a href="/users/cart"><i class="fa-solid fa-cart-shopping"></i></a></li>
+              <li><a href="/products/create"><i class="fa-solid fa-circle-plus"></i></i></a></li>
             </ul>
         </nav>
         <nav class="navbar-usuario">
-            <a href="/users/login"><i class="fa-solid fa-user"></i></a>
+                <a href="/users/login">
+                    <% if (locals.isLogged) { %>
+                        Hola <%= locals.userLogged.firstName %> 
+                    <% } else {%>
+                        <i class="fa-solid fa-user"></i>
+                    <% } %>
+                </a>
             <a href="/users/cart"><i class="fa-solid fa-cart-shopping"></i></a>
             <a href="/products/create"><i class="fa-solid fa-circle-plus"></i></i></a>
         </nav>

@@ -17,18 +17,10 @@
   },
   {
     "id": 3,
-    "firstName": "Juan",
-    "lastName": "Maneffa",
-    "email": "jamaneffa@yahoo.com",
-    "password": "$2a$10$QNfTlpSBydOkmY0K4MeI.u50KV0ALe1LSWJ4ZGIt.9qBaHdg2Ehve",
-    "image": "default.png"
-  },
-  {
-    "id": 4,
-    "firstName": "Valeria",
-    "lastName": "Ramos",
-    "email": "valeria_ramos08@hotmail.com",
-    "password": "$2a$10$kTh.dI3tIjWmuWSdtRcUKOKUXX7HxczjQg1ZJlH/zhf08mNNgRXHe",
-    "image": "default.png"
+    "firstName": "Diego Armando",
+    "lastName": "Maradona",
+    "email": "diego@maradona.com",
+    "password": "$2a$10$PSzFD5XEGnGEJIk0IwORceTgUugsDeHZ.V6e2K7tUVblE9k80egia",
+    "image": "image-1663000464342.png"
   }
 ]
