@@ -5,7 +5,17 @@
             <h1>Ingresa a tu cuenta</h1>
             <form class="formulario-login"action="/users/login" method="post">
                 <input type="text" id="email" name="email" placeholder="Correo Electrónico">
+                <% if (locals.errors && errors.email) { %>
+                    <div class="div-error">
+                        <%= errors.email.msg %>
+                    </div>
+                <% } %>
                 <input type="password" id="password" name="password" placeholder="Contraseña">
+                <% if (locals.errors && errors.password) { %>
+                    <div class="div-error">
+                        <%= errors.password.msg %>
+                    </div>
+                <% } %>
                 <button type="submit">Ingresar</button>
             </form>
             <a href="#">Olvidaste tu contraseña?</a>

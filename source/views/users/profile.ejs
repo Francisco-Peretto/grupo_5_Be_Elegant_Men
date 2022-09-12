@@ -3,19 +3,19 @@
         <%- include('../partials/header.ejs') %>
         <main class="cuerpo-profile">
             <picture class="contenedor-avatar">
-                <img class="avatar" src="/img/users/default.png" alt="Imagen de Usuario">
+                <img class="avatar" src="/img/users/<%= user.image %> " alt="Imagen de Usuario">
             </picture>
             <section class="sec-profile">
                 <form action="" method="">
                     <fieldset>
                         <legend>Informacion Personal</legend>
                         <div>
-                            <label for="first_name">Nombre</label>
-                            <input type="text">
+                            <label for="firstName">Nombre</label>
+                            <input type="text" value="<%= user.firstName %>">
                         </div>
                         <div>
-                            <label for="last_name">Apellido</label>
-                            <input type="text">
+                            <label for="lastName">Apellido</label>
+                            <input type="text" value="<%= user.lastName %>">
                         </div>
                         <div>
                             <button type="submit">Editar</button>
@@ -26,7 +26,7 @@
                     <fieldset>
                         <legend>Informacion de Usuario</legend>
                         <label for="email">Correo Electronico</label>
-                        <input type="email">
+                        <input type="email" value="<%= user.email %>">
                         <div>
                             <button type="submit">Editar</button>
                         </div>

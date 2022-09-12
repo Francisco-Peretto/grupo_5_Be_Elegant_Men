@@ -14,6 +14,12 @@ let model = {
         let all = model.all();
         return all.find(e => e.id == id)
     },
+    findByField : function (field, text) {
+        
+        let all = model.all()
+        let userFound =  all.find(oneUser => oneUser[field] === text)
+        return userFound
+    },
     generate : function (data) {
 
         let user = {}
