@@ -4,6 +4,7 @@
   "description": "Este Marketplace ofrecerá ropa para hombres.",
   "main": "app.js",
   "scripts": {
+    "start": "node source/app.js",
     "test": "nodemon source/app.js -e js,mjs,json,ejs,css",
     "sq" : "sequelize init"
   },
