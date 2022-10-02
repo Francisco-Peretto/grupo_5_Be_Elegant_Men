@@ -14,20 +14,16 @@ module.exports = (sequelize, dataTypes) => {
                 allowNull: false
             },
             detail : {
-                type : dataTypes.LONGTEXT,
+                type : dataTypes.TEXT,
                 allowNull: false
             },
             price : {
                 type : dataTypes.INTEGER(10).UNSIGNED,
                 allowNull: false
             },
-            image_id : {
-                type : dataTypes.INTEGER(10).UNSIGNED,
-                allowNull: false,
-                references: {
-                    model: Product_Image, 
-                    key: 'id'
-                }
+            image : {
+                type : dataTypes.VARCHAR(200),
+                allowNull: false
             },
             category_id : {
                 type : dataTypes.INTEGER(10).UNSIGNED,
@@ -53,15 +49,11 @@ module.exports = (sequelize, dataTypes) => {
     )
 
     Product.associate = function (models) {
-        Product.hasMany(models.Product_Image, {
-            as : 'products_images',
-            foreignKey : 'image_id'
-        })
-        Product.hasMany(models.Category, {
+        Product.belongsTo(models.Category, {
             as : 'categories',
             foreignKey : 'category_id'
         })
-        Product.hasMany(models.Product_Image, {
+        Product.belongsTo(models.Brand, {
             as : 'brands',
             foreignKey : 'brand_id'
         })
