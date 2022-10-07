@@ -20,7 +20,7 @@ const productsController = {
         return res.render('./products/listProducts',{products})  
     },
 
-    create: (req, res) => {  // 2. GET products/create. Formulario de creación de productos aún sin hacer
+    create: (req, res) => {  // 2. GET products/create. Formulario de creación de productos
         return res.render('./products/createProduct.ejs');
     },
 

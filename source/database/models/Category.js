@@ -1,7 +1,7 @@
 module.exports = (sequelize, dataTypes) => {
 
     const Category = sequelize.define(
-	    'categories',
+	    'Category',
         {
             id : {
                 type : dataTypes.INTEGER(10).UNSIGNED,
@@ -27,6 +27,5 @@ module.exports = (sequelize, dataTypes) => {
         })
     }
         
-
     return Category
 }

@@ -1,7 +1,7 @@
 module.exports = (sequelize, dataTypes) => {
 
     const Product = sequelize.define(
-	    'products',
+	    'Product',
         {
             sku : {
                 type : dataTypes.INTEGER(10).UNSIGNED,
@@ -59,6 +59,5 @@ module.exports = (sequelize, dataTypes) => {
         })
     }
         
-
     return Product
 }
