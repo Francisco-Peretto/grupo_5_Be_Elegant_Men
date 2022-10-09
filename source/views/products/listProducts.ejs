@@ -49,7 +49,7 @@
             <section class="sec-productos">
                 <% products.forEach(element => { %> 
                 <a class="link-producto" href="/products/<%= element.sku %>">
-                    <img src="/img/products/<%= element.category %>/<%= element.image %>" alt="<%= element.image %>">
+                    <img src="/img/products/<%= element.category_id %>/<%= element.image %>" alt="<%= element.image %>">
                     <div>
                         <p><%= element.name %></p>
                         <p>$ <%= element.price %></p>

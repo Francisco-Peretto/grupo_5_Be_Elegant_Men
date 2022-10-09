@@ -4,15 +4,15 @@
         <main class="cuerpo-register-createProduct">
             <h1>Edición de producto</h1>
             <!-- Revisar el action -->
-            <form class="formulario-register-createProduct" action="/products/:<%- id.sku %>?_method=PUT" method="POST" enctype="multipart/form-data"> 
+            <form class="formulario-register-createProduct" action="/products/:<%- product.sku %>?_method=PUT" method="POST" enctype="multipart/form-data"> 
                 <section>
-                    <input type="hidden" name="sku" value="<%= id.sku%>">
-                    <input type="text" id="name" name="name" placeholder="Nombre del producto" value="<%- id.name %> " required>
-                    <input type="number" id="price" name="price" placeholder="Precio del producto" value="<%- id.price %>" required>
+                    <input type="hidden" name="sku" value="<%= product.sku%>">
+                    <input type="text" id="name" name="name" placeholder="Nombre del producto" value="<%- product.name %> " required>
+                    <input type="number" id="price" name="price" placeholder="Precio del producto" value="<%- product.price %>" required>
                 </section>
                 <!-- Obtener descripción a través de EJS -->
                 <section> 
-                    <input type="text" id="detail" name="detail" placeholder="Descripción del producto" value="<%- id.detail %>" required></input>
+                    <input type="text" id="detail" name="detail" placeholder="Descripción del producto" value="<%- product.detail %>" required></input>
                 </section>
 
                 <section> 
@@ -20,7 +20,7 @@
                     <select class="dropdown-createProduct" name="brand" required>
                         <% let brands = ['Brooks Brothers', 'Colantuono', 'Devré', 'Ermenegildo Zegna', 'Hermes', 'Luigi Di Carlo']; %> 
                         <% for( const brand of brands) { %>
-                            <% if (brand == id.brand) { %>
+                            <% if (brand == product.brand) { %>
                                 <option value="<%= brand %>" selected><%= brand %></option>
                             <% } else {%>                            
                             <option value="<%= brand %>"> <%= brand %> </option>
@@ -31,7 +31,7 @@
                     <select class="dropdown-createProduct" name="category" required>
                         <% let categories = ['Ambos', 'Pantalones', 'Camisas', 'Sacos', 'Zapatos', 'Corbatas']; %> 
                         <% for( const category of categories) { %>
-                            <% if (category == id.category) { %>
+                            <% if (category == product.category) { %>
                                 <option value="<%= category %>" selected> <%= category %> </option>
                             <% } else {%>                            
                                 <option value="<%= category %>"> <%= category %> </option>
@@ -44,7 +44,7 @@
                 </div>
 
                 <section>
-                    <form action="products/<%= id.sku %>?_method=PUT" method="post">
+                    <form action="products/<%= product.sku %>?_method=PUT" method="post">
                         <button type="submit" value="editar">Editar producto</button>
                     </form>
                     <button type="reset">Reiniciar formulario</button>

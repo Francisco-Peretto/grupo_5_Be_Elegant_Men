@@ -8,17 +8,17 @@
 
             <section class="sec-principal">
                 <picture class="galeriaProducto"> <!--  Hacer con ejs tantas imágenes como hayan además de la primera-->
-                    <img src="/img/products/<%= id.category %>/<%= id.image %>" alt="Imagen del producto 1">
-                    <img src="/img/products/<%= id.category %>/<%= id.image %>" alt="Imagen del producto 2">
-                    <img src="/img/products/<%= id.category %>/<%= id.image %>" alt="Imagen del producto 3">
-                    <img src="/img/products/<%= id.category %>/<%= id.image %>" alt="Imagen del producto 4">
+                    <img src="/img/products/<%= product.category_id %>/<%= product.image %>" alt="Imagen del producto 1">
+                    <img src="/img/products/<%= product.category_id %>/<%= product.image %>" alt="Imagen del producto 2">
+                    <img src="/img/products/<%= product.category_id %>/<%= product.image %>" alt="Imagen del producto 3">
+                    <img src="/img/products/<%= product.category_id %>/<%= product.image %>" alt="Imagen del producto 4">
                 </picture>
 
-                <img class="imagenPrincipal" src="/img/products/<%= id.category %>/<%= id.image %>" alt="Imagen principal del producto">
+                <img class="imagenPrincipal" src="/img/products/<%= product.category_id %>/<%= product.image %>" alt="Imagen principal del producto">
 
                 <article class="opcionesProducto"> <!-- Sector derecho del producto, opciones de la compra -->
                     <div class="div-categoria-favoritos">
-                        <a href="list/<%= id.category %>"><%= id.category %></a>
+                        <a href="list/<%= product.category_id %>"><%= product.category_id %></a>
                         <!-- <i class="fa-regular fa-heart"></i> -->
                     </div>
                     <!-- <div class="div-puntuacion">
@@ -29,10 +29,10 @@
                         <i class="fa-regular fa-star"></i>                        
                     </div> -->
 
-                    <h2 class="nombreProducto"><%= id.name %> </h2>    
+                    <h2 class="nombreProducto"><%= product.name %> </h2>    
 
                     <div class="div-precio-descuento">
-                        <h2>$ <%= id.price %></h2>
+                        <h2>$ <%= product.price %></h2>
                         <p>43% OFF</p>
                     </div>
 
@@ -80,12 +80,12 @@
                     </form>
 
                     <div class="botonera">
-                        <form action="<%= id.sku %>/edit" method="get">
+                        <form action="<%= product.sku %>/edit" method="get">
                             <button type="submit">Editar</button>
                         </form>
 
-                        <form action="<%= id.sku %>?_method=DELETE" method="post"> <!-- hacer confirmación -->
-                            <input type="hidden" name="sku" value="<%= id.sku %>">
+                        <form action="<%= product.sku %>?_method=DELETE" method="post"> <!-- hacer confirmación -->
+                            <input type="hidden" name="sku" value="<%= product.sku %>">
                             <button type="submit">Borrar</button>
                         </form>
                     </div>
@@ -94,7 +94,7 @@
 
             <section class="sec-detallesProducto">
                 <h2>Detalles del producto</h2>
-                <p><%= id.detail %> </p>
+                <p><%= product.detail %> </p>
             </section>
 
             <section class="sec-productosRelacionados">

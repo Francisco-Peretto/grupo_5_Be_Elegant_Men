@@ -10,7 +10,7 @@ module.exports = (sequelize, dataTypes) => {
                 allowNull: false
             },
             name : {
-                type : dataTypes.VARCHAR(100),
+                type : dataTypes.STRING(100),
                 allowNull: false
             },
             detail : {
@@ -22,14 +22,14 @@ module.exports = (sequelize, dataTypes) => {
                 allowNull: false
             },
             image : {
-                type : dataTypes.VARCHAR(200),
+                type : dataTypes.STRING(200),
                 allowNull: false
             },
             category_id : {
                 type : dataTypes.INTEGER(10).UNSIGNED,
                 allowNull: false,
                 references: {
-                    model: Category, 
+                    model: "Category", 
                     key: 'id'
                 }
             },
@@ -37,7 +37,7 @@ module.exports = (sequelize, dataTypes) => {
                 type : dataTypes.INTEGER(10).UNSIGNED,
                 allowNull: false,
                 references: {
-                    model: Brand, 
+                    model: "Brand", 
                     key: 'id'
                 }
             }

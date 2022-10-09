@@ -36,19 +36,19 @@
                 <section class="input-select">
                     <label>Selecciona la marca:</label>
                     <select class="dropdown-createProduct" name="brand" required> <!-- este name es lo que pasa al back-->
-                        <% let marcas = ['Brooks Brothers', 'Colantuono', 'Devré', 'Ermenegildo Zegna', 'Hermes', 'Luigi de Carlo']; %> 
-                        <% for( const marca of marcas) { %>
-                            <option value="<%= marca %>"> <%= marca %> </option>                        
+                        <% let brands = ['Brooks Brothers', 'Colantuono', 'Devré', 'Ermenegildo Zegna', 'Hermes', 'Luigi de Carlo']; %> 
+                        <% for( const brand of brands) { %>
+                            <option value="<%= brand %>"> <%= brand %> </option>                        
                         <% } %>
                     </select>
                 </section>
                 <section class="input-select">
                     <label>Selecciona la categoría:</label>
                     <select class="dropdown-createProduct" name="category" required> <!-- este name es lo que pasa al back-->
-                        <% let categorias = ['Ambos', 'Pantalones', 'Camisas', 'Sacos', 'Zapatos', 'Corbatas']; %> 
-                        <% for( const categoria of categorias) { %>
-                            <option value="<%= categoria %>"> <%= categoria %> </option>                        
-                        <% } %>
+                        <% let categories = ['Ambos', 'Camisas', 'Corbatas', 'Pantalones', 'Sacos', 'Zapatos']; %> 
+                        <% for( const category of categories) { %>
+                            <option value="<%= category %>"> <%= category %> </option>
+                        <% } %>              
                     </select>
                 </section>
 

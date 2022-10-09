@@ -20,10 +20,11 @@ const productsController = {
             detail: req.body.detail,
             price: req.body.price,
             image: req.files && req.files.length > 0 ? req.files[0].filename : 'default.png',
-            category_id: req.body.category,
-            brand_id: req.body.brand,
-        })
-
+            category_id: req.body.category == "Ambos" ? 1 : req.body.category == "Camisas" ? 2 : req.body.category == "Corbatas" ? 3 : req.body.category == "Pantalones" ? 4 : req.body.category == "Sacos" ? 5 : 6,
+            brand_id: req.body.brand == "Brooks Brothers" ? 1 : req.body.brand == "Colantuono" ? 2 : req.body.brand == "Devré" ? 3 : req.body.brand == "Ermenegildo Zegna" ? 4 : req.body.brand == "Hermes" ? 5 : 6
+        },
+        {include: [{association : "categories"},{association : "brands"}]}
+        )
         return res.redirect('/');
     },
 
@@ -32,10 +33,10 @@ const productsController = {
     list: (req, res) => {                      
 
         if (req.params.category) {    
-            db.Product.findAll()
-                .then(function(products) {
-                    products = products.filter(e => 
-                        e.category == req.params.category)         
+            db.Product.findAll({
+                where: {category_id : req.params.category}
+            })
+                .then(function(products) {                    
                     return res.render('./products/listProducts',{products})  
                 })             
         } else {
@@ -72,17 +73,16 @@ const productsController = {
             detail: req.body.detail,
             price: req.body.price,
             image: req.files && req.files.length > 0 ? req.files[0].filename : 'default.png',
-            category_id: req.body.category,
-            brand_id: req.body.brand,
-        },{
-            where : {
-                sku: req.params.id
-            }
-        })
-
+            category_id: req.body.category == "Ambos" ? 1 : req.body.category == "Camisas" ? 2 : req.body.category == "Corbatas" ? 3 : req.body.category == "Pantalones" ? 4 : req.body.category == "Sacos" ? 5 : 6,
+            brand_id: req.body.brand == "Brooks Brothers" ? 1 : req.body.brand == "Colantuono" ? 2 : req.body.brand == "Devré" ? 3 : req.body.brand == "Ermenegildo Zegna" ? 4 : req.body.brand == "Hermes" ? 5 : 6
+        },({
+            where : {sku: req.params.id}
+        }),
+        {include: [{association : "categories"},{association : "brands"}]}
+        )
         return res.redirect('/');
     },
-
+    
     //D - Eliminacion
 
     erase: (req, res) => {

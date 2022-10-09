@@ -10,23 +10,23 @@ module.exports = (sequelize, dataTypes) => {
                 allowNull: false
             },
             first_name : {
-                type : dataTypes.VARCHAR(100),
+                type : dataTypes.STRING(100),
                 allowNull: false
             },
             last_name : {
-                type : dataTypes.VARCHAR(100),
+                type : dataTypes.STRING(100),
                 allowNull: false
             },
             email : {
-                type : dataTypes.VARCHAR(100),
+                type : dataTypes.STRING(100),
                 allowNull: false
             },
             password : {
-                type : dataTypes.VARCHAR(100),
+                type : dataTypes.STRING(100),
                 allowNull: false
             },
             image : {
-                type : dataTypes.VARCHAR(200),
+                type : dataTypes.STRING(200),
                 allowNull: false
             }
         },
