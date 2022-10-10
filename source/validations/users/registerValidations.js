@@ -1,10 +1,10 @@
 const {body} = require('express-validator')
 
 const validations = [
-    body('firstName')
+    body('first_name')
         .notEmpty().withMessage('El campo esta vacio'),
 
-    body('lastName')
+    body('last_name')
         .notEmpty().withMessage('El campo esta vacio'),
 
     body('email')

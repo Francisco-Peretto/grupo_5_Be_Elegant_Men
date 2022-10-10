@@ -17,6 +17,7 @@ app.set("view engine", "ejs")
 app.use(express.static(resolve(__dirname,'..','public')))
 app.use(express.urlencoded({extended: true})) // capturar datos de formulario post
 
+/* const globalUserLogMiddleware = require('./middlewares/globalUserLogMiddlewareJSON') */
 const globalUserLogMiddleware = require('./middlewares/globalUserLogMiddleware')
 
 app.use(session({

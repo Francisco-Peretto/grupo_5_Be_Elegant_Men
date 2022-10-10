@@ -1,77 +1,103 @@
-const path = require('path')
-const {all,one,generate, write} = require('../models/productsModel')
-const {unlinkSync} = require('fs');
+const db = require("../database/models")
 
 const productsController = {
-    index: (req , res) => { // GET index
+
+    //INDEX
+
+    index: (req, res) => {
         return res.render('./products/index')
     },
     
-    list: (req, res) => { // 1. GET products. Listado de productos
-        
-        let products = all();                               
+    //C - Creacion
 
-        if (req.params.category) {                         
-            products = products.filter(e => 
-                e.category == req.params.category)         
-            return res.render('./products/listProducts',{products})            
-        }
-        
-        return res.render('./products/listProducts',{products})  
-    },
-
-    create: (req, res) => {  // 2. GET products/create. Formulario de creación de productos
+    create: (req, res) => { 
         return res.render('./products/createProduct.ejs');
     },
 
-    detail: (req , res) => { // 3. GET products/:id. Pasará a renderizar el producto con el ID seleccionado cuando se implemente EJS en la hoja productDetail
-        let { id } = req.params;
-        return res.render('./products/productDetail.ejs', {id: one(id)});
+    save: (req, res) => {
+        db.Product.create({
+            name: req.body.name,
+            detail: req.body.detail,
+            price: req.body.price,
+            image: req.files && req.files.length > 0 ? req.files[0].filename : 'default.png',
+            category_id: req.body.category == "Ambos" ? 1 : req.body.category == "Camisas" ? 2 : req.body.category == "Corbatas" ? 3 : req.body.category == "Pantalones" ? 4 : req.body.category == "Sacos" ? 5 : 6,
+            brand_id: req.body.brand == "Brooks Brothers" ? 1 : req.body.brand == "Colantuono" ? 2 : req.body.brand == "Devré" ? 3 : req.body.brand == "Ermenegildo Zegna" ? 4 : req.body.brand == "Hermes" ? 5 : 6
+        },
+        {include: [{association : "categories"},{association : "brands"}]}
+        )
+        return res.redirect('/');
+    },
+
+    //R - Lectura
+
+    list: (req, res) => {                      
+
+        if (req.params.category) {    
+            db.Product.findAll({
+                where: {category_id : req.params.category}
+            })
+                .then(function(products) {                    
+                    return res.render('./products/listProducts',{products})  
+                })             
+        } else {
+            db.Product.findAll()
+                .then(function(products) {
+                    return res.render('./products/listProducts',{products})  
+                })
+        }
+    },
+
+    detail: (req, res) => {
+        db.Product.findByPk(req.params.id, {
+            include: [{association: "categories"}, {association:"brands"}]
+        })
+            .then(function(product) {
+                return res.render('./products/productDetail.ejs', {product: product}); 
+            })
     },
     
-    save: (req, res) => { // 4. POST products. Acción del botón de creación de producto. Image se sube pero no es listada en products.json
-        req.files && req.files.length > 0 ? req.body.image = req.files[0].filename : req.body.image = 'default.png';
-        let product = generate(req.body);
-        let allProducts = all();
-        allProducts.push(product);
-        write(allProducts);        
-        return res.redirect('/');
+    //U - Actualizacion
 
-    },
-
-    edit: (req, res) => { // 5. GET products/:id/edit. Acceder a formulario de edición de producto. LOGRAR que capture sku del producto que se muestra o dirección web 
-        let { id } = req.params;
-        return res.render('./products/editProduct.ejs', {id: one(id)});
-    },
-
-    update: (req, res) => { // 6. PUT products/:id. Botón del formulario de edición de producto
-        let allProducts = all();
-        let updProducts = allProducts.map(product => {
-            if (product.sku == req.body.sku) {
-                product.name = req.body.name;
-                product.detail = req.body.detail;
-                product.category = req.body.category;
-                product.brand = req.body.brand;
-                product.price = parseInt(req.body.price);
-                product.image = req.files && req.files.length > 0 ? req.files[0].filename : product.image;
-            }
-            return product;
+    edit: (req, res) => {
+        db.Product.findByPk(req.params.id, {
+            include: [{association: "categories"}, {association:"brands"}]
         })
-        write(updProducts);
-        return res.redirect('/');
+            .then(function(product) {
+                return res.render('./products/editProduct.ejs', {product: product}); 
+            })
     },
 
-    erase: (req, res) => { // 7. DELETE products/:id. Botón de borrado de producto
-        let product = one(req.body.sku)
-        if (product.image != 'default.png'){
-            let file = path.resolve(__dirname,'..','..','public','img','products',product.image)
-            unlinkSync(file)
-        }
-        let allProducts = all();
-        let notDelProducts = allProducts.filter(elemento => elemento.sku != req.body.sku)
-        write(notDelProducts);
+    update: (req, res) => {
+        db.Product.update({
+            name: req.body.name,
+            detail: req.body.detail,
+            price: req.body.price,
+            image: req.files && req.files.length > 0 ? req.files[0].filename : 'default.png',
+            category_id: req.body.category == "Ambos" ? 1 : req.body.category == "Camisas" ? 2 : req.body.category == "Corbatas" ? 3 : req.body.category == "Pantalones" ? 4 : req.body.category == "Sacos" ? 5 : 6,
+            brand_id: req.body.brand == "Brooks Brothers" ? 1 : req.body.brand == "Colantuono" ? 2 : req.body.brand == "Devré" ? 3 : req.body.brand == "Ermenegildo Zegna" ? 4 : req.body.brand == "Hermes" ? 5 : 6
+        },({
+            where : {sku: req.params.id}
+        }),
+        {include: [{association : "categories"},{association : "brands"}]}
+        )
+        return res.redirect('/');
+    },
+    
+    //D - Eliminacion
+
+    erase: (req, res) => {
+        db.Product.destroy({
+            where: {
+                sku: req.params.id
+            }
+        })
+
         return res.render('./products/index.ejs');
-    }
+    },
 };
 
 module.exports = productsController;
+
+
+//CHEQUEAR EL NOMBRE DE LAS VARIBALES EN LAS VISTAS (PASO DE LLAMARSE ID A LLAMARSE PRODUCT)
+//BORRAR MODELOS CON JSON

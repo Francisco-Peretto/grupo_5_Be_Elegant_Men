@@ -67,15 +67,6 @@
     border-radius: 15px;
 }
 
-.div-categoria-favoritos {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin-bottom: .5rem;
-}
-
 .div-puntuacion {
     margin: 1rem 0;
 }

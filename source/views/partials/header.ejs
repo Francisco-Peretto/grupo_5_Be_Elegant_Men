@@ -18,8 +18,9 @@
             <ul>
               <li>
                 <a href="/users/login">
+                    <!-- <% console.log(locals) %> -->
                     <% if (locals.isLogged) { %>
-                        Hola <%= locals.userLogged.firstName %>
+                        Hola <%= locals.userLogged.first_name %>
                     <% } else {%>
                         <i class="fa-solid fa-user"></i>
                     <% } %>
@@ -32,7 +33,7 @@
         <nav class="navbar-usuario">
                 <a href="/users/login">
                     <% if (locals.isLogged) { %>
-                        Hola <%= locals.userLogged.firstName %> 
+                        Hola <%= locals.userLogged.first_name %> 
                     <% } else {%>
                         <i class="fa-solid fa-user"></i>
                     <% } %>

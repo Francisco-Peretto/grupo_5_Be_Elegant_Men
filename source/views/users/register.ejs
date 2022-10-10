@@ -5,19 +5,19 @@
             <h1>Crea tu cuenta</h1>
             <form class="formulario-register" action="/users/register" method="post" enctype="multipart/form-data">
                 <section>
-                    <input type="text" id="firstName" name="firstName" placeholder="Nombre/s" value="<%= locals.old ? old.firstName : '' %>">
+                    <input type="text" id="first_name" name="first_name" placeholder="Nombre/s" value="<%= locals.old ? old.first_name : '' %>">
                 </section>
-                <% if (locals.errors && errors.firstName) { %>
+                <% if (locals.errors && errors.first_name) { %>
                     <div class="div-error">
-                        <%= errors.firstName.msg %>
+                        <%= errors.first_name.msg %>
                     </div>
                 <% } %>
                 <section>
-                    <input type="text" id="lastName" name="lastName" placeholder="Apellido/s" value="<%= locals.old ? old.lastName : '' %>">
+                    <input type="text" id="last_name" name="last_name" placeholder="Apellido/s" value="<%= locals.old ? old.last_name : '' %>">
                 </section>
-                <% if (locals.errors && errors.lastName) { %>
+                <% if (locals.errors && errors.last_name) { %>
                     <div class="div-error">
-                        <%= errors.lastName.msg %>
+                        <%= errors.last_name.msg %>
                     </div>
                 <% } %>
                 <section>

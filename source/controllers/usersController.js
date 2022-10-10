@@ -1,83 +1,101 @@
 const path = require('path');
-const {all,findByField,generate,write} = require('../models/usersModel');
 const bcryptjs = require('bcryptjs');
 const {validationResult} = require('express-validator')
 
+const db = require("../database/models")
+
 const usersController = {
-    cart: (req , res) => {  // GET cart
+    //CARRITO
+    cart: (req , res) => {  
         return res.render('users/cart');
     },
-    login: (req , res) => { // GET login
+
+    //LOGUEO
+    login: (req , res) => { 
         return res.render('users/login');
     },
-    register: (req , res) => { // GET register
+
+    access: (req , res) => { 
+
+        db.User.findOne({
+            where : {email : req.body.email}
+        })
+            .then((userToLogin) => {
+
+                let correctPassword = bcryptjs.compareSync(req.body.password, userToLogin.password);
+                if (correctPassword) {
+                    delete userToLogin.password
+                    req.session.userLogged = userToLogin
+                    if (req.body.remember != undefined) {
+                        res.cookie('userEmail' , req.body.email, {maxAge : (((1000 * 60) * 60)*24)}) // cookie de 24 hs
+                    }   
+
+                    return res.redirect('profile');
+
+                } else {
+                    return res.render('users/login' , {
+                        errors: {password: {msg: 'Contraseña incorrecta'}},
+                        old : req.body
+                    })
+                }
+            })       
+            .catch((fail) => {
+                return res.render('users/login' , {
+                    errors: {email: {msg: 'El email con el que intenta ingresar no existe'}}
+                })
+            })
+
+    },
+
+    //REGISTRO
+    register: (req , res) => { 
         return res.render('users/register');
     },
-    record: (req , res) => { // POST register
+
+    record: (req , res) => {                    
         const resultValidation = validationResult(req)
 
         if (resultValidation.errors.length > 0) { 
-            return res.render('users/register' , {errors: resultValidation.mapped() , old : req.body})
-        } 
-
-        let userInDB = findByField('email', req.body.email)
-        if (userInDB) {
             return res.render('users/register' , {
-                errors: {
-                    email: {
-                        msg: 'Este email ya se encuentra registrado'
-                    }
-                }, 
-                old : req.body})
+                errors: resultValidation.mapped(),
+                old : req.body
+            })
         } 
 
-        req.files && req.files.length > 0 ? req.body.image = req.files[0].filename : req.body.image = 'default.png';
-        let user = generate(req.body);
-        let allUsers = all();
-        allUsers.push(user);
-        write(allUsers);
+       db.User.findOne({
+            where : {email : req.body.email}
+        })
+            .then((result) => {
+                let userFound = result
 
-        return res.render('users/login');
-        
-    },
-    access: (req , res) => { // POST login
-        let userToLogin = findByField('email', req.body.email)
-
-        if (userToLogin) {
-            let correctPassword = bcryptjs.compareSync(req.body.password, userToLogin.password);
-            if (correctPassword) {
-                delete userToLogin.password
-                req.session.userLogged = userToLogin
-
-                if (req.body.remember) {
-                    res.cookie('userEmail' , req.body.email, {maxAge : (((1000 * 60) * 60)*24)}) // cookie de 24 hs
+                if (userFound == null) {
+                    db.User.create({
+                        first_name: req.body.first_name,
+                        last_name: req.body.last_name,
+                        email: req.body.email,
+                        password: bcryptjs.hashSync(req.body.password, 10),
+                        image: req.files && req.files.length > 0 ? req.files[0].filename : 'default.png',
+                    })
+            
+                    return res.render('users/login');
+                } else {
+                    return res.render('users/register' , {
+                        errors: {email: {msg: 'Este email ya se encuentra registrado'}}, 
+                        old : req.body
+                    })
                 }
+            })
 
-                return res.redirect('profile');
-             } else {
-                return res.render('users/login' , {
-                    errors: {
-                        password: {
-                            msg: 'Contraseña incorrecta'
-                        }
-                    },
-                    old : req.body
-                })
-             }
-        } else {
-            return res.render('users/login' , {
-                errors: {
-                    email: {
-                        msg: 'El email con el que intenta ingresar no existe'
-                    }
-                }})
-        }
     },
+
+    //PERFIL
     profile: (req , res) => { // GET profile
         return res.render('users/profile', {
             user: req.session.userLogged
         })
     },
+
+    //LOGOUT
     logout: (req, res) => { // GET logout
         res.clearCookie('userEmail')
         req.session.destroy()
