@@ -8,20 +8,23 @@ const multer = require('multer');
 const storage = require('../modules/storage');
 const upload = multer({storage:storage('../../uploads/users')});
 
-router.get('/', productsController.index); // Index
 
-router.get('/products/list/:category?', productsController.list); // 1. GET products.
+// rutas de pagina principal
+router.get('/', productsController.index); 
 
-router.get('/products/create', productsController.create); // 2. GET products/create.
+//rutas de creacion
+router.post('/products/save', upload.any(), productsController.save); 
+router.get('/products/create', productsController.create); 
 
-router.get('/products/:id', productsController.detail); // 3. GET products/:id
+// rutas de lectura
+router.get('/products/list/:category?', productsController.list); 
+router.get('/products/:id', productsController.detail); 
 
-router.post('/products/save', upload.any(), productsController.save); // 4. POST products
+//rutas de edicion
+router.get('/products/:id/edit', productsController.edit); 
+router.put('/products/:id', upload.any(), productsController.update); 
 
-router.get('/products/:id/edit', productsController.edit); // 5. GET products/:id/edit
-
-router.put('/products/:id', upload.any(), productsController.update); // 6. PUT products/id
-
-router.delete('/products/:id', productsController.erase); // 7. DELETE products/:id
+//ruta de borrado
+router.delete('/products/:id', productsController.erase); 
 
 module.exports = router;

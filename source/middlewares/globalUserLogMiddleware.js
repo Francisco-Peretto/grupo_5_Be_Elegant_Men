@@ -1,23 +1,25 @@
 const db = require("../database/models")
 
-let middleware = (req,res,next) => {
+let middleware = async (req,res,next) => {
     res.locals.isLogged = false
-/*     if (req.cookies.userEmail)  */
-    db.User.findOne({
-        where : {email : req.cookies.userEmail}
-    })
-        .then((user) => {
-            if (user) {
-                req.session.userLogged = user
-            }
-            if (req.session.userLogged) {
-                res.locals.userLogged = req.session.userLogged
-                res.locals.isLogged = true
-            }
-            return next()
+    
+    if (req.cookies && req.cookies.userEmail) {
+        let user = await db.User.findOne({
+            where : {email : req.cookies.userEmail}
         })
-        .catch(()=> next())
-        
+        if (user) {
+            req.session.userLogged = user
+        }
+    }
+
+    if (req.session && req.session.userLogged) {
+        res.locals.isLogged = true
+        res.locals.userLogged = req.session.userLogged
+    }
+
+    return next()
+
+
 }
 
 module.exports= middleware

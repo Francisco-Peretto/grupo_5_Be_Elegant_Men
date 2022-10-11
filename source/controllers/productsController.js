@@ -97,7 +97,3 @@ const productsController = {
 };
 
 module.exports = productsController;
-
-
-//CHEQUEAR EL NOMBRE DE LAS VARIBALES EN LAS VISTAS (PASO DE LLAMARSE ID A LLAMARSE PRODUCT)
-//BORRAR MODELOS CON JSON
