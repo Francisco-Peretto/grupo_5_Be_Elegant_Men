@@ -3,8 +3,9 @@
         <a class="contenedor-img" href="/"><img class="img-logo" src="\img\logos\logo10.png" alt="logo"></a>
         <h2><a href="/">Be Elegant Men</a></h2>
         <div class="div-busqueda">
-            <form action="#" method="get">
-                <input type="text" placeholder=" Buscar..." name="search">
+            <form action="/products/search" method="get">
+                <input type="text" placeholder=" Buscar productos..." name="search" id="search" list="suggestions" autocomplete="on">
+                <datalist id="suggestions"></datalist>
                 <button>
                     <i class="fa fa-search"></i>
                 </button>
@@ -16,23 +17,24 @@
                 <i class="fa-solid fa-bars"></i>
             </label>
             <ul>
-              <li>
+            <li>
                 <a href="/users/login">
                     <% if (locals.isLogged) { %>
-                        Hola <%= locals.userLogged.first_name %>
+                        <p>Bienvenido <%= locals.userLogged.first_name %></p>
                     <% } else {%>
                         <i class="fa-solid fa-user"></i>
                     <% } %>
                 </a>
-              </li>
-              <li><a href="/users/cart"><i class="fa-solid fa-cart-shopping"></i></a></li>
-              <li><a href="/products/create"><i class="fa-solid fa-circle-plus"></i></i></a></li>
+            </li>
+            <li><a href="/users/cart"><i class="fa-solid fa-cart-shopping"></i></a></li>
+            <li><a href="/products/create"><i class="fa-solid fa-circle-plus"></i></i></a></li>
             </ul>
         </nav>
+
         <nav class="navbar-usuario">
                 <a href="/users/login">
                     <% if (locals.isLogged) { %>
-                        Hola <%= locals.userLogged.first_name %> 
+                        <p>Bienvenido <%= locals.userLogged.first_name %></p> 
                     <% } else {%>
                         <i class="fa-solid fa-user"></i>
                     <% } %>
@@ -40,14 +42,15 @@
             <a href="/users/cart"><i class="fa-solid fa-cart-shopping"></i></a>
             <a href="/products/create"><i class="fa-solid fa-circle-plus"></i></i></a>
         </nav>
+
     </section>
     <nav class="navbar-categorias">
         <a href="/products/list/">Todos</a>
         <a href="/products/list/1">Ambos</a>
-        <a href="/products/list/4">Pantalones</a>
         <a href="/products/list/2">Camisas</a>
+        <a href="/products/list/3">Corbatas</a>
+        <a href="/products/list/4">Pantalones</a>
         <a href="/products/list/5">Sacos</a>
         <a href="/products/list/6">Zapatos</a>
-        <a href="/products/list/3">Corbatas</a>
     </nav> 
 </header>

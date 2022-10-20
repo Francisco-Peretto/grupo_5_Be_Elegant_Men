@@ -17,6 +17,7 @@ router.post('/products/save', upload.any(), productsController.save);
 router.get('/products/create', productsController.create); 
 
 // rutas de lectura
+router.get('/products/search', productsController.search);
 router.get('/products/list/:category?', productsController.list); 
 router.get('/products/:id', productsController.detail); 
 

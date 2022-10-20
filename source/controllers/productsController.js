@@ -1,4 +1,5 @@
 const db = require("../database/models")
+const { Op } = require("sequelize");
 
 const productsController = {
 
@@ -82,7 +83,7 @@ const productsController = {
         )
         return res.redirect('/');
     },
-    
+
     //D - Eliminacion
 
     erase: (req, res) => {
@@ -94,6 +95,16 @@ const productsController = {
 
         return res.render('./products/index.ejs');
     },
-};
+
+    search: (req,res) => {
+        console.log(req.query.search)
+        db.Product.findAll({
+            where: { name: { [Op.like] : `%${req.query.search}%` }}
+        })
+        .then(function(products) {
+            return res.render('./products/listProducts',{products})
+        })
+    }
+}
 
 module.exports = productsController;

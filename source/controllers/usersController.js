@@ -1,4 +1,3 @@
-const path = require('path');
 const bcryptjs = require('bcryptjs');
 const {validationResult} = require('express-validator')
 
@@ -62,7 +61,7 @@ const usersController = {
             })
         } 
 
-       db.User.findOne({
+        db.User.findOne({
             where : {email : req.body.email}
         })
             .then((result) => {
@@ -76,7 +75,7 @@ const usersController = {
                         password: bcryptjs.hashSync(req.body.password, 10),
                         image: req.files && req.files.length > 0 ? req.files[0].filename : 'default.png',
                     })
-            
+
                     return res.render('users/login');
                 } else {
                     return res.render('users/register' , {
