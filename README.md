@@ -1,6 +1,5 @@
 # grupo_5_Be_Elegant_Men
 
-
 Este Marketplace ofrecerá ropa para hombres.
 
 Integrantes:
