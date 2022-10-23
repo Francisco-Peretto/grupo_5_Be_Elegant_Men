@@ -1,25 +1,14 @@
--- phpMyAdmin SQL Dump
--- version 5.2.0
--- https://www.phpmyadmin.net/
---
--- Host: 127.0.0.1
--- Generation Time: Sep 23, 2022 at 02:42 AM
--- Server version: 10.4.24-MariaDB
--- PHP Version: 8.1.6
-
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
 SET time_zone = "+00:00";
 
-
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
-
 --
 -- Database: `beelegantmen_db`
 --
+
+DROP DATABASE IF EXISTS `beelegantmen_db`;
+CREATE DATABASE `beelegantmen_db`;
+USE `beelegantmen_db`;
 
 -- --------------------------------------------------------
 
@@ -152,22 +141,20 @@ CREATE TABLE `users` (
   `last_name` varchar(100) NOT NULL,
   `email` varchar(100) NOT NULL,
   `password` varchar(100) NOT NULL,
-  `image` varchar(200) NOT NULL
+  `avatar` varchar(200) NOT NULL,
+  `admin` tinyint(1) UNSIGNED NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`id`, `first_name`, `last_name`, `email`, `password`, `image`) VALUES
-(1, 'Mateo', 'González', 'correo_fantasma@gmail.com', '$2a$10$FQag5sflLp/Zz6kWvCvNC.J61MvPDjvX2pKhgJUPrCN7JQiiQlmku', 'default.png'),
-(2, 'Karlos', 'Market', 'km@gmail.com', '$2a$10$drdmHWZDmTpsjEst2BhcMOnxX/qoZdA1k0e6qAWiFPURYaljChngO', 'image-1662048555871.jpg'),
-(3, 'Diego Armando', 'Maradona', 'diego@maradona.com', '$2a$10$PSzFD5XEGnGEJIk0IwORceTgUugsDeHZ.V6e2K7tUVblE9k80egia', 'image-1663000464342.png'),
-(4, 'ad', 'min', 'admin@beelegantmen.com', '$2a$10$ttemeksug08c/Iva5WM3r.Vgn4je0USNcRRybExS99M7L4hk8al3.', 'image-1663892577863.png');
+INSERT INTO `users` (`id`, `first_name`, `last_name`, `email`, `password`, `avatar`, `admin`) VALUES
+(1, 'Mateo', 'González', 'correo_fantasma@gmail.com', '$2a$10$FQag5sflLp/Zz6kWvCvNC.J61MvPDjvX2pKhgJUPrCN7JQiiQlmku', 'default.png', 0),
+(2, 'Karlos', 'Market', 'km@gmail.com', '$2a$10$drdmHWZDmTpsjEst2BhcMOnxX/qoZdA1k0e6qAWiFPURYaljChngO', 'image-1662048555871.jpg', 0),
+(3, 'Diego Armando', 'Maradona', 'diego@maradona.com', '$2a$10$PSzFD5XEGnGEJIk0IwORceTgUugsDeHZ.V6e2K7tUVblE9k80egia', 'image-1663000464342.png', 0),
+(4, 'ad', 'min', 'admin@beelegantmen.com', '$2a$10$ttemeksug08c/Iva5WM3r.Vgn4je0USNcRRybExS99M7L4hk8al3.', 'image-1663892577863.png', 1);
 
---
--- Indexes for dumped tables
---
 
 --
 -- Indexes for table `brands`
@@ -196,10 +183,6 @@ ALTER TABLE `users`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT for dumped tables
---
-
---
 -- AUTO_INCREMENT for table `brands`
 --
 ALTER TABLE `brands`
@@ -224,17 +207,9 @@ ALTER TABLE `users`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- Constraints for dumped tables
---
-
---
 -- Constraints for table `products`
 --
 ALTER TABLE `products`
   ADD CONSTRAINT `products_ibfk_1` FOREIGN KEY (`category_id`) REFERENCES `categories` (`id`),
   ADD CONSTRAINT `products_ibfk_2` FOREIGN KEY (`brand_id`) REFERENCES `brands` (`id`);
 COMMIT;
-
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

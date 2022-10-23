@@ -21,6 +21,10 @@ SET time_zone = "+00:00";
 -- Database: `beelegantmen_db`
 --
 
+DROP DATABASE IF EXISTS `beelegantmen_db`;
+CREATE DATABASE `beelegantmen_db`;
+USE `beelegantmen_db`;
+
 -- --------------------------------------------------------
 
 --

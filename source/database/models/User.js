@@ -25,8 +25,12 @@ module.exports = (sequelize, dataTypes) => {
                 type : dataTypes.STRING(100),
                 allowNull: false
             },
-            image : {
+            avatar : {
                 type : dataTypes.STRING(200),
+                allowNull: false
+            },
+            admin : {
+                type : dataTypes.INTEGER(1),
                 allowNull: false
             }
         },

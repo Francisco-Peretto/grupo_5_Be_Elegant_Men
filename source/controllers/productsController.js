@@ -39,7 +39,7 @@ const productsController = {
             })
                 .then(function(products) {                    
                     return res.render('./products/listProducts',{products})  
-                })             
+                })           
         } else {
             db.Product.findAll()
                 .then(function(products) {

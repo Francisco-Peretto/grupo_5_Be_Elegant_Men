@@ -1,7 +1,7 @@
 module.exports = (sequelize, dataTypes) => {
 
     const Product = sequelize.define(
-	    'Product',
+        'Product',
         {
             sku : {
                 type : dataTypes.INTEGER(10).UNSIGNED,
@@ -29,7 +29,7 @@ module.exports = (sequelize, dataTypes) => {
                 type : dataTypes.INTEGER(10).UNSIGNED,
                 allowNull: false,
                 references: {
-                    model: "Category", 
+                    model: "Category",
                     key: 'id'
                 }
             },
@@ -37,7 +37,7 @@ module.exports = (sequelize, dataTypes) => {
                 type : dataTypes.INTEGER(10).UNSIGNED,
                 allowNull: false,
                 references: {
-                    model: "Brand", 
+                    model: "Brand",
                     key: 'id'
                 }
             }
@@ -58,6 +58,6 @@ module.exports = (sequelize, dataTypes) => {
             foreignKey : 'brand_id'
         })
     }
-        
+    
     return Product
 }

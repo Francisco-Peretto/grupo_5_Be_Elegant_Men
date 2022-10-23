@@ -73,7 +73,8 @@ const usersController = {
                         last_name: req.body.last_name,
                         email: req.body.email,
                         password: bcryptjs.hashSync(req.body.password, 10),
-                        image: req.files && req.files.length > 0 ? req.files[0].filename : 'default.png',
+                        avatar: req.files && req.files.length > 0 ? req.files[0].filename : 'default.png',
+                        admin: req.body.email.includes('@beelegantmen.com') ? 1 : 0
                     })
 
                     return res.render('users/login');
