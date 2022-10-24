@@ -18,9 +18,6 @@
                 <section> 
                     <h3>Selecciona la marca</h3> <!-- Cuando recupere la marca le agregará el selected -->
                     <select class="dropdown-createProduct" name="brand" required>
-                        <% let brands = [{ id: 1, name: 'Brooks Brothers' },{ id: 2, name: 'Colantuono' },{ id: 3, name: 'Devré' },
-                        { id: 4, name: 'Ermenegildo Zegna' },{ id: 5, name: 'Hermes' },{ id: 6, name: 'Luigi Di Carlo' }]; %> 
-
                         <% for( const brand of brands) { %>
                             <% if (brand.id == product.brand_id) { %>
                                 <option value="<%= brand.id %>" selected><%= brand.name %></option>
@@ -31,9 +28,6 @@
 
                     <h3>Selecciona la categoría</h3> <!-- Cuando recupere la categoría le agregará el selected -->
                     <select class="dropdown-createProduct" name="category" required>
-                        <% let categories = [{ id: 1, name: 'Ambos' },{ id: 2, name: 'Camisas' },{ id: 3, name: 'Corbatas' },
-                        { id: 4, name: 'Pantalones' },{ id: 5, name: 'Sacos' },{ id: 6, name: 'Zapatos' }]; %> 
-
                         <% for( const category of categories) { %>
                             <% if (category.id == product.category_id) { %>
                                 <option value="<%= category.id %>" selected><%= category.name %></option>

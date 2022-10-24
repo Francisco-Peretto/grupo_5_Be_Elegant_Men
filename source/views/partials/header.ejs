@@ -46,11 +46,9 @@
     </section>
     <nav class="navbar-categorias">
         <a href="/products/list/">Todos</a>
-        <a href="/products/list/1">Ambos</a>
-        <a href="/products/list/2">Camisas</a>
-        <a href="/products/list/3">Corbatas</a>
-        <a href="/products/list/4">Pantalones</a>
-        <a href="/products/list/5">Sacos</a>
-        <a href="/products/list/6">Zapatos</a>
+        <% let categories = ["Ambos", "Camisas", "Corbatas", "Pantalones", "Sacos", "Zapatos"] %> 
+        <% for( let i = 1; i <= categories.length; i++ ) { %>
+            <a href="/products/list/<%= i %>"> <%= categories[i - 1]%> </a>
+        <% } %>
     </nav> 
 </header>

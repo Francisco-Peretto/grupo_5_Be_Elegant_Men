@@ -19,14 +19,6 @@
                 </div>
                 <article class="opcionesProducto"> <!-- Sector derecho del producto, opciones de la compra -->
 
-                    <!-- <div class="div-puntuacion">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-regular fa-star"></i>                        
-                    </div> -->
-
                     <div class="div-producto-marca">
                         <h2 class="nombreProducto"><%= product.name %> </h2>
                         <p><%= product.brands.name %></p>
@@ -53,28 +45,8 @@
                                     <option value="<%= i %>"> <%= i %> </option>
                                     <% } %>
                             </select>
-                        </div>
-                                          
-                        <!-- <div>  
-                            <label for="size">Elegí el talle</label>
-                            <select name="size">
-                                <option value="s">S</option>
-                                <option value="m">M</option>
-                                <option value="l">L</option>
-                                <option value="xl">XL</option>
-                            </select>
-                        </div>
+                        </div
 
-                        <div>
-                            <label for="color">Elegí el color</label>
-                            <select name="color">
-                                <option value="negro">Negro</option>
-                                <option value="gris">Gris</option>
-                                <option value="azul">Azul</option>
-                                <option value="blanco">Blanco</option>
-                            </select>
-                        </div> -->
-                    
                         <button type="submit">
                             Agregar al carrito   <i class="fa-solid fa-cart-shopping"></i>
                         </button>
@@ -101,10 +73,10 @@
             <section class="sec-productosRelacionados">
                 <h2>Productos relacionados</h2>
                 <picture>
-                    <img src="\img\products\camisa_blanca1.jpg" alt="Imagen del producto 1">
-                    <img src="\img\products\camisa_blanca2.jpg" alt="Imagen del producto 2">
-                    <img src="\img\products\camisa_blanca3.jpg" alt="Imagen del producto 3">
-                    <img src="\img\products\camisa_blanca4.jpg" alt="Imagen del producto 4">
+                    <% for( const catProduct of categoryProducts) { %>
+                        <a href="/products/<%= catProduct.sku %>">
+                            <img src="/img/products/<%= catProduct.category_id %>/<%= catProduct.image %>" alt="Producto relacionado"></a>
+                        <% } %>
                 </picture>
             </section>
             

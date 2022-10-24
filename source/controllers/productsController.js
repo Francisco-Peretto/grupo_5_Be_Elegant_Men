@@ -6,14 +6,32 @@ const productsController = {
     //INDEX
 
     index: (req, res) => {
-        return res.render('./products/index')
-    },
-    
-    //C - Creacion
+        db.Product.findAll()
+            .then(function(product) {
+                db.Category.findAll()
+                .then(function(categories) {
+                    db.Brand.findAll()
+                    .then(function(brands) {
+                        return res.render('./products/index.ejs', {product: product, categories : categories, brands : brands })
+            })
+        })
+    })
+},
 
-    create: (req, res) => { 
-        return res.render('./products/createProduct.ejs');
-    },
+    //C - Creación
+
+    create: (req, res) => {
+        db.Product.findAll()
+            .then(function(product) {
+                db.Category.findAll()
+                .then(function(categories) {
+                    db.Brand.findAll()
+                    .then(function(brands) {
+                        return res.render('./products/createProduct.ejs', {product: product, categories : categories, brands : brands })
+            })
+        })
+    })
+},
 
     save: (req, res) => {
         db.Product.create({
@@ -49,24 +67,33 @@ const productsController = {
     },
 
     detail: (req, res) => {
-        db.Product.findByPk(req.params.id, {
-            include: [{association: "categories"}, {association:"brands"}]
+        db.Product.findByPk(req.params.id,
+            {include: [{association: "categories"}, {association:"brands"}]
         })
-            .then(function(product) {
-                return res.render('./products/productDetail.ejs', {product: product}); 
-            })
+        .then(function(product) {
+            db.Product.findAll( {where : {category_id : product.category_id}})
+            .then(function(categoryProducts) {
+                    return res.render('./products/productDetail.ejs', {product: product, categoryProducts : categoryProducts })
+                }
+        )})
     },
-    
-    //U - Actualizacion
+
+    //U - Actualización
 
     edit: (req, res) => {
         db.Product.findByPk(req.params.id, {
             include: [{association: "categories"}, {association:"brands"}]
         })
             .then(function(product) {
-                return res.render('./products/editProduct.ejs', {product: product}); 
+                db.Category.findAll()
+                .then(function(categories) {
+                    db.Brand.findAll()
+                    .then(function(brands) {
+                        return res.render('./products/editProduct.ejs', {product: product, categories : categories, brands : brands })
             })
-    },
+        })
+    })
+},
 
     update: (req, res) => {
         db.Product.update({
@@ -84,7 +111,7 @@ const productsController = {
         return res.redirect('/');
     },
 
-    //D - Eliminacion
+    //D - Eliminación
 
     erase: (req, res) => {
         db.Product.destroy({
@@ -92,7 +119,6 @@ const productsController = {
                 sku: req.params.id
             }
         })
-
         return res.render('./products/index.ejs');
     },
 
