@@ -27,8 +27,11 @@
                         <i class="fa-regular fa-star"></i>                        
                     </div> -->
 
-                    <h2 class="nombreProducto"><%= product.name %> </h2>    
-
+                    <div class="div-producto-marca">
+                        <h2 class="nombreProducto"><%= product.name %> </h2>
+                        <p><%= product.brands.name %></p>
+                    </div>
+                    
                     <div class="div-precio-descuento">
                         <h2>$ <%= product.price %></h2>
                         <p>43% OFF</p>
