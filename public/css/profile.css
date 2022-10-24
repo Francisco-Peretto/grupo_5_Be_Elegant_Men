@@ -1,14 +1,24 @@
+.main-profile {
+    padding: 2.5%;
+    background-color: rgb(41, 40, 40);
+}
+
 .cuerpo-profile {
     display: flex;
     flex-wrap: nowrap;
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: flex-start;
-    padding: 5%;
+    padding: 2.5%;
+    margin: auto;
+    width: 60%;
+    border-radius: 20px;
+    background-color: #0e141a;
+    box-shadow: 0px 0px 10px rgb(209, 208, 204);
 }
 
 .contenedor-avatar {
-    width: 15%;
+    width: 20%;
 }
 
 .avatar {
@@ -17,14 +27,39 @@
 }
 
 .sec-profile {
-    width: 50%;
+    width: 90%;
     margin-left: 5%;
 }
 
 .sec-profile label {
-    color: black;
+    color:#adb1b5;
+}
+
+.sec-profile fieldset {
+    color:#adb1b5;
 }
 
 .sec-profile button {
     margin-top: 2%;
+    width: 12rem;
+    margin-top: 1rem;
+    padding: .5rem;
+    text-align: center;
+    background-color: #0e141a;
+    color:#adb1b5;
+    font-size: 1rem;
+    border: 2px solid;
+    border-radius: .5rem;
+    cursor: pointer;
+    transition: all 1s ease;
+}
+
+.sec-profile button:hover {
+    box-shadow: .10rem .10rem 1rem #fff, 
+    -.10rem -.10rem 1rem #ccc;
+}
+
+.sec-profile button:active {
+    box-shadow: .10rem .10rem 1rem #fff, 
+    -.10rem -.10rem 1rem #ccc;
 }

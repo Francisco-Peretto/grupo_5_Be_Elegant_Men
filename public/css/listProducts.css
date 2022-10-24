@@ -5,7 +5,7 @@
     justify-content: space-evenly;
     align-items: flex-start;
     margin: 0%;
-    background-color: black; 
+    background-color: rgb(41, 40, 40);
 }
 
 .sec-filtros {
@@ -81,12 +81,14 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    box-shadow: 0px 0px 10px rgb(224 197 51 / 73%);
+    box-shadow: 0px 0px 10px rgb(209, 208, 204);
     width: 25%;
     height: 350px;
     margin: 2%;
     color: #adb1b5;
     text-decoration: none;
+
+    background-color: #0e141a;
 
     display:block;
     -webkit-transition:-webkit-transform 0.5s ease-out;

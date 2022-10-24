@@ -1,36 +1,40 @@
 <%- include('../partials/head.ejs') %>
     <body>
         <%- include('../partials/header.ejs') %>
+        <%- include('../partials/navBrands.ejs') %>
         <main class="cuerpo-profile">
-            <picture class="contenedor-avatar">
-                <img class="avatar" src="/img/users/<%= user.avatar %> " alt="Imagen de Usuario">
-            </picture>
-            <section class="sec-profile">
-                <form>
-                    <fieldset>
-                        <legend>Informacion Personal</legend>
-                        <div>
-                            <label for="first_name">Nombre</label>
-                            <input type="text" value="<%= user.first_name %>" readonly>
-                        </div>
-                        <div>
-                            <label for="last_name">Apellido</label>
-                            <input type="text" value="<%= user.last_name %>" readonly>
-                        </div>
-                    </fieldset>
-                </form>
-                <form>
-                    <fieldset>
-                        <legend>Informacion de Usuario</legend>
-                        <label for="email">Correo Electronico</label>
-                        <input type="email" value="<%= user.email %>" readonly>
-                    </fieldset>
-                </form>
-                <form action="/users/logout" method="get">
-                    <button type="submit">Cerrar sesion</button>
-                </form>
+	        <section class="cuerpo-profile">
+            	<picture class="contenedor-avatar">
+                    <img class="avatar" src="/img/users/<%= user.avatar %> " alt="Imagen de Usuario">
+                </picture>
+                <section class="sec-profile">
+                    <form>
+                        <fieldset>
+                            <legend>Informacion Personal</legend>
+                            <div>
+                                <label for="first_name">Nombre</label>
+                                <input type="text" value="<%= user.first_name %>" readonly>
+                            </div>
+                            <div>
+                                <label for="last_name">Apellido</label>
+                                <input type="text" value="<%= user.last_name %>" readonly>
+                            </div>
+                        </fieldset>
+                    </form>
+                    <form>
+                        <fieldset>
+                            <legend>Informacion de Usuario</legend>
+                            <label for="email">Correo Electronico</label>
+                            <input type="email" value="<%= user.email %>" readonly>
+                        </fieldset>
+                    </form>
+                    <form action="/users/logout" method="get">
+                        <button type="submit">Cerrar sesion</button>
+                    </form>
+                </section>
             </section>
         </main>
+        <%- include('../partials/navBrands.ejs') %>
         <%- include('../partials/footer.ejs') %>
     </body>
 </html>

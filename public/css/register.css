@@ -1,3 +1,8 @@
+.main-register {
+    padding: 4%;
+    background-color: rgb(41, 40, 40);
+}
+
 .cuerpo-register {
     display: flex;
     flex-wrap: nowrap;
@@ -8,12 +13,13 @@
     border: 1px solid #0b335b ;
     border-radius: 15px;
     margin: auto;
-    margin-top: 5%;
-    margin-bottom: 5%;
+    background-color: #0e141a;
+    box-shadow: 0px 0px 10px rgb(209, 208, 204);
 }
 
 .cuerpo-register h1 {
     font-size: 2rem;
+    color:#adb1b5;
 }
 
 .formulario-register {
@@ -48,7 +54,9 @@
 
 .formulario-register section input {
     width: 100%;
+    margin-bottom: 2%;
     height: 30px;
+    color:#adb1b5;
 }
 
 .formulario-register button {
@@ -57,26 +65,24 @@
     margin-top: 2%;
     text-align: center;
     background-color: #0e141a;
-    color: #fff;
+    color:#adb1b5;
     font-size: 1rem;
     padding: 1%;
     border: 2px solid;
     border-radius: .5rem;
     cursor: pointer;
     transition: all 1s ease;
-    box-shadow: .5rem .5rem 1rem #ccc, 
-        -.5rem -.5rem 1rem #fff;
 }
 
 .formulario-register button:hover {
-    box-shadow: .5rem .5rem 1rem #fff, 
-    -.5rem -.5rem 1rem #ccc;
+    box-shadow: .10rem .10rem 1rem #adb1b5,
+    -.10rem -.10rem 1rem #ccc;
     
 }
 
 .formulario-register button:active {
-    box-shadow: inset .2rem .2rem 1rem #fff, 
-    inset -.2rem -.2rem 1rem #ccc;
+    box-shadow: inset .10rem .10rem 1rem #adb1b5,
+    inset -.10rem -.10rem 1rem #ccc;
 }
 
 /*estilo para el input file*/
@@ -88,7 +94,8 @@
   
 .file-select::before {
     background-color: #0e141a;
-    color: white;
+    color: #adb1b5;
+    border: 2px solid;
     display: flex;
     justify-content: center;
     align-items: center;

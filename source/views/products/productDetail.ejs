@@ -3,19 +3,20 @@
     <body>
 
         <%- include('../partials/header.ejs') %>
+        <%- include('../partials/navBrands.ejs') %>
 
         <main class="cuerpo-productDetail">
 
             <section class="sec-principal">
-                <picture class="galeriaProducto"> <!--  Hacer con ejs tantas imágenes como hayan además de la primera-->
+<!--                 <picture class="galeriaProducto"> 
                     <img src="/img/products/<%= product.category_id %>/<%= product.image %>" alt="Imagen del producto 1">
                     <img src="/img/products/<%= product.category_id %>/<%= product.image %>" alt="Imagen del producto 2">
                     <img src="/img/products/<%= product.category_id %>/<%= product.image %>" alt="Imagen del producto 3">
                     <img src="/img/products/<%= product.category_id %>/<%= product.image %>" alt="Imagen del producto 4">
-                </picture>
-
-                <img class="imagenPrincipal" src="/img/products/<%= product.category_id %>/<%= product.image %>" alt="Imagen principal del producto">
-
+                </picture> -->
+                <div class="divImagenPrincipal">
+                    <img src="/img/products/<%= product.category_id %>/<%= product.image %>" alt="Imagen principal del producto">
+                </div>
                 <article class="opcionesProducto"> <!-- Sector derecho del producto, opciones de la compra -->
 
                     <!-- <div class="div-puntuacion">
@@ -74,6 +75,11 @@
                         <button type="submit">
                             Agregar al carrito   <i class="fa-solid fa-cart-shopping"></i>
                         </button>
+
+                        <div>
+                            <h2>Detalles del producto</h2>
+                            <p><%= product.detail %> </p>
+                        </div>
                     </form>
 
                     <div class="botonera">
@@ -89,11 +95,6 @@
                 </article>
             </section>
 
-            <section class="sec-detallesProducto">
-                <h2>Detalles del producto</h2>
-                <p><%= product.detail %> </p>
-            </section>
-
             <section class="sec-productosRelacionados">
                 <h2>Productos relacionados</h2>
                 <picture>
@@ -105,7 +106,7 @@
             </section>
             
         </main>
-        
+        <%- include('../partials/navBrands.ejs') %>
         <%- include('../partials/footer.ejs') %>
     </body>
 </html>

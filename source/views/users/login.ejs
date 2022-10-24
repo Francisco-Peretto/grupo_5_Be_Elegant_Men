@@ -1,30 +1,34 @@
 <%- include('../partials/head.ejs') %>
     <body>
         <%- include('../partials/header.ejs') %>
-        <main class="cuerpo-login">
-            <h1>Ingresa a tu cuenta</h1>
-            <form class="formulario-login"action="/users/login" method="post">
-                <input type="text" id="email" name="email" placeholder="Correo Electrónico" value="<%= locals.old ? old.email : '' %>">
-                <% if (locals.errors && errors.email) { %>
-                    <div class="div-error">
-                        <%= errors.email.msg %>
+        <%- include('../partials/navBrands.ejs') %>
+        <main class="main-login">
+            <section class="cuerpo-login">
+                <h1>Ingresa a tu cuenta</h1>
+                <form class="formulario-login"action="/users/login" method="post">
+                    <input type="text" id="email" name="email" placeholder="Correo Electrónico" value="<%= locals.old ? old.email : '' %>">
+                    <% if (locals.errors && errors.email) { %>
+                        <div class="div-error">
+                            <%= errors.email.msg %>
+                        </div>
+                    <% } %>
+                    <input type="password" id="password" name="password" placeholder="Contraseña">
+                    <% if (locals.errors && errors.password) { %>
+                        <div class="div-error">
+                            <%= errors.password.msg %>
+                        </div>
+                    <% } %>
+                    <div class="div-remember">
+                        <input class="input-remember" type="checkbox" id="remember" name="remember">
+                        <label for="remember"> Recordarme</label>
                     </div>
-                <% } %>
-                <input type="password" id="password" name="password" placeholder="Contraseña">
-                <% if (locals.errors && errors.password) { %>
-                    <div class="div-error">
-                        <%= errors.password.msg %>
-                    </div>
-                <% } %>
-                <div class="div-remember">
-                    <input class="input-remember" type="checkbox" id="remember" name="remember">
-                    <label for="remember"> Recordarme</label>
-                </div>
-                <button type="submit">Ingresar</button>
-            </form>
-            <a href="#">Olvidaste tu contraseña?</a>
-            <a href="../users/register">Aun no tenes tu cuenta? Creala ahora</a>
+                    <button type="submit">Ingresar</button>
+                </form>
+                <a href="#">Olvidaste tu contraseña?</a>
+                <a href="../users/register">Aun no tenes tu cuenta? Creala ahora</a>
+            </section>
         </main>
+        <%- include('../partials/navBrands.ejs') %>
         <%- include('../partials/footer.ejs') %>
     </body>
 </html>

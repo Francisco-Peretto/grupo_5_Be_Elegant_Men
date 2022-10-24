@@ -3,27 +3,28 @@
     flex-wrap: nowrap;
     flex-direction: column;
     justify-content: space-evenly;
-    align-items: center;
+    align-items: space-around;
     width: 100%;
     padding: 5%;
     margin-right: 0%;
+    background-color: rgb(41, 40, 40);
 }
 
 .cuerpo-productDetail h2 {
-    color: black;
+    color:#adb1b5;
+
 }
 
 .sec-principal {
     display: flex;
     flex-wrap: nowrap;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: flex-start;
     width: 95%;
-
 }
 
-.galeriaProducto {
+/* .galeriaProducto {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -41,11 +42,20 @@
     border: 2px solid black;
     border-radius: 10px;
 }
-
-.imagenPrincipal {
+ */
+.divImagenPrincipal {
     padding: 4rem;
     width: 30rem;
     height: 40rem;
+    border-radius: 25px;
+    color:#adb1b5;
+    background-color: #0e141a;
+    box-shadow: 0px 0px 10px rgb(209, 208, 204);
+    
+}
+
+.divImagenPrincipal img {
+    width: 95%;
     border-radius: 25px;
 }
 
@@ -58,13 +68,15 @@
     align-items: space-around;  
     
     width: 35%;
-
+    color:#adb1b5;
     border-radius: 15px;
     padding: 2rem;
     height: 40rem;
 
     border: 1px solid black;
     border-radius: 15px;
+    background-color: #0e141a;
+    box-shadow: 0px 0px 10px rgb(209, 208, 204);
 }
 
 .div-puntuacion {
@@ -85,6 +97,7 @@
 
 .div-precio-descuento p{
     margin-left: 4%;
+    color:#adb1b5;
 }
 
 .div-envio {
@@ -93,10 +106,11 @@
 
 .div-envio p {
     width: 100%;
+    color:#adb1b5;
 }
 
 .form-carrito label {
-    color: black;
+    color:#adb1b5;
 }
 
 .form-carrito button {
@@ -105,24 +119,22 @@
     padding: .5rem;
     text-align: center;
     background-color: #0e141a;
-    color: #fff;
+    color:#adb1b5;
     font-size: 1rem;
     border: 2px solid;
     border-radius: .5rem;
     cursor: pointer;
     transition: all 1s ease;
-    box-shadow: .5rem .5rem 1rem #ccc, 
-        -.5rem -.5rem 1rem #fff;
 }
 
 .form-carrito button:hover {
-    box-shadow: .5rem .5rem 1rem #fff, 
-    -.5rem -.5rem 1rem #ccc;
+    box-shadow: .10rem .10rem 1rem #fff, 
+    -.10rem -.10rem 1rem #ccc;
 }
 
 .form-carrito button:active {
-    box-shadow: inset .2rem .2rem 1rem #fff, 
-    inset -.2rem -.2rem 1rem #ccc;
+    box-shadow: .10rem .10rem 1rem #fff, 
+    -.10rem -.10rem 1rem #ccc;
 }
 
 .botonera {
@@ -139,28 +151,26 @@
     width: 7rem;
     text-align: center;
     background-color: #0e141a;
-    color: #fff;
+    color:#adb1b5;
     font-size: 1rem;
     padding: .5rem;
     border: 2px solid;
     border-radius: .5rem;
     cursor: pointer;
     transition: all 1s ease;
-    box-shadow: .5rem .5rem 1rem #ccc, 
-        -.5rem -.5rem 1rem #fff;
 }
 
 .botonera button:hover {
-    box-shadow: .5rem .5rem 1rem #fff, 
-    -.5rem -.5rem 1rem #ccc;
+    box-shadow: .10rem .10rem 1rem #fff, 
+    -.10rem -.10rem 1rem #ccc;
 }
 
 .botonera button:active {
-    box-shadow: inset .2rem .2rem 1rem #fff, 
-    inset -.2rem -.2rem 1rem #ccc;
+    box-shadow: .10rem .10rem 1rem #fff, 
+    -.10rem -.10rem 1rem #ccc;
 }
 
-.sec-detallesProducto {
+/* .sec-detallesProducto {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -181,7 +191,7 @@
 .sec-detallesProducto p {
     width: 70%;
     text-align: left;
-}
+} */
 
 .sec-productosRelacionados {
     display: flex;
@@ -190,7 +200,7 @@
     justify-content: space-evenly;
     align-items: flex-start;
     width: 95%;
-
+    margin-top: 2%;
 }
 
 .sec-productosRelacionados picture{
@@ -204,10 +214,13 @@
 .sec-productosRelacionados img{
     width: 20%;
     margin-bottom: 2%;
+    box-shadow: 0px 0px 10px rgb(209, 208, 204);
+    border-radius: 20px;
 }
 
 .sec-productosRelacionados h2 {
     width: 100%;
     text-align: center;
     margin-bottom: 5%;
+    color:#adb1b5;
 }
