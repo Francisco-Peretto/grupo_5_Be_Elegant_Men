@@ -28,6 +28,7 @@ Users
 * : register - https://wireframe.cc/26u2Sy
 * : login - https://wireframe.cc/khVH86
 * : profile - https://wireframe.cc/6u0Qer
+* : cart - https://wireframe.cc/0Nua82
 
 Web de tablero de trabajo:
 * : https://trello.com/b/xcOe6A5e/proyecto-dh
