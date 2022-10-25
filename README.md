@@ -19,15 +19,15 @@ Webs que sirven de referencia para este market place:
 
 Wireframes:
 
-* : index - https://wireframe.cc/jP8dsw
-* : listProduct - https://wireframe.cc/94IATU
-* : productDetail - https://wireframe.cc/Q6abWW
-* : createProduct - https://wireframe.cc/ty8Nl3
-* : editProduct - https://wireframe.cc/ty8Nl3
-* : register - https://wireframe.cc/26u2Sy
-* : login - https://wireframe.cc/khVH86
-* : profile - https://wireframe.cc/6u0Qer
-* : cart - https://wireframe.cc/0Nua82
+* : Pagina Principal - https://wireframe.cc/jP8dsw
+* : Listado de Productos - https://wireframe.cc/94IATU
+* : Detalle de Producto - https://wireframe.cc/Q6abWW
+* : Formualrio de Creacion de Producto - https://wireframe.cc/ty8Nl3
+* : Formualrio de Edicion de Producto - https://wireframe.cc/ty8Nl3
+* : Formulario de Registro de Usuario - https://wireframe.cc/26u2Sy
+* : Formulario de Login - https://wireframe.cc/khVH86
+* : Pagina de Perfil de Usuario - https://wireframe.cc/6u0Qer
+* : Carrito de Compras - https://wireframe.cc/0Nua82
 
 Web de tablero de trabajo:
 * : https://trello.com/b/xcOe6A5e/proyecto-dh
