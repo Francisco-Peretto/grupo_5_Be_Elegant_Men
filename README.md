@@ -18,11 +18,16 @@ Webs que sirven de referencia para este market place:
 * : https://www.ae.com/intl/es/cart : web utilizada para el carrito de compras7
 
 Wireframes:
-* : Home - https://wireframe.cc/jP8dsw
-* : Detalle de Producto - https://wireframe.cc/Q6abWW
-* : Carrito de Compras - https://wireframe.cc/pro/pp/f25b5e63d561890 
-* : Formulario de Registro - https://wireframe.cc/26u2Sy
-* : Formulario de Login - https://wireframe.cc/khVH86
+Products
+* : index - https://wireframe.cc/jP8dsw
+* : listProduct - 
+* : productDetail - https://wireframe.cc/Q6abWW
+* : createProduct - 
+* : editProduct - 
+Users
+* : register - https://wireframe.cc/26u2Sy
+* : login - https://wireframe.cc/khVH86
+* : profile - 
 
 Web de tablero de trabajo:
 * : https://trello.com/b/xcOe6A5e/proyecto-dh
