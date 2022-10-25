@@ -5,39 +5,33 @@
         <%- include('../partials/header.ejs') %>
         <%- include('../partials/navBrands.ejs') %>
 
-        <main class="cuerpo-productDetail">
+        <main class="mainProductDetail">
 
-            <section class="sec-principal">
-<!--                 <picture class="galeriaProducto"> 
-                    <img src="/img/products/<%= product.category_id %>/<%= product.image %>" alt="Imagen del producto 1">
-                    <img src="/img/products/<%= product.category_id %>/<%= product.image %>" alt="Imagen del producto 2">
-                    <img src="/img/products/<%= product.category_id %>/<%= product.image %>" alt="Imagen del producto 3">
-                    <img src="/img/products/<%= product.category_id %>/<%= product.image %>" alt="Imagen del producto 4">
-                </picture> -->
-                <div class="divImagenPrincipal">
+            <section class="sectionPrincipal">
+
+                <article class="articleImagenPrincipal">
                     <img src="/img/products/<%= product.category_id %>/<%= product.image %>" alt="Imagen principal del producto">
-                </div>
-                <article class="opcionesProducto"> <!-- Sector derecho del producto, opciones de la compra -->
+                </article>
+                <article class="articleOpcionesProducto"> <!-- Sector derecho del producto, opciones de la compra -->
 
-                    <div class="div-producto-marca">
-                        <h2 class="nombreProducto"><%= product.name %> </h2>
+                    <div class="divProductoMarca">
+                        <h2><%= product.name %> </h2>
                         <p><%= product.brands.name %></p>
                     </div>
                     
-                    <div class="div-precio-descuento">
+                    <div class="divPrecioDescuento">
                         <h2>$ <%= product.price %></h2>
                         <p>43% OFF</p>
                     </div>
 
-                    <div class="div-envio">
+                    <div class="divEnvio">
                         <p><i class="fa-solid fa-truck-fast"></i> Envios a todo el pais</p>
-                        <!-- <a href="#"><i class="fa-solid fa-location-pin"></i> Calcula el costo</a> -->
                     </div>
                     
                     <p>Stock disponible</p>
                     
-                    <form class="form-carrito" action="../users/cart" method="post">
-                        <div> 
+                    <form class="formCarrito" action="../users/cart" method="post">
+                        <div>
                             <label for="cantidad">Cantidad</label>
                             <select name="cantidad" id="cantidad">
                                 <% let valores = ['1','2','3','4','5']; %> 
@@ -45,17 +39,16 @@
                                     <option value="<%= i %>"> <%= i %> </option>
                                     <% } %>
                             </select>
-                        </div
-
+                        </div>
                         <button type="submit">
                             Agregar al carrito   <i class="fa-solid fa-cart-shopping"></i>
                         </button>
-
-                        <div>
-                            <h2>Detalles del producto</h2>
-                            <p><%= product.detail %> </p>
-                        </div>
                     </form>
+
+                    <div class="divDetalle">
+                        <h2>Detalles del producto</h2>
+                        <p><%= product.detail %> </p>
+                    </div>
 
                     <div class="botonera">
                         <form action="<%= product.sku %>/edit" method="get">
@@ -70,16 +63,17 @@
                 </article>
             </section>
 
-            <section class="sec-productosRelacionados">
+            <section class="sectionProdRelacionados">
                 <h2>Productos relacionados</h2>
                 <picture>
                     <% for( const catProduct of categoryProducts) { %>
                         <a href="/products/<%= catProduct.sku %>">
-                            <img src="/img/products/<%= catProduct.category_id %>/<%= catProduct.image %>" alt="Producto relacionado"></a>
-                        <% } %>
+                            <img src="/img/products/<%= catProduct.category_id %>/<%= catProduct.image %>" alt="Producto relacionado">
+                            <p><%= catProduct.name %></p>
+                        </a>
+                    <% } %>
                 </picture>
             </section>
-            
         </main>
         <%- include('../partials/navBrands.ejs') %>
         <%- include('../partials/footer.ejs') %>
