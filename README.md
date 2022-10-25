@@ -20,19 +20,14 @@ Webs que sirven de referencia para este market place:
 Wireframes:
 Products
 * : index - https://wireframe.cc/jP8dsw
-* : listProduct - 
+* : listProduct - https://wireframe.cc/94IATU
 * : productDetail - https://wireframe.cc/Q6abWW
-* : createProduct - 
-* : editProduct - 
+* : createProduct - https://wireframe.cc/ty8Nl3
+* : editProduct - https://wireframe.cc/ty8Nl3
 Users
 * : register - https://wireframe.cc/26u2Sy
 * : login - https://wireframe.cc/khVH86
-* : profile - 
+* : profile - https://wireframe.cc/6u0Qer
 
 Web de tablero de trabajo:
 * : https://trello.com/b/xcOe6A5e/proyecto-dh
-
-Paleta de colores:
-* : #0b335b
-* : #dae0ed
-* : #035c5c
