@@ -13,10 +13,22 @@ const productsController = {
                     db.Brand.findAll()
                     .then(function(brands) {
                         return res.render('./products/index.ejs', {product: product, categories : categories, brands : brands })
+                    })
+                })
             })
+    },
+
+    // BUSQUEDA
+
+    search: (req,res) => {
+
+        db.Product.findAll({
+            where: { name: { [Op.like] : `%${req.query.search}%` }}
         })
-    })
-},
+            .then(function(products) {
+                return res.render('./products/listProducts',{products})
+            })
+    },
 
     //C - Creación
 
@@ -27,11 +39,15 @@ const productsController = {
                 .then(function(categories) {
                     db.Brand.findAll()
                     .then(function(brands) {
-                        return res.render('./products/createProduct.ejs', {product: product, categories : categories, brands : brands })
+                        return res.render('./products/createProduct.ejs', {
+                            product: product, 
+                            categories : categories, 
+                            brands : brands 
+                        })
+                    })
+                })
             })
-        })
-    })
-},
+    },
 
     save: (req, res) => {
         db.Product.create({
@@ -41,8 +57,10 @@ const productsController = {
             image: req.files && req.files.length > 0 ? req.files[0].filename : 'default.png',
             category_id: req.body.category == "Ambos" ? 1 : req.body.category == "Camisas" ? 2 : req.body.category == "Corbatas" ? 3 : req.body.category == "Pantalones" ? 4 : req.body.category == "Sacos" ? 5 : 6,
             brand_id: req.body.brand == "Brooks Brothers" ? 1 : req.body.brand == "Colantuono" ? 2 : req.body.brand == "Devré" ? 3 : req.body.brand == "Ermenegildo Zegna" ? 4 : req.body.brand == "Hermes" ? 5 : 6
-        },
-        {include: [{association : "categories"},{association : "brands"}]}
+        }, 
+        {
+            include: [{association : "categories"},{association : "brands"}]
+        }
         )
         return res.redirect('/');
     },
@@ -71,11 +89,17 @@ const productsController = {
             {include: [{association: "categories"}, {association:"brands"}]
         })
         .then(function(product) {
-            db.Product.findAll( {where : {category_id : product.category_id}})
+            db.Product.findAll( 
+                {where : {category_id : product.category_id}}
+            )
             .then(function(categoryProducts) {
-                    return res.render('./products/productDetail.ejs', {product: product, categoryProducts : categoryProducts })
+                    return res.render('./products/productDetail.ejs', {
+                        product: product, 
+                        categoryProducts : categoryProducts 
+                    })
                 }
-        )})
+            )
+        })
     },
 
     //U - Actualización
@@ -89,11 +113,15 @@ const productsController = {
                 .then(function(categories) {
                     db.Brand.findAll()
                     .then(function(brands) {
-                        return res.render('./products/editProduct.ejs', {product: product, categories : categories, brands : brands })
+                        return res.render('./products/editProduct.ejs', {
+                            product: product, 
+                            categories : categories, 
+                            brands : brands 
+                        })
+                    })
+                })
             })
-        })
-    })
-},
+    },
 
     update: (req, res) => {
         db.Product.update({
@@ -103,10 +131,10 @@ const productsController = {
             image: req.files && req.files.length > 0 ? req.files[0].filename : 'default.png',
             category_id: req.body.category == "Ambos" ? 1 : req.body.category == "Camisas" ? 2 : req.body.category == "Corbatas" ? 3 : req.body.category == "Pantalones" ? 4 : req.body.category == "Sacos" ? 5 : 6,
             brand_id: req.body.brand == "Brooks Brothers" ? 1 : req.body.brand == "Colantuono" ? 2 : req.body.brand == "Devré" ? 3 : req.body.brand == "Ermenegildo Zegna" ? 4 : req.body.brand == "Hermes" ? 5 : 6
-        },({
-            where : {sku: req.params.id}
-        }),
-        {include: [{association : "categories"},{association : "brands"}]}
+            },(
+                {where : {sku: req.params.id}}
+            ), 
+                {include: [{association : "categories"},{association : "brands"}]}
         )
         return res.redirect('/');
     },
@@ -115,21 +143,9 @@ const productsController = {
 
     erase: (req, res) => {
         db.Product.destroy({
-            where: {
-                sku: req.params.id
-            }
+            where: {sku: req.params.id}
         })
         return res.render('./products/index.ejs');
-    },
-
-    search: (req,res) => {
-        console.log(req.query.search)
-        db.Product.findAll({
-            where: { name: { [Op.like] : `%${req.query.search}%` }}
-        })
-        .then(function(products) {
-            return res.render('./products/listProducts',{products})
-        })
     }
 }
 

@@ -3,11 +3,13 @@
 @import url('register.css');
 @import url('footer.css');
 @import url('productDetail.css');
-@import url('homeBody.css');
+@import url('index.css');
 @import url('cart.css');
 @import url('createProduct.css');
 @import url('listProducts.css');
 @import url('profile.css');
+@import url('navBrands.css');
+@import url('editProduct.css');
 
 * {
     list-style-type: none;

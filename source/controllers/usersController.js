@@ -4,12 +4,15 @@ const {validationResult} = require('express-validator')
 const db = require("../database/models")
 
 const usersController = {
+
     //CARRITO
+    
     cart: (req , res) => {  
         return res.render('users/cart');
     },
 
     //LOGUEO
+
     login: (req , res) => { 
         return res.render('users/login');
     },
@@ -47,6 +50,7 @@ const usersController = {
     },
 
     //REGISTRO
+
     register: (req , res) => { 
         return res.render('users/register');
     },
@@ -76,7 +80,6 @@ const usersController = {
                         avatar: req.files && req.files.length > 0 ? req.files[0].filename : 'default.png',
                         admin: req.body.email.includes('@beelegantmen.com') ? 1 : 0
                     })
-
                     return res.render('users/login');
                 } else {
                     return res.render('users/register' , {
@@ -89,6 +92,7 @@ const usersController = {
     },
 
     //PERFIL
+
     profile: (req , res) => { // GET profile
         return res.render('users/profile', {
             user: req.session.userLogged
@@ -96,6 +100,7 @@ const usersController = {
     },
 
     //LOGOUT
+
     logout: (req, res) => { // GET logout
         res.clearCookie('userEmail')
         req.session.destroy()

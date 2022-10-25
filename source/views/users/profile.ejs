@@ -2,34 +2,55 @@
     <body>
         <%- include('../partials/header.ejs') %>
         <%- include('../partials/navBrands.ejs') %>
-        <main class="cuerpo-profile">
-	        <section class="cuerpo-profile">
-            	<picture class="contenedor-avatar">
+        <main class="mainProfile">
+	        <section class="cuerpoProfile">
+                <form class="contenedorAvatar" action="" method="" enctype="multipart/form-data">
                     <img class="avatar" src="/img/users/<%= user.avatar %> " alt="Imagen de Usuario">
-                </picture>
-                <section class="sec-profile">
-                    <form>
+                    <div class="fileSelectProfile" id="image" >
+                        <input type="file" name="image" id="image">
+                    </div>
+                </form>
+                <section class="sectionDatos">
+                    <form action="" method="">
                         <fieldset>
                             <legend>Informacion Personal</legend>
                             <div>
                                 <label for="first_name">Nombre</label>
-                                <input type="text" value="<%= user.first_name %>" readonly>
+                                <input type="text" value="<%= user.first_name %>">
                             </div>
                             <div>
                                 <label for="last_name">Apellido</label>
-                                <input type="text" value="<%= user.last_name %>" readonly>
+                                <input type="text" value="<%= user.last_name %>">
                             </div>
+                            <button class="formButton" type="submit">Editar</button>
                         </fieldset>
                     </form>
-                    <form>
+                    <form action="" method="">
                         <fieldset>
                             <legend>Informacion de Usuario</legend>
-                            <label for="email">Correo Electronico</label>
-                            <input type="email" value="<%= user.email %>" readonly>
+                            <div>
+                                <label for="email">Correo Electronico</label>
+                                <input type="email" value="<%= user.email %>" readonly>
+                            </div>
+                            <button class="formButton" type="submit">Editar</button>
+                        </fieldset>
+                    </form>
+                    <form action="" method="">
+                        <fieldset>
+                            <legend>Modificar Contraseña</legend>
+                            <div>
+                                <label for="password">Ingrese su contraseña actual</label>
+                                <input type="password" value="" required>
+                            </div>
+                            <div>
+                                <label for="password">Ingrese su nueva contraseña</label>
+                                <input type="password" value="">
+                            </div>
+                            <button class="formButton" type="submit">Cambiar</button>
                         </fieldset>
                     </form>
                     <form action="/users/logout" method="get">
-                        <button type="submit">Cerrar sesion</button>
+                        <button class="sessionButton"type="submit">Cerrar sesion</button>
                     </form>
                 </section>
             </section>

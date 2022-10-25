@@ -1,9 +1,9 @@
-.main-login {
+.mainlogin {
     padding: 4%;
     background-color: rgb(41, 40, 40);
 }
 
-.cuerpo-login {
+.cuerpoLogin {
     display: flex;
     flex-wrap: nowrap;
     flex-direction: column;
@@ -18,12 +18,12 @@
     box-shadow: 0px 0px 10px rgb(209, 208, 204);
 }
 
-.cuerpo-login h1 {
+.cuerpoLogin h1 {
     font-size: 2rem;
     color:#adb1b5;
 }
 
-.formulario-login {
+.formularioLogin {
     display: flex;
     flex-wrap: nowrap;
     flex-direction: column;
@@ -33,20 +33,20 @@
     padding: 2%;
 }
 
-.formulario-login input {
+.formularioLogin input {
     width: 48%;
     height: 30px;
     margin-bottom: 3%;
     color:#adb1b5;
 }
 
-.formulario-login .div-error {
+.formularioLogin .divError {
     font-size: 15px;
     color: red;
     margin-bottom: 3%;
 }
 
-.formulario-login button {
+.formularioLogin button {
     width: 30%;
     margin-top: 2%;
     text-align: center;
@@ -61,28 +61,28 @@
 
 }
 
-.formulario-login button:hover {
+.formularioLogin button:hover {
     box-shadow: .10rem .10rem 1rem #fff, 
     -.10rem -.10rem 1rem #ccc; 
 }
 
-.formulario-login button:active {
+.formularioLogin button:active {
     box-shadow: inset .10rem .10rem 1rem #fff, 
     inset -.10rem -.10rem 1rem #ccc;
 }
 
-.cuerpo-login a {
+.cuerpoLogin a {
     margin-top: 2%;
     font-size: 1rem;
     color:#adb1b5;
     font-weight: bold;
 }
 
-.cuerpo-login a:hover {
+.cuerpoLogin a:hover {
     text-decoration: underline;
   }
 
-.div-remember {
+.divRemember {
     display: flex;
     flex-wrap: nowrap;
     flex-direction: row;
@@ -90,29 +90,29 @@
     align-items: center;
 }
 
-.div-remember label {
+.divRemember label {
     color:#adb1b5;
 }
 
 /* mediasquerys */
 
 @media (max-width: 479px) {
-    .cuerpo-login h1 {
+    .cuerpoLogin h1 {
         font-size: 1.5rem;
     }
-    .cuerpo-login {
+    .cuerpoLogin {
         width: 90%;
     }
-    .cuerpo-login a {
+    .cuerpoLogin a {
         font-size: 0.75rem;
     }
 }
   
 @media (min-width: 480px) and (max-width: 799px) {
-    .cuerpo-login h1 {
+    .cuerpoLogin h1 {
         font-size: 1.5rem;
     }
-    .cuerpo-login {
+    .cuerpoLogin {
         width: 75%;
     }
 }

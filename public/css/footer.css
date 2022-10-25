@@ -13,7 +13,7 @@
     font-size:  3rem;
 }
 
-.lista , .derechos , .icon-list {
+.lista , .derechos , .iconList {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -37,7 +37,7 @@
 
 
 @media (max-width: 479px) {
-    .lista , .derechos , .icon-list {
+    .lista , .derechos , .iconList {
         display: block;
     }
     .titulo{

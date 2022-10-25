@@ -89,12 +89,12 @@
 
 /*estilo para el input file*/
 
-.file-select-createProduct {
+.fileSelectCreateProduct {
     position: relative;
     display: inline-block;
   }
   
-.file-select-createProduct::before {
+.fileSelectCreateProduct::before {
     background-color: #0e141a;
     border: 1px solid #adb1b5;
     color:#adb1b5;
@@ -111,7 +111,7 @@
     bottom: 0;
   }
   
-  .file-select-createProduct input[type="file"] {
+  .fileSelectCreateProduct input[type="file"] {
     opacity: 0;
     width: 200px;
     height: 32px;
@@ -121,13 +121,13 @@
   /* mediasquerys */
 
 @media (max-width: 479px) {
-    .cuerpo-register-createProduct {
+    .cuerpoCreateProduct {
         width: 90%;
     }
 }
   
 @media (min-width: 480px) and (max-width: 799px) {
-    .cuerpo-register-createProduct {
+    .cuerpoCreateProduct {
         width: 75%;
     }
 }

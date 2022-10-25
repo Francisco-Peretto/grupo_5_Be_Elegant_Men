@@ -2,23 +2,23 @@
     <body>
         <%- include('../partials/header.ejs') %>
         <%- include('../partials/navBrands.ejs') %>
-        <main class="main-login">
-            <section class="cuerpo-login">
+        <main class="mainlogin">
+            <section class="cuerpoLogin">
                 <h1>Ingresa a tu cuenta</h1>
-                <form class="formulario-login"action="/users/login" method="post">
+                <form class="formularioLogin"action="/users/login" method="post">
                     <input type="text" id="email" name="email" placeholder="Correo Electrónico" value="<%= locals.old ? old.email : '' %>">
                     <% if (locals.errors && errors.email) { %>
-                        <div class="div-error">
+                        <div class="diveError">
                             <%= errors.email.msg %>
                         </div>
                     <% } %>
                     <input type="password" id="password" name="password" placeholder="Contraseña">
                     <% if (locals.errors && errors.password) { %>
-                        <div class="div-error">
+                        <div class="divError">
                             <%= errors.password.msg %>
                         </div>
                     <% } %>
-                    <div class="div-remember">
+                    <div class="divRemember">
                         <input class="input-remember" type="checkbox" id="remember" name="remember">
                         <label for="remember"> Recordarme</label>
                     </div>

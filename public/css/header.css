@@ -7,7 +7,7 @@ header {
     background-color: #0e141a;
 }
 
-.sec-header-superior {
+.sectionHeaderSuperior {
     display: flex;
     flex-wrap: nowrap;
     flex-direction: row;
@@ -22,17 +22,17 @@ h2 a {
   margin-left: -15%;
 }
 
-.contenedor-img {
+.contenedorImg {
     width: 15%;
 }
 
-.img-logo {
+.imgLogo {
     width: 100%;
     margin: auto;
     display: block;
 }
 
-.img-logo:hover {
+.imgLogo:hover {
     transform: rotateX(360deg);
     transition-property: transform;
     transition-duration: 2s;
@@ -46,25 +46,25 @@ h2 a {
     100% { transform: rotateX(360deg);}
 }
 
-.img-logo {
+.imgLogo {
     animation: logo-header 2s 1;
 }
 
-.div-busqueda {
+.divBusqueda {
   float:right;
   margin:7px;
   margin-top: 15px;
   margin-left: 15px;
 }
 
-.div-busqueda input {
+.divBusqueda input {
   width:375px;
   height:25px;
   border-radius:25px;
   border: none;
 }
 
-.div-busqueda button {
+.divBusqueda button {
   background-color: #0e141a;
   color: #f2f2f2;
   float: right;
@@ -75,12 +75,12 @@ h2 a {
   cursor: pointer;
 } 
 
-.div-busqueda i {
+.divBusqueda i {
   margin-top: -3px;
   font-size: 22px;
 }
 
-.navbar-usuario {
+.navbarUsuario {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -89,7 +89,7 @@ h2 a {
     width: 20%;
 }
 
-.navbar-usuario i {
+.navbarUsuario i {
     color: #fff;
     font-size: 22px;
 
@@ -101,7 +101,7 @@ h2 a {
     transition:transform 0.2s ease-out;
 }
 
-.navbar-usuario i:hover {
+.navbarUsuario i:hover {
     -moz-transform: scale(1.5);
     -webkit-transform: scale(1.5);
     -o-transform: scale(1.5);
@@ -109,7 +109,7 @@ h2 a {
     transform: scale(1.5)
 }
 
-.navbar-categorias {
+.navbarCategorias {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
@@ -119,7 +119,7 @@ h2 a {
   margin-bottom: 1%;
 }
 
-.navbar-categorias a {
+.navbarCategorias a {
   color: #dae0ed;
   font-size: 1.2em;
 
@@ -131,7 +131,7 @@ h2 a {
   transition:transform 0.2s ease-out;
 }
 
-.navbar-categorias a:hover {
+.navbarCategorias a:hover {
   -moz-transform: scale(1.2);
   -webkit-transform: scale(1.2);
   -o-transform: scale(1.2);
@@ -139,7 +139,7 @@ h2 a {
   transform: scale(1.2)
 }
 
-.navbar-usuario a {
+.navbarUsuario a {
   color: #dae0ed;
   font-size: 1.2em;
 
@@ -151,7 +151,7 @@ h2 a {
   transition:transform 0.2s ease-out;
 }
 
-.navbar-usuario a:hover {
+.navbarUsuario a:hover {
   -moz-transform: scale(1.2);
   -webkit-transform: scale(1.2);
   -o-transform: scale(1.2);
@@ -161,24 +161,24 @@ h2 a {
 
 /* menu hamburguesa  */
 
-.menu-hamburguesa ul{
+.menuHamburguesa ul{
   display: none;
 }
 
-.menu-hamburguesa input:checked  ~ ul{
+.menuHamburguesa input:checked  ~ ul{
   display:block;
 }
 
-.menu-hamburguesa input {
+.menuHamburguesa input {
   display: none;
 }
 
-.menu-hamburguesa i{
+.menuHamburguesa i{
   color: #fff;
   background-color: #0e141a;
 }
 
-.menu-hamburguesa label {
+.menuHamburguesa label {
   box-sizing: border-box;
   display: inline-block;
   border-radius: 5px;
@@ -196,7 +196,7 @@ h2 a {
   transition:transform 0.2s ease-out;
 }
 
-.menu-hamburguesa label:hover{
+.menuHamburguesa label:hover{
   -moz-transform: scale(1.2);
   -webkit-transform: scale(1.2);
   -o-transform: scale(1.2);
@@ -204,14 +204,14 @@ h2 a {
   transform: scale(1.2)
 }
 
-.menu-hamburguesa ul{
+.menuHamburguesa ul{
   margin-top:0;
   padding: 0;
   width: 50px;
   position: absolute;
 }
 
-.menu-hamburguesa li {
+.menuHamburguesa li {
   display: block;
   background: #0e141a; 
   margin: 0;
@@ -219,11 +219,11 @@ h2 a {
   list-style: none;
 }
 
-.menu-hamburguesa li a{
+.menuHamburguesa li a{
   color: #fff;
 }
 
-.menu-hamburguesa li i{
+.menuHamburguesa li i{
   font-size: 15px;
   text-align: center;
 
@@ -235,7 +235,7 @@ h2 a {
   transition:transform 0.2s ease-out;
 }
 
-.menu-hamburguesa li i:hover{
+.menuHamburguesa li i:hover{
   -moz-transform: scale(1.2);
   -webkit-transform: scale(1.2);
   -o-transform: scale(1.2);
@@ -248,28 +248,28 @@ h2 a {
 
 @media (max-width: 479px) {
 
-  .navbar-categorias a {
+  .navbarCategorias a {
     font-size: 0.7em;
   }
-  .navbar-usuario  {
+  .navbarUsuario  {
     display: none;
   }
-  .sec-header-superior h2 {
+  .sectionHeaderSuperior h2 {
     display: none;
   }
-  .contenedor-img {
+  .contenedorImg {
     width: 25%;
   }
-  .div-busqueda {
+  .divBusqueda {
     margin-left: 0px;
   }
-  .div-busqueda input {
+  .divBusqueda input {
     width:130px;
   }
-  .div-busqueda input {
+  .divBusqueda input {
     height:20px;
   }
-  .div-busqueda button {
+  .divBusqueda button {
     margin: auto;
     height:15px;
   }
@@ -277,34 +277,34 @@ h2 a {
 
 @media (min-width: 480px) and (max-width: 799px) {
 
-  .navbar-categorias a {
+  .navbarCategorias a {
     font-size: 1em;
   }
-  .navbar-usuario  {
+  .navbarUsuario  {
     display: none;
   }
-  .sec-header-superior h2 {
+  .sectionHeaderSuperior h2 {
     display: none;
   }
-  .contenedor-img {
+  .contenedorImg {
     width: 20%;
   }
-  .div-busqueda {
+  .divBusqueda {
     margin-left: -35px;
   }
-  .div-busqueda input {
+  .divBusqueda input {
     width:240px;
   }
-  .div-busqueda input {
+  .divBusqueda input {
     height:20px;
   }
-  .div-busqueda button {
+  .divBusqueda button {
     height:15px;
   }
 }
 
 @media (min-width: 800px) and (max-width: 1023px) {
-  .menu-hamburguesa {
+  .menuHamburguesa {
     display: none;
 }
 
@@ -312,13 +312,13 @@ h2 a {
   margin-left: -10%;
 }
 
-.div-busqueda input {
+.divBusqueda input {
   width:275px;
 }
 }
 
 @media (min-width: 1024px) {
-  .menu-hamburguesa {
+  .menuHamburguesa {
     display: none;
   }
 }

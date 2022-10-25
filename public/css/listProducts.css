@@ -1,4 +1,4 @@
-.main-listProducts {
+.mainListProducts {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -8,63 +8,7 @@
     background-color: rgb(41, 40, 40);
 }
 
-.sec-filtros {
-    margin-top: 2%;
-    margin-bottom: 2%;
-    width: 20%;
-}
-
-.sec-filtros form {
-    width: 100%;
-}
-
-.sec-filtros legend,label,h2 {
-    color: #fff;
-}
-
-.sec-filtros h2 {
-    margin-top: 0%;
-}
-
-.sec-filtros fieldset {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: flex-start;
-    width: 100%;
-}
-
-.sec-filtros button {
-    width: 40%;
-    margin-top: 5%;
-    margin-left: 6%;
-    text-align: center;
-    background-color: #0e141a;
-    font-family: inherit;
-    color: #fff;
-    font-size: 1rem;
-    padding: 1%;
-    border: 2px solid;
-    border-radius: .5rem;
-    cursor: pointer;
-
-    -webkit-transition:-webkit-transform 0.5s ease-out;
-    -moz-transition:-moz-transform 0.5s ease-out;
-    -o-transition:-o-transform 0.5s ease-out;
-    -ms-transition:-ms-transform 0.5s ease-out;
-    transition:transform 0.5s ease-out;
-}
-
-.sec-filtros button:hover {
-    -moz-transform: scale(1.05);
-    -webkit-transform: scale(1.05);
-    -o-transform: scale(1.05);
-    -ms-transform: scale(1.05);
-    transform: scale(1.05)
-}
-
-.sec-productos {
+.sectionProductos {
     margin-top: 2%;
     margin-bottom: 2%;
     display: flex;
@@ -75,7 +19,7 @@
     width: 70%;
 }
 
-.link-producto {
+.linkProducto {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -87,8 +31,8 @@
     margin: 2%;
     color: #adb1b5;
     text-decoration: none;
-
     background-color: #0e141a;
+    border-radius: 15px;
 
     display:block;
     -webkit-transition:-webkit-transform 0.5s ease-out;
@@ -98,7 +42,7 @@
     transition:transform 0.5s ease-out;
 }
 
-.link-producto:hover {
+.linkProducto:hover {
     -moz-transform: scale(1.05);
     -webkit-transform: scale(1.05);
     -o-transform: scale(1.05);
@@ -106,7 +50,7 @@
     transform: scale(1.05)
 }
 
-.link-producto img {
+.linkProducto img {
     width:80%;
     height: 70%;
     align-content: space-between;
@@ -114,14 +58,14 @@
     margin-top: 2vh;
 }
 
-.link-producto div {
+.linkProducto div {
     width:100%;
     height: 30%;
     margin-top: 10%;
     align-self: flex-start;
 }
 
-.link-producto div p {
+.linkProducto div p {
     margin: 3%;
     font-size: 18px;
     margin-left: 4vh;

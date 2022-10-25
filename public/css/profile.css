@@ -1,22 +1,23 @@
-.main-profile {
+.mainProfile {
     padding: 2.5%;
     background-color: rgb(41, 40, 40);
 }
 
-.cuerpo-profile {
+.cuerpoProfile {
     display: flex;
     flex-wrap: nowrap;
     flex-direction: row;
     justify-content: center;
     align-items: flex-start;
     padding: 2.5%;
+    border-radius: 15px;
     margin: auto;
-    width: 100%;
+    width: 60%;
     background-color: #0e141a;
     box-shadow: 0px 0px 10px rgb(209, 208, 204);
 }
 
-.contenedor-avatar {
+.contenedorAvatar {
     width: 20%;
 }
 
@@ -25,20 +26,26 @@
     border-radius: 50%;
 }
 
-.sec-profile {
+.sectionDatos {
     width: 90%;
     margin-left: 5%;
 }
 
-.sec-profile label {
+.sectionDatos label {
     color:#adb1b5;
 }
 
-.sec-profile fieldset {
+.sectionDatos div {
+    margin-bottom: 1%;
+    margin-top: 2%;
+}
+
+.sectionDatos fieldset {
+    margin-bottom: 1%;
     color:#adb1b5;
 }
 
-.sec-profile button {
+.sessionButton {
     margin-top: 2%;
     width: 12rem;
     margin-top: 1rem;
@@ -53,12 +60,69 @@
     transition: all 1s ease;
 }
 
-.sec-profile button:hover {
+.sessionButton:hover {
     box-shadow: .10rem .10rem 1rem #fff, 
     -.10rem -.10rem 1rem #ccc;
 }
 
-.sec-profile button:active {
+.sessionButton:active {
     box-shadow: .10rem .10rem 1rem #fff, 
     -.10rem -.10rem 1rem #ccc;
 }
+
+.formButton {
+    margin-top: 2%;
+    width: 8rem;
+    margin-top: 1rem;
+    margin-bottom: .5rem;
+    padding: .5rem;
+    text-align: center;
+    background-color: #0e141a;
+    color:#adb1b5;
+    font-size: 1rem;
+    border: 2px solid;
+    border-radius: .5rem;
+    cursor: pointer;
+    transition: all 1s ease;
+}
+
+.formButton:hover {
+    box-shadow: .10rem .10rem 1rem #fff, 
+    -.10rem -.10rem 1rem #ccc;
+}
+
+.formButton:active {
+    box-shadow: .10rem .10rem 1rem #fff, 
+    -.10rem -.10rem 1rem #ccc;
+}
+
+/*estilo para el input file*/
+
+.fileSelectProfile {
+    position: relative;
+    display: inline-block;
+}
+  
+.fileSelectProfile::before {
+    background-color: #0e141a;
+    color: #adb1b5;
+    border: 2px solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    width: 40%;
+    content: 'Editar';
+    position: absolute;
+    left: 15%;
+    right: 0;
+    top: 30%;
+    bottom: -35%;
+  }
+  
+  .fileSelectProfile input[type="file"] {
+    opacity: 0;
+    width: 200px;
+    height: 32px;
+    display: inline-block;
+  }

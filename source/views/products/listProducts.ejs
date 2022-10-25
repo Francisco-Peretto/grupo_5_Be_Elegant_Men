@@ -2,54 +2,11 @@
     <body>
         <%- include('../partials/header.ejs') %>
         <%- include('../partials/navBrands.ejs') %>
-        <main class="main-listProducts">
-            <!-- <section class="sec-filtros">
-                <h2>Filtros</h2>
-                <article class="filtro-categoria">
-                    <form>
-                        <fieldset>
-                            <legend>Filtrar por Marca</legend>
-                                <div>
-                                    <label>Filtro 1</label>
-                                    <input type="checkbox" name="" id="">
-                                </div>
-                                <div>
-                                    <label>Filtro 2</label>
-                                    <input type="checkbox" name="" id="">
-                                </div>
-                                <div>
-                                    <label>Filtro 3</label>
-                                    <input type="checkbox" name="" id="">
-                                </div>        
-                        </fieldset>
-                        <fieldset>
-                            <legend>Filtrar por Precio</legend>
-                                <input type="range" name="" id="">
-                        </fieldset>
-                        <fieldset>
-                            <legend>Filtrar por Color</legend>
-                                <div>
-                                    <label>Filtro 1</label>
-                                    <input type="checkbox" name="" id="">
-                                </div>
-                                <div>
-                                    <label>Filtro 2</label>
-                                    <input type="checkbox" name="" id="">
-                                </div>
-                                <div>
-                                    <label>Filtro 3</label>
-                                    <input type="checkbox" name="" id="">
-                                </div>        
-                        </fieldset>
-                        <button type="submit">Aplicar</button>
-                        <button type="reset">Quitar</button>
-                    </form>
-                </article>
-            </section> -->
+        <main class="mainListProducts">
             <% if (products.length > 0) { %>
-            <section class="sec-productos">
+            <section class="sectionProductos">
                 <% products.forEach(element => { %> 
-                <a class="link-producto" href="/products/<%= element.sku %>">
+                <a class="linkProducto" href="/products/<%= element.sku %>">
                     <img src="/img/products/<%= element.category_id %>/<%= element.image %>" alt="<%= element.image %>">
                     <div>
                         <p><%= element.name %></p>

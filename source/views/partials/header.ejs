@@ -1,8 +1,8 @@
 <header>
-    <section class="sec-header-superior">
-        <a class="contenedor-img" href="/"><img class="img-logo" src="\img\logos\logo10.png" alt="logo"></a>
+    <section class="sectionHeaderSuperior">
+        <a class="contenedorImg" href="/"><img class="imgLogo" src="\img\logos\logo10.png" alt="logo"></a>
         <h2><a href="/">Be Elegant Men</a></h2>
-        <div class="div-busqueda">
+        <div class="divBusqueda">
             <form action="/products/search" method="get">
                 <input type="text" placeholder=" Buscar productos..." name="search" id="search" list="suggestions" autocomplete="on">
                 <datalist id="suggestions"></datalist>
@@ -11,7 +11,7 @@
                 </button>
             </form>
         </div>
-        <nav class="menu-hamburguesa">
+        <nav class="menuHamburguesa">
             <input type="checkbox" id="menu">
             <label for="menu">
                 <i class="fa-solid fa-bars"></i>
@@ -31,7 +31,7 @@
             </ul>
         </nav>
 
-        <nav class="navbar-usuario">
+        <nav class="navbarUsuario">
                 <a href="/users/login">
                     <% if (locals.isLogged) { %>
                         <p>Bienvenid@ <%= locals.userLogged.first_name %></p> 
@@ -44,7 +44,7 @@
         </nav>
 
     </section>
-    <nav class="navbar-categorias">
+    <nav class="navbarCategorias">
         <a href="/products/list/">Todos</a>
         <% let categories = ["Ambos", "Camisas", "Corbatas", "Pantalones", "Sacos", "Zapatos"] %> 
         <% for( let i = 1; i <= categories.length; i++ ) { %>

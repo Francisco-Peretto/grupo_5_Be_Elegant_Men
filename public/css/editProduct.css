@@ -1,28 +1,26 @@
-.mainRegister {
+.mainEditProduct {
     padding: 4%;
     background-color: rgb(41, 40, 40);
 }
 
-.cuerpoRegister {
+.cuerpoEditProduct {
     display: flex;
     flex-wrap: nowrap;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
     width: 40%;
-    border: 1px solid #0b335b ;
     border-radius: 15px;
     margin: auto;
     background-color: #0e141a;
     box-shadow: 0px 0px 10px rgb(209, 208, 204);
 }
 
-.cuerpoRegister h1 {
-    font-size: 2rem;
+.cuerpoEditProduct h1{
     color:#adb1b5;
 }
 
-.formularioRegister {
+.formularioEditProduct {
     display: flex;
     flex-wrap: nowrap;
     flex-direction: column;
@@ -32,12 +30,18 @@
     padding: 2%;
 }
 
-.formularioRegister div {
+.formularioEditProduct div {
     width: 100%;
+    margin-top: 2%;
     margin-bottom: 3%;
 }
 
-.formularioRegister section {
+.formularioEditProduct label {
+    margin-right: 2%;
+    color:#adb1b5;
+}
+
+.formularioEditProduct section {
     display: flex;
     flex-wrap: nowrap;
     flex-direction: row;
@@ -47,61 +51,59 @@
     margin-bottom: 2%;
 }
 
-.formularioRegister .divError {
-    font-size: 15px;
-    color: red;
-}
-
-.formularioRegister section input {
-    width: 100%;
-    margin-bottom: 2%;
+.formularioEditProduct section input {
+    width: 48%;
     height: 30px;
-    color:#adb1b5;
 }
 
-.formularioRegister button {
-    width: 30%;
-    margin-left: 35%;
-    margin-top: 2%;
+#detail {
+    width: 100%;
+    height: 50px;
+}
+
+
+.formularioEditProduct button {
+    width: 45%;
     text-align: center;
     background-color: #0e141a;
     color:#adb1b5;
     font-size: 1rem;
     padding: 1%;
-    border: 2px solid;
+    margin-top: 1em;
+    border: 2px solid #adb1b5;;
     border-radius: .5rem;
     cursor: pointer;
-    transition: all 1s ease;
+    white-space: nowrap;
 }
 
-.formularioRegister button:hover {
+.formularioEditProduct button:hover {
     box-shadow: .10rem .10rem 1rem #adb1b5,
     -.10rem -.10rem 1rem #ccc;
     
 }
 
-.formularioRegister button:active {
+.formularioEditProduct button:active {
     box-shadow: inset .10rem .10rem 1rem #adb1b5,
     inset -.10rem -.10rem 1rem #ccc;
 }
 
 /*estilo para el input file*/
 
-.fileSelect {
+.fileSelectEditProduct {
     position: relative;
     display: inline-block;
   }
   
-.fileSelect::before {
+.fileSelectEditProduct::before {
     background-color: #0e141a;
-    color: #adb1b5;
-    border: 2px solid;
+    border: 1px solid #adb1b5;
+    color:#adb1b5;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 15px;
     width: 40%;
-    content: 'Foto';
+    content: 'Fotos';
     position: absolute;
     left: 0;
     right: 0;
@@ -109,23 +111,23 @@
     bottom: 0;
   }
   
-  .fileSelect input[type="file"] {
+  .fileSelectEditProduct input[type="file"] {
     opacity: 0;
     width: 200px;
     height: 32px;
     display: inline-block;
   }
-  
-/* mediasquerys */
+
+  /* mediasquerys */
 
 @media (max-width: 479px) {
-    .cuerpoRegister {
+    .cuerpoEditProduct {
         width: 90%;
     }
 }
   
 @media (min-width: 480px) and (max-width: 799px) {
-    .cuerpoRegister {
+    .cuerpoEditProduct {
         width: 75%;
     }
 }

@@ -1,0 +1,14 @@
+.seccionMarcas {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 0.5%;
+    margin-top: 0.5%;
+}
+
+.seccionMarcas img {
+    width: 8%;
+}

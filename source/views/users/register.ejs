@@ -2,15 +2,15 @@
     <body>
         <%- include('../partials/header.ejs') %>
         <%- include('../partials/navBrands.ejs') %>
-        <main class="main-register">
-            <section class="cuerpo-register">
+        <main class="mainRegister">
+            <section class="cuerpoRegister">
                 <h1>Crea tu cuenta</h1>
-                <form class="formulario-register" action="/users/register" method="post" enctype="multipart/form-data">
+                <form class="formularioRegister" action="/users/register" method="post" enctype="multipart/form-data">
                     <section>
                         <input type="text" id="first_name" name="first_name" placeholder="Nombre/s" value="<%= locals.old ? old.first_name : '' %>">
                     </section>
                     <% if (locals.errors && errors.first_name) { %>
-                        <div class="div-error">
+                        <div class="divError">
                             <%= errors.first_name.msg %>
                         </div>
                     <% } %>
@@ -18,7 +18,7 @@
                         <input type="text" id="last_name" name="last_name" placeholder="Apellido/s" value="<%= locals.old ? old.last_name : '' %>">
                     </section>
                     <% if (locals.errors && errors.last_name) { %>
-                        <div class="div-error">
+                        <div class="divError">
                             <%= errors.last_name.msg %>
                         </div>
                     <% } %>
@@ -26,7 +26,7 @@
                         <input type="email" id="email" name="email" placeholder="Correo Electrónico" value="<%= locals.old ? old.email : '' %>">
                     </section>
                     <% if (locals.errors && errors.email) { %>
-                        <div class="div-error">
+                        <div class="divError">
                             <%= errors.email.msg %>
                         </div>
                     <% } %>
@@ -34,15 +34,15 @@
                         <input type="password" id="password" name="password" placeholder="Contraseña">
                     </section>
                     <% if (locals.errors && errors.password) { %>
-                        <div class="div-error">
+                        <div class="divError">
                             <%= errors.password.msg %>
                         </div>
                     <% } %>
-                    <div class="file-select" id="image" >
+                    <div class="fileSelect" id="image" >
                         <input type="file" name="image" id="image">
                     </div>
                     <% if (locals.errors && errors.image) { %>
-                        <div class="div-error">
+                        <div class="divError">
                             <%= errors.image.msg %>
                         </div>
                     <% } %>  
