@@ -17,15 +17,15 @@ const noLogged = require('../middlewares/noLogged')
 router.get('/cart', noLogged, usersController.cart);
 
 //rutas de registro
-router.get('/register', isLogged, usersController.register) //muestra la vista del forulario de registro
-router.post('/register', upload.any(), registerValidations, usersController.record) // registra un usuario validando los campos
+router.get('/register', isLogged, usersController.register) 
+router.post('/register', upload.any(), registerValidations, usersController.record) 
 
 //ruta de loguin
-router.get('/login', isLogged, usersController.login); //muestra la vista del formulario de registro
-router.post('/login', usersController.access); //loguea al usuario 
+router.get('/login', isLogged, usersController.login); 
+router.post('/login', usersController.access); 
 
 // rutas de perfil
-router.get('/profile', usersController.profile); //este middlewarre no seria necesario en tanto no tengamos un boton para acceder directamente al perfil de usuario
-router.get('/logout', usersController.logout); //desloguea al usuario
+router.get('/profile', usersController.profile); 
+router.get('/logout', usersController.logout); 
 
 module.exports = router;

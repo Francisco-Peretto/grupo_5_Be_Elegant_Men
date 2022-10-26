@@ -47,11 +47,6 @@
     margin-bottom: 2%;
 }
 
-.formularioRegister .divError {
-    font-size: 15px;
-    color: red;
-}
-
 .formularioRegister section input {
     width: 100%;
     margin-bottom: 2%;

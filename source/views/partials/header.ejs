@@ -27,7 +27,9 @@
                 </a>
             </li>
             <li><a href="/users/cart"><i class="fa-solid fa-cart-shopping"></i></a></li>
-            <li><a href="/products/create"><i class="fa-solid fa-circle-plus"></i></i></a></li>
+            <% if (locals.isLogged && locals.userLogged.admin) { %>
+                <a href="/products/create"><i class="fa-solid fa-circle-plus"></i></i></a> 
+            <% } %>  
             </ul>
         </nav>
 
@@ -40,7 +42,9 @@
                     <% } %>
                 </a>
             <a href="/users/cart"><i class="fa-solid fa-cart-shopping"></i></a>
-            <a href="/products/create"><i class="fa-solid fa-circle-plus"></i></i></a>
+            <% if (locals.isLogged && locals.userLogged.admin) { %>
+                <a href="/products/create"><i class="fa-solid fa-circle-plus"></i></i></a> 
+            <% } %>            
         </nav>
 
     </section>

@@ -13,8 +13,8 @@ const upload = multer({storage:storage('../../uploads/users')});
 router.get('/', productsController.index); 
 
 //rutas de creacion
-router.post('/products/save', upload.any(), productsController.save); 
 router.get('/products/create', productsController.create); 
+router.post('/products/save', upload.any(), productsController.save); 
 
 // rutas de lectura
 router.get('/products/search', productsController.search);

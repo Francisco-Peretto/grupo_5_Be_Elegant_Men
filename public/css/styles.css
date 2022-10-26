@@ -22,6 +22,11 @@ body {
     font-family: 'Playfair Display', serif;
 }
 
+.divError {
+    font-size: 15px;
+    color: red;
+}
+
 
 
 

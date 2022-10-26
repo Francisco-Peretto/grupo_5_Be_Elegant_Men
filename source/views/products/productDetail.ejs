@@ -1,35 +1,25 @@
 <%- include('../partials/head.ejs') %>
-
     <body>
-
         <%- include('../partials/header.ejs') %>
         <%- include('../partials/navBrands.ejs') %>
-
         <main class="mainProductDetail">
-
             <section class="sectionPrincipal">
-
                 <article class="articleImagenPrincipal">
                     <img src="/img/products/<%= product.category_id %>/<%= product.image %>" alt="Imagen principal del producto">
                 </article>
-                <article class="articleOpcionesProducto"> <!-- Sector derecho del producto, opciones de la compra -->
-
+                <article class="articleOpcionesProducto">
                     <div class="divProductoMarca">
                         <h2><%= product.name %> </h2>
                         <p><%= product.brands.name %></p>
-                    </div>
-                    
+                    </div>                    
                     <div class="divPrecioDescuento">
                         <h2>$ <%= product.price %></h2>
                         <p>43% OFF</p>
                     </div>
-
                     <div class="divEnvio">
                         <p><i class="fa-solid fa-truck-fast"></i> Envios a todo el pais</p>
                     </div>
-                    
                     <p>Stock disponible</p>
-                    
                     <form class="formCarrito" action="../users/cart" method="post">
                         <div>
                             <label for="cantidad">Cantidad</label>
@@ -44,25 +34,23 @@
                             Agregar al carrito   <i class="fa-solid fa-cart-shopping"></i>
                         </button>
                     </form>
-
                     <div class="divDetalleProducto">
                         <h2>Detalles del producto</h2>
                         <p><%= product.detail %> </p>
                     </div>
-
-                    <div class="botonera">
-                        <form action="<%= product.sku %>/edit" method="get">
-                            <button type="submit">Editar</button>
-                        </form>
-
-                        <form action="<%= product.sku %>?_method=DELETE" method="post"> <!-- hacer confirmación -->
-                            <input type="hidden" name="sku" value="<%= product.sku %>">
-                            <button type="submit">Borrar</button>
-                        </form>
-                    </div>
+                    <% if (locals.isLogged && locals.userLogged.admin) { %>
+                        <div class="botonera">
+                            <form action="<%= product.sku %>/edit" method="get">
+                                <button type="submit">Editar</button>
+                            </form>
+                            <form action="<%= product.sku %>?_method=DELETE" method="post"> <!-- hacer confirmación -->
+                                <input type="hidden" name="sku" value="<%= product.sku %>">
+                                <button type="submit">Borrar</button>
+                            </form>
+                        </div> 
+                    <% } %>    
                 </article>
             </section>
-
             <section class="sectionProdRelacionados">
                 <h2>Productos relacionados</h2>
                 <picture>
