@@ -131,10 +131,9 @@ const productsController = {
             image: req.files && req.files.length > 0 ? req.files[0].filename : 'default.png',
             category_id: req.body.category == "Ambos" ? 1 : req.body.category == "Camisas" ? 2 : req.body.category == "Corbatas" ? 3 : req.body.category == "Pantalones" ? 4 : req.body.category == "Sacos" ? 5 : 6,
             brand_id: req.body.brand == "Brooks Brothers" ? 1 : req.body.brand == "Colantuono" ? 2 : req.body.brand == "Devré" ? 3 : req.body.brand == "Ermenegildo Zegna" ? 4 : req.body.brand == "Hermes" ? 5 : 6
-            },(
+            },
                 {where : {sku: req.params.id}}
-            ), 
-                {include: [{association : "categories"},{association : "brands"}]}
+            
         )
         return res.redirect('/');
     },
