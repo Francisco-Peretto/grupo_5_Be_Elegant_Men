@@ -23,11 +23,7 @@
     margin-bottom: 3%;
 }
 
-.cuerpoCart h3 {
-    color: aliceblue;
-}
-
-.cuerpoCart p {
+.cuerpoCart h3, p {
     color: aliceblue;
 }
 

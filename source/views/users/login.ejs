@@ -8,7 +8,7 @@
                 <form class="formularioLogin"action="/users/login" method="post">
                     <input type="text" id="email" name="email" placeholder="Correo Electrónico" value="<%= locals.old ? old.email : '' %>">
                     <% if (locals.errors && errors.email) { %>
-                        <div class="diveError">
+                        <div class="divError">
                             <%= errors.email.msg %>
                         </div>
                     <% } %>

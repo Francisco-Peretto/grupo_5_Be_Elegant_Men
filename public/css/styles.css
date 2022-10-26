@@ -27,6 +27,11 @@ body {
     color: red;
 }
 
+input::placeholder {
+    font-family: 'Playfair Display', serif;
+    color: black;
+    font-weight: 475;
+}
 
 
 

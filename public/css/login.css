@@ -37,12 +37,9 @@
     width: 48%;
     height: 30px;
     margin-bottom: 3%;
-    color:#adb1b5;
 }
 
 .formularioLogin .divError {
-    font-size: 15px;
-    color: red;
     margin-bottom: 3%;
 }
 
