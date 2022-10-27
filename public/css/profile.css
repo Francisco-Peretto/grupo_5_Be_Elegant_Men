@@ -102,7 +102,7 @@
     position: relative;
     display: inline-block;
 }
-  
+
 .fileSelectProfile::before {
     background-color: #0e141a;
     color: #adb1b5;
@@ -111,18 +111,29 @@
     justify-content: center;
     align-items: center;
     border-radius: 15px;
-    width: 40%;
-    content: 'Editar';
+    width: 60%;
+    content: 'Cambiar';
     position: absolute;
     left: 15%;
     right: 0;
     top: 30%;
     bottom: -35%;
-  }
-  
-  .fileSelectProfile input[type="file"] {
+    padding-bottom: 1em;
+}
+
+.fileSelectProfile input[type="file"] {
     opacity: 0;
     width: 200px;
     height: 32px;
     display: inline-block;
-  }
+}
+
+.editButton {
+    width: 60%;
+    position: absolute;
+    left: 15%;
+    right: 0;
+    top: 30%;
+    bottom: -35%;
+    padding-top: 3em;
+}

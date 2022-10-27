@@ -1,7 +1,8 @@
-const db = require("../database/models")
+const db = require("../database/models");
 
 let middleware = async (req,res,next) => {
     res.locals.isLogged = false
+    res.locals.isAdmin = false
     
     if (req.cookies && req.cookies.userEmail) {
         let user = await db.User.findOne({
@@ -15,10 +16,10 @@ let middleware = async (req,res,next) => {
     if (req.session && req.session.userLogged) {
         res.locals.isLogged = true
         res.locals.userLogged = req.session.userLogged
+        res.locals.admin = 1 ? res.locals.isAdmin : null;
     }
 
     return next()
-
 
 }
 

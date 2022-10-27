@@ -4,16 +4,18 @@
         <%- include('../partials/navBrands.ejs') %>
         <main class="mainProfile">
 	        <section class="cuerpoProfile">
-                <form class="contenedorAvatar" action="/updateAvatar/<%= user.id %>?_method=PATCH" method="POST" enctype="multipart/form-data">
-                    <img class="avatar" src="/img/users/<%= user.avatar %> " alt="Imagen de Usuario">
-                    <div class="fileSelectProfile" id="image" >
-                        <input type="file" name="image" id="image">
+                <form class="contenedorAvatar" action="/users/updateAvatar/<%= user.id %>?_method=PATCH" method="POST" enctype="multipart/form-data">
+                    <img class="avatar" src="/img/users/<%= user.avatar %>" alt="Imagen de Usuario">
+                    <div class="fileSelectProfile" id="avatar">
+                        <input type="file" name="avatar" id="avatar">
+                        <input type="hidden" id="email" name="email" value="<%= user.email %>">
+                        <button class="formButton editButton" type="submit">Editar </button>
                     </div>
                 </form>
                 <section class="sectionDatos">
-                    <form action="/updateNames/<%= user.id %>?_method=PATCH" method="POST">
+                    <form action="/users/updateNames/<%= user.id %>?_method=PATCH" method="POST">
                         <fieldset>
-                            <legend>Informacion Personal</legend>
+                            <legend>Información Personal</legend>
                             <div>
                                 <label for="first_name">Nombre</label>
                                 <input type="text" name="first_name" value="<%= user.first_name %>">
@@ -22,14 +24,14 @@
                                 <label for="last_name">Apellido</label>
                                 <input type="text" name="last_name"value="<%= user.last_name %>">
                             </div>
-                            <button class="formButton" type="submit">Editar</button>
+                            <button class="formButton" type="submit">Editar datos</button>
                         </fieldset>
                     </form>
-                    <form action="/updatePass/<%= user.id %>?_method=PATCH" method="POST">
+                    <form action="/users/updatePass/<%= user.id %>?_method=PATCH" method="POST">
                         <fieldset>
-                            <legend>Informacion de Usuario</legend>
+                            <legend>Información de Usuario</legend>
                             <div>
-                                <label for="email">Correo Electronico</label>
+                                <label for="email">Correo Electrónico</label>
                                 <input type="email" name="email" value="<%= user.email %>" readonly>
                             </div>
                         </fieldset>
@@ -47,11 +49,11 @@
                                 <label for="checkNewPass">Repita su nueva contraseña</label>
                                 <input type="password" name="checkNewPass">
                             </div>
-                            <button class="formButton" type="submit">Cambiar</button>
+                            <button class="formButton" type="submit">Cambiar contraseña</button>
                         </fieldset>
                     </form>
                     <form action="/users/logout" method="GET">
-                        <button class="sessionButton"type="submit">Cerrar sesion</button>
+                        <button class="sessionButton"type="submit">Cerrar sesión</button>
                     </form>
                 </section>
             </section>

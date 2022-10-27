@@ -23,7 +23,7 @@
                     </section>
                     <section>
                         <label>Selecciona la categoría:</label>
-                        <select name="category" required> <!-- este name es lo que pasa al back-->
+                        <select name="category" required>
                             <% for( const category of categories) { %>
                                 <option value="<%= category.id %>"> <%= category.name %> </option>
                             <% } %>              

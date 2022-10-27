@@ -18,7 +18,7 @@ const productsController = {
             })
     },
 
-    // BUSQUEDA
+    // BÚSQUEDA
 
     search: (req,res) => {
 
@@ -41,7 +41,7 @@ const productsController = {
                     .then(function(brands) {
                         return res.render('./products/createProduct.ejs', {
                             product: product, 
-                            categories : categories, 
+                            categories : categories,
                             brands : brands 
                         })
                     })
@@ -55,8 +55,8 @@ const productsController = {
             detail: req.body.detail,
             price: req.body.price,
             image: req.files && req.files.length > 0 ? req.files[0].filename : 'default.png',
-            category_id: req.body.category == "Ambos" ? 1 : req.body.category == "Camisas" ? 2 : req.body.category == "Corbatas" ? 3 : req.body.category == "Pantalones" ? 4 : req.body.category == "Sacos" ? 5 : 6,
-            brand_id: req.body.brand == "Brooks Brothers" ? 1 : req.body.brand == "Colantuono" ? 2 : req.body.brand == "Devré" ? 3 : req.body.brand == "Ermenegildo Zegna" ? 4 : req.body.brand == "Hermes" ? 5 : 6
+            category_id: req.body.category,
+            brand_id: req.body.brand
         }, 
         {
             include: [{association : "categories"},{association : "brands"}]
@@ -114,8 +114,8 @@ const productsController = {
                     db.Brand.findAll()
                     .then(function(brands) {
                         return res.render('./products/editProduct.ejs', {
-                            product: product, 
-                            categories : categories, 
+                            product: product,
+                            categories : categories,
                             brands : brands 
                         })
                     })
@@ -129,8 +129,8 @@ const productsController = {
             detail: req.body.detail,
             price: req.body.price,
             image: req.files && req.files.length > 0 ? req.files[0].filename : 'default.png',
-            category_id: req.body.category == "Ambos" ? 1 : req.body.category == "Camisas" ? 2 : req.body.category == "Corbatas" ? 3 : req.body.category == "Pantalones" ? 4 : req.body.category == "Sacos" ? 5 : 6,
-            brand_id: req.body.brand == "Brooks Brothers" ? 1 : req.body.brand == "Colantuono" ? 2 : req.body.brand == "Devré" ? 3 : req.body.brand == "Ermenegildo Zegna" ? 4 : req.body.brand == "Hermes" ? 5 : 6
+            category_id: req.body.category,
+            brand_id: req.body.brand
             },
                 {where : {sku: req.params.id}}
             
