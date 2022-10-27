@@ -28,4 +28,9 @@ router.post('/login', usersController.access);
 router.get('/profile', usersController.profile); 
 router.get('/logout', usersController.logout); 
 
+//rutas de edicion de usuario
+router.patch('/updateNames/:id', usersController.updateUserNames); 
+router.patch('/updateAvatar/:id', usersController.updateUserAvatar); 
+router.patch('/updatePass/:id', usersController.updateUserPass); 
+
 module.exports = router;

@@ -4,56 +4,53 @@
         <%- include('../partials/navBrands.ejs') %>
         <main class="mainProfile">
 	        <section class="cuerpoProfile">
-                <form class="contenedorAvatar" action="" method="" enctype="multipart/form-data">
+                <form class="contenedorAvatar" action="/updateAvatar/<%= user.id %>?_method=PATCH" method="POST" enctype="multipart/form-data">
                     <img class="avatar" src="/img/users/<%= user.avatar %> " alt="Imagen de Usuario">
                     <div class="fileSelectProfile" id="image" >
                         <input type="file" name="image" id="image">
                     </div>
                 </form>
                 <section class="sectionDatos">
-                    <form action="" method="">
+                    <form action="/updateNames/<%= user.id %>?_method=PATCH" method="POST">
                         <fieldset>
                             <legend>Informacion Personal</legend>
                             <div>
                                 <label for="first_name">Nombre</label>
-                                <input type="text" value="<%= user.first_name %>">
+                                <input type="text" name="first_name" value="<%= user.first_name %>">
                             </div>
                             <div>
                                 <label for="last_name">Apellido</label>
-                                <input type="text" value="<%= user.last_name %>">
+                                <input type="text" name="last_name"value="<%= user.last_name %>">
                             </div>
                             <button class="formButton" type="submit">Editar</button>
                         </fieldset>
                     </form>
-                    <form action="" method="">
+                    <form action="/updatePass/<%= user.id %>?_method=PATCH" method="POST">
                         <fieldset>
                             <legend>Informacion de Usuario</legend>
                             <div>
                                 <label for="email">Correo Electronico</label>
-                                <input type="email" value="<%= user.email %>" readonly>
+                                <input type="email" name="email" value="<%= user.email %>" readonly>
                             </div>
-                            <button class="formButton" type="submit">Editar</button>
                         </fieldset>
-                    </form>
-                    <form action="" method="">
                         <fieldset>
                             <legend>Modificar Contraseña</legend>
                             <div>
-                                <label for="password">Ingrese su contraseña actual</label>
-                                <input type="password" value="" required>
+                                <label for="actualPass">Ingrese su contraseña actual</label>
+                                <input type="password" name="actualPass">
                             </div>
                             <div>
-                                <label for="password">Ingrese su nueva contraseña</label>
-                                <input type="password" value="">
+                                <label for="newPass">Ingrese su nueva contraseña</label>
+                                <input type="password" name="newPass">
                             </div>
                             <div>
-                                <label for="password">Repita su nueva contraseña</label>
-                                <input type="password" value="">
+                                <label for="checkNewPass">Repita su nueva contraseña</label>
+                                <input type="password" name="checkNewPass">
                             </div>
                             <button class="formButton" type="submit">Cambiar</button>
                         </fieldset>
                     </form>
-                    <form action="/users/logout" method="get">
+                    <form action="/users/logout" method="GET">
                         <button class="sessionButton"type="submit">Cerrar sesion</button>
                     </form>
                 </section>

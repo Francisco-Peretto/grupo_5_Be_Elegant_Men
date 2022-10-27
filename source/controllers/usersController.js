@@ -99,9 +99,47 @@ const usersController = {
         })
     },
 
+    updateUserNames: (req, res) => {
+        db.User.update({
+            first_name: req.body.first_name,
+            last_name: req.body.last_name,
+            },
+            {where : {id: req.params.id}}
+        )
+        return res.redirect('profile');       
+    },
+
+    updateUserAvatar: (req, res) => {
+        db.User.update({
+            avatar: req.files && req.files.length > 0 ? req.files[0].filename : 'default.png',
+            },
+            {where : {id: req.params.id}}
+        )
+        return res.redirect('profile');
+    },
+
+    updateUserPass: (req, res) => {
+
+        db.User.findOne({
+            where : {email : req.body.email}
+        })
+            .then((userToUpdate) => {
+                
+                let correctPassword = bcryptjs.compareSync(req.body.actualPass, userToUpdate.password);
+                if ((correctPassword) && (req.body.newPass === req.body.chechNewPass)) {
+                    db.User.update({
+                        password: bcryptjs.hashSync(req.body.newPass, 10),
+                        },
+                        {where : {id: userToUpdate.id}}
+                    )
+                    return res.render('users/login');
+                }
+            })
+    },
+
     //LOGOUT
 
-    logout: (req, res) => { // GET logout
+    logout: (req, res) => { 
         res.clearCookie('userEmail')
         req.session.destroy()
         return res.redirect('/')
