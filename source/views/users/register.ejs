@@ -38,8 +38,12 @@
                             <%= errors.password.msg %>
                         </div>
                     <% } %>
-                    <div class="fileSelect" id="avatar" >
-                        <input type="file" name="avatar" id="avatar">
+                    <div class="registerAvatarUpload">
+                        <h4>Foto de perfil</h4>
+                        <label for="avatar">
+                            <i class="fa-solid fa-upload"></i>
+                        </label>
+                        <input type="file" id="avatar" name="avatar"/>
                     </div>
                     <% if (locals.errors && errors.avatar) { %>
                         <div class="divError">

@@ -87,37 +87,39 @@
     inset -.10rem -.10rem 1rem #ccc;
 }
 
-/*estilo para el input file*/
-
-.fileSelectCreateProduct {
-    position: relative;
-    display: inline-block;
-  }
-  
-.fileSelectCreateProduct::before {
-    background-color: #0e141a;
-    border: 1px solid #adb1b5;
-    color:#adb1b5;
+.createProductFotosUpload {
     display: flex;
-    justify-content: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: flex-start;
     align-items: center;
-    border-radius: 15px;
-    width: 40%;
-    content: 'Fotos';
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-  }
-  
-  .fileSelectCreateProduct input[type="file"] {
-    opacity: 0;
-    width: 200px;
-    height: 32px;
-    display: inline-block;
-  }
+    margin: 0%;
+    padding: 0%;
+}
 
+.createProductFotosUpload>input {
+    display: none;
+}
+
+.createProductFotosUpload p {
+    color: #adb1b5;
+}
+
+.createProductFotosUpload i {
+    color: #adb1b5;
+    margin-left: 60%;
+    transition: all 1s ease;
+}
+
+.createProductFotosUpload i:hover {
+    box-shadow: .10rem .10rem 1rem #fff, 
+    -.10rem -.10rem 1rem #ccc;
+}
+
+.createProductFotosUpload i:active {
+    box-shadow: .10rem .10rem 1rem #fff, 
+    -.10rem -.10rem 1rem #ccc;
+}
   /* mediasquerys */
 
 @media (max-width: 479px) {

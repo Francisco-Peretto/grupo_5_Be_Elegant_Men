@@ -21,9 +21,57 @@
     width: 20%;
 }
 
-.avatar {
+.avatarImg {
     width: 100%;
     border-radius: 50%;
+}
+
+.profileAvatarUpload>input {
+    display: none;
+}
+
+.profileAvatarUpload i {
+    color: #adb1b5;
+    position: relative;
+    left: 7rem;
+    top: -1.5rem;
+    border-radius: 100%;
+    transition: all 1s ease;
+}
+
+.profileAvatarUpload i:hover {
+    box-shadow: .10rem .10rem 1rem #fff, 
+    -.10rem -.10rem 1rem #ccc;
+}
+
+.profileAvatarUpload i:active {
+    box-shadow: .10rem .10rem 1rem #fff, 
+    -.10rem -.10rem 1rem #ccc;
+}
+
+.avatarButton {
+    margin-top: 2%;
+    width: 8rem;
+    margin: auto;
+    padding: .5rem;
+    text-align: center;
+    background-color: #0e141a;
+    color:#adb1b5;
+    font-size: 1rem;
+    border: 2px solid;
+    border-radius: .5rem;
+    cursor: pointer;
+    transition: all 1s ease;
+}
+
+.avatarButton:hover {
+    box-shadow: .10rem .10rem 1rem #fff, 
+    -.10rem -.10rem 1rem #ccc;
+}
+
+.avatarButton:active {
+    box-shadow: .10rem .10rem 1rem #fff, 
+    -.10rem -.10rem 1rem #ccc;
 }
 
 .sectionDatos {
@@ -43,6 +91,58 @@
 .sectionDatos fieldset {
     margin-bottom: 1%;
     color:#adb1b5;
+}
+
+.nameButton {
+    margin-top: 2%;
+    width: 8rem;
+    margin-top: 1rem;
+    margin-bottom: .5rem;
+    padding: .5rem;
+    text-align: center;
+    background-color: #0e141a;
+    color:#adb1b5;
+    font-size: 1rem;
+    border: 2px solid;
+    border-radius: .5rem;
+    cursor: pointer;
+    transition: all 1s ease;
+}
+
+.nameButton:hover {
+    box-shadow: .10rem .10rem 1rem #fff, 
+    -.10rem -.10rem 1rem #ccc;
+}
+
+.nameButton:active {
+    box-shadow: .10rem .10rem 1rem #fff, 
+    -.10rem -.10rem 1rem #ccc;
+}
+
+.passButton {
+    margin-top: 2%;
+    width: 12rem;
+    margin-top: 1rem;
+    margin-bottom: .5rem;
+    padding: .5rem;
+    text-align: center;
+    background-color: #0e141a;
+    color:#adb1b5;
+    font-size: 1rem;
+    border: 2px solid;
+    border-radius: .5rem;
+    cursor: pointer;
+    transition: all 1s ease;
+}
+
+.passButton:hover {
+    box-shadow: .10rem .10rem 1rem #fff, 
+    -.10rem -.10rem 1rem #ccc;
+}
+
+.passButton:active {
+    box-shadow: .10rem .10rem 1rem #fff, 
+    -.10rem -.10rem 1rem #ccc;
 }
 
 .sessionButton {
@@ -68,72 +168,4 @@
 .sessionButton:active {
     box-shadow: .10rem .10rem 1rem #fff, 
     -.10rem -.10rem 1rem #ccc;
-}
-
-.formButton {
-    margin-top: 2%;
-    width: 8rem;
-    margin-top: 1rem;
-    margin-bottom: .5rem;
-    padding: .5rem;
-    text-align: center;
-    background-color: #0e141a;
-    color:#adb1b5;
-    font-size: 1rem;
-    border: 2px solid;
-    border-radius: .5rem;
-    cursor: pointer;
-    transition: all 1s ease;
-}
-
-.formButton:hover {
-    box-shadow: .10rem .10rem 1rem #fff, 
-    -.10rem -.10rem 1rem #ccc;
-}
-
-.formButton:active {
-    box-shadow: .10rem .10rem 1rem #fff, 
-    -.10rem -.10rem 1rem #ccc;
-}
-
-/*estilo para el input file*/
-
-.fileSelectProfile {
-    position: relative;
-    display: inline-block;
-}
-
-.fileSelectProfile::before {
-    background-color: #0e141a;
-    color: #adb1b5;
-    border: 2px solid;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 15px;
-    width: 60%;
-    content: 'Cambiar';
-    position: absolute;
-    left: 15%;
-    right: 0;
-    top: 30%;
-    bottom: -35%;
-    padding-bottom: 1em;
-    padding-top: 10px;
-}
-
-.fileSelectProfile input[type="file"] {
-    opacity: 0;
-    width: 200px;
-    height: 32px;
-    display: inline-block;
-}
-
-.editButton {
-    width: 60%;
-    position: absolute;
-    left: 15%;
-    right: 0;
-    top: 1cm;
-    
 }

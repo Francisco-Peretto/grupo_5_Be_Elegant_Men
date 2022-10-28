@@ -79,38 +79,39 @@
     inset -.10rem -.10rem 1rem #ccc;
 }
 
-/*estilo para el input file*/
-
-.fileSelect {
-    position: relative;
-    display: inline-block;
-  }
-  
-.fileSelect::before {
-    background-color: #0e141a;
-    color: #adb1b5;
-    border: 2px solid;
+.registerAvatarUpload {
     display: flex;
-    justify-content: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: flex-start;
     align-items: center;
-    border-radius: 15px;
-    width: 40%;
-    content: 'Foto';
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-  }
-  
-  .fileSelect input[type="file"] {
-    opacity: 0;
-    width: 200px;
-    height: 32px;
-    display: inline-block;
-  }
-  
-/* mediasquerys */
+    margin: 0%;
+    padding: 0%;
+}
+
+.registerAvatarUpload>input {
+    display: none;
+}
+
+.registerAvatarUpload h4 {
+    color: #adb1b5;
+}
+
+.registerAvatarUpload i {
+    color: #adb1b5;
+    margin-left: 60%;
+    transition: all 1s ease;
+}
+
+.registerAvatarUpload i:hover {
+    box-shadow: .10rem .10rem 1rem #fff, 
+    -.10rem -.10rem 1rem #ccc;
+}
+
+.registerAvatarUpload i:active {
+    box-shadow: .10rem .10rem 1rem #fff, 
+    -.10rem -.10rem 1rem #ccc;
+}
 
 @media (max-width: 479px) {
     .cuerpoRegister {

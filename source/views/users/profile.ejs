@@ -5,11 +5,16 @@
         <main class="mainProfile">
 	        <section class="cuerpoProfile">
                 <form class="contenedorAvatar" action="/users/updateAvatar/<%= user.id %>?_method=PATCH" method="POST" enctype="multipart/form-data">
-                    <img class="avatar" src="/img/users/<%= user.avatar %>" alt="Imagen de Usuario">
-                    <div class="fileSelectProfile" id="avatar">
-                        <input type="file" name="avatar" id="avatar">
-                        <input type="hidden" id="email" name="email" value="<%= user.email %>">
-                        <button class="formButton editButton" type="submit">Editar </button>
+                    <img class="avatarImg" id="avatarID" src="/img/users/<%= user.avatar %>" alt="Imagen de Usuario">
+                    <input type="hidden" id="email" name="email" value="<%= user.email %>">
+                    <div class="profileAvatarUpload">
+                        <label for="avatar">
+                            <i class="fa-solid fa-pen"></i>
+                        </label>
+                        <input type="file" id="avatar" name="avatar"/>
+                    </div>
+                    <div>
+                        <button class="avatarButton" type="submit">Editar </button>
                     </div>
                 </form>
                 <section class="sectionDatos">
@@ -24,7 +29,7 @@
                                 <label for="last_name">Apellido</label>
                                 <input type="text" name="last_name"value="<%= user.last_name %>">
                             </div>
-                            <button class="formButton" type="submit">Editar datos</button>
+                            <button class="nameButton" type="submit">Editar datos</button>
                         </fieldset>
                     </form>
                     <form action="/users/updatePass/<%= user.id %>?_method=PATCH" method="POST">
@@ -49,7 +54,7 @@
                                 <label for="checkNewPass">Repita su nueva contraseña</label>
                                 <input type="password" name="checkNewPass">
                             </div>
-                            <button class="formButton" type="submit">Cambiar contraseña</button>
+                            <button class="passButton" type="submit">Cambiar contraseña</button>
                         </fieldset>
                     </form>
                     <form action="/users/logout" method="GET">
@@ -61,4 +66,5 @@
         <%- include('../partials/navBrands.ejs') %>
         <%- include('../partials/footer.ejs') %>
     </body>
+    <script src=”/scripts/changeAvatar.js” type=”text/javascript”></script>
 </html>

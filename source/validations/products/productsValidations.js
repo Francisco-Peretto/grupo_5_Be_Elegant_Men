@@ -14,7 +14,6 @@ const validations = [
 
     body('imagen')
         .isIn([ "PNG", "JPEG", "GIF" , "JPG"]).withMessage('Los formatos soportados son solo JPG, JPEG, PNG y GIF'),
-
 ]
 
 module.exports = validations
