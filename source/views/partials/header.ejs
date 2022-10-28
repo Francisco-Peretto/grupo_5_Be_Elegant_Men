@@ -27,12 +27,8 @@
                 </a>
             </li>
             <li><a href="/users/cart"><i class="fa-solid fa-cart-shopping"></i></a></li>
-            <% if (locals.isLogged && locals.userLogged.admin) { %>
-                <a href="/products/create"><i class="fa-solid fa-circle-plus"></i></i></a> 
-            <% } %>  
             </ul>
         </nav>
-
         <nav class="navbarUsuario">
                 <a href="/users/login">
                     <% if (locals.isLogged) { %>
@@ -41,12 +37,8 @@
                         <i class="fa-solid fa-user"></i>
                     <% } %>
                 </a>
-            <a href="/users/cart"><i class="fa-solid fa-cart-shopping"></i></a>
-            <% if (locals.isLogged && locals.userLogged.admin) { %>
-                <a href="/products/create"><i class="fa-solid fa-circle-plus"></i></i></a> 
-            <% } %>            
+            <a href="/users/cart"><i class="fa-solid fa-cart-shopping"></i></a>          
         </nav>
-
     </section>
     <nav class="navbarCategorias">
         <a href="/products/list/">Todos</a>
