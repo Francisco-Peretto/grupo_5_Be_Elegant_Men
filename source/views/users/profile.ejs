@@ -5,7 +5,7 @@
         <main class="mainProfile">
 	        <section class="cuerpoProfile">
                 <form class="contenedorAvatar" action="/users/updateAvatar/<%= user.id %>?_method=PATCH" method="POST" enctype="multipart/form-data">
-                    <img class="avatarImg" id="avatarID" src="/img/users/<%= user.avatar %>" alt="Imagen de Usuario">
+                    <img class="avatarImg" id="avatarImgID" src="/img/users/<%= user.avatar %>" alt="Imagen de Usuario">
                     <input type="hidden" id="email" name="email" value="<%= user.email %>">
                     <div class="profileAvatarUpload">
                         <label for="avatar">
