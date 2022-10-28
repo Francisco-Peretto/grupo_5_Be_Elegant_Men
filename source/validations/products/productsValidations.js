@@ -12,9 +12,16 @@ const validations = [
     body('price')
         .notEmpty().withMessage('Debes indicar el precio'),
 
-    body('imagen')
-        .isIn([ "PNG", "JPEG", "GIF" , "JPG"]).withMessage('Los formatos soportados son solo JPG, JPEG, PNG y GIF'),
-]
+   /*  body('image')
+        .isIn([ "PNG", "JPEG", "GIF" , "JPG"]).withMessage('Los formatos soportados son solo JPG, JPEG, PNG y GIF'), */
+
+    body('category')
+        .notEmpty().withMessage('El campo esta vacio'),
+    
+    body('brand')
+        .notEmpty().withMessage('El campo esta vacio'),
+
+    ]
 
 module.exports = validations
 

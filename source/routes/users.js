@@ -33,4 +33,7 @@ router.patch('/updateNames/:id', usersController.updateUserNames);
 router.patch('/updateAvatar/:id', upload.any(), usersController.updateUserAvatar);
 router.patch('/updatePass/:id', usersController.updateUserPass);
 
+//ruta de borrado
+router.delete('/destroyUser/:id', usersController.destroy);
+
 module.exports = router;

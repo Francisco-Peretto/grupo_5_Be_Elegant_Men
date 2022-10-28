@@ -58,22 +58,22 @@ const productsController = {
                 errors: resultValidation.mapped(),
                 old : req.body
             })
-        } 
-        else(
+        } else {
 
-        db.Product.create({
-            name: req.body.name,
-            detail: req.body.detail,
-            price: req.body.price,
-            image: req.files && req.files.length > 0 ? req.files[0].filename : 'default.png',
-            category_id: req.body.category,
-            brand_id: req.body.brand
-        }, 
-        {
-            include: [{association : "categories"},{association : "brands"}]
+            db.Product.create({
+                name: req.body.name,
+                detail: req.body.detail,
+                price: req.body.price,
+                image: req.files && req.files.length > 0 ? req.files[0].filename : 'default.png',
+                category_id: req.body.category,
+                brand_id: req.body.brand
+            }, 
+            {
+                include: [{association : "categories"}, {association : "brands"}]
+            }
+            )
         }
-        ))
-        return res.redirect('/');
+            return res.redirect('/');
     },
 
     //R - Lectura
@@ -134,14 +134,12 @@ const productsController = {
             })
     },
 
-    
-
     update: (req, res) => {
 
         const resultValidation = validationResult(req)
 
         if (resultValidation.errors.length > 0) { 
-            return res.render('./products/editProduct.ejs' , {
+            return res.redirect('./products/editProduct.ejs' , {
                 errors: resultValidation.mapped(),
                 old : req.body
             })
@@ -155,7 +153,7 @@ const productsController = {
             category_id: req.body.category,
             brand_id: req.body.brand
             },
-                {where : {sku: req.params.id}}
+            {where : {sku: req.params.id}}
             
                 
         ))

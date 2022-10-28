@@ -13,10 +13,10 @@ const validations = [
         .isEmail().withMessage('Debes escribir un correo válido'),
     
     body('password')
-        .isLength({ min: 8 }).withMessage('La contraseña debe contener al menos 8 caracteres'),
+        .isLength({ min: 8 }).withMessage('La contraseña debe contener al menos 8 caracteres')/* ,
     
     body('avatar')
-        .isIn([ "PNG", "JPEG", "GIF" , "JPG"]).withMessage('Los formatos soportados son solo JPG, JPEG, PNG y GIF'),
+        .isIn([ "PNG", "JPEG", "GIF" , "JPG"]).withMessage('Los formatos soportados son solo JPG, JPEG, PNG y GIF'), */
     ]
         
 module.exports = validations
