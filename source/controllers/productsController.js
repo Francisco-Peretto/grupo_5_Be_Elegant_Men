@@ -1,5 +1,6 @@
 const db = require("../database/models")
 const { Op } = require("sequelize");
+const {validationResult} = require('express-validator');
 
 const productsController = {
 
@@ -50,6 +51,16 @@ const productsController = {
     },
 
     save: (req, res) => {
+        const resultValidation = validationResult(req)
+
+        if (resultValidation.errors.length > 0) { 
+            return res.render('./products/createProduct.ejs' , {
+                errors: resultValidation.mapped(),
+                old : req.body
+            })
+        } 
+        else(
+
         db.Product.create({
             name: req.body.name,
             detail: req.body.detail,
@@ -61,7 +72,7 @@ const productsController = {
         {
             include: [{association : "categories"},{association : "brands"}]
         }
-        )
+        ))
         return res.redirect('/');
     },
 
@@ -123,7 +134,19 @@ const productsController = {
             })
     },
 
+    
+
     update: (req, res) => {
+
+        const resultValidation = validationResult(req)
+
+        if (resultValidation.errors.length > 0) { 
+            return res.render('./products/editProduct.ejs' , {
+                errors: resultValidation.mapped(),
+                old : req.body
+            })
+        } 
+        else(
         db.Product.update({
             name: req.body.name,
             detail: req.body.detail,
@@ -134,9 +157,14 @@ const productsController = {
             },
                 {where : {sku: req.params.id}}
             
-        )
+                
+        ))
         return res.redirect('/');
     },
+
+
+
+    
 
     //D - Eliminación
 
