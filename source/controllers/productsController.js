@@ -163,7 +163,6 @@ const productsController = {
                             return res.render('./products/editProduct.ejs', {
                                 errors: resultValidation.mapped(),
                                 old : req.body,
-                                product: product,
                                 categories : categories,
                                 brands : brands 
                             })
