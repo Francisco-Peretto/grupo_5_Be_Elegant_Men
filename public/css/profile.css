@@ -33,7 +33,7 @@
 .profileAvatarUpload i {
     color: #adb1b5;
     position: relative;
-    left: 7rem;
+    left: 6rem;
     top: -1.5rem;
     border-radius: 100%;
     transition: all 1s ease;
@@ -49,7 +49,12 @@
     -.10rem -.10rem 1rem #ccc;
 }
 
+.hidden {
+    display: none;
+}
+
 .avatarButton {
+    display: block;
     margin-top: 2%;
     width: 8rem;
     margin: auto;
@@ -77,9 +82,10 @@
 .sectionDatos {
     width: 90%;
     margin-left: 5%;
+    margin-right: 3%;
 }
 
-.sectionDatos label {
+.cuerpoProfile label {
     color:#adb1b5;
 }
 
@@ -88,7 +94,7 @@
     margin-top: 2%;
 }
 
-.sectionDatos fieldset {
+.cuerpoProfile   fieldset {
     margin-bottom: 1%;
     color:#adb1b5;
 }
@@ -192,6 +198,40 @@
 }
 
 .eraseButton:active {
+    box-shadow: .10rem .10rem 1rem #fff, 
+    -.10rem -.10rem 1rem #ccc;
+}
+
+.buttons {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.createButton {
+    margin-top: 2%;
+    width: 8rem;
+    margin-top: 1rem;
+    margin-bottom: .5rem;
+    padding: .5rem;
+    text-align: center;
+    background-color: #0e141a;
+    color:#adb1b5;
+    font-size: 1rem;
+    border: 2px solid;
+    border-radius: .5rem;
+    cursor: pointer;
+    transition: all 1s ease;
+}
+
+.createButton:hover {
+    box-shadow: .10rem .10rem 1rem #fff, 
+    -.10rem -.10rem 1rem #ccc;
+}
+
+.createButton:active {
     box-shadow: .10rem .10rem 1rem #fff, 
     -.10rem -.10rem 1rem #ccc;
 }

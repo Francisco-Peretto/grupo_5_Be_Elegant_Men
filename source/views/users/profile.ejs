@@ -14,7 +14,7 @@
                         <input type="file" id="avatar" name="avatar"/>
                     </div>
                     <div>
-                        <button class="avatarButton" type="submit">Editar </button>
+                        <button class="hidden" id="idButton" type="submit">Cambiar</button>
                     </div>
                 </form>
                 <section class="sectionDatos">
@@ -57,14 +57,26 @@
                             <button class="passButton" type="submit">Cambiar contraseña</button>
                         </fieldset>
                     </form>
-                    <form action="/users/logout" method="GET">
-                        <button class="sessionButton"type="submit">Cerrar sesión</button>
-                    </form>
+                    <div class="buttons">
+                        <form action="/users/logout" method="GET">
+                            <button class="sessionButton"type="submit">Cerrar sesión</button>
+                        </form>
                         <form action="/users/destroyUser/<%= user.id %>?_method=DELETE" method="POST">
                             <input type="hidden" name="id" value="<%= user.id %>">
                             <button class="eraseButton" type="submit">Borrar Usuario</button>
-                    </form>
+                        </form>
+                    </div>
                 </section>
+                <% if (locals.isLogged && locals.userLogged.admin) { %>
+                    <section>
+                        <form action="/products/create" method="GET">
+                            <fieldset>
+                                <legend>Panel de Control</legend>
+                                <button class="createButton"type="submit">Crear Producto</button>
+                            </fieldset>
+                        </form>
+                    </section>
+                <% } %>  
             </section>
         </main>
         <%- include('../partials/navBrands.ejs') %>
