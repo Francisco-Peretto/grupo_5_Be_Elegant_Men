@@ -149,7 +149,7 @@ const usersController = {
         return res.redirect('/')
     },
     
-    //D - Eliminación
+    //ELIMINACION
 
     destroy: (req, res) => {
         db.User.destroy({

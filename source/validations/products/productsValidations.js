@@ -19,20 +19,13 @@ const validations = [
         if (!file) {
             throw new Error('Debes de subir una imagen');
         } else {
-        let fileExtension = path.extname(file.originalname)
+        let fileExtension = extname(file.originalname)
         if (!acceptedExtensions.includes(fileExtension)) {
             throw new Error (`las extensiones de imagen permitidas son ${acceptedExtensions.join(', ')}`);
         }
             return true
         }
-    }),
-
-    body('category')
-        .notEmpty().withMessage('El campo está vacío'),
-
-    body('brand')
-        .notEmpty().withMessage('El campo está vacío')
-
+    })
 ]
 
 module.exports = validations

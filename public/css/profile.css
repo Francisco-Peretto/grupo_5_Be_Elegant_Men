@@ -18,7 +18,7 @@
 }
 
 .contenedorAvatar {
-    width: 20%;
+    width: 25%;
 }
 
 .avatarImg {
@@ -30,11 +30,15 @@
     display: none;
 }
 
+.profileAvatarUpload {
+    margin-bottom: 10%;
+}
+
 .profileAvatarUpload i {
     color: #adb1b5;
-    position: relative;
+/*     position: relative;
     left: 6rem;
-    top: -1.5rem;
+    top: -1.5rem; */
     border-radius: 100%;
     transition: all 1s ease;
 }

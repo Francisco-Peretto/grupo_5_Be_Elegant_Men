@@ -11,9 +11,26 @@
                         <input type="text" id="name" name="name" placeholder="Nombre del producto" value="<%= product.name %> " required>
                         <input type="number" id="price" name="price" placeholder="Precio del producto" value="<%= product.price %>" required>
                     </section>
+                    <% if (locals.errors) { %>
+                        <% if (errors.name) { %>
+                            <div class="divError">
+                                <%= errors.name.msg %>
+                            </div>
+                        <% } %>
+                        <% if (errors.price) { %>
+                            <div class="divError">
+                                <%= errors.price.msg %>
+                            </div>
+                        <% } %>
+                    <% } %>
                     <section> 
                         <input type="text" id="detail" name="detail" placeholder="Descripción del producto" value="<%= product.detail %>" required></input>
                     </section>
+                    <% if (locals.errors && errors.detail) { %>
+                        <div class="divError">
+                            <%= errors.detail.msg %>
+                        </div>
+                    <% } %>
                     <section> 
                         <label>Selecciona la marca:</label>
                         <select name="brand" required>
@@ -43,6 +60,11 @@
                         </label>
                         <input type="file" id="image" name="image"/>
                     </div>
+                    <% if (locals.errors && errors.image) { %>
+                        <div class="divError">
+                            <%= errors.image.msg %>
+                        </div>
+                    <% } %>
                     <section>
                         <button type="submit" value="editar">Editar Producto</button>
                         <button type="reset">Reiniciar Formulario</button>

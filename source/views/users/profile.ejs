@@ -61,7 +61,7 @@
                         <form action="/users/logout" method="GET">
                             <button class="sessionButton"type="submit">Cerrar sesión</button>
                         </form>
-                        <form action="/users/destroyUser/<%= user.id %>?_method=DELETE" method="POST">
+                        <form id="formDeleteUser" action="/users/destroyUser/<%= user.id %>?_method=DELETE" method="POST">
                             <input type="hidden" name="id" value="<%= user.id %>">
                             <button class="eraseButton" type="submit">Borrar Usuario</button>
                         </form>
@@ -83,6 +83,7 @@
         <%- include('../partials/footer.ejs') %>
     </body>
     <script src='/scripts/changeAvatar.js'></script>
+    <script src='/scripts/confirmDeleteUser.js'></script>
 </html>
 
 

@@ -7,13 +7,18 @@ const productsController = {
     //INDEX
 
     index: (req, res) => {
+        
         db.Product.findAll()
             .then(function(product) {
                 db.Category.findAll()
                 .then(function(categories) {
                     db.Brand.findAll()
                     .then(function(brands) {
-                        return res.render('./products/index.ejs', {product: product, categories : categories, brands : brands })
+                        return res.render('./products/index.ejs', {
+                            product: product, 
+                            categories : categories, 
+                            brands : brands 
+                        })
                     })
                 })
             })
@@ -27,13 +32,14 @@ const productsController = {
             where: { name: { [Op.like] : `%${req.query.search}%` }}
         })
             .then(function(products) {
-                return res.render('./products/listProducts',{products})
+                return res.render('./products/listProducts', {products})
             })
     },
 
-    //C - Creación
+    // CREACION
 
     create: (req, res) => {
+
         db.Product.findAll()
             .then(function(product) {
                 db.Category.findAll()
@@ -54,6 +60,7 @@ const productsController = {
         const resultValidation = validationResult(req)
 
         if (resultValidation.errors.length > 0) {
+
             db.Product.findAll()
             .then(function(product) {
                 db.Category.findAll()
@@ -61,11 +68,11 @@ const productsController = {
                     db.Brand.findAll()
                     .then(function(brands) {
                         return res.render('./products/createProduct.ejs', {
-                errors: resultValidation.mapped(),
-                old : req.body,
-                product: product, 
-                categories : categories,
-                brands : brands 
+                            errors: resultValidation.mapped(),
+                            old : req.body,
+                            product: product, 
+                            categories : categories,
+                            brands : brands 
                         })
                     })
                 })
@@ -86,10 +93,11 @@ const productsController = {
             }
             )
         }
-            return res.redirect('/');
+        
+        return res.redirect('/');
     },
 
-    //R - Lectura
+    // LECTURA
 
     list: (req, res) => {                      
 
@@ -126,7 +134,7 @@ const productsController = {
         })
     },
 
-    //U - Actualización
+    // ACTUALIZACION
 
     edit: (req, res) => {
         db.Product.findByPk(req.params.id, {
@@ -170,33 +178,29 @@ const productsController = {
                         })
                     })
                 })
-            } 
-        else(
-        db.Product.update({
-            name: req.body.name,
-            detail: req.body.detail,
-            price: req.body.price,
-            image: req.files && req.files.length > 0 ? req.files[0].filename : 'default.png',
-            category_id: req.body.category,
-            brand_id: req.body.brand
-            },
-            {where : {sku: req.params.id}}
-            
-                
-        ))
+        } else {
+            db.Product.update({
+                name: req.body.name,
+                detail: req.body.detail,
+                price: req.body.price,
+                image: req.files && req.files.length > 0 ? req.files[0].filename : 'default.png',
+                category_id: req.body.category,
+                brand_id: req.body.brand
+                },
+                {where : {sku: req.params.id}}
+            )
+        }
+
         return res.redirect('/');
     },
 
-
-
-    
-
-    //D - Eliminación
+    // ELIMINACION
 
     erase: (req, res) => {
         db.Product.destroy({
             where: {sku: req.params.id}
         })
+
         return res.render('./products/index.ejs');
     }
 }

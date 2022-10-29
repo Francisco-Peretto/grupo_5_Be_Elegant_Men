@@ -43,7 +43,7 @@
                             <form action="<%= product.sku %>/edit" method="get">
                                 <button type="submit">Editar</button>
                             </form>
-                            <form action="<%= product.sku %>?_method=DELETE" method="post"> <!-- hacer confirmación -->
+                            <form id="formDeleteProduct" action="<%= product.sku %>?_method=DELETE" method="post"> <!-- hacer confirmación -->
                                 <input type="hidden" name="sku" value="<%= product.sku %>">
                                 <button type="submit">Borrar</button>
                             </form>
@@ -66,4 +66,5 @@
         <%- include('../partials/navBrands.ejs') %>
         <%- include('../partials/footer.ejs') %>
     </body>
+    <script src='/scripts/confirmDeleteProduct.js'></script>
 </html>
