@@ -30,7 +30,7 @@ router.get('/logout', usersController.logout);
 
 //rutas de edición de usuario
 router.patch('/updateNames/:id', usersController.updateUserNames);
-router.patch('/updateAvatar/:id', upload.any(), usersController.updateUserAvatar);
+router.patch('/updateAvatar/:id', upload.any(), registerValidations, usersController.updateUserAvatar);
 router.patch('/updatePass/:id', usersController.updateUserPass);
 
 //ruta de borrado

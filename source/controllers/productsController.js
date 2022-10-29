@@ -53,11 +53,24 @@ const productsController = {
     save: (req, res) => {
         const resultValidation = validationResult(req)
 
-        if (resultValidation.errors.length > 0) { 
-            return res.render('./products/createProduct.ejs' , {
+        if (resultValidation.errors.length > 0) {
+            db.Product.findAll()
+            .then(function(product) {
+                db.Category.findAll()
+                .then(function(categories) {
+                    db.Brand.findAll()
+                    .then(function(brands) {
+                        return res.render('./products/createProduct.ejs', {
                 errors: resultValidation.mapped(),
-                old : req.body
+                old : req.body,
+                product: product, 
+                categories : categories,
+                brands : brands 
+                        })
+                    })
+                })
             })
+
         } else {
 
             db.Product.create({
@@ -139,11 +152,25 @@ const productsController = {
         const resultValidation = validationResult(req)
 
         if (resultValidation.errors.length > 0) { 
-            return res.redirect('./products/editProduct.ejs' , {
-                errors: resultValidation.mapped(),
-                old : req.body
+            db.Product.findByPk(req.params.id, {
+                include: [{association: "categories"}, {association:"brands"}]
             })
-        } 
+                .then(function(product) {
+                    db.Category.findAll()
+                    .then(function(categories) {
+                        db.Brand.findAll()
+                        .then(function(brands) {
+                            return res.render('./products/editProduct.ejs', {
+                                errors: resultValidation.mapped(),
+                                old : req.body,
+                                product: product,
+                                categories : categories,
+                                brands : brands 
+                            })
+                        })
+                    })
+                })
+            } 
         else(
         db.Product.update({
             name: req.body.name,
