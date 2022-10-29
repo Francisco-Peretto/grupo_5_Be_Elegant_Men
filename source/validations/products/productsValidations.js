@@ -1,5 +1,5 @@
 const {body} = require('express-validator');
-const {extname} = require('path');
+const path = require('path');
 
 const validations = [
     body('name')
@@ -14,18 +14,19 @@ const validations = [
         .notEmpty().withMessage('Debes indicar el precio'),
 
     body('image').custom((value, { req }) => {
-        let file = req.files[0];
+        let file = req.files;
         let acceptedExtensions = ['.jpg', '.jpeg', '.png', '.gif' ];
-        if (!file) {
+
+        if (file[0] == undefined ) {
             throw new Error('Debes de subir una imagen');
         } else {
-        let fileExtension = extname(file.originalname)
+        let fileExtension = path.extname(file[0].originalname)
         if (!acceptedExtensions.includes(fileExtension)) {
             throw new Error (`las extensiones de imagen permitidas son ${acceptedExtensions.join(', ')}`);
-        }
+        } else {
             return true
-        }
-    })
+    }}
+})
 ]
 
 module.exports = validations

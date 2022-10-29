@@ -7,7 +7,7 @@ const productsController = {
     //INDEX
 
     index: (req, res) => {
-        
+
         db.Product.findAll()
             .then(function(product) {
                 db.Category.findAll()
@@ -15,9 +15,9 @@ const productsController = {
                     db.Brand.findAll()
                     .then(function(brands) {
                         return res.render('./products/index.ejs', {
-                            product: product, 
-                            categories : categories, 
-                            brands : brands 
+                            product: product,
+                            categories : categories,
+                            brands : brands
                         })
                     })
                 })
@@ -36,7 +36,7 @@ const productsController = {
             })
     },
 
-    // CREACION
+    // CREACIÓN
 
     create: (req, res) => {
 
@@ -49,7 +49,7 @@ const productsController = {
                         return res.render('./products/createProduct.ejs', {
                             product: product, 
                             categories : categories,
-                            brands : brands 
+                            brands : brands
                         })
                     })
                 })
@@ -61,8 +61,6 @@ const productsController = {
 
         if (resultValidation.errors.length > 0) {
 
-            db.Product.findAll()
-            .then(function(product) {
                 db.Category.findAll()
                 .then(function(categories) {
                     db.Brand.findAll()
@@ -70,16 +68,12 @@ const productsController = {
                         return res.render('./products/createProduct.ejs', {
                             errors: resultValidation.mapped(),
                             old : req.body,
-                            product: product, 
                             categories : categories,
                             brands : brands 
                         })
                     })
                 })
-            })
-
         } else {
-
             db.Product.create({
                 name: req.body.name,
                 detail: req.body.detail,
@@ -87,31 +81,29 @@ const productsController = {
                 image: req.files && req.files.length > 0 ? req.files[0].filename : 'default.png',
                 category_id: req.body.category,
                 brand_id: req.body.brand
-            }, 
+            },
             {
                 include: [{association : "categories"}, {association : "brands"}]
-            }
-            )
+            })
+            return res.redirect('/');
         }
-        
-        return res.redirect('/');
     },
 
     // LECTURA
 
-    list: (req, res) => {                      
+    list: (req, res) => {
 
         if (req.params.category) {    
             db.Product.findAll({
                 where: {category_id : req.params.category}
             })
-                .then(function(products) {                    
-                    return res.render('./products/listProducts',{products})  
-                })           
+                .then(function(products) {
+                    return res.render('./products/listProducts',{products})
+                })
         } else {
             db.Product.findAll()
                 .then(function(products) {
-                    return res.render('./products/listProducts',{products})  
+                    return res.render('./products/listProducts',{products})
                 })
         }
     },
@@ -121,20 +113,20 @@ const productsController = {
             {include: [{association: "categories"}, {association:"brands"}]
         })
         .then(function(product) {
-            db.Product.findAll( 
+            db.Product.findAll(
                 {where : {category_id : product.category_id}}
             )
             .then(function(categoryProducts) {
                     return res.render('./products/productDetail.ejs', {
-                        product: product, 
-                        categoryProducts : categoryProducts 
+                        product: product,
+                        categoryProducts : categoryProducts
                     })
                 }
             )
         })
     },
 
-    // ACTUALIZACION
+    // ACTUALIZACIÓN
 
     edit: (req, res) => {
         db.Product.findByPk(req.params.id, {
@@ -194,7 +186,7 @@ const productsController = {
         return res.redirect('/');
     },
 
-    // ELIMINACION
+    // ELIMINACIÓN
 
     erase: (req, res) => {
         db.Product.destroy({
