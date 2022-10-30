@@ -19,6 +19,8 @@ Webs que sirven de referencia para este market place:
 
 Wireframes:
 
+Vistas de usuarios clientes
+
 * : Pagina Principal - https://wireframe.cc/jP8dsw
 * : Listado de Productos - https://wireframe.cc/94IATU
 * : Detalle de Producto - https://wireframe.cc/Q6abWW
@@ -28,6 +30,11 @@ Wireframes:
 * : Formulario de Login - https://wireframe.cc/khVH86
 * : Pagina de Perfil de Usuario - https://wireframe.cc/6u0Qer
 * : Carrito de Compras - https://wireframe.cc/0Nua82
+
+Vistas de usuarios administradores
+
+* : Detalle de Producto (administrador) - https://wireframe.cc/rnU5jQ
+* : Pagina de Perfil de Usuario (adminitrador) https://wireframe.cc/u1WAUK
 
 Web de tablero de trabajo:
 * : https://trello.com/b/xcOe6A5e/proyecto-dh
