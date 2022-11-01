@@ -152,6 +152,7 @@ const productsController = {
         const resultValidation = validationResult(req)
 
         if (resultValidation.errors.length > 0) { 
+            
             db.Product.findByPk(req.params.id, {
                 include: [{association: "categories"}, {association:"brands"}]
             })
@@ -163,6 +164,7 @@ const productsController = {
                             return res.render('./products/editProduct.ejs', {
                                 errors: resultValidation.mapped(),
                                 old : req.body,
+                                product: product,
                                 categories : categories,
                                 brands : brands 
                             })

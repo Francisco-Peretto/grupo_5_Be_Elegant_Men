@@ -38,6 +38,14 @@
                             <%= errors.password.msg %>
                         </div>
                     <% } %>
+                    <section>
+                        <input type="password" id="repassword" name="repassword" placeholder="Repita la contraseña">
+                    </section>
+                    <% if (locals.errors && errors.repassword) { %>
+                        <div class="divError">
+                            <%= errors.repassword.msg %>
+                        </div>
+                    <% } %>
                     <div class="registerAvatarUpload">
                         <h4>Foto de perfil</h4>
                         <label for="avatar">

@@ -3,18 +3,26 @@ const path = require('path');
 
 const validations = [
     body('first_name')
-        .notEmpty().withMessage('El campo está vacío')
-        .bail().isLength({ min: 2 }).withMessage('El nombre debe contener al menos 2 caracteres'),
+        .trim().not().notEmpty().withMessage('El campo está vacío').bail()
+        .isLength({ min: 2 }).withMessage('El nombre debe contener al menos 2 caracteres'),
 
     body('last_name')
-        .notEmpty().withMessage('El campo está vacío')
-        .bail().isLength({ min: 2 }).withMessage('El apellido debe contener al menos 2 caracteres'),
+        .trim().not().notEmpty().withMessage('El campo está vacío').bail()
+        .isLength({ min: 2 }).withMessage('El apellido debe contener al menos 2 caracteres'),
     
     body('email')
-        .isEmail().withMessage('Debes escribir un correo válido'),
+        .trim().not().isEmail().withMessage('Debes escribir un correo válido'),
     
     body('password')
         .isLength({ min: 8 }).withMessage('La contraseña debe contener al menos 8 caracteres'),
+
+    body('repassword').custom((value, { req }) => {
+        if (req.body.repassword != req.body.password) {
+            throw new Error('Las contraseñas no coinciden');
+        } else {
+            return true;
+        }
+    }),
     
     body('avatar').custom((value, { req }) => {
         let file = req.files;
@@ -23,7 +31,7 @@ const validations = [
         if (file[0] == undefined ) {
             throw new Error('Debes de subir una imagen');
         } else {
-        let fileExtension = path.extname(file[0].originalname)
+        let fileExtension = path.extname(file[0].originalname);
         if (!acceptedExtensions.includes(fileExtension)) {
             throw new Error (`las extensiones de imagen permitidas son ${acceptedExtensions.join(', ')}`);
         } else {
