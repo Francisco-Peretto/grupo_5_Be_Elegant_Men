@@ -33,8 +33,8 @@ Vistas de usuarios clientes
 
 Vistas de usuarios administradores
 
-* : Detalle de Producto (administrador) - https://wireframe.cc/rnU5jQ
-* : Pagina de Perfil de Usuario (adminitrador) https://wireframe.cc/u1WAUK
+* : Detalle de Producto - https://wireframe.cc/rnU5jQ
+* : Pagina de Perfil de Usuario - https://wireframe.cc/u1WAUK
 
 Web de tablero de trabajo:
 * : https://trello.com/b/xcOe6A5e/proyecto-dh

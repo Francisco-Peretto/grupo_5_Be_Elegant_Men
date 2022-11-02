@@ -8,8 +8,8 @@
                 <form class="formularioEditProduct" action="/products/<%= product.sku %>?_method=PUT" method="POST" enctype="multipart/form-data"> 
                     <section>
                         <input type="hidden" name="sku" value="<%= product.sku%>">
-                        <input type="text" id="name" name="name" placeholder="Nombre del producto" value="<%= product.name %> " required>
-                        <input type="number" id="price" name="price" placeholder="Precio del producto" value="<%= product.price %>" required>
+                        <input type="text" id="name" name="name" placeholder="Nombre del producto" value="<%= locals.old ? old.name : product.name %>" >
+                        <input type="number" id="price" name="price" placeholder="Precio del producto" value="<%= locals.old ? old.price : product.price %>" >
                     </section>
                     <% if (locals.errors) { %>
                         <% if (errors.name) { %>
@@ -24,7 +24,7 @@
                         <% } %>
                     <% } %>
                     <section> 
-                        <input type="text" id="detail" name="detail" placeholder="Descripción del producto" value="<%= locals.old ? old.detail : product.detail %>" required></input>
+                        <input type="text" id="detail" name="detail" placeholder="Descripción del producto" value="<%= locals.old ? old.detail : product.detail %>" ></input>
                     </section>
                     <% if (locals.errors && errors.detail) { %>
                         <div class="divError">
@@ -33,7 +33,7 @@
                     <% } %>
                     <section> 
                         <label>Selecciona la marca:</label>
-                        <select name="brand" required>
+                        <select name="brand" >
                             <% for( const brand of brands) { %>
                                 <% if (brand.id == product.brand_id) { %>
                                     <option value="<%= brand.id %>" selected><%= brand.name %></option>
@@ -44,7 +44,7 @@
                     </section>
                     <section>
                         <label>Selecciona la categoría:</label>
-                        <select name="category" required>
+                        <select name="category" >
                             <% for( const category of categories) { %>
                                 <% if (category.id == product.category_id) { %>
                                     <option value="<%= category.id %>" selected><%= category.name %></option>

@@ -21,34 +21,45 @@ const usersController = {
 
     access: (req , res) => {
 
-        db.User.findOne({
-            where : {email : req.body.email}
-        })
-            .then((userToLogin) => {
+        const resultValidation = validationResult(req)
 
-                let correctPassword = bcryptjs.compareSync(req.body.password, userToLogin.password);
-                if (correctPassword) {
-                    delete userToLogin.password
-                    req.session.userLogged = userToLogin
-                    userToLogin.admin == 1 ? req.session.isAdmin = true : req.session.isAdmin = false;
-                    if (req.body.remember != undefined) {
-                        res.cookie('userEmail' , req.body.email, {maxAge : (((1000 * 60) * 60)*24)}) // cookie de 24 hs
+        if (resultValidation.errors.length > 0) { 
+            return res.render('users/login' , {
+                errors: resultValidation.mapped(),
+                old : req.body
+            })
+        } else {
+            db.User.findOne({
+                where : {email : req.body.email}
+            })
+                .then((userToLogin) => {
+    
+                    let correctPassword = bcryptjs.compareSync(req.body.password, userToLogin.password);
+                    if (correctPassword) {
+                        delete userToLogin.password
+                        req.session.userLogged = userToLogin
+                        userToLogin.admin == 1 ? req.session.isAdmin = true : req.session.isAdmin = false;
+                        if (req.body.remember != undefined) {
+                            res.cookie('userEmail' , req.body.email, {maxAge : (((1000 * 60) * 60)*24)}) // cookie de 24 hs
+                        }
+    
+                        return res.redirect('profile');
+    
+                    } else {
+                        return res.render('users/login' , {
+                            errors: {password: {msg: 'Contraseña incorrecta'}},
+                            old : req.body
+                        })
                     }
-
-                    return res.redirect('profile');
-
-                } else {
-                    return res.render('users/login' , {
-                        errors: {password: {msg: 'Contraseña incorrecta'}},
-                        old : req.body
-                    })
-                }
-            })
-            .catch((fail) => {
-                return res.render('users/login' , {
-                    errors: {email: {msg: 'El email con el que intenta ingresar no existe'}}
                 })
-            })
+                .catch((fail) => {
+                    return res.render('users/login' , {
+                        errors: {email: {msg: 'El email con el que intenta ingresar no existe'}}
+                    })
+                })
+        }
+
+
 
     },
 

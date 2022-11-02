@@ -11,7 +11,7 @@ const validations = [
         .isLength({ min: 2 }).withMessage('El apellido debe contener al menos 2 caracteres'),
     
     body('email')
-        .trim().not().isEmail().withMessage('Debes escribir un correo válido'),
+        .isEmail().withMessage('Debes escribir un correo válido'),
     
     body('password')
         .isLength({ min: 8 }).withMessage('La contraseña debe contener al menos 8 caracteres'),
@@ -29,7 +29,7 @@ const validations = [
         let acceptedExtensions = ['.jpg', '.jpeg', '.png', '.gif' ];
 
         if (file[0] == undefined ) {
-            throw new Error('Debes de subir una imagen');
+            throw new Error('Debes subir una imagen');
         } else {
         let fileExtension = path.extname(file[0].originalname);
         if (!acceptedExtensions.includes(fileExtension)) {

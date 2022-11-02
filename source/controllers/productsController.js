@@ -152,17 +152,15 @@ const productsController = {
         const resultValidation = validationResult(req)
 
         if (resultValidation.errors.length > 0) { 
-            
-            db.Product.findByPk(req.params.id, {
-                include: [{association: "categories"}, {association:"brands"}]
-            })
+           
+            db.Product.findByPk(req.params.id,)
                 .then(function(product) {
                     db.Category.findAll()
                     .then(function(categories) {
                         db.Brand.findAll()
                         .then(function(brands) {
                             return res.render('./products/editProduct.ejs', {
-                                errors: resultValidation.mapped(),
+                                errors : resultValidation.mapped(),
                                 old : req.body,
                                 product: product,
                                 categories : categories,
@@ -182,9 +180,8 @@ const productsController = {
                 },
                 {where : {sku: req.params.id}}
             )
+            return res.redirect('/');
         }
-
-        return res.redirect('/');
     },
 
     // ELIMINACIÓN

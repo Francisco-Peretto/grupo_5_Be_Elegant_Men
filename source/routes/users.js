@@ -9,6 +9,7 @@ const storage = require('../modules/storage');
 const upload = multer({storage:storage('../../uploads/users')});
 
 const registerValidations = require('../validations/users/registerValidations');
+const loginValidations = require('../validations/users/loginValidations');
 
 const isLogged = require('../middlewares/isLogged');
 const noLogged = require('../middlewares/noLogged');
@@ -22,7 +23,7 @@ router.post('/register', upload.any(), registerValidations, usersController.reco
 
 //ruta de login
 router.get('/login', isLogged, usersController.login);
-router.post('/login', usersController.access);
+router.post('/login', loginValidations, usersController.access);
 
 // rutas de perfil
 router.get('/profile', usersController.profile);
