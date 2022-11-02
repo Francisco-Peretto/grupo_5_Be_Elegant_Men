@@ -24,7 +24,7 @@
                         <% } %>
                     <% } %>
                     <section> 
-                        <input type="text" id="detail" name="detail" placeholder="Descripción del producto" value="<%= product.detail %>" required></input>
+                        <input type="text" id="detail" name="detail" placeholder="Descripción del producto" value="<%= locals.old ? old.detail : product.detail %>" required></input>
                     </section>
                     <% if (locals.errors && errors.detail) { %>
                         <div class="divError">
@@ -54,7 +54,8 @@
                         </select>
                     </section>
                     <div class="editProductFotosUpload">
-                        <p>Foto/s del Producto</p>
+                        <p>Foto del Producto</p>
+                        <input type="file" value="<%= product.image %>" name="previousImage" alt="Previous image">
                         <label for="image">
                             <i class="fa-solid fa-cloud-arrow-up"></i>
                         </label>

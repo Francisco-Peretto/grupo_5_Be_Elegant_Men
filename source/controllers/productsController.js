@@ -176,7 +176,7 @@ const productsController = {
                 name: req.body.name,
                 detail: req.body.detail,
                 price: req.body.price,
-                image: req.files && req.files.length > 0 ? req.files[0].filename : 'default.png',
+                image: req.files && req.files.length > 0 ? req.files[0].filename : req.previousImage,
                 category_id: req.body.category,
                 brand_id: req.body.brand
                 },

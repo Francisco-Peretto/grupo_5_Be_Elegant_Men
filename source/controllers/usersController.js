@@ -30,6 +30,7 @@ const usersController = {
                 if (correctPassword) {
                     delete userToLogin.password
                     req.session.userLogged = userToLogin
+                    userToLogin.admin == 1 ? req.session.isAdmin = true : req.session.isAdmin = false;
                     if (req.body.remember != undefined) {
                         res.cookie('userEmail' , req.body.email, {maxAge : (((1000 * 60) * 60)*24)}) // cookie de 24 hs
                     }
