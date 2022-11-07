@@ -1,20 +1,71 @@
-const db = require("../database/models")
+const db = require("../database/models");
 const { Op } = require("sequelize");
 const {validationResult} = require('express-validator');
 
 const productsController = {
 
-    //INDEX
+    // Vista de productos
 
-    index: (req, res) => {
+    index: async (req, res) => {
+        try {
+            await db.Product.findAll()
+                .then(product => { db.Category.findAll()
+                    .then(categories => { db.Brand.findAll()
+                        .then(brands => {
+                            return res.render('./products/index.ejs', {
+                                product: product,
+                                categories : categories,
+                                brands : brands
+                            })
+                        })
+                    })
+                })
+            } catch (error) { console.log(error); }
+        },
 
-        db.Product.findAll()
-            .then(function(product) {
-                db.Category.findAll()
-                .then(function(categories) {
-                    db.Brand.findAll()
-                    .then(function(brands) {
-                        return res.render('./products/index.ejs', {
+    search: async (req,res) => {
+        try {
+            await db.Product.findAll({ where: { name: { [Op.like] : `%${req.query.search}%` }} })
+                .then(products => res.render('./products/listProducts', {products}))
+        } catch (error) { console.log(error); }
+    },
+
+    list: async (req, res) => {
+        try {
+            if (req.params.category) {
+                await db.Product.findAll({ where: {category_id : req.params.category} })
+                    .then(products => { return res.render('./products/listProducts',{products}) })
+            } else {
+                await db.Product.findAll()
+                    .then(products => { return res.render('./products/listProducts',{products}) })
+            }
+        }
+        catch (error) { console.log(error); }
+    },
+
+    detail: async (req, res) => {
+        try {
+            await db.Product.findByPk(req.params.id, {include: [{association: "categories"}, {association:"brands"}] })
+        .then(product => { db.Product.findAll({where : {category_id : product.category_id} })
+            .then(categoryProducts => {
+                    return res.render('./products/productDetail.ejs', {
+                        product: product,
+                        categoryProducts : categoryProducts
+                    })
+                })
+            })
+        } catch (error) { console.log(error); }
+    },
+
+    // Creación de productos
+
+    create: async (req, res) => {
+        try {
+            await db.Product.findAll()
+            .then(product => { db.Category.findAll()
+                .then(categories => { db.Brand.findAll()
+                    .then(brands => { 
+                        return res.render('./products/createProduct.ejs', {
                             product: product,
                             categories : categories,
                             brands : brands
@@ -22,176 +73,95 @@ const productsController = {
                     })
                 })
             })
+        } catch (error) { console.log(error); }
     },
 
-    // BÚSQUEDA
-
-    search: (req,res) => {
-
-        db.Product.findAll({
-            where: { name: { [Op.like] : `%${req.query.search}%` }}
-        })
-            .then(function(products) {
-                return res.render('./products/listProducts', {products})
-            })
-    },
-
-    // CREACIÓN
-
-    create: (req, res) => {
-
-        db.Product.findAll()
-            .then(function(product) {
-                db.Category.findAll()
-                .then(function(categories) {
-                    db.Brand.findAll()
-                    .then(function(brands) {
+    save: async (req, res) => {
+        const resultValidation = validationResult(req)
+        try {
+            if (resultValidation.errors.length > 0) {
+                await db.Category.findAll()
+                .then(categories => { db.Brand.findAll()
+                    .then(brands => {
                         return res.render('./products/createProduct.ejs', {
-                            product: product, 
+                            errors: resultValidation.mapped(),
+                            old : req.body,
                             categories : categories,
                             brands : brands
                         })
                     })
                 })
-            })
-    },
-
-    save: (req, res) => {
-        const resultValidation = validationResult(req)
-
-        if (resultValidation.errors.length > 0) {
-
-                db.Category.findAll()
-                .then(function(categories) {
-                    db.Brand.findAll()
-                    .then(function(brands) {
-                        return res.render('./products/createProduct.ejs', {
-                            errors: resultValidation.mapped(),
-                            old : req.body,
-                            categories : categories,
-                            brands : brands 
-                        })
-                    })
-                })
-        } else {
-            db.Product.create({
+            } else {
+            await db.Product.create({
                 name: req.body.name,
                 detail: req.body.detail,
                 price: req.body.price,
                 image: req.files && req.files.length > 0 ? req.files[0].filename : 'default.png',
                 category_id: req.body.category,
                 brand_id: req.body.brand
-            },
-            {
-                include: [{association : "categories"}, {association : "brands"}]
-            })
+            }, { include: [{association : "categories"}, {association : "brands"}] })
             return res.redirect('/');
         }
-    },
+    } catch (error) { console.log(error); }
+},
 
-    // LECTURA
+    // Edición y eliminación de productos
 
-    list: (req, res) => {
-
-        if (req.params.category) {    
-            db.Product.findAll({
-                where: {category_id : req.params.category}
-            })
-                .then(function(products) {
-                    return res.render('./products/listProducts',{products})
-                })
-        } else {
-            db.Product.findAll()
-                .then(function(products) {
-                    return res.render('./products/listProducts',{products})
-                })
-        }
-    },
-
-    detail: (req, res) => {
-        db.Product.findByPk(req.params.id,
-            {include: [{association: "categories"}, {association:"brands"}]
-        })
-        .then(function(product) {
-            db.Product.findAll(
-                {where : {category_id : product.category_id}}
-            )
-            .then(function(categoryProducts) {
-                    return res.render('./products/productDetail.ejs', {
-                        product: product,
-                        categoryProducts : categoryProducts
-                    })
-                }
-            )
-        })
-    },
-
-    // ACTUALIZACIÓN
-
-    edit: (req, res) => {
-        db.Product.findByPk(req.params.id, {
-            include: [{association: "categories"}, {association:"brands"}]
-        })
-            .then(function(product) {
-                db.Category.findAll()
-                .then(function(categories) {
-                    db.Brand.findAll()
-                    .then(function(brands) {
+    edit: async (req, res) => {
+        try {
+            await db.Product.findByPk(req.params.id, { include: [{association: "categories"}, {association:"brands"}] })
+            .then(product => { db.Category.findAll()
+                .then(categories => { db.Brand.findAll()
+                    .then(brands => {
                         return res.render('./products/editProduct.ejs', {
                             product: product,
                             categories : categories,
-                            brands : brands 
+                            brands : brands
                         })
                     })
                 })
             })
+        } catch (error) { console.log(error); }
     },
 
-    update: (req, res) => {
-
+    update: async (req, res) => {
         const resultValidation = validationResult(req)
-
-        if (resultValidation.errors.length > 0) { 
-           
-            db.Product.findByPk(req.params.id,)
-                .then(function(product) {
-                    db.Category.findAll()
-                    .then(function(categories) {
-                        db.Brand.findAll()
-                        .then(function(brands) {
-                            return res.render('./products/editProduct.ejs', {
-                                errors : resultValidation.mapped(),
-                                old : req.body,
-                                product: product,
-                                categories : categories,
-                                brands : brands 
+        try {
+            if (resultValidation.errors.length > 0) {
+                await db.Product.findByPk(req.params.id)
+                    .then(product => { db.Category.findAll()
+                        .then(categories => { db.Brand.findAll()
+                            .then(brands => {
+                                return res.render('./products/editProduct.ejs', {
+                                    errors : resultValidation.mapped(),
+                                    old : req.body,
+                                    product: product,
+                                    categories : categories,
+                                    brands : brands
+                                })
                             })
                         })
                     })
-                })
-        } else {
-            db.Product.update({
-                name: req.body.name,
-                detail: req.body.detail,
-                price: req.body.price,
-                image: req.files && req.files.length > 0 ? req.files[0].filename : req.previousImage,
-                category_id: req.body.category,
-                brand_id: req.body.brand
-                },
-                {where : {sku: req.params.id}}
-            )
-            return res.redirect('/');
-        }
-    },
+                } else {
+                    await db.Product.update({
+                        name: req.body.name,
+                        detail: req.body.detail,
+                        price: req.body.price,
+                        image: req.files && req.files.length > 0 ? req.files[0].filename : req.previousImage,
+                        category_id: req.body.category,
+                        brand_id: req.body.brand
+                        }, {where : {sku: req.params.id}}
+                    )
+                    return res.redirect('/');
+                }
+            } catch (error) { console.log(error); }
+        },
 
-    // ELIMINACIÓN
-
-    erase: (req, res) => {
-        db.Product.destroy({
-            where: {sku: req.params.id}
-        })
-
-        return res.render('./products/index.ejs');
+    erase: async (req, res) => {
+        try {
+            await db.Product.destroy({ where: {sku: req.params.id} })
+            return res.render('./products/index.ejs');
+        } catch (error) { console.log(error); }
     }
 }
 

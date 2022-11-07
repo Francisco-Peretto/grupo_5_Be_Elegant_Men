@@ -150,10 +150,8 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `first_name`, `last_name`, `email`, `password`, `avatar`, `admin`) VALUES
-(1, 'Mateo', 'González', 'correo_fantasma@gmail.com', '$2a$10$FQag5sflLp/Zz6kWvCvNC.J61MvPDjvX2pKhgJUPrCN7JQiiQlmku', 'default.png', 0),
-(2, 'Karlos', 'Market', 'km@gmail.com', '$2a$10$drdmHWZDmTpsjEst2BhcMOnxX/qoZdA1k0e6qAWiFPURYaljChngO', 'image-1662048555871.jpg', 0),
-(3, 'Diego Armando', 'Maradona', 'diego@maradona.com', '$2a$10$PSzFD5XEGnGEJIk0IwORceTgUugsDeHZ.V6e2K7tUVblE9k80egia', 'image-1663000464342.png', 0),
-(4, 'ad', 'min', 'admin@beelegantmen.com', '$2a$10$ttemeksug08c/Iva5WM3r.Vgn4je0USNcRRybExS99M7L4hk8al3.', 'image-1663892577863.png', 1);
+(1, 'Ad', 'Min', 'admin@beelegantmen.com', '$2a$10$WZ1ghFBsVqo2H1dWxl3UNewjyso/jij9codyIdiifi6L.p5hxo40i', 'avatar-1667862812056.png', 1),
+(2, 'Diego', 'Maradona', 'diegomaradona@usuario.com', '$2a$10$LekOymw.tXGnOo1SEA.3vufihE3p6VvvH6bl9nHZ.KMUJ9xQv.2aO', 'avatar-1667862874381.png', 0);
 
 
 --
