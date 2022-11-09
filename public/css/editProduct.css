@@ -52,7 +52,7 @@
 }
 
 .formularioEditProduct section input {
-    width: 48%;
+    width: 108%;
     height: 30px;
 }
 
@@ -103,6 +103,7 @@
 
 .editProductFotosUpload p {
     color: #adb1b5;
+    margin: 0%;
 }
 
 .editProductFotosUpload i {

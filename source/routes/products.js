@@ -16,7 +16,7 @@ router.get('/', productsController.index);
 
 //rutas de creación
 router.get('/products/create', isAdmin, productsController.create); 
-router.post('/products/save', upload.any(), createProductsValidations, productsController.save);
+router.post('/products/save', upload.single('image'), createProductsValidations, productsController.save);
 
 // rutas de lectura
 router.get('/products/search', productsController.search);
@@ -25,7 +25,7 @@ router.get('/products/:id', productsController.detail);
 
 //rutas de edición
 router.get('/products/:id/edit', isAdmin, productsController.edit);
-router.put('/products/:id', upload.any(), editProductsValidations, productsController.update);
+router.put('/products/:id', upload.single('image'), editProductsValidations, productsController.update);
 
 //ruta de borrado
 router.delete('/products/:id', productsController.erase);

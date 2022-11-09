@@ -19,7 +19,7 @@ router.get('/cart', noLogged, usersController.cart);
 
 //rutas de registro
 router.get('/register', isLogged, usersController.register);
-router.post('/register', upload.any(), registerValidations, usersController.record);
+router.post('/register', upload.single('avatar'), registerValidations, usersController.record);
 
 //ruta de login
 router.get('/login', isLogged, usersController.login);
@@ -31,7 +31,7 @@ router.get('/logout', usersController.logout);
 
 //rutas de edición de usuario
 router.patch('/updateNames/:id', usersController.updateUserNames);
-router.patch('/updateAvatar/:id', upload.any(), registerValidations, usersController.updateUserAvatar);
+router.patch('/updateAvatar/:id', upload.single('avatar'), registerValidations, usersController.updateUserAvatar);
 router.patch('/updatePass/:id', usersController.updateUserPass);
 
 //ruta de borrado

@@ -8,19 +8,19 @@
                 <form class="formularioCreateProduct" action="/products/save" method="post" enctype="multipart/form-data">
                     <section>
                         <input type="text" id="name" name="name" placeholder="Nombre del producto" value="<%= locals.old ? old.name : '' %>">
+                    </section>
+                    <% if (locals.errors && errors.name) { %>
+                        <div class="divError">
+                            <%= errors.name.msg %>
+                        </div>
+                    <% } %>
+                    <section> 
                         <input type="number" id="price" name="price" placeholder="Precio del producto" value="<%= locals.old ? old.price : '' %>">
                     </section>
-                    <% if (locals.errors) { %>
-                        <% if (errors.name) { %>
-                            <div class="divError">
-                                <%= errors.name.msg %>
-                            </div>
-                        <% } %>
-                        <% if (errors.price) { %>
-                            <div class="divError">
-                                <%= errors.price.msg %>
-                            </div>
-                        <% } %>
+                    <% if (locals.errors && errors.price) { %>
+                        <div class="divError">
+                            <%= errors.price.msg %>
+                        </div>
                     <% } %>
                     <section>
                         <input type="text" id="detail" name="detail" placeholder="Descripción del producto" value="<%= locals.old ? old.detail : '' %>"></input>

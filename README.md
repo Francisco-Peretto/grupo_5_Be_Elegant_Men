@@ -11,11 +11,12 @@ Integrantes:
 * Juan Romano:
 
 Webs que sirven de referencia para este market place:
-* : https://www.investidas.com.ar : esta página sirve de referencia principal para el detalle del producto.
-* : https://www.diselo.com.ar : esta pagina sirve de referencia para el Formulario de login y registro.
-* : https://www.dafiti.com.ar : web de referencia para el home
+
+* : https://www.investidas.com.ar : referencia principal para el detalle del producto.
+* : https://www.diselo.com.ar : referencia para el Formulario de login y registro.
+* : https://www.dafiti.com.ar : referencia para el home
 * : https://www.mercadolibre.com.ar : web utilizada por ser referente en el rubro de tiendas online
-* : https://www.ae.com/intl/es/cart : web utilizada para el carrito de compras7
+* : https://www.ae.com/intl/es/cart : referencia para el carrito de compras
 
 Wireframes:
 
@@ -37,4 +38,5 @@ Vistas de usuarios administradores
 * : Pagina de Perfil de Usuario - https://wireframe.cc/u1WAUK
 
 Web de tablero de trabajo:
+
 * : https://trello.com/b/xcOe6A5e/proyecto-dh
