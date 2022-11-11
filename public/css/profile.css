@@ -98,6 +98,14 @@
     margin-top: 2%;
 }
 
+.sectionDatos input {
+    width: 90%;
+    height: 1.5rem;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+
 .cuerpoProfile   fieldset {
     margin-bottom: 1%;
     color:#adb1b5;
@@ -238,4 +246,20 @@
 .createButton:active {
     box-shadow: .10rem .10rem 1rem #fff, 
     -.10rem -.10rem 1rem #ccc;
+}
+
+.eventError {
+    width: 90%;
+    height: 1.5rem;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    box-shadow: 0 0 0 2px red;
+}
+
+.eventSuccess {
+    width: 90%;
+    height: 1.5rem;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    box-shadow: 0 0 0 2px green;
 }
