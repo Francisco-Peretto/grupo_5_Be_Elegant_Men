@@ -11,6 +11,7 @@ const upload = multer({storage:storage('../../uploads/users')});
 const isAdmin = require('../middlewares/isAdmin');
 const createProductsValidations = require('../validations/products/createProductsValidations')
 const editProductsValidations = require('../validations/products/editProductsValidations')
+
 // rutas de pagina principal
 router.get('/', productsController.index);
 
@@ -29,5 +30,10 @@ router.put('/products/:id', upload.single('image'), editProductsValidations, pro
 
 //ruta de borrado
 router.delete('/products/:id', productsController.erase);
+
+//APIS
+
+router.get('/api/products', productsController.indexApi);
+router.get('/api/products/:id', productsController.detailApi);
 
 module.exports = router;

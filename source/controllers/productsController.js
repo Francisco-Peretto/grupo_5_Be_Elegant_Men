@@ -9,11 +9,11 @@ const productsController = {
     index: async (req, res) => {
         try {
             await db.Product.findAll()
-                .then(product => { db.Category.findAll()
+                .then(products => { db.Category.findAll()
                     .then(categories => { db.Brand.findAll()
                         .then(brands => {
                             return res.render('./products/index.ejs', {
-                                product: product,
+                                products: products,
                                 categories : categories,
                                 brands : brands
                             })
@@ -162,7 +162,44 @@ const productsController = {
             await db.Product.destroy({ where: {sku: req.params.id} })
             return res.render('./products/index.ejs');
         } catch (error) { console.log(error); }
-    }
+    },
+
+    //APIs
+
+    indexApi: async (req, res) => {
+        try {
+            await db.Product.findAll({
+                include: [{association: "categories"}, {association:"brands"}] 
+            })
+                .then(products => {
+                        return res.json({
+                            count: products.length,
+                            countByCategory : {
+                                ambos : products.filter(product => {product.categories.name == "ambos"}).length,
+                                camisas : products.filter(product => {product.categories.name == "camisas"}).length,
+                                corbatas : products.filter(product => {product.categories.name == "corbatas"}).length,
+                                pantalones : products.filter(product => {product.categories.name == "pantalones"}).length,
+                                sacos : products.filter(product => {product.categories.name == "sacos"}).length,
+                                zapatos : products.filter(product => {product.categories.name == "zapatos"}).length
+                            },
+                            productos : products
+                    })
+                })
+            } catch (error) { console.log(error); }
+        },
+
+        detailApi: async (req, res) => {
+            try {
+                await db.Product.findByPk(req.params.id, {
+                    include: [{association: "categories"}, {association:"brands"}] 
+                })
+                    .then(product => { 
+                            return res.json({
+                                producto: product
+                            })
+                    })
+            } catch (error) { console.log(error); }
+        }
 }
 
 module.exports = productsController;
