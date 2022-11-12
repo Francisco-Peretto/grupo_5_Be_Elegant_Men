@@ -25,10 +25,12 @@
                                 <label for="first_name">Nombre</label>
                                 <input class="fisrtNameProfileInput"type="text" name="first_name" value="<%= user.first_name %>">
                             </div>
+                            <span class="fisrtNameProfileSpan">El campo no puede quedar vacio</span>
                             <div>
                                 <label for="last_name">Apellido</label>
                                 <input class="lastNameProfileInput"type="text" name="last_name"value="<%= user.last_name %>">
                             </div>
+                            <span class="lastNameProfileSpan">El campo no puede quedar vacio</span>
                             <button class="nameButton" type="submit">Editar datos</button>
                         </fieldset>
                     </form>
@@ -46,14 +48,17 @@
                                 <label for="actualPass">Ingrese su contraseña actual</label>
                                 <input class="actualPassProfileInput"type="password" name="actualPass">
                             </div>
+                            <span class="actualPassProfileSpan">El campo no puede quedar vacio</span>
                             <div>
                                 <label for="newPass">Ingrese su nueva contraseña</label>
                                 <input class="newPassProfileInput"type="password" name="newPass">
                             </div>
+                            <span class="newPassProfileSpan">El campo no puede quedar vacio</span>
                             <div>
                                 <label for="checkNewPass">Repita su nueva contraseña</label>
                                 <input class="checkNewPassProfileInput"type="password" name="checkNewPass">
                             </div>
+                            <span class="checkNewPassProfileSpan">El campo no puede quedar vacio</span>
                             <button class="passButton" type="submit">Cambiar contraseña</button>
                         </fieldset>
                     </form>

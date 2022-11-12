@@ -263,3 +263,9 @@
     margin-bottom: 1%;
     box-shadow: 0 0 0 2px green;
 }
+
+.fisrtNameProfileSpan, .lastNameProfileSpan, .actualPassProfileSpan, .newPassProfileSpan, .checkNewPassProfileSpan {
+    display: none;
+    color: red;
+    margin-bottom: 3%;  
+}

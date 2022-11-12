@@ -9,6 +9,7 @@
                     <section>
                         <input type="text" id="first_name" name="first_name" placeholder="Nombre/s" value="<%= locals.old ? old.first_name : '' %>">
                     </section>
+                    <span class="firstNameSpan">El campo no puede quedar vacio</span>
                     <% if (locals.errors && errors.first_name) { %>
                         <div class="divError">
                             <%= errors.first_name.msg %>
@@ -17,6 +18,7 @@
                     <section>
                         <input type="text" id="last_name" name="last_name" placeholder="Apellido/s" value="<%= locals.old ? old.last_name : '' %>">
                     </section>
+                    <span class="lastNameSpan">El campo no puede quedar vacio</span>
                     <% if (locals.errors && errors.last_name) { %>
                         <div class="divError">
                             <%= errors.last_name.msg %>
@@ -25,6 +27,7 @@
                     <section>
                         <input type="email" id="email" name="email" placeholder="Correo Electrónico" value="<%= locals.old ? old.email : '' %>">
                     </section>
+                    <span class="emailSpan">Debe ingresar un correo valido</span>
                     <% if (locals.errors && errors.email) { %>
                         <div class="divError">
                             <%= errors.email.msg %>
@@ -33,6 +36,7 @@
                     <section>
                         <input type="password" id="password" name="password" placeholder="Contraseña">
                     </section>
+                    <span class="passSpan">El campo no puede quedar vacio</span>
                     <% if (locals.errors && errors.password) { %>
                         <div class="divError">
                             <%= errors.password.msg %>
@@ -41,6 +45,7 @@
                     <section>
                         <input type="password" id="repassword" name="repassword" placeholder="Repita la contraseña">
                     </section>
+                    <span class="rePassSpan">El campo no puede quedar vacio</span>
                     <% if (locals.errors && errors.repassword) { %>
                         <div class="divError">
                             <%= errors.repassword.msg %>

@@ -133,6 +133,12 @@
     box-shadow: 0 0 0 2px green;
 }
 
+.nameSpan, .priceSpan, .detailSpan {
+    display: none;
+    color: red;
+    margin-bottom: 3%;
+}
+
   /* mediasquerys */
 
 @media (max-width: 479px) {

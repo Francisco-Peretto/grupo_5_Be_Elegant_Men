@@ -7,6 +7,7 @@
                 <h1>Ingresa a tu cuenta</h1>
                 <form class="formularioLogin"action="/users/login" method="post">
                     <input type="text" id="email" name="email" placeholder="Correo Electrónico" value="<%= locals.old ? old.email : '' %>">
+                    <span class="emailSpan">Debe ingresar un correo electronico valido</span>
                     <% if (locals.errors && errors.email) { %>
                         <div class="divError">
                             <%= errors.email.msg %>
@@ -18,6 +19,7 @@
                             <%= errors.password.msg %>
                         </div>
                     <% } %>
+                    <span class="passSpan">El campo no puede quedar vacio</span>
                     <div class="divRemember">
                         <input class="input-remember" type="checkbox" id="remember" name="remember">
                         <label for="remember"> Recordarme</label>
