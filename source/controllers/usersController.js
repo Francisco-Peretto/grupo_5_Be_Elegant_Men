@@ -173,6 +173,10 @@ const usersController = {
             await db.User.findAll()
                 .then(users => {
 
+                    let arrUser = delete users.password
+
+                    console.log(JSON.STRINGIFY(arrUser,null,2))
+
                     return res.json({
                             count: users.length,
                             usuarios : users
