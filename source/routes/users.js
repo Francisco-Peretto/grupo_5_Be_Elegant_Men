@@ -37,4 +37,9 @@ router.patch('/updatePass/:id', usersController.updateUserPass);
 //ruta de borrado
 router.delete('/destroyUser/:id', usersController.destroy);
 
+//APIS
+
+router.get('/api/users', usersController.listUsersApi);
+router.get('/api/users/:id', usersController.userDetailApi);
+
 module.exports = router;

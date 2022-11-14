@@ -164,7 +164,33 @@ const usersController = {
         try {
             return res.render('users/cart');
         } catch (error) { console.log(error); }
-    }
+    },
+
+    //APIs
+
+    listUsersApi: async (req, res) => {
+        try {
+            await db.User.findAll()
+                .then(users => {
+
+                    return res.json({
+                            count: users.length,
+                            usuarios : users
+                    })
+                })
+            } catch (error) { console.log(error); }
+        },
+
+    userDetailApi: async (req, res) => {
+            try {
+                await db.User.findByPk(req.params.id)
+                    .then(user => { 
+                            return res.json({
+                                Usuario: user
+                            })
+                    })
+            } catch (error) { console.log(error); }
+        }
 }
 
 module.exports = usersController;
