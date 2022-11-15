@@ -1,22 +1,40 @@
-const firstNameInput = document.querySelector('.fisrtNameProfileInput')
+const firstNameInput = document.querySelector('.firstNameProfileInput')
 const lastNameInput = document.querySelector('.lastNameProfileInput')
 const actualPassInput = document.querySelector('.actualPassProfileInput')
 const newPassInput = document.querySelector('.newPassProfileInput')
 const checkNewPassInput = document.querySelector('.checkNewPassProfileInput')
 
-const fisrtNameProfileSpan = document.querySelector('.fisrtNameProfileSpan')
+const firstNameProfileSpan = document.querySelector('.firstNameProfileSpan')
 const lastNameProfileSpan = document.querySelector('.lastNameProfileSpan')
 const actualPassProfileSpan = document.querySelector('.actualPassProfileSpan')
 const newPassProfileSpan = document.querySelector('.newPassProfileSpan')
 const checkNewPassProfileSpan = document.querySelector('.checkNewPassProfileSpan')
 
+$formReg.addEventListener('submit', (e) => {
+    let error = false;
+    e.preventDefault();
+    let elementsForm = $formReg.elements;
+    for (let i = 0; i < elementsForm.length; i++) {
+        if (elementsForm[i].value == "") {
+            elementsForm[i].classList.add('text-red-600', 'ml-10', 'font-medium')
+            $submitErrors.innerHTML = 'Quedaron campos sin completar!'
+            $submitErrors.classList.add('text-red-600', 'ml-10', 'font-medium')
+            error = true;
+        }
+    }
+    if (!error) {
+        console.log('ok');
+        $formReg.submit()
+    };
+})
+
 firstNameInput.addEventListener('blur', () => {
     if (firstNameInput.value == "") {
         firstNameInput.classList.add('eventError')
-        fisrtNameProfileSpan.style.display = 'block'
+        firstNameProfileSpan.style.display = 'block'
     } else {
         firstNameInput.classList.add('eventSuccess')
-        fisrtNameProfileSpan.style.display = 'none'
+        firstNameProfileSpan.style.display = 'none'
     }
 });
 

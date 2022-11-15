@@ -172,7 +172,7 @@ const usersController = {
         try {
             await db.User.findAll()
                 .then(users => {
-                    
+
                     return res.json({
                         count: users.length,
                         usuarios : users.map(user => Object({

@@ -169,20 +169,28 @@ const productsController = {
     indexApi: async (req, res) => {
         try {
             await db.Product.findAll({
-                include: [{association: "categories"}, {association:"brands"}] 
+                include: [{association: "categories"}, {association:"brands"}]
             })
                 .then(products => {
-                        return res.json({
-                            count: products.length,
-                            countByCategory : {
-                                ambos : products.filter(product => {product.categories.name == "ambos"}).length,
-                                camisas : products.filter(product => {product.categories.name == "camisas"}).length,
-                                corbatas : products.filter(product => {product.categories.name == "corbatas"}).length,
-                                pantalones : products.filter(product => {product.categories.name == "pantalones"}).length,
-                                sacos : products.filter(product => {product.categories.name == "sacos"}).length,
-                                zapatos : products.filter(product => {product.categories.name == "zapatos"}).length
-                            },
-                            productos : products
+                    // Se recurre a este método de filtrado para no sobrecargar la DB con métodos findAll. Se cambiará por un filtro dinámico.
+                    const ambosFilter = { category_id : 1 };
+                    const camisasFilter = { category_id : 2 };
+                    const corbatasFilter = { category_id : 3 };
+                    const pantalonesFilter = { category_id : 4 };
+                    const sacosFilter = { category_id : 5 };
+                    const zapatosFilter = { category_id : 6 };
+
+                    return res.json({
+                        count: products.length,
+                        countByCategory : {
+                            ambos : products.filter((prod) => Object.keys(ambosFilter).every((k) => ambosFilter[k] === prod[k])).length,
+                            camisas : products.filter((prod) => Object.keys(camisasFilter).every((k) => camisasFilter[k] === prod[k])).length,
+                            corbatas : products.filter((prod) => Object.keys(corbatasFilter).every((k) => corbatasFilter[k] === prod[k])).length,
+                            pantalones : products.filter((prod) => Object.keys(pantalonesFilter).every((k) => pantalonesFilter[k] === prod[k])).length,
+                            sacos : products.filter((prod) => Object.keys(sacosFilter).every((k) => sacosFilter[k] === prod[k])).length,
+                            zapatos : products.filter((prod) => Object.keys(zapatosFilter).every((k) => zapatosFilter[k] === prod[k])).length
+                        },
+                        productos : products
                     })
                 })
             } catch (error) { console.log(error); }
@@ -191,7 +199,7 @@ const productsController = {
         detailApi: async (req, res) => {
             try {
                 await db.Product.findByPk(req.params.id, {
-                    include: [{association: "categories"}, {association:"brands"}] 
+                    include: [{association: "categories"}, {association:"brands"}]
                 })
                     .then(product => { 
                             return res.json({
