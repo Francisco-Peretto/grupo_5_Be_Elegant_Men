@@ -172,10 +172,15 @@ const usersController = {
         try {
             await db.User.findAll()
                 .then(users => {
-
+                    
                     return res.json({
-                            count: users.length,
-                            usuarios : users
+                        count: users.length,
+                        usuarios : users.map(user => Object({
+                            id : user.id,
+                            name : user.first_name + ' ' + user.last_name,
+                            email : user.email,
+                            detail : 'url a detail'
+                        }))
                     })
                 })
             } catch (error) { console.log(error); }
@@ -183,7 +188,11 @@ const usersController = {
 
     userDetailApi: async (req, res) => {
             try {
-                await db.User.findByPk(req.params.id)
+                await db.User.findByPk(req.params.id , {
+                    attributes : {
+                        exclude : ['password', 'admin', 'avatar']
+                    }
+                })
                     .then(user => { 
                             return res.json({
                                 Usuario: user
