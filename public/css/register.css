@@ -134,6 +134,8 @@
     margin-bottom: 3%;  
 }
 
+/* mediasquerys */
+
 @media (max-width: 479px) {
     .cuerpoRegister {
         width: 90%;

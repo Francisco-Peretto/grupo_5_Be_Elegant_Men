@@ -1,4 +1,4 @@
-.containerBody {
+.containerIndex {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -8,7 +8,7 @@
     background-color: rgb(41, 40, 40);
 }
 
-.producto{
+.categoria{
     margin: 3% 2%;
     display:block;
     -webkit-transition:-webkit-transform 0.5s ease-out;
@@ -18,7 +18,7 @@
     transition:transform 0.5s ease-out;
 }
 
-.producto:hover {
+.categoria:hover {
     -moz-transform: scale(1.05);
     -webkit-transform: scale(1.05);
     -o-transform: scale(1.05);
@@ -26,13 +26,13 @@
     transform: scale(1.05)
 }
 
-.producto img {
+.categoria img {
     width: 50vh;
     height: 60vh;
     margin: 5px;
 }
 
-.producto a {
+.categoria a {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -43,7 +43,7 @@
     background-color: #0e141a;
 }
 
-.producto p {
+.categoria p {
     font-size: 18px;
     font-weight: bold;
     color:#adb1b5
@@ -52,19 +52,26 @@
 /* mediasquerys */
 
 @media (max-width: 479px) {
-    .producto img {
-        width: 175px;
-        height: 220px;
-        margin: 2.5px;
-    }
+.categoria img {
+    width: 30vh;
+    height: 30vh;
+    margin: 2.5px;
+}
+
+.categoria p {
+    font-size: 15px;
+}
 }
   
 @media (min-width: 480px) and (max-width: 799px) {
-    .producto img {
-        width: 175px;
-        height: 220px;
-        margin: 2.5px;
-    }
+.categoria img {
+    width: 40vh;
+    height: 45vh;
+    margin: 3px;
+}
+.categoria p {
+    font-size: 15px;
+}
 }
   
 @media (min-width: 800px) and (max-width: 1023px) {

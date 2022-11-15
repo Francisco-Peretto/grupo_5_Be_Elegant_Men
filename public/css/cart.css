@@ -129,3 +129,21 @@
     box-shadow: inset .10rem .10rem 1rem #adb1b5,
     inset -.10rem -.10rem 1rem #ccc;
 }
+
+/* mediasquerys */
+
+@media (max-width: 479px) {
+
+}
+      
+@media (min-width: 480px) and (max-width: 799px) {
+
+}
+    
+@media (min-width: 800px) and (max-width: 1023px) {
+
+}
+    
+@media (min-width: 1024px) {
+
+}

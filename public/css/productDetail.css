@@ -19,13 +19,13 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
-    width: 90%;
+    width: 80%;
     margin: auto;
 }
 
 .articleImagenPrincipal {
-    padding: 4rem;
-    width: 35rem;
+    padding: 5%;
+    width: 55%;
     height: 40rem;
     border-radius: 15px;
     color:#adb1b5;
@@ -48,7 +48,7 @@
     align-items: space-around;  
     width: 40%;
     color:#adb1b5;
-    padding: 2%;
+    padding: 3%;
     height: 40rem;
     border-radius: 15px;
     background-color: #0e141a;
@@ -152,7 +152,7 @@
     flex-direction: column;
     justify-content: space-around;
     align-items: flex-start;
-    width: 95%;
+    width: 80%;
     margin: auto;
 }
 
@@ -194,3 +194,20 @@
     color:#adb1b5;
 }
 
+/* mediasquerys */
+
+@media (max-width: 479px) {
+
+}
+      
+@media (min-width: 480px) and (max-width: 799px) {
+
+}
+    
+@media (min-width: 800px) and (max-width: 1023px) {
+
+}
+    
+@media (min-width: 1024px) {
+
+}
