@@ -6,7 +6,7 @@ function Chart (){
     const [ productsInDB , setProductsInDB ] = useState([]);
     
     useEffect(() => {
-         fetch("https://la-guarida-del-dragon.herokuapp.com/api/products")
+         fetch("    api/products")
              .then(response => response.json())
              .then(products => {
                  setProductsInDB(products.products);
