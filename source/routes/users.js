@@ -39,7 +39,7 @@ router.delete('/destroyUser/:id', usersController.destroy);
 
 //APIS
 
-router.get('/api/users', usersController.listUsersApi);
-router.get('/api/users/:id', usersController.userDetailApi);
+//router.get('/api/users', usersController.listUsersApi);
+//router.get('/api/users/:id', usersController.userDetailApi);
 
 module.exports = router;

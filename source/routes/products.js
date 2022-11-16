@@ -33,7 +33,7 @@ router.delete('/products/:id', productsController.erase);
 
 //APIS
 
-router.get('/api/products', productsController.indexApi);
-router.get('/api/products/:id', productsController.detailApi);
+//router.get('/api/products', productsController.indexApi);
+//router.get('/api/products/:id', productsController.detailApi);
 
 module.exports = router;
