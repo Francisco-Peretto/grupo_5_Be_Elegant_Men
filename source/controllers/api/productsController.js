@@ -44,7 +44,7 @@ const apiProductsController = {
 	
 	lastProduct: (req, res) => {
 
-        db.Product.findAll({
+        db.product.findAll({
             // include: ["Category"],
             order: [
                 ["id", "DESC"],
@@ -56,7 +56,7 @@ const apiProductsController = {
 					url: product.image, 
 					status: 200,   
 					product: product,
-					
+					image:""
 				   })
                
             })
