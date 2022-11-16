@@ -1,0 +1,289 @@
+.mainProfile {
+    padding: 2.5%;
+    background-color: rgb(41, 40, 40);
+}
+
+.cuerpoProfile {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 2.5%;
+    border-radius: 15px;
+    margin: auto;
+    width: 60%;
+    background-color: #0e141a;
+    box-shadow: 0px 0px 10px rgb(209, 208, 204);
+}
+
+.contenedorAvatar {
+    width: 25%;
+}
+
+.avatarImg {
+    width: 100%;
+    border-radius: 50%;
+}
+
+.profileAvatarUpload>input {
+    display: none;
+}
+
+.profileAvatarUpload {
+    margin-bottom: 10%;
+}
+
+.profileAvatarUpload i {
+    color: #adb1b5;
+/*     position: relative;
+    left: 6rem;
+    top: -1.5rem; */
+    border-radius: 100%;
+    transition: all 1s ease;
+}
+
+.profileAvatarUpload i:hover {
+    box-shadow: .10rem .10rem 1rem #fff, 
+    -.10rem -.10rem 1rem #ccc;
+}
+
+.profileAvatarUpload i:active {
+    box-shadow: .10rem .10rem 1rem #fff, 
+    -.10rem -.10rem 1rem #ccc;
+}
+
+.hidden {
+    display: none;
+}
+
+.avatarButton {
+    display: block;
+    margin-top: 2%;
+    width: 8rem;
+    margin: auto;
+    padding: .5rem;
+    text-align: center;
+    background-color: #0e141a;
+    color:#adb1b5;
+    font-size: 1rem;
+    border: 2px solid;
+    border-radius: .5rem;
+    cursor: pointer;
+    transition: all 1s ease;
+}
+
+.avatarButton:hover {
+    box-shadow: .10rem .10rem 1rem #fff, 
+    -.10rem -.10rem 1rem #ccc;
+}
+
+.avatarButton:active {
+    box-shadow: .10rem .10rem 1rem #fff, 
+    -.10rem -.10rem 1rem #ccc;
+}
+
+.sectionDatos {
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 3%;
+}
+
+.cuerpoProfile label {
+    color:#adb1b5;
+}
+
+.sectionDatos div {
+    margin-bottom: 1%;
+    margin-top: 2%;
+}
+
+.sectionDatos input {
+    width: 90%;
+    height: 1.5rem;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+
+.cuerpoProfile   fieldset {
+    margin-bottom: 1%;
+    color:#adb1b5;
+}
+
+.nameButton {
+    margin-top: 2%;
+    width: 8rem;
+    margin-top: 1rem;
+    margin-bottom: .5rem;
+    padding: .5rem;
+    text-align: center;
+    background-color: #0e141a;
+    color:#adb1b5;
+    font-size: 1rem;
+    border: 2px solid;
+    border-radius: .5rem;
+    cursor: pointer;
+    transition: all 1s ease;
+}
+
+.nameButton:hover {
+    box-shadow: .10rem .10rem 1rem #fff, 
+    -.10rem -.10rem 1rem #ccc;
+}
+
+.nameButton:active {
+    box-shadow: .10rem .10rem 1rem #fff, 
+    -.10rem -.10rem 1rem #ccc;
+}
+
+.passButton {
+    margin-top: 2%;
+    width: 12rem;
+    margin-top: 1rem;
+    margin-bottom: .5rem;
+    padding: .5rem;
+    text-align: center;
+    background-color: #0e141a;
+    color:#adb1b5;
+    font-size: 1rem;
+    border: 2px solid;
+    border-radius: .5rem;
+    cursor: pointer;
+    transition: all 1s ease;
+}
+
+.passButton:hover {
+    box-shadow: .10rem .10rem 1rem #fff, 
+    -.10rem -.10rem 1rem #ccc;
+}
+
+.passButton:active {
+    box-shadow: .10rem .10rem 1rem #fff, 
+    -.10rem -.10rem 1rem #ccc;
+}
+
+.sessionButton {
+    margin-top: 2%;
+    width: 12rem;
+    margin-top: 1rem;
+    padding: .5rem;
+    text-align: center;
+    background-color: #0e141a;
+    color:#adb1b5;
+    font-size: 1rem;
+    border: 2px solid;
+    border-radius: .5rem;
+    cursor: pointer;
+    transition: all 1s ease;
+}
+
+.sessionButton:hover {
+    box-shadow: .10rem .10rem 1rem #fff, 
+    -.10rem -.10rem 1rem #ccc;
+}
+
+.sessionButton:active {
+    box-shadow: .10rem .10rem 1rem #fff, 
+    -.10rem -.10rem 1rem #ccc;
+}
+
+.eraseButton {
+    margin-top: 2%;
+    width: 8rem;
+    margin-top: 1rem;
+    margin-bottom: .5rem;
+    padding: .5rem;
+    text-align: center;
+    background-color: #0e141a;
+    color:#adb1b5;
+    font-size: 1rem;
+    border: 2px solid;
+    border-radius: .5rem;
+    cursor: pointer;
+    transition: all 1s ease;
+}
+
+.eraseButton:hover {
+    box-shadow: .10rem .10rem 1rem #fff, 
+    -.10rem -.10rem 1rem #ccc;
+}
+
+.eraseButton:active {
+    box-shadow: .10rem .10rem 1rem #fff, 
+    -.10rem -.10rem 1rem #ccc;
+}
+
+.buttons {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.createButton {
+    margin-top: 2%;
+    width: 8rem;
+    margin-top: 1rem;
+    margin-bottom: .5rem;
+    padding: .5rem;
+    text-align: center;
+    background-color: #0e141a;
+    color:#adb1b5;
+    font-size: 1rem;
+    border: 2px solid;
+    border-radius: .5rem;
+    cursor: pointer;
+    transition: all 1s ease;
+}
+
+.createButton:hover {
+    box-shadow: .10rem .10rem 1rem #fff, 
+    -.10rem -.10rem 1rem #ccc;
+}
+
+.createButton:active {
+    box-shadow: .10rem .10rem 1rem #fff, 
+    -.10rem -.10rem 1rem #ccc;
+}
+
+.eventError {
+    width: 90%;
+    height: 1.5rem;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    box-shadow: 0 0 0 2px red;
+}
+
+.eventSuccess {
+    width: 90%;
+    height: 1.5rem;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    box-shadow: 0 0 0 2px green;
+}
+
+.fisrtNameProfileSpan, .lastNameProfileSpan, .actualPassProfileSpan, .newPassProfileSpan, .checkNewPassProfileSpan {
+    display: none;
+    color: red;
+    margin-bottom: 3%;  
+}
+
+/* mediasquerys */
+
+@media (max-width: 479px) {
+
+}
+      
+@media (min-width: 480px) and (max-width: 799px) {
+
+}
+    
+@media (min-width: 800px) and (max-width: 1023px) {
+
+}
+    
+@media (min-width: 1024px) {
+
+}

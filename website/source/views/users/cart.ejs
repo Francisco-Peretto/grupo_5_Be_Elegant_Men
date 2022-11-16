@@ -1,0 +1,48 @@
+<%- include('../partials/head.ejs') %>
+    <body>
+        <%- include('../partials/header.ejs') %>
+        <%- include('../partials/navBrands.ejs') %>
+        <main class="mainCart">
+	        <section class="cuerpoCart">
+                <h1>Carrito</h1>
+                <article class="articleProducto">
+                    <div class="divDetalle">
+                        <div>
+                            <img src="/img/products/camisa_blanca1.jpg" alt="Imagen del Producto">
+                            <p>Nombre producto</p>
+                        </div>
+                        <button class="removeButton">Eliminar</button>
+                    </div>
+                    <div>
+                        <p> + 1 - </p>
+                    </div>
+                    <div>
+                        <p>$ 9.000</p>
+                    </div>
+                </article>
+                <article class="articleProducto">
+                    <div class="divDetalle">
+                        <div>
+                            <img src="/img/products/camisa_blanca1.jpg" alt="Imagen del Producto">
+                            <p>Nombre producto</p>
+                        </div>
+                        <button class="removeButton">Eliminar</button>
+                    </div>
+                    <div>
+                        <p> + 1 - </p>
+                    </div>
+                    <div>
+                        <p>$ 9.000</p>
+                    </div>
+                </article>
+                <article class="articleTotal">
+                    <h3>Total</h3>
+                    <p>$ 18.000</p>
+                </article>
+                <button class="shopButton">Ir a Pagar</button>
+            </section>
+        </main>
+        <%- include('../partials/navBrands.ejs') %>
+        <%- include('../partials/footer.ejs') %>
+    </body>
+</html>

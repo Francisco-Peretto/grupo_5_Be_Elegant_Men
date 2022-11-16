@@ -1,0 +1,25 @@
+<%- include('../partials/head.ejs') %>
+    <body>
+        <%- include('../partials/header.ejs') %>
+        <main>
+            <%- include('../partials/navBrands.ejs') %>
+            <% if (products.length > 0) { %>
+            <section class="containerListProduct">
+                <% products.forEach(element => { %> 
+                <article class="producto">
+                    <a href="/products/<%= element.sku %>">
+                        <img src="/img/products/<%= element.category_id %>/<%= element.image %>" alt="<%= element.image %>">
+                        <div>
+                            <p><%= element.name %></p>
+                            <p>$ <%= element.price %></p>
+                        </div>
+                    </a>
+                </article>
+                <% }) %> 
+            </section>
+        <% } %>
+        <%- include('../partials/navBrands.ejs') %>
+        </main>
+        <%- include('../partials/footer.ejs') %>
+    </body>
+</html>

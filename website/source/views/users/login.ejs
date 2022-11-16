@@ -1,0 +1,37 @@
+<%- include('../partials/head.ejs') %>
+    <body>
+        <%- include('../partials/header.ejs') %>
+        <%- include('../partials/navBrands.ejs') %>
+        <main class="mainlogin">
+            <section class="cuerpoLogin">
+                <h1>Ingresa a tu cuenta</h1>
+                <form class="formularioLogin"action="/users/login" method="post">
+                    <input type="text" id="email" name="email" placeholder="Correo Electrónico" value="<%= locals.old ? old.email : '' %>">
+                    <span class="emailSpan">Debe ingresar un correo electronico valido</span>
+                    <% if (locals.errors && errors.email) { %>
+                        <div class="divError">
+                            <%= errors.email.msg %>
+                        </div>
+                    <% } %>
+                    <input type="password" id="password" name="password" placeholder="Contraseña">
+                    <% if (locals.errors && errors.password) { %>
+                        <div class="divError">
+                            <%= errors.password.msg %>
+                        </div>
+                    <% } %>
+                    <span class="passSpan">El campo no puede quedar vacio</span>
+                    <div class="divRemember">
+                        <input class="input-remember" type="checkbox" id="remember" name="remember">
+                        <label for="remember"> Recordarme</label>
+                    </div>
+                    <button type="submit">Ingresar</button>
+                </form>
+                <a href="#">Olvidaste tu contraseña?</a>
+                <a href="../users/register">Aun no tenes tu cuenta? Creala ahora</a>
+            </section>
+        </main>
+        <%- include('../partials/navBrands.ejs') %>
+        <%- include('../partials/footer.ejs') %>
+    </body>
+    <script src='/scripts/loginValidator.js'></script>
+</html>

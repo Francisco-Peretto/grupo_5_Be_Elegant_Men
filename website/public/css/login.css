@@ -1,0 +1,145 @@
+.mainlogin {
+    padding: 4%;
+    background-color: rgb(41, 40, 40);
+}
+
+.cuerpoLogin {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 40%;
+    border: 1px solid #0b335b ;
+    border-radius: 15px;
+    margin: auto;
+    padding-bottom: 2%;
+    background-color: #0e141a;
+    box-shadow: 0px 0px 10px rgb(209, 208, 204);
+}
+
+.cuerpoLogin h1 {
+    font-size: 2rem;
+    color:#adb1b5;
+}
+
+.formularioLogin {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 90%;
+    padding: 2%;
+}
+
+.formularioLogin input {
+    width: 48%;
+    height: 30px;
+    margin-bottom: 3%;
+}
+
+.formularioLogin .divError {
+    margin-bottom: 3%;
+}
+
+.formularioLogin button {
+    width: 30%;
+    margin-top: 2%;
+    text-align: center;
+    background-color: #0e141a;
+    color:#adb1b5;
+    font-size: 1rem;
+    padding: 1%;
+    border: 2px solid;
+    border-radius: .5rem;
+    cursor: pointer;
+    transition: all 1s ease;
+
+}
+
+.formularioLogin button:hover {
+    box-shadow: .10rem .10rem 1rem #fff, 
+    -.10rem -.10rem 1rem #ccc; 
+}
+
+.formularioLogin button:active {
+    box-shadow: inset .10rem .10rem 1rem #fff, 
+    inset -.10rem -.10rem 1rem #ccc;
+}
+
+.cuerpoLogin a {
+    margin-top: 2%;
+    font-size: 1rem;
+    color:#adb1b5;
+    font-weight: bold;
+}
+
+.cuerpoLogin a:hover {
+    text-decoration: underline;
+  }
+
+.divRemember {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.divRemember label {
+    color:#adb1b5;
+}
+
+.eventError {
+    width: 48%;
+    height: 30px;
+    margin-bottom: 3%;
+    box-shadow: 0 0 0 2px red;
+}
+
+.eventSuccess {
+    width: 48%;
+    height: 30px;
+    margin-bottom: 3%;
+    box-shadow: 0 0 0 2px green;
+}
+
+.emailSpan, .passSpan {
+    display: none;
+    color: red;
+    margin-bottom: 3%;
+}
+
+/* mediasquerys */
+
+@media (max-width: 479px) {
+    .cuerpoLogin h1 {
+        font-size: 1.5rem;
+    }
+    .cuerpoLogin {
+        width: 90%;
+    }
+    .cuerpoLogin a {
+        font-size: 0.75rem;
+    }
+}
+  
+@media (min-width: 480px) and (max-width: 799px) {
+    .cuerpoLogin h1 {
+        font-size: 1.5rem;
+    }
+    .cuerpoLogin {
+        width: 75%;
+    }
+}
+  
+@media (min-width: 800px) and (max-width: 1023px) {
+
+}
+  
+@media (min-width: 1024px) {
+
+}
+
+

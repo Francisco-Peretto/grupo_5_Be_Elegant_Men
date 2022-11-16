@@ -1,0 +1,84 @@
+<%- include('../partials/head.ejs') %>
+    <body>
+        <%- include('../partials/header.ejs') %>
+        <%- include('../partials/navBrands.ejs') %>
+        <main class="mainEditProduct">
+            <section class="cuerpoEditProduct">
+                <h1>Editar Producto</h1>
+                <form class="formularioEditProduct" action="/products/<%= product.sku %>?_method=PUT" method="POST" enctype="multipart/form-data"> 
+                    <input type="hidden" name="sku" value="<%= product.sku%>">
+                    <section>
+                        <input type="text" id="name" name="name" placeholder="Nombre del producto" value="<%= locals.old ? old.name : product.name %>" >
+                    </section>
+                    <span class="nameSpan">El campo no puede quedar vacio</span>
+                    <% if (locals.errors && errors.name) { %>
+                        <div class="divError">
+                            <%= errors.name.msg %>
+                        </div>
+                    <% } %>
+                    <section>
+                        <input type="number" id="price" name="price" placeholder="Precio del producto" value="<%= locals.old ? old.price : product.price %>" >
+                    </section>
+                    <span class="priceSpan">El campo no puede quedar vacio</span>
+                    <% if (locals.errors && errors.price) { %>
+                        <div class="divError">
+                            <%= errors.price.msg %>
+                        </div>
+                    <% } %>
+                    <section> 
+                        <input type="text" id="detail" name="detail" placeholder="Descripción del producto" value="<%= locals.old ? old.detail : product.detail %>" ></input>
+                    </section>
+                    <span class="detailSpan">El campo no puede quedar vacio</span>
+                    <% if (locals.errors && errors.detail) { %>
+                        <div class="divError">
+                            <%= errors.detail.msg %>
+                        </div>
+                    <% } %>
+                    <section> 
+                        <label>Selecciona la marca:</label>
+                        <select name="brand" >
+                            <% for( const brand of brands) { %>
+                                <% if (brand.id == product.brand_id) { %>
+                                    <option value="<%= brand.id %>" selected><%= brand.name %></option>
+                                <% } else {%>                            
+                                <option value="<%= brand.id %>"> <%= brand.name %> </option>
+                            <% } }%>
+                        </select>
+                    </section>
+                    <section>
+                        <label>Selecciona la categoría:</label>
+                        <select name="category" >
+                            <% for( const category of categories) { %>
+                                <% if (category.id == product.category_id) { %>
+                                    <option value="<%= category.id %>" selected><%= category.name %></option>
+                                <% } else {%>                            
+                                <option value="<%= category.id %>"> <%= category.name %> </option>
+                            <% } }%>                        
+                        </select>
+                    </section>
+                    <div class="editProductFotosUpload">
+                        <p>Foto del Producto</p>
+                        <input type="file" value="<%= product.image %>" name="previousImage" alt="Previous image">
+                        <label for="image">
+                            <i class="fa-solid fa-cloud-arrow-up"></i>
+                        </label>
+                        <input type="file" id="image" name="image"/>
+                    </div>
+                    <% if (locals.errors && errors.image) { %>
+                        <div class="divError">
+                            <%= errors.image.msg %>
+                        </div>
+                    <% } %>
+                    <section>
+                        <button type="submit" value="editar">Editar Producto</button>
+                        <button type="reset">Reiniciar Formulario</button>
+                    </section>
+                </form>
+            </section>
+        </main>
+        <%- include('../partials/navBrands.ejs') %>
+        <%- include('../partials/footer.ejs') %>
+    </body>
+    <script src='/scripts/confirmEditProduct.js'></script>
+    <script src='/scripts/editProductValidator.js'></script>
+</html>
