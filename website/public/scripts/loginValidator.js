@@ -22,7 +22,7 @@ passwordInput.addEventListener('blur', () => {
         passwordInput.classList.add('eventError')
         passSpan.style.display = 'block'    
     } else {
-        passwordInput.classList.add('eventSuccess')
+//        passwordInput.classList.add('eventSuccess')
         passSpan.style.display = 'none'
     }
 });

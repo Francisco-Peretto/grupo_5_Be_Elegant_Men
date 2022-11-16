@@ -41,6 +41,8 @@ app.use (methodOverride('_method'));
 app.use('/', routesProducts);
 app.use('/users/', routesUsers);
 
+app.use(cors());
+
 const apiProductsRouter = require('./routes/api/productsRouter');
 app.use ('/api/products', apiProductsRouter);
 

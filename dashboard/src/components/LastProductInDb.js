@@ -8,15 +8,23 @@ function LastProductInDb(){
 
     const [ lastProduct, setLastProduct ] = useState([]);
     const [ lastProductImage, setLastProductImage ] = useState("");
-
+    const [ lastProductName, setLastProductName ] = useState("");
+    const [ lastProductDetail, setLastProductDetail ] = useState("");
+    const [ lastProductPrice, setLastProductPrice ] = useState("");
 
     useEffect(() => {
-         console.log("me monté");
-         fetch("http://localhost:3030/api/products/lastproduct")
-             .then(response => response.json())
+        console.log("me monté");
+        fetch("http://localhost:3030/api/products/lastproduct")
+            .then(response => response.json())
             .then(product => {
                 setLastProduct(product.product);
-                 setLastProductImage(product.product[0].image)
+                setLastProductImage(product.product.image);
+                setLastProductName(product.product.name);
+                setLastProductDetail(product.product.detail);
+                setLastProductPrice(product.product.price);
+
+
+
             })
     },[])
 
@@ -30,18 +38,17 @@ function LastProductInDb(){
                 {lastProduct.length !== 0 && 
                     <div className="card-body">
                         <div className="text-center">
-                            <img className="img-fluid px-2 px-sm-2 mt-2 mb-4" style={{width: 18 +'rem'}} src={`http://localhost:3030/img/${lastProductImage}`} alt="Last Product in Data Base"/>
+                            <img className="img-fluid px-2 px-sm-2 mt-2 mb-4" style={{width: 18 +'rem'}} src={`${lastProductImage}`} alt="Last Product in Data Base"/>
                         </div>
                         <h3>
-                            {lastProduct[0].title}
+                            {lastProductName}
                         </h3>
                         <p>
-                            {lastProduct[0].descrip}
+                            {lastProductDetail}
                         </p>
                         <h5>
-                            $ {lastProduct[0].price}
+                            $ {lastProductPrice}
                         </h5>
-                        {/* <a className="btn btn-danger" target="_blank" rel="nofollow" href="/">View movie detail</a> */}
                     </div>
             }   
             </div>

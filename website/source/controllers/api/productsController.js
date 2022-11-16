@@ -65,28 +65,26 @@ const apiProductsController = {
 	},
 	
 	lastProduct: (req, res) => {
-
-        db.Product.findAll({
-            // include: ["Category"],
-            order: [
-                ["id", "DESC"],
-            ],
-            limit: 1
-        })
-            .then(product => {
-				return res.status(200).json({
-					url: product.image, 
-					status: 200,   
-					product: product,
-					
-				   })
-               
-            })
-            .catch(err => {
-                res.send(err)
-            })
-
-    }
+		db.Product.findOne({	
+			order: [["sku", "DESC"]],
+		})
+		.then((product) => {
+			return res.status(200).json({
+			url: product.image,
+			status: 200,
+			product: {
+				...product,
+				image: `http://localhost:3030/img/products/${product.category_id}/${product.image}`,
+				name: product.name,
+				detail: product.detail,
+				price: product.price
+			},
+			});
+		})
+		.catch((err) => {
+			res.send(err);
+		});
+	},
 
 }
 
