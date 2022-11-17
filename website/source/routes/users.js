@@ -1,45 +1,41 @@
 const express = require ('express');
-
-const usersController = require('../controllers/usersController');
-
 const router = express.Router();
 
+// Controller
+const usersController = require('../controllers/usersController');
+
+// Middlewares
 const multer = require('multer');
 const storage = require('../modules/storage');
 const upload = multer({storage:storage('../../uploads/users')});
-
-const registerValidations = require('../validations/users/registerValidations');
-const loginValidations = require('../validations/users/loginValidations');
-
 const isLogged = require('../middlewares/isLogged');
 const noLogged = require('../middlewares/noLogged');
 
-//ruta para mostrar el carrito
-router.get('/cart', noLogged, usersController.cart);
+// Validators
+const registerValidations = require('../validations/users/registerValidations');
+const loginValidations = require('../validations/users/loginValidations');
 
-//rutas de registro
+// User register routes
 router.get('/register', isLogged, usersController.register);
 router.post('/register', upload.single('avatar'), registerValidations, usersController.record);
 
-//ruta de login
+// User login routes
 router.get('/login', isLogged, usersController.login);
 router.post('/login', loginValidations, usersController.access);
 
-// rutas de perfil
+// Profile routes
 router.get('/profile', usersController.profile);
 router.get('/logout', usersController.logout);
 
-//rutas de edición de usuario
+// User editing routes
 router.patch('/updateNames/:id', usersController.updateUserNames);
 router.patch('/updateAvatar/:id', upload.single('avatar'), registerValidations, usersController.updateUserAvatar);
 router.patch('/updatePass/:id', usersController.updateUserPass);
 
-//ruta de borrado
+// User deleting route
 router.delete('/destroyUser/:id', usersController.destroy);
 
-//APIS
-
-//router.get('/api/users', usersController.listUsersApi);
-//router.get('/api/users/:id', usersController.userDetailApi);
+// User cart route
+router.get('/cart', noLogged, usersController.cart);
 
 module.exports = router;

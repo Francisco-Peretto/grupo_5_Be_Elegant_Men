@@ -1,39 +1,36 @@
 const express = require ('express');
-
-const productsController = require ('../controllers/productsController');
-
 const router = express.Router();
 
+// Controller
+const productsController = require ('../controllers/productsController');
+
+// Middlewares
 const multer = require('multer');
 const storage = require('../modules/storage');
 const upload = multer({storage:storage('../../uploads/users')});
 
+// Validators
 const isAdmin = require('../middlewares/isAdmin');
-const createProductsValidations = require('../validations/products/createProductsValidations')
-const editProductsValidations = require('../validations/products/editProductsValidations')
+const createProductsValidations = require('../validations/products/createProductsValidations');
+const editProductsValidations = require('../validations/products/editProductsValidations');
 
-// rutas de pagina principal
+// Index route
 router.get('/', productsController.index);
 
-//rutas de creación
+// Product creation routes
 router.get('/products/create', isAdmin, productsController.create); 
 router.post('/products/save', upload.single('image'), createProductsValidations, productsController.save);
 
-// rutas de lectura
+// Product reading routes
 router.get('/products/search', productsController.search);
 router.get('/products/list/:category?', productsController.list);
 router.get('/products/:id', productsController.detail);
 
-//rutas de edición
+// Product edition routes
 router.get('/products/:id/edit', isAdmin, productsController.edit);
 router.put('/products/:id', upload.single('image'), editProductsValidations, productsController.update);
 
-//ruta de borrado
+// Product erasing route
 router.delete('/products/:id', productsController.erase);
-
-//APIS
-
-//router.get('/api/products', productsController.indexApi);
-//router.get('/api/products/:id', productsController.detailApi);
 
 module.exports = router;

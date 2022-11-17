@@ -1,32 +1,28 @@
 const bcryptjs = require('bcryptjs');
 const {validationResult} = require('express-validator');
-/*const fs = require('fs');
-const {extname,resolve} = require('path');*/
 const db = require("../database/models");
 
 const usersController = {
 
+    //Login de usuarios
     login: async (req, res) => {
         try {
             return res.render('users/login')
+
         } catch (error) { console.log(error); }
     },
 
-    //Login de usuarios
-
     access: async (req , res) => {
         try {
-            const resultValidation = validationResult(req)
-
-            if (resultValidation.errors.length > 0) { 
+            const resultValidation = validationResult(req);
+            if (resultValidation.errors.length > 0) {
                 return res.render('users/login', {
                     errors: resultValidation.mapped(),
                     old : req.body
                 })
+
             } else {
-                await db.User.findOne({
-                    where : {email : req.body.email}
-                })
+                await db.User.findOne({ where : {email : req.body.email} })
                     .then(userToLogin => {        
                         let correctPassword = bcryptjs.compareSync(req.body.password, userToLogin.password);
                         if (correctPassword) {
@@ -36,6 +32,7 @@ const usersController = {
                             req.body.remember != undefined ?
                             res.cookie('userEmail', req.body.email, {maxAge : (((1000 * 60) * 60)*24)}) : null; // cookie de 24 hs 
                             return res.redirect('profile');
+
                         } else {
                             return res.render('users/login', {
                                 errors: {password: {msg: 'Contraseña incorrecta'}},
@@ -43,19 +40,21 @@ const usersController = {
                             })
                         }
                     })
+
                     .catch((fail) => { return res.render('users/login', {
                             errors: {email: {msg: 'El email con el que intenta ingresar no existe'}}
                         })
                     })
             }
+
         } catch (error) { console.log(error); }
     },
 
-    //register de usuarios
-
+    // Registro de usuarios
     register: async (req , res) => { 
         try {
             return res.render('users/register');
+
         } catch (error) { console.log(error); }
     },
 
@@ -80,6 +79,7 @@ const usersController = {
                             admin: req.body.email.includes('@beelegantmen.com') ? 1 : 0
                         })
                         return res.render('users/login');
+
                     } else {
                         return res.render('users/register', {
                             errors: {email: {msg: 'Este email ya se encuentra registrado'}},
@@ -87,16 +87,17 @@ const usersController = {
                         })
                     }
                 })
+
         } catch (error) { console.log(error); }
     },
 
     //Profile access y logout
-
     profile: async (req , res) => { // GET profile
         try {
             return res.render('users/profile', {
                 user: req.session.userLogged
             })
+
         } catch (error) { console.log(error); }
     },
 
@@ -105,11 +106,11 @@ const usersController = {
             res.clearCookie('userEmail')
             req.session.destroy()
             return res.redirect('/')
+
         } catch (error) { console.log(error); }
     },
 
     // Profile edit y erase
-
     updateUserNames: async (req, res) => {
         try {
             await db.User.update({
@@ -117,6 +118,7 @@ const usersController = {
                 last_name: req.body.last_name
                 }, {where : {id: req.params.id} })
             return res.redirect('/users/profile');
+
         } catch (error) { console.log(error); }
     },
 
@@ -125,12 +127,9 @@ const usersController = {
             await db.User.update({
                 avatar: req.file ? req.file.filename : 'default.png',
                 }, {where : {id: req.params.id}}
-                /*.then(function(file) {
-                    let path = resolve(__dirname,'..','..','public','img','users',)
-                    fs.unlink(path)
-                }) */
                 )
                 return res.redirect('/users/profile');
+
             } catch (error) { console.log(error); }
     },
 
@@ -147,6 +146,7 @@ const usersController = {
                         return res.redirect('/users/profile');
                     }
                 })
+
         } catch (error) { console.log(error); }
     },
 
@@ -155,51 +155,18 @@ const usersController = {
             await db.User.destroy({ where: {id: req.params.id} });
             req.session.destroy();
             return res.redirect('/');
+
         } catch (error) { console.log(error); }
     },
 
-    // Cart 
-
+    // Cart
     cart: async (req , res) => {
         try {
             return res.render('users/cart');
+
         } catch (error) { console.log(error); }
     },
 
-    //APIs
-
-    listUsersApi: async (req, res) => {
-        try {
-            await db.User.findAll()
-                .then(users => {
-
-                    return res.json({
-                        count: users.length,
-                        usuarios : users.map(user => Object({
-                            id : user.id,
-                            name : user.first_name + ' ' + user.last_name,
-                            email : user.email,
-                            detail : 'url a detail'
-                        }))
-                    })
-                })
-            } catch (error) { console.log(error); }
-        },
-
-    userDetailApi: async (req, res) => {
-            try {
-                await db.User.findByPk(req.params.id , {
-                    attributes : {
-                        exclude : ['password', 'admin', 'avatar']
-                    }
-                })
-                    .then(user => { 
-                            return res.json({
-                                Usuario: user
-                            })
-                    })
-            } catch (error) { console.log(error); }
-        }
 }
 
 module.exports = usersController;
