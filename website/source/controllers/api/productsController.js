@@ -1,9 +1,10 @@
 const db = require('../../database/models/index');
 
 const apiProductsController = {
+	
     index: (req, res) => {
 		db.Product.findAll({include: [{association: "categories"}, {association:"brands"}]})
-		   .then(product => {
+		.then(product => {
 				// Se recurre a este método de filtrado para no sobrecargar la DB con métodos findAll. Se cambiará por un filtro dinámico.
 				const ambosFilter = { category_id : 1 };
 				const camisasFilter = { category_id : 2 };
@@ -25,13 +26,14 @@ const apiProductsController = {
 				product: product.map(product => Object({
 					sku : product.sku,
 					name : product.name,
+					price: product.price,
 					description : product.detail,
-					relaciones: {categoría : product.categories.name, marca : product.brands.name},
+					relaciones: {categoria : product.categories.name, marca : product.brands.name},
 					detail : `http://localhost:3030/api/products/${product.sku}`
 				}))
-			   })
-		   })
-		   .catch(err => {
+			})
+		})
+		.catch(err => {
 			res.send(err)
 		})
 	},
@@ -43,12 +45,12 @@ const apiProductsController = {
 				)
 		.then(product => {
 			return res.status(200).json({
-			 status: 200,
-			 product: product,
-			 url : `http://localhost:3030/img/products/${product.categories.id}/${product.image}`
+			status: 200,
+			product: product,
+			url : `http://localhost:3030/img/products/${product.categories.id}/${product.image}`
 			})
 		})
-	   .catch(err => {
+	.catch(err => {
 		res.send(err)
 	})
 	},

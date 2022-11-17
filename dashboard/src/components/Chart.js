@@ -4,14 +4,18 @@ import ChartRow from './ChartRow';
 function Chart (){
 
     const [ productsInDB , setProductsInDB ] = useState([]);
-    
+
     useEffect(() => {
-         fetch("    api/products")
-             .then(response => response.json())
-             .then(products => {
-                 setProductsInDB(products.products);
-             })
-     },[]);
+
+        fetch('http://localhost:3030/api/products')
+        .then(response => response.json())
+        .then(({product}) => {
+            setProductsInDB(product);
+            })
+
+            .catch(error => console.error(error))
+
+    },[]);
 
     return (
         /* <!-- DataTales Example --> */
@@ -30,11 +34,10 @@ function Chart (){
                         </thead>
                         <tbody>
                             {
-                            productsInDB.map( ( product , i) => {
+                            productsInDB.map((product , i) => {
                                 return <ChartRow { ...product} key={i}/>
                             })
                             }
-
                         </tbody>
                     </table>
                 </div>

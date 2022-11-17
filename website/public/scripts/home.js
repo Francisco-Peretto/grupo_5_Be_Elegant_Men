@@ -13,7 +13,7 @@ document.querySelector("#search").addEventListener("input", async (e) =>{
 
 window.addEventListener('load', async (e) => {
     try {
-        let petition = await fetch ('http://localhost:3030/api/products'); //cambiar a API
+        let petition = await fetch ('http://localhost:3030/api/products/'); //cambiar a API
         let response = await petition.json();
         localStorage.setItem("products", JSON.stringify(response.data.map(product => product.title)));
     } catch {
