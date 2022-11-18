@@ -114,26 +114,6 @@
     -.10rem -.10rem 1rem #ccc;
 }
 
-.eventError {
-    width: 100%;
-    margin-bottom: 2%;
-    height: 30px;
-    box-shadow: 0 0 0 2px red;
-}
-
-.eventSuccess {
-    width: 100%;
-    margin-bottom: 2%;
-    height: 30px;
-    box-shadow: 0 0 0 2px green;
-}
-
-.firstNameSpan, .lastNameSpan, .emailSpan, .passSpan, .rePassSpan {
-    display: none;
-    color: red;
-    margin-bottom: 3%;  
-}
-
 /* mediasquerys */
 
 @media (max-width: 479px) {

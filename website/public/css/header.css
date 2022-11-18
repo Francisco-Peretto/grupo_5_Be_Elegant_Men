@@ -206,25 +206,29 @@ h2 a {
 
 .menuHamburguesa ul{
   margin-top:0;
+  margin-left: -40px;
   padding: 0;
   width: 50px;
   position: absolute;
 }
 
 .menuHamburguesa li {
+  text-align: center;
+  margin: auto;
   display: block;
   background: #0e141a; 
-  margin: 0;
-  padding: 10px;
+  width: 80px;
+  padding: 30%;
   list-style: none;
 }
 
 .menuHamburguesa li a{
+  text-align: center;
   color: #fff;
 }
 
 .menuHamburguesa li i{
-  font-size: 15px;
+  font-size: 20px;
   text-align: center;
 
   display:block;

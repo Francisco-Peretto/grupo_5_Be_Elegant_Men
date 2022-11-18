@@ -38,4 +38,7 @@ router.delete('/destroyUser/:id', usersController.destroy);
 // User cart route
 router.get('/cart', noLogged, usersController.cart);
 
+// User contact route
+router.get('/contact', usersController.contact);
+
 module.exports = router;

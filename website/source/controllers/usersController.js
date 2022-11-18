@@ -167,6 +167,15 @@ const usersController = {
         } catch (error) { console.log(error); }
     },
 
+    // Cart
+    contact: async (req , res) => {
+        try {
+            return res.render('users/contact');
+
+        } catch (error) { console.log(error); }
+    }
+
+
 }
 
 module.exports = usersController;

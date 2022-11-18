@@ -1,9 +1,9 @@
-.mainCreateProduct {
+.mainContact {
     padding: 4%;
     background-color: rgb(41, 40, 40);
 }
 
-.cuerpoCreateProduct {
+.cuerpoContact {
     display: flex;
     flex-wrap: nowrap;
     flex-direction: column;
@@ -16,11 +16,11 @@
     box-shadow: 0px 0px 10px rgb(209, 208, 204);
 }
 
-.cuerpoCreateProduct h1{
+.cuerpoContact h1{
     color:#adb1b5;
 }
 
-.formularioCreateProduct {
+.formularioContact {
     display: flex;
     flex-wrap: nowrap;
     flex-direction: column;
@@ -30,18 +30,18 @@
     padding: 2%;
 }
 
-.formularioCreateProduct div {
+.formularioContact div {
     width: 100%;
     margin-top: 2%;
     margin-bottom: 3%;
 }
 
-.formularioCreateProduct label {
+.formularioContact label {
     margin-right: 2%;
     color:#adb1b5;
 }
 
-.formularioCreateProduct section {
+.formularioContact section {
     display: flex;
     flex-wrap: nowrap;
     flex-direction: row;
@@ -51,7 +51,7 @@
     margin-bottom: 2%;
 }
 
-.formularioCreateProduct section input {
+.formularioContact section input {
     width: 100%;
     height: 30px;
 }
@@ -61,8 +61,7 @@
     height: 50px;
 }
 
-
-.formularioCreateProduct button {
+.formularioContact button {
     width: 45%;
     text-align: center;
     background-color: #0e141a;
@@ -76,62 +75,33 @@
     white-space: nowrap;
 }
 
-.formularioCreateProduct button:hover {
+.formularioContact button:hover {
     box-shadow: .10rem .10rem 1rem #adb1b5,
     -.10rem -.10rem 1rem #ccc;
     
 }
 
-.formularioCreateProduct button:active {
+.formularioContact button:active {
     box-shadow: inset .10rem .10rem 1rem #adb1b5,
     inset -.10rem -.10rem 1rem #ccc;
 }
 
-.createProductFotosUpload {
-    display: flex;
-    flex-wrap: nowrap;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-    margin: 0%;
-    padding: 0%;
-}
-
-.createProductFotosUpload>input {
+.userSpan {
     display: none;
-}
-
-.createProductFotosUpload p {
-    color: #adb1b5;
-    margin: 0%;
-}
-
-.createProductFotosUpload i {
-    color: #adb1b5;
-    margin-left: 60%;
-    transition: all 1s ease;
-}
-
-.createProductFotosUpload i:hover {
-    box-shadow: .10rem .10rem 1rem #fff, 
-    -.10rem -.10rem 1rem #ccc;
-}
-
-.createProductFotosUpload i:active {
-    box-shadow: .10rem .10rem 1rem #fff, 
-    -.10rem -.10rem 1rem #ccc;
+    color: red;
+    margin-bottom: 3%;
 }
 
 /* mediasquerys */
 
 @media (max-width: 479px) {
-    .cuerpoCreateProduct {
+    .cuerpoContact {
         width: 90%;
     }
 }
   
 @media (min-width: 480px) and (max-width: 799px) {
-    .cuerpoCreateProduct {
+    .cuerpoContact {
         width: 75%;
     }
 }

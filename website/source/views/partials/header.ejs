@@ -20,7 +20,7 @@
             <li>
                 <a href="/users/login">
                     <% if (locals.isLogged) { %>
-                        <p>Bienvenid@ <%= locals.userLogged.first_name %></p>
+                        <p><%= locals.userLogged.first_name %></p>
                     <% } else {%>
                         <i class="fa-solid fa-user"></i>
                     <% } %>

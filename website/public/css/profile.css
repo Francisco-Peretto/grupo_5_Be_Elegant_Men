@@ -222,7 +222,7 @@
     align-items: flex-start;
 }
 
-.createButton {
+.createButton, .dashboardButton {
     margin-top: 2%;
     width: 8rem;
     margin-top: 1rem;
@@ -238,37 +238,16 @@
     transition: all 1s ease;
 }
 
-.createButton:hover {
+.createButton:hover , .dashboardButton:hover{
     box-shadow: .10rem .10rem 1rem #fff, 
     -.10rem -.10rem 1rem #ccc;
 }
 
-.createButton:active {
+.createButton:active, .dashboardButton:active{
     box-shadow: .10rem .10rem 1rem #fff, 
     -.10rem -.10rem 1rem #ccc;
 }
 
-.eventError {
-    width: 90%;
-    height: 1.5rem;
-    margin-top: 1%;
-    margin-bottom: 1%;
-    box-shadow: 0 0 0 2px red;
-}
-
-.eventSuccess {
-    width: 90%;
-    height: 1.5rem;
-    margin-top: 1%;
-    margin-bottom: 1%;
-    box-shadow: 0 0 0 2px green;
-}
-
-.fisrtNameProfileSpan, .lastNameProfileSpan, .actualPassProfileSpan, .newPassProfileSpan, .checkNewPassProfileSpan {
-    display: none;
-    color: red;
-    margin-bottom: 3%;  
-}
 
 /* mediasquerys */
 

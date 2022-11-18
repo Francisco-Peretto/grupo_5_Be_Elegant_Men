@@ -1,0 +1,39 @@
+<%- include('../partials/head.ejs') %>
+    <body>
+        <%- include('../partials/header.ejs') %>
+        <%- include('../partials/navBrands.ejs') %>
+        <main class="mainContact">
+            <section class="cuerpoContact">
+                <h1>Contactanos</h1>
+                <form class="formularioContact" action="" method="post">
+                    <section>
+                        <input type="text" id="user" name="user" placeholder="Ingrese su usuario" value="<%= locals.old ? old.user : '' %>">
+                    </section>
+                    <span class="userSpan">Debe ingresar un correo electronico</span>
+                    <% if (locals.errors && errors.user) { %>
+                        <div class="divError">
+                            <%= errors.user.msg %>
+                        </div>
+                    <% } %>
+                    <section>
+                        <input type="text" id="detail" name="detail" placeholder="Ingrese su comentario" value="<%= locals.old ? old.detail : '' %>"></input>
+                    </section>
+                    <span class="detailSpan">Ingrese un comentario</span>
+                    <% if (locals.errors && errors.detail) { %>
+                        <div class="divError">
+                            <%= errors.detail.msg %>
+                        </div>
+                    <% } %> 
+                    <section>
+                        <button type="submit">Enviar</button>
+                        <button type="reset">Borrar</button>
+                    </section>
+                </form>
+            </section>
+        </main>
+        <%- include('../partials/navBrands.ejs') %>
+        <%- include('../partials/footer.ejs') %>
+    </body>
+    <script src='/scripts/confirmContact.js'></script>
+    <script src='/scripts/contactValidator.js'></script>
+</html>
