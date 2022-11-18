@@ -67,10 +67,11 @@ const apiProductsController = {
 	},
 	
 	lastProduct: (req, res) => {
-		db.Product.findOne({	
+		db.Product.findOne({
 			order: [["sku", "DESC"]],
 		})
 		.then((product) => {
+			console.log('producto', product)
 			return res.status(200).json({
 			url: product.image,
 			status: 200,
@@ -84,6 +85,7 @@ const apiProductsController = {
 			});
 		})
 		.catch((err) => {
+			console.log('asd', err)
 			res.send(err);
 		});
 	},
