@@ -6,6 +6,7 @@
     align-items: center;
     margin: 0%;
     background-color: rgb(41, 40, 40);
+    background-image: url(../img/logos/background.jpg);
 }
 
 .categoria{
@@ -74,10 +75,20 @@
     height: 50%;
     width: 25%;
     margin-top: 7.5%;
-    font-family: 'Libre Baskerville';font-size: 22px; font-weight: 700;
+    font-size: 25px;
 }
 .banner-description{
     color: whitesmoke;
+    
+}
+
+
+
+.descripcion{
+
+    background-color: #ffffff;
+    box-sizing: border-box;
+    
 }
 /* mediasquerys */
 
