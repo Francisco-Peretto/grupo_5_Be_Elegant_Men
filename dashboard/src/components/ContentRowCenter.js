@@ -4,15 +4,9 @@ import CategoriesInDb from './CategoriesInDb';
 
 function ContentRowCenter(){
     return (
-        <div className="row">
-            
-            {/*<!-- Last Movie in DB -->*/}
+        <div className="row">        
             <LastProductInDb />
-            {/*<!-- End content row last movie in Data Base -->*/}
-
-            {/*<!-- Genres in DB -->*/}
             <CategoriesInDb />
-            {/*<!-- End content row Genres in DB -->*/}
         </div>
     )
 }

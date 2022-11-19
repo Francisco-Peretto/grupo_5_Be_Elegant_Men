@@ -5,7 +5,7 @@ function ContentRowProducts(){
 
     // Estados
 	const [ products, setProducts ] = useState([]);
-	// eslint-disable-next-line no-unused-vars
+
 	const [ users, setUsers ] = useState([]);
 	const [ categories, setCategories ] = useState(0);
 
@@ -40,7 +40,6 @@ function ContentRowProducts(){
 			})
 	 }, []);
 
-    /* <!-- Movies in DB --> */
 
     let productsInDB = {
         title: 'Productos en DB',
@@ -48,9 +47,6 @@ function ContentRowProducts(){
         quantity: products,
         icon: 'fas fa-briefcase'
     }
-    
-
-    /* <!-- Total awards --> */
 
     let usersInDb = {
         title:'Usuarios en DB', 
@@ -58,8 +54,6 @@ function ContentRowProducts(){
         quantity: users,
         icon:'fas fa-users'
     }
-
-    /* <!-- Actors quantity --> */
 
     let categoriesInDB = {
         title: 'Categorías en DB' ,

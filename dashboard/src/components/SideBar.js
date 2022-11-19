@@ -28,11 +28,11 @@ function SideBar(){
             <ul className="navbar-nav  bg-gradient sidebar sidebar-dark accordion" style={sidebartest} id="accordionSidebar">
 
                 {/*<!-- Sidebar - Brand -->*/}
-                <a className="sidebar-brand d-flex align-items-center justify-content-center" href="/">
+{/*                 <a className="sidebar-brand d-flex align-items-center justify-content-center" href="/">
                     <div className="sidebar-brand-icon">
                         <h1 className="w-100 mb-133" style={paddingSidebar}> Be Elegant Men </h1>
                     </div>
-                </a>
+                </a> */}
 
                 {/*<!-- Divider -->*/}
                 <hr className="sidebar-divider my-0"/>
@@ -49,7 +49,7 @@ function SideBar(){
                 <hr className="sidebar-divider"/>
 
                 {/*<!-- Heading -->*/}
-                <div className="sidebar-heading">Actions</div>
+                <div className="sidebar-heading">Opciones</div>
 
                 {/*<!-- Nav Item - Search -->*/}
                 {/* <li className="nav-item">
@@ -138,10 +138,10 @@ function SideBar(){
                 <Route path="/summary">
                     <div id="content-wrapper" className="d-flex flex-column">
                         <div id="content">
-                            <TopBar />
+                            {/* <TopBar /> */}
                             <div className="container-fluid">
                                 <div className="d-sm-flex aligns-items-center justify-content-between mb-4">
-                                    <h1 className="h3 mb-0 text-gray-800">Guarida DB</h1>
+                                    <h1 className="h3 mb-0 text-gray-800"> </h1>
                                 </div>
                                 <ContentRowProducts />
                             </div>
@@ -151,10 +151,10 @@ function SideBar(){
                 <Route path="/last-movie-in-db">
                     <div id="content-wrapper" className="d-flex flex-column">
                         <div id="content">
-                            <TopBar />
+                            {/* <TopBar /> */}
                             <div className="container-fluid">
                                 <div className="d-sm-flex aligns-items-center justify-content-between mb-4">
-                                    <h1 className="h3 mb-0 text-gray-800">Guarida DB</h1>
+                                    <h1 className="h3 mb-0 text-gray-800"> </h1>
                                 </div>
                                 <div className="row">
                                     <LastProductInDb />
@@ -166,10 +166,10 @@ function SideBar(){
                 <Route path="/genres-in-db">
                     <div id="content-wrapper" className="d-flex flex-column">
                         <div id="content">
-                            <TopBar />
+                            {/* <TopBar /> */}
                             <div className="container-fluid">
                                 <div className="d-sm-flex aligns-items-center justify-content-between mb-4">
-                                    <h1 className="h3 mb-0 text-gray-800">Guarida DB</h1>
+                                    <h1 className="h3 mb-0 text-gray-800"> </h1>
                                 </div>
                                 <div className="row">
                                     <CategoriesInDb />
@@ -181,10 +181,10 @@ function SideBar(){
                 <Route path="/movie-chart">
                     <div id="content-wrapper" className="d-flex flex-column">
                         <div id="content">
-                            <TopBar />
+                            {/* <TopBar /> */}
                             <div className="container-fluid">
                                 <div className="d-sm-flex aligns-items-center justify-content-between mb-4">
-                                    <h1 className="h3 mb-0 text-gray-800">Guarida DB</h1>
+                                    <h1 className="h3 mb-0 text-gray-800"> </h1>
                                 </div>
                                 <Chart />
                             </div>                            
@@ -194,7 +194,7 @@ function SideBar(){
                 <Route>
                     <div id="content-wrapper" className="d-flex flex-column">
                         <div id="content">
-                            <TopBar />
+                            {/* <TopBar /> */}
                             <NotFound />                          
                         </div>
                     </div>

@@ -34,7 +34,7 @@ function CategoriesInDb() {
       <div className="card shadow mb-4">
         <div className="card-header py-3">
           <h5 className="m-0 font-weight-bold text-gray-800">
-            Generos y productos por genero en DB
+            Productos por categoria en DB
           </h5>
         </div>
         <div className="card-body">
@@ -42,10 +42,12 @@ function CategoriesInDb() {
             {categoryCount &&
 
             categoryCount.map((category, i) => {
+              let categoryName = category.name;
+              let categoryCap = categoryName.charAt(0).toUpperCase() + categoryName.slice(1);
                 return(
                   <div className="col-lg-6 mb-4" key={i}>
                     <div className="card bg-dark text-white shadow">
-                      <div className="card-body">{`${category.name} : ${category.count}`}</div>
+                      <div className="card-body">{`${categoryCap} : ${category.count}`}</div>
                     </div>
                   </div>
                 )
