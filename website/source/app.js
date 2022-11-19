@@ -23,7 +23,7 @@ app.use((req, res, next) => {
 
 app.set('views', resolve(__dirname, 'views'));
 app.set("view engine", "ejs");
-app.use(express.static(resolve(__dirname,'..','public')));
+app.use(express.static(resolve(__dirname,'..','public/')));
 app.use(express.urlencoded({extended: true}));
 app.use(cookies());
 app.use (methodOverride('_method'));

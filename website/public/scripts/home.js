@@ -1,22 +1,16 @@
-const formatText = text => String(text).toLowerCase().trim();
-
-document.querySelector("#search").addEventListener("input", async (e) =>{
+document.querySelector("#search").addEventListener("input", async (e) => {
     try {
-        let filtro = title => formatText(title).includes(formatText(e.target.value));
-        let resultados = e.target.value.length > 1 ? JSON.parse(localStorage.getItem("products")).filter(filtro) : [];
+        let petition = await fetch ('http://localhost:3030/api/products/');
+        let response = await petition.json();
+        let products = response.product;
+        let names = products.map(product => product.name)
+
+        let filtro = name => String(name).toLowerCase().trim().includes(String(e.target.value).toLowerCase().trim());
+        let resultados = e.target.value.length > 1 ? names.filter(filtro) : [];
+        
         document.querySelector("#suggestions").innerHTML = null;
         resultados.forEach(element => document.querySelector("#suggestions").innerHTML += `<option value="${element}">${element}</option>`);
     } catch (error) {
         console.log(error);
-    }
-})
-
-window.addEventListener('load', async (e) => {
-    try {
-        let petition = await fetch ('http://localhost:3030/api/products/'); //cambiar a API
-        let response = await petition.json();
-        localStorage.setItem("products", JSON.stringify(response.data.map(product => product.title)));
-    } catch {
-        console.log(error)
     }
 })
