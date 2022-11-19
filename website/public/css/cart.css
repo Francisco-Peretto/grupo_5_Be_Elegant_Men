@@ -1,6 +1,6 @@
 .mainCart {
     padding: 2.5%;
-    background-color: rgb(41, 40, 40);
+    background-image: url(../img/logos/background.jpg);
 }
 
 .cuerpoCart {
@@ -18,13 +18,13 @@
 }
 
 .cuerpoCart h1 {
-    color: aliceblue;
+    color: black;
     margin: auto;
     margin-bottom: 3%;
 }
 
 .cuerpoCart h3, p {
-    color: aliceblue;
+    color: 13202F;
 }
 
 .articleProducto {
