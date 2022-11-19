@@ -6,11 +6,11 @@
     align-items: space-around;
     width: 100%;
     padding: 5%;
-    background-color: rgb(41, 40, 40);
+    background-image: url(../img/logos/background.jpg);
 }
 
 .mainProductDetail h2 {
-    color:#adb1b5;
+    color: 13202F
 }
 
 .sectionPrincipal {
@@ -24,13 +24,10 @@
 }
 
 .articleImagenPrincipal {
-    padding: 5%;
-    width: 55%;
-    height: 40rem;
     border-radius: 15px;
-    color:#adb1b5;
-    background-color: #0e141a;
-    box-shadow: 0px 0px 10px rgb(209, 208, 204);
+    color: adb1b5;
+    box-shadow: 0px 0px 10px rgb(209 208 204);
+    padding: 8px;
 }
 
 .articleImagenPrincipal img {
@@ -45,14 +42,14 @@
     flex-wrap: nowrap;
     flex-direction: column;
     justify-content: flex-start;
-    align-items: space-around;  
+    align-items: space-around;
     width: 40%;
-    color:#adb1b5;
+    color: 13202F;
     padding: 3%;
     height: 40rem;
     border-radius: 15px;
-    background-color: #0e141a;
-    box-shadow: 0px 0px 10px rgb(209, 208, 204);
+    box-shadow: 0px 0px 10px rgb(209 208 204);
+    margin-top: 90px;
 }
 
 .divProductoMarca h2 {
@@ -75,18 +72,18 @@
 
 .divPrecioDescuento p{
     margin-left: 4%;
-    color:#adb1b5;
+    color: 13202F;
 }
 
 .divEnvio p {
-    color:#adb1b5;
+    color: 13202F;
 }
 
 .formCarrito div {
     margin-top: 3%;
 }
 .formCarrito label {
-    color:#adb1b5;
+    color: 13202F;
 }
 
 .formCarrito button {
@@ -94,8 +91,8 @@
     margin-top: 1rem;
     padding: .5rem;
     text-align: center;
-    background-color: #0e141a;
-    color:#adb1b5;
+    background-color: #adb1b5;
+    color: 13202F;
     font-size: 1rem;
     border: 2px solid;
     border-radius: .5rem;
@@ -126,8 +123,8 @@
 .botonera button {
     width: 7rem;
     text-align: center;
-    background-color: #0e141a;
-    color:#adb1b5;
+    background-color: #adb1b5;
+    color:13202F;
     font-size: 1rem;
     padding: .5rem;
     border: 2px solid;
@@ -174,7 +171,7 @@
 }
 
 .sectionProdRelacionados a{
-    width: 10%;
+    width: 14%;
     margin-bottom: 2%;
     margin-left: 2%;
     background-color: #0e141a;
@@ -190,6 +187,7 @@
 }
 
 .sectionProdRelacionados p{
+    text-align: center;
     margin-left: 12%;
     color:#adb1b5;
 }
