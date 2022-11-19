@@ -65,7 +65,7 @@ function ContentRowProducts(){
         title: 'Categorías en DB' ,
         color: 'warning',
         quantity: categories,
-        icon: 'fad fa-folder-open'
+        icon: 'fas fa-folder-open'
     }
 
     let cartProps = [productsInDB, usersInDb, categoriesInDB];
