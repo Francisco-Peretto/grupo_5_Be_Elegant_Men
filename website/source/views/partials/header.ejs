@@ -4,7 +4,7 @@
         <h2><a href="/">Be Elegant Men</a></h2>
         <div class="divBusqueda">
             <form action="/products/search" method="get">
-                <input type="text" placeholder=" Buscar productos..." name="search" id="search" list="suggestions" autocomplete="on">
+                <input type="text" placeholder=" Buscar productos..." name="search" id="search" list="suggestions" autocomplete="off">
                 <datalist id="suggestions"></datalist>
                 <button>
                     <i class="fa fa-search"></i>
@@ -46,6 +46,6 @@
         <% for( let i = 1; i <= categories.length; i++ ) { %>
             <a href="/products/list/<%= i %>"> <%= categories[i - 1]%> </a>
         <% } %>
-    </nav>
+    </nav> 
     <script defer src ="scripts/home.js"></script>
 </header>
