@@ -7,7 +7,7 @@
                 <h1>Ingresa a tu cuenta</h1>
                 <form class="formularioLogin"action="/users/login" method="post">
                     <input type="text" id="email" name="email" placeholder="Correo Electrónico" value="<%= locals.old ? old.email : '' %>">
-                    <span class="emailSpan">Debe ingresar un correo electronico valido</span>
+                    <span class="emailSpan">Debe ingresar un correo electronico</span>
                     <% if (locals.errors && errors.email) { %>
                         <div class="divError">
                             <%= errors.email.msg %>
