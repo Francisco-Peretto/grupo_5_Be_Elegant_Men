@@ -157,7 +157,7 @@ const productsController = {
     erase: async (req, res) => {
         try {
             await db.Product.destroy({ where: {sku: req.params.id} });
-            return res.render('./products/index.ejs');
+            return res.redirect('/');
 
         } catch (error) { console.log(error.message); }
     }
