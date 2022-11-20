@@ -29,9 +29,9 @@
 
 .categoria img {
     border-radius: 25px;
-    width: 50vh;
+    width: 40vh;
     height: 60vh;
-    margin: 5px;
+    margin: 11px;
 }
 
 .categoria a {
@@ -40,16 +40,15 @@
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    border-radius: 25px;
     width: 100%;
-    box-shadow: 0px 0px 10px rgb(209, 208, 204);
-    background-color: #0e141a;
+    border-radius: 0px;
+    box-shadow: 0px 0px 1000px rgb(209 208 204);
 }
 
 .categoria p {
     font-size: 18px;
     font-weight: bold;
-    color:#adb1b5
+    color:#13202F
 }
 .banner{
     display: flex;
