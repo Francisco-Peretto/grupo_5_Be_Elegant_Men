@@ -2,8 +2,9 @@ const db = require('../../database/models/index');
 
 const apiProductsController = {
 	
-    index: (req, res) => {
-		db.Product.findAll({include: [{association: "categories"}, {association:"brands"}]})
+    index: async (req, res) => {
+		try {
+			db.Product.findAll({include: [{association: "categories"}, {association:"brands"}]})
 		.then(product => {
 				// Se recurre a este método de filtrado para no sobrecargar la DB con métodos findAll. Se cambiará por un filtro dinámico.
 				const ambosFilter = { category_id : 1 };
@@ -36,10 +37,13 @@ const apiProductsController = {
 		.catch(err => {
 			res.send(err)
 		})
+
+	} catch (error) { console.log(error.message); }
 	},
 
-	detail: (req, res) => {
-		db.Product.findByPk(req.params.id, {
+	detail: async (req, res) => {
+		try {
+			await db.Product.findByPk(req.params.id, {
 			attributes : ['sku', 'name', 'detail', 'price', 'image'],
 			include: [{association: "categories"}, {association:"brands"}] }
 				)
@@ -53,21 +57,25 @@ const apiProductsController = {
 	.catch(err => {
 		res.send(err)
 	})
+	} catch (error) { console.log(error.message); }
 	},
 
 
-	category: (req, res) => {
-		db.Category.findAll()
+	category: async (req, res) => {
+		try {
+			await db.Category.findAll()
 		.then(categories => {
 			return res.status(200).json({
 				count: categories.length,
 				categories: categories,
 			})
 		})
+	} catch (error) { console.log(error.message); }
 	},
 	
-	lastProduct: (req, res) => {
-		db.Product.findOne({
+	lastProduct: async (req, res) => {
+		try {
+			await db.Product.findOne({
 			order: [["sku", "DESC"]],
 		})
 		.then((product) => {
@@ -88,6 +96,8 @@ const apiProductsController = {
 			console.log('asd', err)
 			res.send(err);
 		});
+
+	} catch (error) { console.log(error.message); }
 	},
 
 }
