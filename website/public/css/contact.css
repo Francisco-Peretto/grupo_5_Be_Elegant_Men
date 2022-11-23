@@ -2,6 +2,7 @@
     padding: 4%;
     background-image: url(../img/background/background.jpg);
 }
+
 .cuerpoContact {
     display: flex;
     flex-wrap: nowrap;
@@ -83,12 +84,6 @@
 .formularioContact button:active {
     box-shadow: inset .10rem .10rem 1rem #adb1b5,
     inset -.10rem -.10rem 1rem #ccc;
-}
-
-.userSpan {
-    display: none;
-    color: red;
-    margin-bottom: 3%;
 }
 
 /* mediasquerys */

@@ -17,17 +17,17 @@
     list-style-type: none;
     text-decoration: none;    
     box-sizing: border-box;
+    font-family: 'Playfair Display', serif;
 }
 
 body {
     margin: 0%;
-    font-family: 'Playfair Display', serif;
+    padding: 0%;
 }
 
 input::placeholder {
-    font-family: 'Playfair Display', serif;
-    color: black;
-    font-weight: 475;
+    color: #0e141a;
+    font-weight: 500;
 }
 
 .divError {

@@ -11,33 +11,54 @@
                 </button>
             </form>
         </div>
-        <nav class="menuHamburguesa">
-            <input type="checkbox" id="menu">
-            <label for="menu">
-                <i class="fa-solid fa-bars"></i>
-            </label>
-            <ul>
-            <li>
-                <a href="/users/login">
-                    <% if (locals.isLogged) { %>
-                        <p><%= locals.userLogged.first_name %></p>
-                    <% } else {%>
-                        <i class="fa-solid fa-user"></i>
-                    <% } %>
-                </a>
-            </li>
-            <li><a href="/users/cart"><i class="fa-solid fa-cart-shopping"></i></a></li>
-            </ul>
+
+        <nav class="navBarUser">
+            <a href="/users/login">
+                <% if (locals.isLogged) { %>
+                    <p><%= locals.userLogged.first_name %></p>
+                <% } else {%>
+                    <i class="fa-solid fa-user"></i>
+                <% } %>
+            </a>
+            <a href="/users/cart">
+                <i class="fa-solid fa-cart-shopping"></i>
+            </a>
+            <a href="/users/logout">
+                <% if (locals.isLogged) { %>
+                    <i class="fa-solid fa-right-from-bracket"></i></a>
+                <% } %>     
+            </a>               
         </nav>
-        <nav class="navbarUsuario">
-                <a href="/users/login">
-                    <% if (locals.isLogged) { %>
-                        <p>Bienvenid@ <%= locals.userLogged.first_name %></p> 
-                    <% } else {%>
-                        <i class="fa-solid fa-user"></i>
-                    <% } %>
-                </a>
-            <a href="/users/cart"><i class="fa-solid fa-cart-shopping"></i></a>          
+
+        <div class="hamburger">
+            <div class="_layer -top"></div>
+            <div class="_layer -mid"></div>
+            <div class="_layer -bottom"></div>
+        </div>
+        <nav class="menuppal">
+            <ul>
+                <li>
+                    <a href="/users/login">
+                        <% if (locals.isLogged) { %>
+                            <p><%= locals.userLogged.first_name %></p>
+                        <% } else {%>
+                            <i class="fa-solid fa-user"></i>
+                        <% } %>
+                    </a>
+                </li>
+                <li>
+                    <a href="/users/cart">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="/users/logout">
+                        <% if (locals.isLogged) { %>
+                            <i class="fa-solid fa-right-from-bracket"></i></a>
+                        <% } %>     
+                    </a>               
+                </li>
+            </ul>
         </nav>
     </section>
     <nav class="navbarCategorias">
@@ -47,5 +68,6 @@
             <a href="/products/list/<%= i %>"> <%= categories[i - 1]%> </a>
         <% } %>
     </nav> 
-    <script defer src ="scripts/home.js"></script>
+    <script src="/scripts/home.js" defer></script>
+    <script src="/scripts/barsMenu.js" defer></script>
 </header>

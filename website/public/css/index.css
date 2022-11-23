@@ -5,13 +5,13 @@
     justify-content: space-around;
     align-items: center;
     margin: 0%;
-    background-image: url(../img/background/background.jpg);
-   
+    background-image: url(../img/background/background.jpg);  
 }
 
 .categoria{
     margin: 3% 2%;
     display:block;
+    border-radius: 25px;
     -webkit-transition:-webkit-transform 0.5s ease-out;
     -moz-transition:-moz-transform 0.5s ease-out;
     -o-transition:-o-transform 0.5s ease-out;
@@ -48,7 +48,7 @@
 .categoria p {
     font-size: 18px;
     font-weight: bold;
-    color:#13202F
+    color:#0e141a;
 }
 .banner{
     display: flex;
@@ -81,11 +81,7 @@
 }
 .banner-description{
     color: whitesmoke;
-    
 }
-
-
-
 
 /* mediasquerys */
 
@@ -102,8 +98,6 @@
 .banner-text {
     width: 325px;
     margin-top: 135px;
-
-
 }
 }
 
@@ -119,22 +113,18 @@
 }
 .banner-text {
     width: 380px;
-
 }
 }
-
-
   
 @media (min-width: 800px) and (max-width: 1023px) {
     .banner-text {
         width: 380px;
-    
+
     }
 }
   
 @media (min-width: 1024px) {
 .banner-text{
     width: 380px;
-
 }
 }

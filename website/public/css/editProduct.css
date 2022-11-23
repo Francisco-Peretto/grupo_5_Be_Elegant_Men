@@ -78,7 +78,6 @@
 .formularioEditProduct button:hover {
     box-shadow: .10rem .10rem 1rem #adb1b5,
     -.10rem -.10rem 1rem #ccc;
-    
 }
 
 .formularioEditProduct button:active {

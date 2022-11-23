@@ -5,14 +5,13 @@
     justify-content: space-around;
     align-items: center;
     margin: 0%;
-    background-color: rgb(41, 40, 40);
     background-image: url(../img/background/background.jpg);
 }
 
 .producto{
     margin: 2% 2%;
     border-radius: 15px;
-    display:block;
+    display: block;
     -webkit-transition:-webkit-transform 0.5s ease-out;
     -moz-transition:-moz-transform 0.5s ease-out;
     -o-transition:-o-transform 0.5s ease-out;
@@ -51,7 +50,7 @@
     text-align: center;
     margin: 20% 0;
     font-weight: bold;
-    color:#13202F
+    color:#0e141a;
 }
 
 /* mediasquerys */
