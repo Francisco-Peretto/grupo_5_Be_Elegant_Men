@@ -1,6 +1,6 @@
 const bcryptjs = require('bcryptjs');
 const {validationResult} = require('express-validator');
-const db = require("../database/models");
+const {User} = require("../database/models");
 
 const usersController = {
 
@@ -12,42 +12,39 @@ const usersController = {
         } catch (error) { console.log(error); }
     },
 
-    access: async (req , res) => {
+    access: async (req, res) => {
         try {
             const resultValidation = validationResult(req);
             if (resultValidation.errors.length > 0) {
                 return res.render('users/login', {
                     errors: resultValidation.mapped(),
                     old : req.body
-                })
-
-            } else {
-                await db.User.findOne({ where : {email : req.body.email} })
-                    .then(userToLogin => {        
-                        let correctPassword = bcryptjs.compareSync(req.body.password, userToLogin.password);
-                        if (correctPassword) {
-                            delete userToLogin.password;
-                            req.session.userLogged = userToLogin;
-                            userToLogin.admin == 1 ? req.session.isAdmin = true : req.session.isAdmin = false;
-                            req.body.remember != undefined ?
-                            res.cookie('userEmail', req.body.email, {maxAge : (((1000 * 60) * 60)*24)}) : null; // cookie de 24 hs 
-                            return res.redirect('profile');
-
-                        } else {
-                            return res.render('users/login', {
-                                errors: {password: {msg: 'Contraseña incorrecta'}},
-                                old : req.body
-                            })
-                        }
-                    })
-
-                    .catch((fail) => { return res.render('users/login', {
-                            errors: {email: {msg: 'El email con el que intenta ingresar no existe'}}
-                        })
-                    })
+                });
             }
 
-        } catch (error) { console.log(error); }
+            const userToLogin = await User.findOne({ where : {email : req.body.email} });
+            if (!userToLogin) {
+                return res.render('users/login', {
+                    errors: {email: {msg: 'El email con el que intenta ingresar no existe'}}
+                });
+            }
+
+            const correctPassword = bcryptjs.compareSync(req.body.password, userToLogin.password);
+            if (correctPassword) {
+                delete userToLogin.password;
+                req.session.userLogged = userToLogin;
+                req.session.isAdmin = userToLogin.admin == 1;
+                if (req.body.remember) {
+                    res.cookie('userEmail', req.body.email, {maxAge : (((1000 * 60) * 60)*24)});
+                }
+                return res.redirect('profile');
+            } else {
+                return res.render('users/login', {
+                    errors: {password: {msg: 'Contraseña incorrecta'}},
+                    old : req.body
+                });
+            }
+        } catch (error) { console.log(error.message); }
     },
 
     // Registro de usuarios
@@ -55,7 +52,7 @@ const usersController = {
         try {
             return res.render('users/register');
 
-        } catch (error) { console.log(error); }
+        } catch (error) { console.log(error.message); }
     },
 
     record: async (req , res) => {
@@ -66,29 +63,28 @@ const usersController = {
                     errors: resultValidation.mapped(),
                     old : req.body
                 })
-            } 
-            await db.User.findOne({ where : {email : req.body.email} })
-                .then(result => {
-                    if (result == null) {
-                        db.User.create({
-                            first_name: req.body.first_name,
-                            last_name: req.body.last_name,
-                            email: req.body.email,
-                            password: bcryptjs.hashSync(req.body.password, 10),
-                            avatar: req.file ? req.file.filename : 'default.png',
-                            admin: req.body.email.includes('@beelegantmen.com') ? 1 : 0
-                        })
-                        return res.render('users/login');
+            }
 
-                    } else {
-                        return res.render('users/register', {
-                            errors: {email: {msg: 'Este email ya se encuentra registrado'}},
-                            old : req.body
-                        })
-                    }
+            const result = await User.findOne({ where : {email : req.body.email} });
+            if (!result) {
+                await User.create({
+                    first_name: req.body.first_name,
+                    last_name: req.body.last_name,
+                    email: req.body.email,
+                    password: bcryptjs.hashSync(req.body.password, 10),
+                    avatar: req.file ? req.file.filename : 'default.png',
+                    admin: req.body.email.includes('@beelegantmen.com') ? 1 : 0
+                });
+                return res.render('users/login');
+
+            } else {
+                return res.render('users/register', {
+                    errors: {email: {msg: 'Este email ya se encuentra registrado'}},
+                    old : req.body
                 })
+            }
 
-        } catch (error) { console.log(error); }
+        } catch (error) { console.log(error.message); }
     },
 
     //Profile access y logout
@@ -98,7 +94,7 @@ const usersController = {
                 user: req.session.userLogged
             })
 
-        } catch (error) { console.log(error); }
+        } catch (error) { console.log(error.message); }
     },
 
     logout: async (req, res) => {
@@ -107,75 +103,67 @@ const usersController = {
             req.session.destroy()
             return res.redirect('/')
 
-        } catch (error) { console.log(error); }
+        } catch (error) { console.log(error.message); }
     },
 
     // Profile edit y erase
     updateUserNames: async (req, res) => {
         try {
-            await db.User.update({
+            await User.update({
                 first_name: req.body.first_name,
                 last_name: req.body.last_name
                 }, {where : {id: req.params.id} })
             return res.redirect('/users/profile');
 
-        } catch (error) { console.log(error); }
+        } catch (error) { console.log(error.message); }
     },
 
     updateUserAvatar: async (req, res) => {
         try {
-            await db.User.update({
+            await User.update({
                 avatar: req.file ? req.file.filename : 'default.png',
                 }, {where : {id: req.params.id}}
                 )
                 return res.redirect('/users/profile');
 
-            } catch (error) { console.log(error); }
+            } catch (error) { console.log(error.message); }
     },
 
     updateUserPass: async (req, res) => {
         try {
-            await db.User.findOne({ where : {email : req.body.email} })
-                .then(userToUpdate => {
-                    let correctPassword = bcryptjs.compareSync(req.body.actualPass, userToUpdate.password);
-                    if ((correctPassword) && (req.body.newPass == req.body.checkNewPass)) {
-                        db.User.update({
-                            password: bcryptjs.hashSync(req.body.newPass, 10),
-                            }, {where : {id: userToUpdate.id}}
-                            )
-                        return res.redirect('/users/profile');
-                    }
-                })
-
-        } catch (error) { console.log(error); }
+            const userToUpdate = await User.findOne({ where: { email: req.body.email } });
+            const correctPassword = bcryptjs.compareSync(req.body.actualPass, userToUpdate.password);
+            if ((correctPassword) && (req.body.newPass == req.body.checkNewPass)) {
+                User.update({
+                    password: bcryptjs.hashSync(req.body.newPass, 10),
+                        }, {where : {id: userToUpdate.id}}
+                        )
+                    return res.redirect('/users/profile');
+                }
+        } catch (error) { console.log(error.message); }
     },
 
     destroy: async (req, res) => {
         try {
-            await db.User.destroy({ where: {id: req.params.id} });
+            await User.destroy({ where: {id: req.params.id} });
             req.session.destroy();
             return res.redirect('/');
-
-        } catch (error) { console.log(error); }
+        } catch (error) { console.log(error.message); }
     },
 
     // Cart
     cart: async (req , res) => {
         try {
             return res.render('users/cart');
-
-        } catch (error) { console.log(error); }
+        } catch (error) { console.log(error.message); }
     },
 
-    // Cart
+    // Contact
     contact: async (req , res) => {
         try {
             return res.render('users/contact');
-
-        } catch (error) { console.log(error); }
+        } catch (error) { console.log(error.message); }
     }
-
-
 }
 
 module.exports = usersController;
