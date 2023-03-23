@@ -9,7 +9,7 @@
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    width: 40%;
+    width: 90%;
     border-radius: 15px;
     margin: auto;
     background-color: #0e141a;
@@ -122,22 +122,14 @@
 
   /* mediasquerys */
 
-@media (max-width: 479px) {
-    .cuerpoEditProduct {
-        width: 90%;
-    }
-}
-  
-@media (min-width: 480px) and (max-width: 799px) {
+@media (min-width: 480px) {
     .cuerpoEditProduct {
         width: 75%;
     }
 }
-  
-@media (min-width: 800px) and (max-width: 1023px) {
 
-}
-  
-@media (min-width: 1024px) {
-
+@media (min-width: 768px) {
+    .cuerpoEditProduct {
+        width: 40%;
+    }
 }

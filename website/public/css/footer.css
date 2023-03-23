@@ -1,4 +1,4 @@
-.footer{
+.footer {
     display: flex;
     background-color: #0e141a;
     text-align: center; 
@@ -8,9 +8,9 @@
     width: 100%;
 }
 
-.titulo{
+.titulo {
     text-align: center;
-    font-size: 3rem;
+    font-size: 1rem;
 }
 
 .lista , .derechos , .iconList {
@@ -21,54 +21,31 @@
     margin-bottom: 2%;
 }
 
-.iconos{
+.iconos , .texto {
     color: inherit;
-    margin: 0 1%;
-    font-size: 1rem;
-}
-
-.texto{
-    color: inherit;
-    margin: 0 1%;
-    font-size: 1rem;
+    margin: 0 1.4%;
+    font-size: 0.5rem;
 }
 
 
 /* mediasquerys */
 
-@media (max-width: 479px) {
+@media (min-width: 480px) {
     .titulo{
+        font-size: 2rem;
+    }
+    .iconos , .texto {
+        margin: 0 1.2%;
+        font-size: 0.8rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .titulo{
+        font-size: 3rem;
+    }
+    .iconos , .texto {
+        margin: 0 1%;
         font-size: 1rem;
     }
-    .iconos{
-        margin: 0 1.4%;
-        font-size: 0.5rem;
-    }
-    .texto{
-        margin: 0 1.4%;
-        font-size: 0.5rem;
-    }
 }
-      
-@media (min-width: 480px) and (max-width: 799px) {
-    .titulo{
-        font-size: 1.5rem;
-    }
-    .iconos{
-        margin: 0 1.2%;
-        font-size: 0.8rem;
-    }
-    .texto{
-        margin: 0 1.2%;
-        font-size: 0.8rem;
-    }
-}
-    
-@media (min-width: 800px) and (max-width: 1023px) {
-
-}
-    
-@media (min-width: 1024px) {
-
-}
-
